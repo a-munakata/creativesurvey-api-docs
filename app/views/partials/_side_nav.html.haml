@@ -1,0 +1,18 @@
+.control
+  = form_tag nil do
+    %select.dropdown
+
+      - %w(ruby curl).each do |key, value|
+        %option{ :value => value, "data-lang" => key }
+          = key
+
+  %ul.side-nav
+    - @categories.each_with_index do |category, index|
+      %li
+        %h3.main-title{ "data-category" => category["anchor_name"] }
+          = link_to category["title"], "##{category["anchor_name"]}"
+
+        %ul
+          - @entries.select{|hash| hash["category_name"] == category["anchor_name"] }.each do |entry|
+            %li.sub-title{ "data-entry" => entry["anchor_name"] }
+              = link_to entry["title"], "##{entry["anchor_name"]}"

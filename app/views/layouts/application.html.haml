@@ -1,0 +1,31 @@
+!!!
+%html
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=Edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=1024", :name => "viewport"}/
+    %title= content_for?(:title) ? yield(:title) : "#{ENV["APPLICATION_DISPLAY_NAME"]}"
+
+
+    = stylesheet_link_tag    "application", :media => "all"
+    = stylesheet_link_tag "//yandex.st/highlightjs/8.0/styles/railscasts.min.css"
+
+    = javascript_include_tag "application"
+    = javascript_include_tag "//yandex.st/highlightjs/8.0/highlight.min.js"
+
+    = yield :head
+
+  %body
+    .header#global
+      .container
+        .inner.clearfix
+          .logo
+            = link_to "#{ENV["APPLICATION_NAME"]}", root_url
+    .main
+      .inner
+
+        = render "partials/side_nav"
+
+        = yield :body
+
+    = render "partials/footer"

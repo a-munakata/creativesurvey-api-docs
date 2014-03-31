@@ -1,0 +1,52 @@
+@import "compass";
+$experimental-support-for-svg: true;
+$legacy-support-for-ie: true;
+
+html, body {
+  font-family: 'MetroNovaPro', 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+  vertical-align: baseline;
+
+  font-size: 12px;
+  line-height: 1.5;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+
+  -moz-font-feature-settings:"kern" 1, "liga" 1, "ss01" 1;
+  -moz-font-feature-settings:"kern=1, liga=1, ss01=1";
+  -ms-font-feature-settings:"kern" 1, "liga" 1, "ss01" 1;
+  -o-font-feature-settings:"kern" 1, "liga" 1, "ss01" 1;
+  -webkit-font-feature-settings:"kern" 1, "liga" 1, "ss01" 1;
+  font-feature-settings:"kern" 1, "liga" 1, "ss01" 1;
+}
+
+i  { font-style: italic; }
+
+label { cursor: pointer; }
+
+input, select.textarea { margin: 0px; }
+
+.script {
+  font-family: 'Dancing Script', cursive;
+}
+
+.cyan       { color: #72b1c0; }
+.chartreuse { color: #bbc063; }
+.mandarin   { color: #eaa21a; }
+.sea        { color: #dbd57a; }
+.carmine    { color: #c03439; }
+.heliotrope { color: #c0749e; }
+.cobalt     { color: #6fc07d; }
+.sky        { color: #b0e5e7; }
+.snow       { color: #cccccc; }
+.lamp       { color: #333333; }
+
+a, a:hover, a:visited, a:active {
+  text-decoration: none;
+}
+a:hover { text-decoration: none };
+
+hr:before{ content: ""; display: block; border-bottom: 1px solid rgba(255,255,255,.5); }
+hr { margin: 20px 0px; padding: 0px; @include box-sizing(content-box); line-height: 0; font-size: 0; border-style: none; border:none; }
+hr:after { content: ""; display: block; border-top: 1px solid rgba(0,0,0,.2); }
+

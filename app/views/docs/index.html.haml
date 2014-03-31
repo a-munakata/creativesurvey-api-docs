@@ -1,0 +1,38 @@
+= content_for :body do
+  .content
+    - @categories.each_with_index do |category, index|
+      %h2{ id: category["anchor_name"], class: "category", "data-category" => category["anchor_name"] }
+        = category["title"]
+
+
+      - @entries.select{|hash| hash["category_name"] == category["anchor_name"] }.each do |entry|
+
+        %div{ id: entry["anchor_name"], class: "entry", "data-entry" => entry["anchor_name"], "data-category" => category["anchor_name"] }
+          .document-block
+            .inner
+              %h3.title
+                = entry["title"]
+
+              %h4
+                = entry["explanation"]
+
+              %table
+                %tbody
+                  - @variables.select{|hash| hash["entry_name"] == entry["anchor_name"] }.each do |detail|
+                    %tr
+                      %th
+                        = detail["used_variables"]
+                      %td
+                        = detail["explanation"]
+
+
+
+
+          .example-block
+            .inner
+              %pre
+                %code.ruby
+                  = entry["ruby"]
+                %code.curl
+                  = entry["curl"]
+

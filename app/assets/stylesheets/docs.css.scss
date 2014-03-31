@@ -1,0 +1,205 @@
+// Place all the styles related to the docs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.header#global {
+  position: fixed;
+  width: 100%;
+}
+
+.main {
+  padding-top: 35px;
+  background: #f6f6f6;
+  > .inner {
+    position: relative;
+    margin-left: 201px;
+    background: #3e3e3e;
+    zoom: 1;
+
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    .control {
+      right: 0px;
+      bottom: 0px;
+      top: 35px;
+      left: 200px;
+      height: 100%;
+      position: fixed;
+
+      width: 200px;
+      margin-left: -201px;
+      min-height: 800px;
+      background: #f6f6f6;
+      border-right: 1px dotted #999;
+      > .inner {
+        padding: 40px;
+
+      }
+
+      ul {
+        padding-left: 20px;
+
+        li {
+
+          ul {
+            li {
+              > a {
+                padding: 10px;
+                display: block;
+              }
+
+              &.selected, &:hover {
+                background: #666;
+                cursor: pointer;
+                > a {
+                  color: #f6f6f6;
+                  &:hover {
+                    background: inherit;
+                  }
+                }
+              }
+            }
+          }
+
+          > h3 {
+            margin: 0px;
+            + ul {
+              display: none;
+            }
+            &.selected {
+              + ul {
+                display: block;
+              }
+            }
+            > a {
+              padding: 10px;
+              display: block;
+            }
+
+            &.selected, &:hover {
+              background: #666;
+              cursor: pointer;
+
+              > a {
+                color: #f6f6f6;
+                &:hover {
+                  background: inherit;
+                }
+              }
+            }
+          }
+
+        }
+      }
+    }
+
+
+  }
+
+
+}
+
+.content {
+  background: #fdfdfd;
+  float: left;
+  margin-right: 500px;
+
+  > div {
+    padding-top: 35px;
+    zoom: 1;
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
+
+  > h2 {
+    margin: 0px;
+    padding: 55px 20px 0px;
+    margin-bottom: -35px;
+  }
+
+  .document-block {
+    float: left;
+    width: 100%;
+
+    > .inner {
+      padding: 20px;
+    }
+
+  }
+
+  .example-block{
+    width: 500px;
+    margin-right: -500px;
+    float: right;
+    background: #3e3e3e;
+    color: #dcdcdc;
+    > .inner {
+      padding: 20px;
+    }
+  }
+}
+
+
+pre {
+  overflow-x: scroll;
+
+  code.hljs {
+
+  }
+
+  code {
+    &.hljs {
+      background: transparent;
+      display: none;
+    }
+
+    &.selected-lang {
+      display: block;
+    }
+  }
+}
+
+ul {
+  li {
+    list-style: none;
+  }
+}
+
+table {
+  tr {
+    th, td {
+      vertical-align: top;
+    }
+    th {
+      padding-right: 10px;
+      text-align: left;
+    }
+  }
+}
+
+.dropdown {
+  border-radius: 0px;
+  margin: 0px;
+  width: 200px;
+
+  > div {
+    border-radius: 0px;
+    &:hover {
+      border-radius: 0px;
+    }
+  }
+  ul {
+    &:hover {
+      border-radius: 0px;
+    }
+    padding: 0px !important;
+    margin: 0px;
+  }
+}

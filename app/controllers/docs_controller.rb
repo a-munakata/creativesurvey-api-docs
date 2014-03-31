@@ -1,13 +1,17 @@
 class DocsController < ApplicationController
   def index
+    @data      = Doc.new
+
+    @entries    = @data.entries
+    @variables  = @data.variables
+    @categories = @data.categories
+
     respond_to do |format|
       format.html
       format.json { render json: @docs }
     end
   end
 
-  # GET /docs/1
-  # GET /docs/1.json
   def show
     @doc = Doc.find(params[:id])
 
@@ -17,8 +21,6 @@ class DocsController < ApplicationController
     end
   end
 
-  # GET /docs/new
-  # GET /docs/new.json
   def new
     @doc = Doc.new
 
@@ -28,13 +30,14 @@ class DocsController < ApplicationController
     end
   end
 
-  # GET /docs/1/edit
   def edit
-    @doc = Doc.find(params[:id])
+    #@doc = Doc.find(params[:id])
+
+    respond_to do |format|
+      format.html
+    end
   end
 
-  # POST /docs
-  # POST /docs.json
   def create
     @doc = Doc.new(params[:doc])
 
@@ -49,8 +52,6 @@ class DocsController < ApplicationController
     end
   end
 
-  # PUT /docs/1
-  # PUT /docs/1.json
   def update
     @doc = Doc.find(params[:id])
 
@@ -65,8 +66,6 @@ class DocsController < ApplicationController
     end
   end
 
-  # DELETE /docs/1
-  # DELETE /docs/1.json
   def destroy
     @doc = Doc.find(params[:id])
     @doc.destroy
