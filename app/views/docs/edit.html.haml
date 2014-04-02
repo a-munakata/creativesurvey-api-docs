@@ -39,15 +39,22 @@
 
             .example-block
               .inner
-                %pre
+                .code.ruby
                   .edit-container
-                    %code.ruby.editable-content{ contenteditable: true }
-                      = entry.ruby
-                      = f.hidden_field :ruby, class: "replace-content"
+                    = link_to "Save & Preview", preview_path( entry_name: entry.anchor_name, lang: "ruby" ), class: "button", remote: true
+                    = f.text_area :ruby, class: "code-editor", rows: 2
+
+
+                  .preview-container{ class: entry.anchor_name }
+                    = render "preview", entry: entry, lang: "ruby"
+
+                .code.curl
                   .edit-container
-                    %code.curl.editable-content{ contenteditable: true }
-                      = entry.curl
-                      = f.hidden_field :curl, class: "replace-content"
+                    = link_to "Save & Preview", preview_path( entry_name: entry.anchor_name, lang: "curl" ), class: "button", remote: true
+                    = f.text_area :curl, class: "code-editor", rows: 2
+
+                  .preview-container{ class: entry.anchor_name }
+                    = render "preview", entry: entry, lang: "curl"
 
 
 

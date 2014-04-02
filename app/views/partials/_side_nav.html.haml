@@ -9,7 +9,7 @@
   %ul.side-nav
     - categories.each_with_index do |category|
       %li
-        %h3.main-title{ "data-category" => category.anchor_name }
+        %h3.main-title{ "data-category" => category.anchor_name, :class => [] << (params[:action] == "edit" && "selected") }
           = link_to category.title, "##{category.anchor_name}"
 
         %ul

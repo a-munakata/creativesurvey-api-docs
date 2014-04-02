@@ -1,8 +1,11 @@
 jQuery ->
-
   hljs.initHighlightingOnLoad();
   header_height = $(".header").innerHeight()
   footer_height = $(".footer").innerHeight()
+
+    #/
+   #/ Navigation
+  #/============
 
   $(".entry").waypoint ()->
     $(".sub-title").removeClass("selected")
@@ -26,14 +29,29 @@ jQuery ->
     height: $(window).height() - (header_height + footer_height)
   })
 
-  $("code." + $("option:selected").data("lang")).addClass("selected-lang")
+    #/
+   #/ Select Language
+  #/================
+
+  $(".code." + $("option:selected").data("lang")).addClass("selected-lang")
 
   $("select").on "change", ()->
-    $("code").removeClass("selected-lang")
-    $("code." + $("option:selected").data("lang")).addClass("selected-lang")
+    $(".code").removeClass("selected-lang")
+    $(".code." + $("option:selected").data("lang")).addClass("selected-lang")
 
     $(".entry:last-child").css({
       height: $(window).height() - (header_height + footer_height)
     })
 
-    $.waypoints('refresh')
+    $.waypoints("refresh")
+
+
+  $(".ruby .code-editor").ace({ theme: 'twilight', lang: 'ruby', height: "200", width: "100%" })
+
+    #/
+   #/ Toggle Edit and Preview
+  #/========================
+
+  $(".example-block .button").on "click", (e) ->
+    $(e.currentTarget).closest(".example-block").find(".inner > .code > div").toggle()
+    $(e.currentTarget).closest("form").find(".hidden-submit").click()

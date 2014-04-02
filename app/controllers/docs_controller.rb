@@ -1,14 +1,15 @@
 class DocsController < ApplicationController
   def index
-    @data      = Doc.new
-
-    @entries    = @data.entries
-    @variables  = @data.variables
-    @categories = @data.categories
 
     respond_to do |format|
       format.html
       format.json { render json: @docs }
+    end
+  end
+
+  def send_json
+    respond_to do |format|
+      format.json
     end
   end
 
@@ -22,7 +23,7 @@ class DocsController < ApplicationController
   end
 
   def new
-    @doc = Doc.new
+    @doc = Doc.find(params[:id])
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,11 +36,12 @@ class DocsController < ApplicationController
 
     respond_to do |format|
       format.html
+      format.json { render json: @docs }
     end
   end
 
   def create
-    @doc = Doc.new(params[:doc])
+    @doc = Doc.find(params[:id])
 
     respond_to do |format|
       if @doc.save
@@ -73,6 +75,13 @@ class DocsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to docs_url }
       format.json { head :no_content }
+    end
+  end
+
+
+  def preview
+    respond_to do |format|
+      format.js
     end
   end
 end

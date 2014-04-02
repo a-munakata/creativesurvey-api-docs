@@ -7,6 +7,8 @@ Docs::Application.routes.draw do
   resources :variables
   resources :categories
 
+  get "preview", :to => "docs#preview"
+
   get "edit",  :to =>"docs#edit"
   post "edit", :to => "docs#save"
 

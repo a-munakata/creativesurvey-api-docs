@@ -124,52 +124,8 @@
     margin-bottom: -35px;
   }
 
-  .document-block {
-    float: left;
-    width: 100%;
-    word-break: break-all;
-
-    > .inner {
-      padding: 20px;
-    }
-
-    .editable-content {
-      word-break: break-all;
-    }
-
-  }
-
-  .example-block{
-    width: 500px;
-    margin-right: -500px;
-    float: right;
-    background: #3e3e3e;
-    color: #dcdcdc;
-    > .inner {
-      padding: 20px;
-    }
-  }
 }
 
-
-pre {
-  overflow-x: scroll;
-
-  code.hljs {
-
-  }
-
-  code {
-    &.hljs {
-      background: transparent;
-      display: none;
-    }
-
-    &.selected-lang {
-      display: block;
-    }
-  }
-}
 
 ul {
   li {
@@ -212,3 +168,88 @@ table {
 .hidden-submit {
   display: none;
 }
+
+.code-editor {
+  width: 100%;
+}
+
+.example-block {
+
+  width: 500px;
+  margin-right: -500px;
+  float: right;
+  background: #3e3e3e;
+  color: #dcdcdc;
+  > .inner {
+    padding: 20px;
+
+    > .edit-container {
+      display: none;
+    }
+  }
+
+  .button {
+    cursor: pointer;
+    margin: 10px 0px;
+    display: block;
+    padding: 10px;
+    background: #9f9f9f;
+    width: 110px;
+    color: #000;
+    &:hover {
+      background: #9f9f9f;
+      color: #f8f8f8;
+    }
+  }
+  .code > div:first-child {
+    display: none;
+  }
+
+  pre {
+    overflow-x: scroll;
+
+    code.hljs {
+
+    }
+
+    code {
+      &.hljs {
+        background: transparent;
+      }
+    }
+  }
+
+  .code{
+    display: none;
+    &.selected-lang {
+      display: block;
+    }
+  }
+
+}
+
+.document-block {
+  float: left;
+  width: 100%;
+  word-break: break-all;
+
+  > .inner {
+    padding: 20px;
+  }
+
+  .editable-content {
+    word-break: break-all;
+  }
+
+}
+
+
+form > div {
+  zoom: 1;
+  &:after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
