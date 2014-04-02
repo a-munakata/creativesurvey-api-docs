@@ -127,9 +127,14 @@
   .document-block {
     float: left;
     width: 100%;
+    word-break: break-all;
 
     > .inner {
       padding: 20px;
+    }
+
+    .editable-content {
+      word-break: break-all;
     }
 
   }
@@ -202,4 +207,8 @@ table {
     padding: 0px !important;
     margin: 0px;
   }
+}
+
+.hidden-submit {
+  display: none;
 }
