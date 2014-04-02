@@ -12,5 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree ./libs
+//= require ace/ace
+//= require ace/theme-twilight
+//= require ace/mode-ruby
+//= require jquery-ace.min
 //= require_tree .
+
