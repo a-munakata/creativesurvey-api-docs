@@ -1,7 +1,4 @@
 Docs::Application.routes.draw do
-  resources :entries
-
-
   resources :docs
   resources :entries
   resources :variables
