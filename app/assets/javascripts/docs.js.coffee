@@ -46,7 +46,7 @@ jQuery ->
     $.waypoints("refresh")
 
 
-  $(".ruby .code-editor").ace({ theme: 'twilight', lang: 'ruby', height: "200", width: "100%" })
+  $(".code-editor").ace({ theme: 'twilight', lang: 'ruby', height: "200", width: "100%" })
 
     #/
    #/ Toggle Edit and Preview

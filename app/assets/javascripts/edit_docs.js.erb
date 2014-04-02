@@ -4,14 +4,19 @@ jQuery(function($){
     var container      = $(e.currentTarget).closest(".edit-container")
 
     container.find(".replace-content").val($(e.currentTarget).html());
-    container.find(".replace-area-content").html($(e.currentTarget).val());
+    container.find(".replace-area-content").html($(e.currentTarget).find("textarea").val());
   };
 
   var save_content = function(e){
     $(e.currentTarget).closest("form").find(".hidden-submit").click()
   }
 
-  $(".editable-content, .editable-area-content").on("keydown", function(e){
+  $(".editable-content").on("keydown", function(e){
+    replace_content(e);
+    save_content(e);
+  });
+
+  $(".editable-area-content").on("keydown", function(e){
     replace_content(e);
     save_content(e);
   });
@@ -22,6 +27,11 @@ jQuery(function($){
 //      e.stopPropagation();
 //    }
 //  });
+
+  $(".close-button").on("click", function(e){
+    $(e.currentTarget).closest(".edit-container").find(".editable-area-content").removeClass("active");
+    e.stopPropagation();
+  });
 
   $(".replace-area-content").on("click", function(e){
     $(e.currentTarget).closest(".edit-container").find(".editable-area-content").addClass("active");

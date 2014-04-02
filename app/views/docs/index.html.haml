@@ -16,7 +16,7 @@
               %h4
                 = entry.explanation
 
-              %table
+              %table.basic-table
                 %tbody
                   - variables.where( :entry_id => entry.id ).each do |variable|
                     %tr
