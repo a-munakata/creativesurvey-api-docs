@@ -17,25 +17,16 @@
                   = f.hidden_field :title, class: "replace-content"
 
                 .edit-container
-                  %h4{ class: "editable-content", contenteditable: true }
+                  %h4{ class: "replace-area-content" }
                     = entry.explanation
 
-                  = f.hidden_field :explanation, class: "replace-content"
+                  = f.text_area :explanation, class: "editable-area-content"
+
 
                 %table
                   %tbody
-                    -# TODO: リレーションを持ったmodelのフォーム入れ子
-                    -#- variables.where( :entry_id => entry.id ).each do |variable|
-                    -#  %tr
-                    -#    %th.edit-container
-                    -#      .editable-content{ contenteditable: true }
-                    -#        = variable.used_variables
-                    -#
-                    -#    %td.edit-container
-                    -#      .editable-content{ contenteditable: true }
-                    -#        = variable.explanation
-
-
+                    = f.fields_for :variables do |builder|
+                      = render "variable_fields", :f => builder
 
             .example-block
               .inner

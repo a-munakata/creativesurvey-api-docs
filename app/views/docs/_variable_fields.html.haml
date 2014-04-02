@@ -1,0 +1,10 @@
+%tr
+  %th.edit-container
+    .editable-content{ contenteditable: true }
+      = f.object.used_variables
+    = f.hidden_field :used_variables, class: "replace-content"
+
+  %td.edit-container
+    .replace-area-content
+      = f.object.explanation
+    = f.text_area :explanation, class: "editable-area-content"
