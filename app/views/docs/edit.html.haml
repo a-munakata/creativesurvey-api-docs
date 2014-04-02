@@ -1,42 +1,54 @@
 = content_for :body do
   .content
-    - @categories.each_with_index do |category, index|
-      %h2{ id: category["anchor_name"], class: "category", "data-category" => category["anchor_name"] }
-        = category["title"]
+    - categories.each do |category|
+      %h2{ id: category.anchor_name }
+        = category.title
+
+      - entries.where( :category_id => category.id ).each do |entry|
+        = form_for find_one_entry(entry.id), remote: true, html: { id: "container-#{entry.id}"} do |f|
+
+          %div
+            .document-block
+              .inner
+                .edit-container
+                  %h3.title{ class: "editable-content", contenteditable: true }
+                    = entry.title
+
+                  = f.hidden_field :title, class: "replace-content"
+
+                .edit-container
+                  %h4{ class: "editable-content", contenteditable: true }
+                    = entry.explanation
+
+                  = f.hidden_field :explanation, class: "replace-content"
+
+                %table
+                  %tbody
+                    -# TODO: リレーションを持ったmodelのフォーム入れ子
+                    -#- variables.where( :entry_id => entry.id ).each do |variable|
+                    -#  %tr
+                    -#    %th.edit-container
+                    -#      .editable-content{ contenteditable: true }
+                    -#        = variable.used_variables
+                    -#
+                    -#    %td.edit-container
+                    -#      .editable-content{ contenteditable: true }
+                    -#        = variable.explanation
 
 
-      - @entries.select{|hash| hash["category_id"].to_i == index + 1 }.each do |entry|
 
-        %div{ id: entry["anchor_name"], class: "entry", "data-entry" => entry["anchor_name"], "data-category" => category["hash_name"] }
-          .document-block
-            .inner
-              %h3.title
-                = entry["title"]
-
-              %h4
-                = entry["returns"]
-
-              %table
-                %tbody
-                  - @variables.select{|hash| hash["entry_id"].to_i == index + 1 }.each do |detail|
-                    %tr
-                      %th
-                        = detail["variable"]
-                      %td
-                        = detail["explanation"]
+            .example-block
+              .inner
+                %pre
+                  .edit-container
+                    %code.ruby.editable-content{ contenteditable: true }
+                      = entry.ruby
+                      = f.hidden_field :ruby, class: "replace-content"
+                  .edit-container
+                    %code.curl.editable-content{ contenteditable: true }
+                      = entry.curl
+                      = f.hidden_field :curl, class: "replace-content"
 
 
 
-
-          .example-block
-            .inner
-              %pre
-                %code.ruby
-                  = entry["ruby"]
-                %code.php
-                  = entry["php"]
-                %code.python
-                  = entry["python"]
-                %code.curl
-                  = entry["curl"]
-
+          = f.submit :class => "hidden-submit", :name => "entry-#{entry.id}"

@@ -28,9 +28,6 @@ jQuery ->
 
   $("code." + $("option:selected").data("lang")).addClass("selected-lang")
 
-  #
-  #=================
-
   $("select").on "change", ()->
     $("code").removeClass("selected-lang")
     $("code." + $("option:selected").data("lang")).addClass("selected-lang")
