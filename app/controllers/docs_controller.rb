@@ -1,15 +1,8 @@
 class DocsController < ApplicationController
   def index
-
     respond_to do |format|
       format.html
       format.json { render json: @docs }
-    end
-  end
-
-  def send_json
-    respond_to do |format|
-      format.json
     end
   end
 
@@ -26,7 +19,7 @@ class DocsController < ApplicationController
     @doc = Doc.find(params[:id])
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html # new.html.haml
       format.json { render json: @doc }
     end
   end

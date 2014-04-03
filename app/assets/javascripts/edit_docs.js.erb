@@ -21,13 +21,6 @@ jQuery(function($){
     save_content(e);
   });
 
-//  $(document).on("click", function(e) {
-//    if (!$(e.currentTarget).hasClass("editable-area-content")) {
-//      $(".editable-area-content").removeClass("active");
-//      e.stopPropagation();
-//    }
-//  });
-
   $(".close-button").on("click", function(e){
     $(e.currentTarget).closest(".edit-container").find(".editable-area-content").removeClass("active");
     e.stopPropagation();
@@ -36,5 +29,10 @@ jQuery(function($){
   $(".replace-area-content").on("click", function(e){
     $(e.currentTarget).closest(".edit-container").find(".editable-area-content").addClass("active");
     e.stopPropagation();
+  });
+
+
+  $(".new-variable").on("click", function(e){
+
   });
 });
