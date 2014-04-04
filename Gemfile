@@ -15,6 +15,8 @@ gem 'haml-rails'
 gem 'google_drive'
 gem 'jquery-ace-rails'
 
+gem 'underscore-rails'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

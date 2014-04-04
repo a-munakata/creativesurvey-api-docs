@@ -16,5 +16,6 @@
 //= require ace/theme-twilight
 //= require ace/mode-ruby
 //= require jquery-ace.min
+//= require underscore
 //= require_tree .
 
