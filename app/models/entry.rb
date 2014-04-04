@@ -14,4 +14,6 @@ class Entry < ActiveRecord::Base
 
   accepts_nested_attributes_for :variables, :allow_destroy => true
 
+  # TODO: バリデーション + controllerにエラーを返す
+
 end

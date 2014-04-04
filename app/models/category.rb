@@ -7,4 +7,5 @@ class Category < ActiveRecord::Base
 
   accepts_nested_attributes_for :entries, :allow_destroy => true
 
+  # TODO: バリデーション + controllerにエラーを返す
 end
