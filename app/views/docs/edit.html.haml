@@ -1,66 +1,73 @@
 = content_for :body do
   .content
     - categories.each do |category|
-      %h2{ id: category.anchor_name }
-        = category.title
+      %div{ class: "category-#{category.id} category" }
+        %h2{ id: category.anchor_name, class: "category-title" }
+          = category.title
 
-      - entries.where( :category_id => category.id ).each do |entry|
-        = form_for find_one_entry(entry.id), remote: true, html: { id: "container-#{entry.id}"} do |f|
+        - entries.where( :category_id => category.id ).each do |entry|
+          = form_for find_one_entry(entry.id), remote: true, html: { id: "container-#{entry.id}"} do |f|
 
-          %div
-            .document-block
-              .inner
-                .edit-container
-                  %h3.title{ class: "editable-content", contenteditable: true }
-                    = entry.title
-
-                  = f.hidden_field :title, class: "replace-content"
-
-                .edit-container
-                  .editable-area-content
-                    = f.text_area :explanation
-                    .close-button
-                      ×
-
-                  %h4{ class: "replace-area-content" }
-                    = entry.explanation
-
-                %table.basic-table
-                  %tbody
-                    = f.fields_for :variables do |builder|
-                      = render "variable_fields", :f => builder
-
-
-            .example-block
-              .inner
-                .code.ruby
+            %div
+              .document-block
+                .inner
                   .edit-container
-                    .button
-                      Preview
-                    = f.text_area :ruby, class: "code-editor", rows: 2
+                    %h3.title{ class: "editable-content", contenteditable: true }
+                      = entry.title
 
-                  .preview-container{ class: entry.anchor_name }
-                    .button
-                      Edit
+                    = f.hidden_field :title, class: "replace-content"
 
-                    %pre
-                      %code.preview{ class: "ruby" }
-                        = entry.ruby
-
-                .code.curl
                   .edit-container
-                    .button
-                      Preview
-                    = f.text_area :curl, class: "code-editor", rows: 2
+                    .editable-area-content
+                      = f.text_area :explanation
+                      .close-button
+                        ×
 
-                  .preview-container{ class: entry.anchor_name }
-                    .button
-                      Edit
+                    %h4{ class: "replace-area-content" }
+                      = entry.explanation
 
-                    %pre
-                      %code.preview{ class: "curl" }
-                        = entry.curl
+                  %table.basic-table
+                    %tbody
+                      = f.fields_for :variables do |builder|
+                        = render "variable_fields", :f => builder
+
+                  // 複数のvariableの追加を可能にする
+                  = link_to "+ Variable", add_variable_path( entry_id: entry.id ), remote: true, class: "new_variable"
+
+
+              .example-block
+                .inner
+                  .code.ruby
+                    .edit-container
+                      .button
+                        Preview
+                      = f.text_area :ruby, class: "code-editor", rows: 2
+
+                    .preview-container{ class: entry.anchor_name }
+                      .button
+                        Edit
+
+                      %pre
+                        %code.preview{ class: "ruby" }
+                          = entry.ruby
+
+                  .code.curl
+                    .edit-container
+                      .button
+                        Preview
+                      = f.text_area :curl, class: "code-editor", rows: 2
+
+                    .preview-container{ class: entry.anchor_name }
+                      .button
+                        Edit
+
+                      %pre
+                        %code.preview{ class: "curl" }
+                          = entry.curl
 
 
 
-          = f.submit :class => "hidden-submit", :name => "entry-#{entry.id}"
+            = f.submit :class => "hidden-submit", :name => "entry-#{entry.id}"
+
+        = link_to "+ Entry", add_entry_path( category_id: category.id ), remote: true, class: "new_entry"
+

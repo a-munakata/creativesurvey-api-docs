@@ -8,7 +8,7 @@ module DocsHelper
   end
 
   def variables
-    Variable.unscoped
+    Variable.unscoped.order(:created_at)
   end
 
   def find_one_entry(id)

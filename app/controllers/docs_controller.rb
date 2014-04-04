@@ -25,7 +25,9 @@ class DocsController < ApplicationController
   end
 
   def edit
-    #@doc = Doc.find(params[:id])
+    @category = Category.new
+    @entry    = Entry.new
+    @variable = Variable.new
 
     respond_to do |format|
       format.html

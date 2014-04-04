@@ -1,4 +1,4 @@
-%tr
+%tr.deletable-wrap
   %th.edit-container
     .editable-content{ class: "editable-content", contenteditable: true }
       = f.object.used_variables
@@ -12,4 +12,5 @@
 
     %h4{ class: "replace-area-content" }
       = f.object.explanation
+    = link_to '×', variable_path(f.object), :method => :delete, class: "destroy-button"
 

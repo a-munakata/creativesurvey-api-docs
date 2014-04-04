@@ -8,13 +8,20 @@
 
   %ul.side-nav
     - categories.each_with_index do |category|
-      %li
-        %h3.main-title{ "data-category" => category.anchor_name, :class => [] << (params[:action] == "edit" && "selected") }
-          = link_to category.title, "##{category.anchor_name}"
-
-        %ul
-          - entries.where( :category_id => category.id ).each do |entry|
-            %li.sub-title{ "data-entry" => entry.anchor_name }
-              = link_to entry.title, "##{ entry.anchor_name }"
+      = form_for find_one_category(category.id), remote: true do |f|
+        %li
+          %h3.main-title.deletable-wrap{ "data-category" => category.anchor_name, :class => [] << (params[:action] == "edit" && "selected") }
+            = link_to category.title, "##{category.anchor_name}"
+            - unless action_name == "index"
+              = link_to '×', category_path(category), :method => :delete, remote: true, class: "destroy-button"
 
 
+          %ul
+            - entries.where( :category_id => category.id ).each do |entry|
+              %li.sub-title.deletable-wrap{ "data-entry" => entry.anchor_name }
+                = link_to entry.title, "##{ entry.anchor_name }", class: "_destroy_category", "data-entry-id" => entry.id
+                - unless action_name == "index"
+                  = link_to '×', entry_path(entry), :method => :delete, remote: true, class: "destroy-button"
+
+  .new_category
+    = render "categories/form"

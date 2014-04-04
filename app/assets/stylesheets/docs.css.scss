@@ -5,6 +5,10 @@
 @import "compass";
 @import "common/mixin";
 
+//
+// Main
+//===============
+
 .header#global {
   position: fixed;
   width: 100%;
@@ -26,6 +30,7 @@
     }
 
     .control {
+      overflow-y: scroll;
       right: 0px;
       bottom: 0px;
       top: 35px;
@@ -38,69 +43,77 @@
       min-height: 800px;
       background: #f6f6f6;
       border-right: 1px dotted #999;
+
+      .destroy-button { color: transparent }
+
       > .inner {
         padding: 40px;
 
       }
 
-      ul {
+      .side-nav {
         padding-left: 20px;
 
-        li {
 
-          ul {
-            li {
-              > a {
-                padding: 10px;
-                display: block;
-              }
+        .sub-title {
+          position: relative;
+          > a {
+            padding: 10px;
+            display: block;
+          }
 
-              &.selected, &:hover {
-                background: #666;
-                cursor: pointer;
-                > a {
-                  color: #f6f6f6;
-                  &:hover {
-                    background: inherit;
-                  }
-                }
+          &.selected, &:hover {
+            background: #666;
+            cursor: pointer;
+            > a {
+              color: #f6f6f6;
+              &:hover {
+                background: inherit;
               }
             }
           }
-
-          h3 {
-            margin: 0px;
+        }
+        .main-title {
+          margin: 0px;
+          position: relative;
+          + ul {
+            display: none;
+          }
+          &.selected {
             + ul {
-              display: none;
-            }
-            &.selected {
-              + ul {
-                display: block;
-              }
-            }
-            > a {
-              padding: 10px;
               display: block;
             }
+          }
+          > a {
+            padding: 10px;
+            display: block;
+          }
 
-            &.selected, &:hover {
-              background: #666;
-              cursor: pointer;
+          &.selected, &:hover {
+            background: #666;
+            cursor: pointer;
 
-              > a {
-                color: #f6f6f6;
-                &:hover {
-                  background: inherit;
-                }
+            > a {
+              color: #f6f6f6;
+              &:hover {
+                background: inherit;
               }
             }
           }
-
         }
       }
     }
+  }
 
-
+  .destroy-button {
+    display: block;
+    padding: 5px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    &:hover {
+      color: #f6f6f6;
+    }
   }
 
 
@@ -110,8 +123,15 @@
   background: #fdfdfd;
   float: left;
   margin-right: 500px;
-
-  > div {
+  .category {
+    zoom: 1;
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
+  .entry {
     padding-top: 35px;
     zoom: 1;
     &:after {
@@ -121,7 +141,7 @@
     }
   }
 
-  > h2 {
+  .category-title {
     margin: 0px;
     padding: 55px 20px 0px;
     margin-bottom: -35px;
@@ -147,6 +167,7 @@ ul {
       }
     }
     td {
+      position: relative;
       h4 {
         font-weight: normal;
       }
@@ -180,6 +201,7 @@ ul {
   }
 }
 
+
 .hidden-submit {
   display: none;
 }
@@ -187,6 +209,11 @@ ul {
 .code-editor {
   width: 100%;
 }
+
+
+  //
+ // Example Block
+//===============
 
 .example-block {
 
@@ -211,6 +238,7 @@ ul {
     background: #9f9f9f;
     width: 110px;
     color: #000;
+    float: right;
     &:hover {
       background: #9f9f9f;
       color: #f8f8f8;
@@ -243,6 +271,11 @@ ul {
 
 }
 
+
+  //
+ // Document Block
+//===============
+
 .document-block {
   float: left;
   width: 100%;
@@ -258,6 +291,9 @@ ul {
 
 }
 
+  //
+ // Form
+//===============
 
 form > div {
   zoom: 1;
@@ -273,8 +309,8 @@ form > div {
 }
 
 
-//
-// Content Editor
+  //
+ // Content Editor
 //===============
 
 .edit-container{
@@ -323,3 +359,74 @@ form > div {
 }
 
 
+.deletable-wrap {
+  position: relative;
+  .edit-container {
+    .destroy-button {
+      right: -20px;
+      top: -4px;
+    }
+  }
+}
+
+
+.new_variable {
+  &:visited {
+    color: #f8f8f8;
+  }
+  float: right;
+  padding: 13px;
+  display: block;
+  white-space: nowrap;
+  color: #f8f8f8;
+  background: #72b1c0;
+  font-weight: bold;
+  .add-container {
+    background: #72b1c0;
+  }
+  margin: 20px;
+}
+
+.new_entry {
+  &:visited {
+    color: #f8f8f8;
+  }
+  float: right;
+  padding: 13px;
+  display: block;
+  white-space: nowrap;
+  color: #f8f8f8;
+  background: #7ac7a2;
+  font-weight: bold;
+  margin: 20px 40px 20px 20px;
+  .add-container {
+    background: #7ac7a2;
+  }
+}
+
+.ajax-submit {
+  border: 0px;
+  background: white;
+  padding: 10px;
+  margin: 5px 15px;
+  float: right;
+}
+
+
+.add-container {
+  float: right;
+  padding: 13px;
+  display: block;
+  color: #f8f8f8;
+  margin: 0px !important;
+  font-weight: normal;
+
+  input {
+    border: 0px;
+    padding: 8px;
+  }
+
+  .actions {
+    margin: 0px;
+  }
+}

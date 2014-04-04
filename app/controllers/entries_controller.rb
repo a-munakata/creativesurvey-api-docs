@@ -44,7 +44,7 @@ class EntriesController < ApplicationController
 
     respond_to do |format|
       if @entry.save
-        format.html { redirect_to @entry, notice: 'Entry was successfully created.' }
+        format.html { redirect_to @entry, action: "edit", controller: "docs" }
         format.json { render json: @entry, status: :created, location: @entry }
       else
         format.html { render action: "new" }
@@ -60,7 +60,7 @@ class EntriesController < ApplicationController
 
     respond_to do |format|
       if @entry.update_attributes(params[:entry])
-        format.html { redirect_to @entry, notice: 'Entry was successfully updated.' }
+        format.html { redirect_to controller: "docs", action: "edit" }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -76,8 +76,16 @@ class EntriesController < ApplicationController
     @entry.destroy
 
     respond_to do |format|
-      format.html { redirect_to entries_url }
+      format.html { redirect_to controller: "docs", action: "edit" }
       format.json { head :no_content }
+    end
+  end
+
+  def add
+    @entry = Entry.new
+
+    respond_to do |format|
+      format.js
     end
   end
 end
