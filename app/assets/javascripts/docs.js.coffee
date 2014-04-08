@@ -7,6 +7,7 @@ jQuery ->
    #/ Navigation
   #/========================
 
+
   $(".entry").waypoint ()->
     $(".sub-title").removeClass("selected")
     $(".sub-title[data-entry=" + $(this).data("entry") + "]").addClass("selected")
@@ -61,7 +62,7 @@ jQuery ->
   #/========================
 
   $(".destroy-button").on "ajax:complete", (e) ->
-    $(e.currentTarget).closest(".deletable-wrap").hide()
+    $(e.currentTarget).closest(".deletable-wrap").remove()
 
 
   $(".destroy-dom-button").on "click", (e) ->
@@ -81,13 +82,16 @@ jQuery ->
   save_content = (e)->
     $(e.currentTarget).closest("form").find(".hidden-submit").click()
 
-  $(".editable-content").on "keydown keyup keypaste click change focus blur", (e)->
-    replace_content(e)
-    save_content(e)
+  AutoSaver = ->
+    $(".editable-content").on "keydown keyup keypaste click change focus blur", (e)->
+      replace_content(e)
+      save_content(e)
 
-  $(".editable-area-content").on "keydown keyup keypaste click change focus blur", (e)->
-    replace_content(e)
-    save_content(e)
+    $(".editable-area-content").on "keydown keyup keypaste click change focus blur", (e)->
+      replace_content(e)
+      save_content(e)
+
+  _.debounce( AutoSaver, 200 )
 
   $(".close-button").on "click", (e)->
     $(e.currentTarget).closest(".edit-container").find(".editable-area-content").removeClass("active")
