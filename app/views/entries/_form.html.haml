@@ -1,4 +1,4 @@
-= form_for @entry, remote: true do |f|
+= form_for @entry do |f|
   .add-container
     - if @entry.errors.any?
       #error_explanation
@@ -8,7 +8,8 @@
             %li= msg
 
     = f.text_field   :title, placeholder: "エントリー名"
-    = f.text_field   :anchor_name, placeholder: "Anchor Name(エントリー英語名)"
+    = f.text_field   :anchor_name, placeholder: "内部リンク用のアンカー名"
+    = f.text_field    :explanation, placeholder: "エントリーの説明"
     = f.hidden_field :category_id, value: category_id
 
     .actions
