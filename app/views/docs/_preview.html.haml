@@ -1,6 +1,6 @@
-.button.preview-button
+.button.edit-button
   Edit
 
 %pre
-  %code.preview{ class: "ruby" }
-    = find_one_entry(entry_id).ruby.try(:gsub, "\n", "")
+  %code.preview{ class: code_lang }
+    = find_one_entry(entry_id).send(code_lang).try(:gsub, "\n", "")

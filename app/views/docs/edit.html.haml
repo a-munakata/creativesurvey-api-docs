@@ -43,23 +43,25 @@
                 .inner
                   .code.ruby
                     .edit-container
-                      .preview-button
+                      .button.preview-button
                         Preview
                       = f.text_area :ruby, class: "code-editor", rows: 2
 
-                    = link_to nil, preview_path, entry_id: entry.id, class: "remote-preview-button", remote: true
-
                     .preview-container{ class: entry.anchor_name }
-                      = render "preview", entry_id: entry.id
+                      .button.edit-button
+                        Edit
+                      %pre
+                        %code.preview{ class: "ruby" }
+                          = entry.ruby.try(:gsub, "\n", "")
 
                   .code.curl
                     .edit-container
-                      .preview-button
+                      .button.preview-button
                         Preview
                       = f.text_area :curl, class: "code-editor", rows: 2
 
                     .preview-container{ class: entry.anchor_name }
-                      .preview-button
+                      .button.preview-button
                         Edit
 
                       %pre
