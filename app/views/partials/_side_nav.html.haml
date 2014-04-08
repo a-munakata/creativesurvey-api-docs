@@ -10,7 +10,7 @@
     - categories.each_with_index do |category|
       = form_for find_one_category(category.id), remote: true do |f|
         %li
-          %h3.main-title.deletable-wrap{ "data-category" => category.anchor_name, :class => [] << (params[:action] == "edit" && "selected") }
+          %h3.main-title.deletable-wrap{ "data-category" => category.anchor_name }
             = link_to category.title, "##{category.anchor_name}"
             - unless action_name == "index"
               = link_to '×', category_path(category), :method => :delete, remote: true, class: "destroy-button"
@@ -23,5 +23,8 @@
                 - unless action_name == "index"
                   = link_to '×', entry_path(entry), :method => :delete, remote: true, class: "destroy-button"
 
-  .new_category
-    = render "categories/form"
+
+  - if action_name == "edit"
+
+    .category-form
+    = link_to "+ Category", add_category_path, remote: true, class: "add_category button"
