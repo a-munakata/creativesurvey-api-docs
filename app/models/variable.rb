@@ -3,5 +3,5 @@ class Variable < ActiveRecord::Base
 
   belongs_to :entry
 
-  # TODO: バリデーション + controllerにエラーを返す
+  validates :entry_id, uniqueness: { scope: [ :used_variables, :explanation ] }
 end

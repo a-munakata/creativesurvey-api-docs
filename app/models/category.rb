@@ -7,5 +7,5 @@ class Category < ActiveRecord::Base
 
   accepts_nested_attributes_for :entries, :allow_destroy => true
 
-  # TODO: バリデーション + controllerにエラーを返す
+  validates :title, :uniqueness => { scope: :anchor_name }
 end
