@@ -1,1 +1,1 @@
-$(".preview-container").html("<%= j render "preview", entry: find_one_entry(params[:entry_id]), lang: params[:lang] %>");
+$(".preview-container").html("<%= j render "preview", entry_id: params[:entry_id] %>");

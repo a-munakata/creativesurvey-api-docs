@@ -4,11 +4,10 @@
       %div{ class: "category-#{category.id} category" }
         %h2{ id: category.anchor_name, class: "category-title" }
           = category.title
-
         - entries.where( :category_id => category.id ).each do |entry|
           = form_for find_one_entry(entry.id), remote: true, html: { id: "container-#{entry.id}"} do |f|
 
-            %div
+            %div{ id: entry.anchor_name, class: "entry", "data-entry" => entry.anchor_name, "data-category" => category.anchor_name }
               .document-block
                 .inner
                   .edit-container
@@ -24,50 +23,52 @@
                         ×
 
                     %h4{ class: "replace-area-content" }
-                      = entry.explanation
+                      - if entry.explanation.present?
+                        = entry.explanation
+                      - else
+                        .content-of-null
+                          = "エントリーの説明を入力してください。"
+
 
                   %table.basic-table
                     %tbody
                       = f.fields_for :variables do |builder|
-                        = render "variable_fields", :f => builder
+                        = render "docs/variable_fields", :f => builder
 
-                  // 複数のvariableの追加を可能にする
-                  = link_to "+ Variable", add_variable_path( entry_id: entry.id ), remote: true, class: "new_variable"
+                  // TODO: 複数のvariableの追加を可能にする
+                  = link_to "+ Variable", add_variable_path( entry_id: entry.id ), remote: true, class: "new_variable button"
 
 
               .example-block
                 .inner
                   .code.ruby
                     .edit-container
-                      .button
+                      .preview-button
                         Preview
                       = f.text_area :ruby, class: "code-editor", rows: 2
 
-                    .preview-container{ class: entry.anchor_name }
-                      .button
-                        Edit
+                    = link_to nil, preview_path, entry_id: entry.id, class: "remote-preview-button", remote: true
 
-                      %pre
-                        %code.preview{ class: "ruby" }
-                          = entry.ruby
+                    .preview-container{ class: entry.anchor_name }
+                      = render "preview", entry_id: entry.id
 
                   .code.curl
                     .edit-container
-                      .button
+                      .preview-button
                         Preview
                       = f.text_area :curl, class: "code-editor", rows: 2
 
                     .preview-container{ class: entry.anchor_name }
-                      .button
+                      .preview-button
                         Edit
 
                       %pre
                         %code.preview{ class: "curl" }
-                          = entry.curl
+                          = entry.curl.try(:gsub, "\n", "")
 
 
 
             = f.submit :class => "hidden-submit", :name => "entry-#{entry.id}"
 
-        = link_to "+ Entry", add_entry_path( category_id: category.id ), remote: true, class: "new_entry"
+        = link_to "+ Entry", add_entry_path( category_id: category.id ), remote: true, class: "new_entry button"
 
