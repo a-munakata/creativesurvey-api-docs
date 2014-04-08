@@ -156,6 +156,7 @@ ul {
 }
 
 .basic-table {
+  width: 100%;
   tr {
     th, td {
       vertical-align: top;
@@ -177,6 +178,7 @@ ul {
       border-right: 2px dotted #888;
       padding-right: 10px;
       text-align: left;
+      width: 130px;
     }
   }
 }
@@ -249,6 +251,7 @@ ul {
   }
 
   pre {
+    width: 100%;
     overflow-x: scroll;
 
     code.hljs {
@@ -289,6 +292,11 @@ ul {
     word-break: break-all;
   }
 
+  .content-of-null {
+    color: #9f9f9f;
+    font-weight: lighter;
+  }
+
 }
 
   //
@@ -298,9 +306,6 @@ ul {
 form > div {
   zoom: 1;
 
-  &:nth-child(2):not(.dropdown) {
-    margin-top: 30px;
-  }
   &:after {
     display: block;
     content: "";
@@ -335,7 +340,7 @@ form > div {
       color: #333;
       font-family: verdana, arial, helvetica, sans-serif;
       @include font13;
-      font-weight: bold;
+      font-weight: normal;
       width: 100%;
       height: 100px;
     }
@@ -352,10 +357,15 @@ form > div {
     line-height: 25px;
     font-weight: bolder;
     position: absolute;
-    right: -13px;
-    top: -13px;
+    right: -27px;
+    top: -3px;
     z-index: 3;
   }
+}
+
+.replace-area-content {
+  min-height: 30px;
+  cursor: text;
 }
 
 
@@ -369,8 +379,7 @@ form > div {
   }
 }
 
-
-.new_variable {
+.button, .new_variable, .new_entry {
   &:visited {
     color: #f8f8f8;
   }
@@ -379,28 +388,22 @@ form > div {
   display: block;
   white-space: nowrap;
   color: #f8f8f8;
-  background: #72b1c0;
-  font-weight: bold;
-  .add-container {
-    background: #72b1c0;
-  }
   margin: 20px;
-}
-
-.new_entry {
-  &:visited {
-    color: #f8f8f8;
+  font-weight: bolder;
+  text-align: center;
+  &.add_category {
+    display: inline-block;
+    background: #ea2;
   }
-  float: right;
-  padding: 13px;
-  display: block;
-  white-space: nowrap;
-  color: #f8f8f8;
-  background: #7ac7a2;
-  font-weight: bold;
-  margin: 20px 40px 20px 20px;
-  .add-container {
+
+  &.new_variable {
+    background: #72b1c0;
+    .add-container { background: #72b1c0; }
+  }
+
+  &.new_entry {
     background: #7ac7a2;
+    .add-container { background: #7ac7a2; }
   }
 }
 
