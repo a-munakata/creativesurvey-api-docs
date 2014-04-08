@@ -28,9 +28,12 @@
 
           .example-block
             .inner
-              %pre
-                %code.ruby
-                  = entry.ruby
-                %code.curl
-                  = entry.curl
+              .code.ruby
+                %pre
+                  %code.ruby
+                    = entry.ruby.try(:gsub, "\n", "")
+              .code.curl
+                %pre
+                  %code.curl
+                    = entry.curl.try(:gsub, "\n", "")
 
