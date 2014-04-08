@@ -1,4 +1,4 @@
-= form_for @category, remote: true do |f|
+= form_for @category do |f|
   .add-container
     - if @category.errors.any?
       #error_explanation
@@ -8,7 +8,7 @@
             %li= msg
 
     = f.text_field :title, placeholder: "カテゴリ名"
-    = f.text_field :anchor_name, placeholder: "Anchor Name(カテゴリ英語名)"
+    = f.text_field :anchor_name, placeholder: "内部リンク用のアンカー名"
 
     .actions
       = f.submit 'Save', id: "category", class: "ajax-submit"

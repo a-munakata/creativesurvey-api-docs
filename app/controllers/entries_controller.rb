@@ -1,6 +1,4 @@
 class EntriesController < ApplicationController
-  # GET /entries
-  # GET /entries.json
   def index
     @entries = Entry.all
 
@@ -10,8 +8,6 @@ class EntriesController < ApplicationController
     end
   end
 
-  # GET /entries/1
-  # GET /entries/1.json
   def show
     @entry = Entry.find(params[:id])
 
@@ -21,8 +17,6 @@ class EntriesController < ApplicationController
     end
   end
 
-  # GET /entries/new
-  # GET /entries/new.json
   def new
     @entry = Entry.new
 
@@ -32,19 +26,16 @@ class EntriesController < ApplicationController
     end
   end
 
-  # GET /entries/1/edit
   def edit
     @entry = Entry.find(params[:id])
   end
 
-  # POST /entries
-  # POST /entries.json
   def create
     @entry = Entry.new(params[:entry])
 
     respond_to do |format|
       if @entry.save
-        format.html { redirect_to @entry, action: "edit", controller: "docs" }
+        format.html { redirect_to action: "edit", controller: "docs" }
         format.json { render json: @entry, status: :created, location: @entry }
       else
         format.html { render action: "new" }
@@ -53,8 +44,6 @@ class EntriesController < ApplicationController
     end
   end
 
-  # PUT /entries/1
-  # PUT /entries/1.json
   def update
     @entry = Entry.find(params[:id])
 
@@ -69,8 +58,6 @@ class EntriesController < ApplicationController
     end
   end
 
-  # DELETE /entries/1
-  # DELETE /entries/1.json
   def destroy
     @entry = Entry.find(params[:id])
     @entry.destroy
