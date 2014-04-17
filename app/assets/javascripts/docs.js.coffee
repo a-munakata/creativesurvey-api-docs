@@ -26,7 +26,7 @@ jQuery ->
 
   , { offset: header_height + 20 }
 
-  $(".entry:last-child").css({
+  $(".content .inner:last-child").css({
     height: $(window).height() - (header_height + footer_height)
   })
 
@@ -47,58 +47,4 @@ jQuery ->
 
 
   $(".code-editor").ace({ theme: 'twilight', lang: 'ruby', height: "200", width: "100%" })
-
-    #/
-   #/ Toggle Edit and Preview
-  #/========================
-
-  $(".example-block .button").on "click", (e) ->
-    $(e.currentTarget).closest(".example-block").find(".inner > .code > div").toggle()
-    $(e.currentTarget).closest("form").find(".hidden-submit").click()
-
-    #/
-   #/ Ajax Form
-  #/========================
-
-  $(".destroy-button").on "ajax:complete", (e) ->
-    $(e.currentTarget).closest(".deletable-wrap").remove()
-
-
-  $(".destroy-dom-button").on "click", (e) ->
-    $(e.currentTarget).closest(".deletable-wrap").remove()
-
-
-    #/
-   #/ Auto Save Text
-  #/========================
-
-
-  replace_content = (e)->
-    container      = $(e.currentTarget).closest(".edit-container")
-    container.find(".replace-content").val($(e.currentTarget).html())
-    container.find(".replace-area-content").html($(e.currentTarget).find("textarea").val())
-
-  save_content = (e)->
-    $(e.currentTarget).closest("form").find(".hidden-submit").click()
-
-  AutoSaver = ->
-    $(".editable-content").on "keydown keyup keypaste click change focus blur", (e)->
-      replace_content(e)
-      save_content(e)
-
-    $(".editable-area-content").on "keydown keyup keypaste click change focus blur", (e)->
-      replace_content(e)
-      save_content(e)
-
-  _.debounce( AutoSaver, 200 )
-
-  $(".close-button").on "click", (e)->
-    $(e.currentTarget).closest(".edit-container").find(".editable-area-content").removeClass("active")
-    e.stopPropagation()
-
-  $(".replace-area-content").on "click", (e)->
-    $(e.currentTarget).closest(".edit-container").find(".editable-area-content").addClass("active")
-    e.stopPropagation()
-
-
 

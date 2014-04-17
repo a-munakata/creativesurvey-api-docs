@@ -212,53 +212,6 @@ ul {
   width: 100%;
 }
 
-
-  //
- // Example Block
-//===============
-//
-//.example-block {
-//
-//  width: 500px;
-//  margin-right: -500px;
-//  float: right;
-//  background: #3e3e3e;
-//  color: #dcdcdc;
-//  > .inner {
-//    padding: 20px;
-//
-//    > .edit-container {
-//      display: none;
-//    }
-//  }
-//
-//  .button {
-//    cursor: pointer;
-//    margin: 10px 0px;
-//    display: block;
-//    padding: 10px;
-//    background: #9f9f9f;
-//    width: 110px;
-//    color: #000;
-//    float: right;
-//    &:hover {
-//      background: #9f9f9f;
-//      color: #f8f8f8;
-//    }
-//  }
-//  .code > div:first-child {
-//    display: none;
-//  }
-//
-//  .code{
-//    display: none;
-//    &.selected-lang {
-//      display: block;
-//    }
-//  }
-//
-//}
-
 pre {
   width: 100%;
   overflow-x: scroll;
@@ -277,7 +230,7 @@ pre {
 
 
   //
- // Document Block
+ // Doc Block
 //===============
 
 .document-block {
@@ -295,15 +248,9 @@ pre {
     }
 
     h2 {
-      @include font16;
+      @include font15;
       margin-bottom: 1em;
       line-height: 1.4;
-      font-weight: normal;
-    }
-
-    h3 {
-      @include font16;
-      margin-bottom: 1em;
       font-weight: normal;
     }
 
@@ -318,7 +265,6 @@ pre {
         float: left;
         font-weight: bold;
         margin-right: -135px;
-        padding-top: 16px;
         position: relative;
         text-align: right;
         word-break: hyphenate;
@@ -331,7 +277,7 @@ pre {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         float: left;
-        padding: 16px 40px 0 105px;
+        padding: 0px 40px 0 105px;
         position: relative;
         width: 100%;
         z-index: 25;
@@ -345,7 +291,7 @@ pre {
       top: 0;
       width: 480px;
       code {
-        display: none;
+        //display: none;
         &.selected-lang {
           display: block;
         }
