@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140401070530) do
+ActiveRecord::Schema.define(:version => 20140417065601) do
 
   create_table "categories", :force => true do |t|
     t.string   "title"
@@ -23,22 +23,14 @@ ActiveRecord::Schema.define(:version => 20140401070530) do
   add_index "categories", ["anchor_name"], :name => "index_categories_on_anchor_name", :unique => true
 
   create_table "docs", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "entries", :force => true do |t|
-    t.integer  "category_id"
-    t.string   "title"
-    t.string   "anchor_name"
-    t.text     "explanation"
-    t.text     "ruby"
-    t.text     "curl"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.integer  "category_id"
+    t.string   "anchor_name"
+    t.text     "source"
   end
 
-  add_index "entries", ["anchor_name"], :name => "index_entries_on_anchor_name", :unique => true
+  add_index "docs", ["anchor_name"], :name => "index_docs_on_anchor_name", :unique => true
 
   create_table "variables", :force => true do |t|
     t.integer  "entry_id"
