@@ -5,6 +5,6 @@ class Doc < ActiveRecord::Base
 
   belongs_to :category
 
-  validates :category_id, uniqueness: { scope: [ :title, :anchor_name ] }
+  validates :category_id, uniqueness: { scope: [ :anchor_name ] }
 
 end

@@ -5,10 +5,7 @@
         %h1{ id: category.anchor_name, class: "category-#{category.id} category category-title" }
           = category.title
 
-        -# TODO: seedsをdbに保存、そこからデータを取ってくるように
-        -#- entries.where( category_id: category.id).each do |entry|
-        - Dir::entries("seeds/#{category.anchor_name}").try(:drop, 2).each do |entry|
-
-          .document-block{ id: entry.gsub(".md", ""), class: "entry", "data-entry" => entry.gsub(".md", ""), "data-category" => category.anchor_name }
+        - docs.where( category_id: category.id).each do |doc|
+          .document-block{ id: doc.anchor_name, class: "entry", "data-entry" => doc.anchor_name, "data-category" => category.anchor_name }
             .inner
-              = markdown File.read("seeds/#{category.anchor_name}/#{entry}")
+              = markdown doc.source

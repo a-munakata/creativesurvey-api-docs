@@ -1,18 +1,10 @@
 module DocsHelper
   def categories
-    Category.unscoped
+    Category.has_docs
   end
 
-  def entries
-    Entry.unscoped
-  end
-
-  def variables
-    Variable.unscoped.order(:created_at)
-  end
-
-  def find_one_entry(id)
-    Entry.find_or_initialize_by_id(id)
+  def docs
+    Doc.unscoped
   end
 
   def find_one_category(id)

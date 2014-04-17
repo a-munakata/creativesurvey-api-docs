@@ -1,7 +1,26 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+# encoding: utf-8
+
+Dir.glob("#{Rails.root}/seeds/md/*") do |category_dir|
+  category_name = File.basename(category_dir)
+
+  category = Category.find_or_initialize_by_anchor_name(category_name).tap do |category|
+    category.save
+  end
+
+  puts "seeded category: #{category_name}"
+
+  Dir.glob("#{Rails.root}/seeds/md/#{category_name}/**/*.md") do |markdown_file|
+    anchor_name = File.basename( markdown_file, ".*" )
+
+    begin
+      Doc.find_or_initialize_by_category_id_and_anchor_name( category.id, anchor_name ).tap do |doc|
+        doc.source = File.read( markdown_file )
+        doc.save!
+      end
+    rescue => e
+      puts "exception raised at : #{anchor_name}"
+      raise e
+    end
+
+  end
+end
