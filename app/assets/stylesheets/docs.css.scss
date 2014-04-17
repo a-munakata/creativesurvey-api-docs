@@ -216,62 +216,63 @@ ul {
   //
  // Example Block
 //===============
+//
+//.example-block {
+//
+//  width: 500px;
+//  margin-right: -500px;
+//  float: right;
+//  background: #3e3e3e;
+//  color: #dcdcdc;
+//  > .inner {
+//    padding: 20px;
+//
+//    > .edit-container {
+//      display: none;
+//    }
+//  }
+//
+//  .button {
+//    cursor: pointer;
+//    margin: 10px 0px;
+//    display: block;
+//    padding: 10px;
+//    background: #9f9f9f;
+//    width: 110px;
+//    color: #000;
+//    float: right;
+//    &:hover {
+//      background: #9f9f9f;
+//      color: #f8f8f8;
+//    }
+//  }
+//  .code > div:first-child {
+//    display: none;
+//  }
+//
+//  .code{
+//    display: none;
+//    &.selected-lang {
+//      display: block;
+//    }
+//  }
+//
+//}
 
-.example-block {
+pre {
+  width: 100%;
+  overflow-x: scroll;
 
-  width: 500px;
-  margin-right: -500px;
-  float: right;
-  background: #3e3e3e;
-  color: #dcdcdc;
-  > .inner {
-    padding: 20px;
-
-    > .edit-container {
-      display: none;
-    }
+  code.hljs {
+    background: #3e3e3e;
   }
 
-  .button {
-    cursor: pointer;
-    margin: 10px 0px;
-    display: block;
-    padding: 10px;
-    background: #9f9f9f;
-    width: 110px;
-    color: #000;
-    float: right;
-    &:hover {
-      background: #9f9f9f;
-      color: #f8f8f8;
+  code {
+    &.hljs {
+      background: #3e3e3e;
+      padding: 30px;
     }
   }
-  .code > div:first-child {
-    display: none;
-  }
-
-  pre {
-    width: 100%;
-    overflow-x: scroll;
-
-    code.hljs {
-
-    }
-
-    code {
-      &.hljs {
-        background: transparent;
-      }
-    }
-  }
-
-  .code{
-    display: none;
-    &.selected-lang {
-      display: block;
-    }
-  }
-
 }
 
 
@@ -281,11 +282,76 @@ ul {
 
 .document-block {
   float: left;
-  width: 100%;
+  margin: 0 0 50px 0;
   word-break: break-all;
 
   > .inner {
     padding: 20px;
+    position: relative;
+
+    h1 {
+      @include font20;
+      margin-bottom: 1em;
+    }
+
+    h2 {
+      @include font16;
+      margin-bottom: 1em;
+      line-height: 1.4;
+      font-weight: normal;
+    }
+
+    h3 {
+      @include font16;
+      margin-bottom: 1em;
+      font-weight: normal;
+    }
+
+    dl {
+      zoom: 1;
+      &:after {
+        clear: both;
+        content: "";
+        display: block;
+      }
+      dt {
+        float: left;
+        font-weight: bold;
+        margin-right: -135px;
+        padding-top: 16px;
+        position: relative;
+        text-align: right;
+        word-break: hyphenate;
+        word-wrap: break-word;
+        width: 135px;
+        z-index: 50;
+      }
+      dd {
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        float: left;
+        padding: 16px 40px 0 105px;
+        position: relative;
+        width: 100%;
+        z-index: 25;
+        line-height: 1.8em;
+      }
+    }
+
+    pre {
+      position: absolute;
+      right: -480px;
+      top: 0;
+      width: 480px;
+      code {
+        display: none;
+        &.selected-lang {
+          display: block;
+        }
+      }
+    }
+
   }
 
   .editable-content {

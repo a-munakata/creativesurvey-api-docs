@@ -33,12 +33,11 @@ jQuery ->
     #/
    #/ Select Language
   #/========================
-
-  $(".code." + $("option:selected").data("lang")).addClass("selected-lang")
+  $(".inner pre:nth-of-type(" + ($("option:selected").index() + 1) + ") code").addClass("selected-lang")
 
   $("select").on "change", ()->
-    $(".code").removeClass("selected-lang")
-    $(".code." + $("option:selected").data("lang")).addClass("selected-lang")
+    $("code").removeClass("selected-lang")
+    $(".inner pre:nth-of-type(" + ($("option:selected").index() + 1) + ") code").addClass("selected-lang")
 
     $(".entry:last-child").css({
       height: $(window).height() - (header_height + footer_height)

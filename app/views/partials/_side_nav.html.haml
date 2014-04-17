@@ -3,28 +3,19 @@
     %select.dropdown
 
       - %w(ruby curl).each do |key, value|
-        %option{ :value => value, "data-lang" => key }
+        %option{ :value => value }
           = key
 
   %ul.side-nav
     - categories.each_with_index do |category|
       = form_for find_one_category(category.id), remote: true do |f|
         %li
-          %h3.main-title.deletable-wrap{ "data-category" => category.anchor_name }
+          %h3.main-title{ "data-category" => category.anchor_name }
             = link_to category.title, "##{category.anchor_name}"
-            - unless action_name == "index"
-              = link_to '×', category_path(category), :method => :delete, remote: true, class: "destroy-button"
-
 
           %ul
-            - entries.where( :category_id => category.id ).each do |entry|
-              %li.sub-title.deletable-wrap{ "data-entry" => entry.anchor_name }
-                = link_to entry.title, "##{ entry.anchor_name }", class: "_destroy_category", "data-entry-id" => entry.id
-                - unless action_name == "index"
-                  = link_to '×', entry_path(entry), :method => :delete, remote: true, class: "destroy-button"
-
-
-  - if action_name == "edit"
-
-    .category-form
-    = link_to "+ Category", add_category_path, remote: true, class: "add_category button"
+            -# TODO: seedsをdbに保存、そこからデータを取ってくるように
+            -#- entries.where( :category_id => category.id ).each do |entry|
+            - Dir::entries("seeds/#{category.anchor_name}").try(:drop, 2).each do |entry|
+              %li.sub-title{ "data-entry" => entry.gsub(".md", "") }
+                = link_to entry.gsub(".md", ""), "##{ entry.gsub(".md", "") }"

@@ -1,39 +1,14 @@
 = content_for :body do
   .content
-    - categories.each_with_index do |category|
-      %h2{ id: category.anchor_name, class: "category-title", "data-category" => category.anchor_name }
-        = category.title
+    - categories.each do |category|
+      .inner
+        %h1{ id: category.anchor_name, class: "category-#{category.id} category category-title" }
+          = category.title
 
+        -# TODO: seedsをdbに保存、そこからデータを取ってくるように
+        -#- entries.where( category_id: category.id).each do |entry|
+        - Dir::entries("seeds/#{category.anchor_name}").try(:drop, 2).each do |entry|
 
-      - entries.where( :category_id => category.id ).each do |entry|
-
-        %div{ id: entry.anchor_name, class: "entry", "data-entry" => entry.anchor_name, "data-category" => category.anchor_name }
-          .document-block
+          .document-block{ id: entry.gsub(".md", ""), class: "entry", "data-entry" => entry.gsub(".md", ""), "data-category" => category.anchor_name }
             .inner
-              %h3.title
-                = entry.title
-
-              %h4
-                = entry.explanation
-
-              %table.basic-table
-                %tbody
-                  - variables.where( :entry_id => entry.id ).each do |variable|
-                    %tr
-                      %th
-                        = variable.used_variables
-                      %td
-                        = variable.explanation
-
-
-          .example-block
-            .inner
-              .code.ruby
-                %pre
-                  %code.ruby
-                    = entry.ruby.try(:gsub, "\n", "")
-              .code.curl
-                %pre
-                  %code.curl
-                    = entry.curl.try(:gsub, "\n", "")
-
+              = markdown File.read("seeds/#{category.anchor_name}/#{entry}")
