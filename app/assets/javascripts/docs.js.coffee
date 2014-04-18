@@ -26,7 +26,7 @@ jQuery ->
 
   , { offset: header_height + 20 }
 
-  $(".content .inner:last-child").css({
+  $(".content > .inner:last-child .entry:last-child").css({
     height: $(window).height() - (header_height + footer_height)
   })
 
