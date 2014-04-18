@@ -2,10 +2,10 @@
   .content
     - categories.each do |category|
       .inner
-        %h1{ id: category.anchor_name, class: "category-#{category.id} category category-title" }
+        %h1{ id: category.name, class: "#{category.name} category category-title" }
           = category.title
 
-        - docs.where( category_id: category.id).each do |doc|
-          .document-block{ id: doc.anchor_name, class: "entry", "data-entry" => doc.anchor_name, "data-category" => category.anchor_name }
+        - docs.select{|doc| doc.category_name == category.name }.each do |doc|
+          .document-block{ id: doc.base_name, class: "entry", "data-entry" => doc.base_name, "data-category" => category.name }
             .inner
-              = markdown doc.source
+              = markdown doc.body

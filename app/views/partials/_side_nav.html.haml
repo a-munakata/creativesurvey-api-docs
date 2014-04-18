@@ -9,10 +9,10 @@
   %ul.side-nav
     - categories.each_with_index do |category|
       %li
-        %h3.main-title{ "data-category" => category.anchor_name }
-          = link_to category.title, "##{category.anchor_name}"
+        %h3.main-title{ "data-category" => category.name }
+          = link_to category.title, "##{ category.name }"
 
         %ul
-          - docs.where( category_id: category.id).each do |doc|
-            %li.sub-title{ "data-entry" => doc.anchor_name }
-              = link_to doc.anchor_name, "##{ doc.anchor_name }"
+          - docs.select{|doc| doc.category_name == category.name }.each do |doc|
+            %li.sub-title{ "data-entry" => doc.base_name }
+              = link_to doc.title, "##{ doc.base_name }"

@@ -11,6 +11,7 @@ gem 'binding_of_caller'
 
 gem 'haml'
 gem 'haml-rails'
+gem 'preamble'
 
 gem 'google_drive'
 gem 'jquery-ace-rails'

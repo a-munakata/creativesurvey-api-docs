@@ -24,3 +24,5 @@ Dir.glob("#{Rails.root}/seeds/md/*") do |category_dir|
 
   end
 end
+
+

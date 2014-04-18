@@ -15,22 +15,18 @@ ActiveRecord::Schema.define(:version => 20140417065601) do
 
   create_table "categories", :force => true do |t|
     t.string   "title"
-    t.string   "anchor_name"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "anchor_name"
   end
-
-  add_index "categories", ["anchor_name"], :name => "index_categories_on_anchor_name", :unique => true
 
   create_table "docs", :force => true do |t|
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.integer  "category_id"
-    t.string   "anchor_name"
     t.text     "source"
+    t.string   "anchor_name"
   end
-
-  add_index "docs", ["anchor_name"], :name => "index_docs_on_anchor_name", :unique => true
 
   create_table "variables", :force => true do |t|
     t.integer  "entry_id"

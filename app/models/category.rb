@@ -1,10 +1,19 @@
-class Category < ActiveRecord::Base
-  attr_accessible :title,
-                  :anchor_name
+# encoding: utf-8
 
-  has_many :docs, :dependent => :destroy
+class Category
+  attr_accessor :title,
+                :name
 
-  validates :title, :uniqueness => { scope: :anchor_name }
+  def initialize(data)
+    @_title = data[:title]
+    @_name  = data[:name]
+  end
 
-  scope :has_docs, lambda{ where("id IN (?)", Doc.pluck(:category_id).select{|c| c.present? } ) }
+  def title
+    @_title
+  end
+
+  def name
+    @_name
+  end
 end

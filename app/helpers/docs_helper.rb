@@ -1,14 +1,22 @@
+# encoding: utf-8
+
 module DocsHelper
   def categories
-    Category.has_docs
+    [
+      { title: "はじめに", name: "overview" },
+      { title: "ユーザー", name: "user" },
+      { title: "アンケート", name: "survey" },
+      { title: "質問表", name: "questionnaire" }
+    ].collect{ |datum|
+      Category.new(datum)
+    }
   end
 
   def docs
-    Doc.unscoped
+    Dir.glob(File.join(Rails.root, "seeds/**/*.md")).collect { |file|
+      Doc.new(file)
+    }.sort{|a, b|
+      a.priority <=> b.priority
+    }
   end
-
-  def find_one_category(id)
-    Category.find_or_initialize_by_id(id)
-  end
-
 end
