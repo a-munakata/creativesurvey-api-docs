@@ -50,13 +50,13 @@
       }
 
       .side-nav {
-        padding-left: 20px;
+        padding-left: 10px;
 
-
+        @include font10;
         .sub-title {
           position: relative;
           > a {
-            padding: 10px;
+            padding: 5px;
             display: block;
           }
 
@@ -141,13 +141,14 @@ ul {
 
 pre {
   width: 100%;
-  overflow-x: scroll;
+  overflow-x: hidden;
 
   code.hljs {
     background: #4b4b4b;
   }
 
   code {
+    overflow-x: scroll;
     &.hljs {
       background: #4b4b4b;
       padding: 0px 30px;
@@ -165,20 +166,19 @@ pre {
   word-break: break-all;
 
   h1 {
-    @include font20;
-    margin-bottom: 1em;
+    @include font15;
+    margin: 0 0 1em;
   }
 
   h2 {
-    @include font15;
+    @include font13;
     margin-bottom: 1em;
     line-height: 1.4;
     font-weight: normal;
   }
 
   > .inner {
-    padding: 20px 0px;
-    position: relative;
+    padding: 20px 30px;
 
     dl {
       zoom: 1;
@@ -213,11 +213,15 @@ pre {
 
     pre {
       position: absolute;
-      right: -500px;
+      right: -100%;
       top: 0;
-      width: 480px;
+      width: 100%;
+      box-sizing: border-box;
+      padding-top: 55px;
+      margin: 0px;
+
       code {
-        //display: none;
+        display: none;
         &.selected-lang {
           display: block;
         }
@@ -241,7 +245,6 @@ pre {
 .content {
   > .inner {
     padding: 30px 0px;
-    min-height: 400px;
   }
 
   h2 {
@@ -253,8 +256,14 @@ pre {
 
   background: #fdfdfd;
   float: left;
-  margin-right: 500px;
+  margin-right: 50%;
+
   .category {
+    h1 {
+      @include font16;
+      margin-bottom: 1em;
+    }
+
     zoom: 1;
     &:after {
       content: "";
@@ -264,17 +273,96 @@ pre {
   }
   .entry {
     padding-top: 35px;
+    position: relative;
     zoom: 1;
+    @include font13;
+    line-height: 1.9;
     &:after {
       content: "";
       display: block;
       clear: both;
     }
   }
+  .method {
+    padding-top: 0px;
+    position: relative;
+  }
 
   .category-title {
     margin: 0px;
-    padding: 55px 0px 0px;
+    padding: 55px 30px 0px;
     margin-bottom: -35px;
+    @include font18;
+  }
+
+}
+
+.methods {
+  -webkit-box-shadow: #0f131a -1px 0 0,rgba(0,0,0,0.05) 1px 0 2px inset;
+  -moz-box-shadow: #0f131a -1px 0 0,rgba(0,0,0,0.05) 1px 0 2px inset;
+  -ms-box-shadow: #0f131a -1px 0 0,rgba(0,0,0,0.05) 1px 0 2px inset;
+  -o-box-shadow: #0f131a -1px 0 0,rgba(0,0,0,0.05) 1px 0 2px inset;
+  box-shadow: #0f131a -1px 0 0,rgba(0,0,0,0.05) 1px 0 2px inset;
+  background-color: #292e33;
+  margin-left: 50%;
+  position: relative;
+}
+
+
+.method-section {
+  clear: left;
+  font-size: 13px;
+  line-height: 1.9em;
+  margin-left: -100%;
+  padding-top: 45px;
+  position: relative;
+  &:after {
+    clear: both;
+    content: "";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+  }
+}
+
+.method-description {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  color: #444;
+  float: left;
+  padding: 0 30px;
+  position: relative;
+  width: 50%;
+  z-index: 15;
+  &:before {
+    background-color: #e4e8eb;
+    content: "";
+    display: none;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    right: 1px;
+    top: -45px;
+  }
+}
+
+.method-example {
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin-left: 50%;
+  padding: 38px 30px 0;
+  position: relative;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.7);
+  width: 50%;
+  &:after {
+    content: "";
+    display: none;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: -45px;
   }
 }

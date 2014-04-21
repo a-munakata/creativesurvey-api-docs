@@ -40,13 +40,34 @@ input, select.textarea { margin: 0px; }
 .sky        { color: #b0e5e7; }
 .snow       { color: #cccccc; }
 .lamp       { color: #333333; }
-
-a, a:hover, a:visited, a:active {
+a {
+  color: #000;
   text-decoration: none;
+  &:visited {
+    color: #666;
+  }
+  &:hover {
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+  }
 }
-a:hover { text-decoration: none };
 
 hr:before{ content: ""; display: block; border-bottom: 1px solid rgba(255,255,255,.5); }
 hr { margin: 20px 0px; padding: 0px; @include box-sizing(content-box); line-height: 0; font-size: 0; border-style: none; border:none; }
 hr:after { content: ""; display: block; border-top: 1px solid rgba(0,0,0,.2); }
 
+
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}

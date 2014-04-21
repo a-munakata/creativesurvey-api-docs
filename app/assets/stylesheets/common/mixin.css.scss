@@ -107,8 +107,6 @@ $legacy-support-for-ie: true;
   font-weight: 700;
 }
 
-// require initializers/compass_extend
-
 @mixin retina-background($image-url) {
   background-image: image-url("#{$image-url}");
 
