@@ -8,7 +8,8 @@ class Doc
                 :title,
                 :file_name,
                 :category_id,
-                :priority
+                :priority,
+                :is_disabled
 
   def initialize(doc_file)
     @_header, @_body = Preamble.load(doc_file)
@@ -37,5 +38,9 @@ class Doc
 
   def priority
     @_header["priority"]
+  end
+
+  def is_disabled
+    @_header["is_disabled"]
   end
 end
