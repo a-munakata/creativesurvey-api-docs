@@ -3,10 +3,12 @@
 module DocsHelper
   def categories
     [
-      { title: "はじめに", name: "overview" },
-      { title: "ユーザー", name: "user" },
-      { title: "アンケート", name: "survey" },
-      { title: "質問表", name: "questionnaire" }
+      { title: "CREATIVE SURVEY API", name: "overview" },
+      { title: "ユーザー(users)", name: "user" },
+      { title: "アンケート(surveys)", name: "survey" },
+      { title: "質問表(questionnaires)", name: "questionnaire" },
+      { title: "画像(creatives)", name: "creative" },
+      { title: "最終画面(egressions)", name: "egression" }
     ].collect{ |datum|
       Category.new(datum)
     }
@@ -14,8 +16,8 @@ module DocsHelper
 
   def docs
     Dir.glob(File.join(Rails.root, "seeds/**/*.md")).collect { |file|
-      Doc.new(file)
-    }.sort{|a, b|
+      doc = Doc.new(file)
+    }.select{|doc| !doc.is_disabled }.sort{|a, b|
       a.priority <=> b.priority
     }
   end

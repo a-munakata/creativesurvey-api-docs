@@ -35,16 +35,22 @@ jQuery ->
   #/========================
   $(".inner pre:nth-of-type(" + ($("option:selected").index() + 1) + ") code").addClass("selected-lang")
 
+  set_entry_height = ->
+    $(".document-block > .inner").each ->
+      $(this).height($(this).find(".selected-lang").innerHeight())
+
   $("select").on "change", ()->
     $("code").removeClass("selected-lang")
     $(".inner pre:nth-of-type(" + ($("option:selected").index() + 1) + ") code").addClass("selected-lang")
 
-    $(".entry:last-child").css({
+    $(".content > .inner:last-child .entry:last-child").css({
       height: $(window).height() - (header_height + footer_height)
     })
 
-    $.waypoints("refresh")
+    set_entry_height()
 
+    $.waypoints("refresh")
 
   $(".code-editor").ace({ theme: 'twilight', lang: 'ruby', height: "200", width: "100%" })
 
+  set_entry_height()
