@@ -76,6 +76,7 @@
           position: relative;
           + ul {
             display: none;
+            padding-left: 30px;
           }
           &.selected {
             + ul {
@@ -171,7 +172,7 @@ pre {
   }
 
   h2 {
-    @include font13;
+    @include font12;
     margin-bottom: 1em;
     line-height: 1.4;
     font-weight: normal;
@@ -182,6 +183,7 @@ pre {
 
     dl {
       zoom: 1;
+      @include font12;
       &:after {
         clear: both;
         content: "";

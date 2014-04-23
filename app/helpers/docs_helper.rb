@@ -8,7 +8,11 @@ module DocsHelper
       { title: "アンケート(surveys)", name: "survey" },
       { title: "質問表(questionnaires)", name: "questionnaire" },
       { title: "画像(creatives)", name: "creative" },
-      { title: "最終画面(egressions)", name: "egression" }
+      { title: "最終画面(egressions)", name: "egression" },
+      { title: "ランダム設定(randomizers)", name: "randomizer" },
+      { title: "質問順序(page_order_items)", name: "page_order_item" },
+      { title: "置き換え変数設定(questionnaire_variables)", name: "questionnaire_variable" },
+      { title: "回答項目(answer_items)", name: "answer_item" }
     ].collect{ |datum|
       Category.new(datum)
     }
