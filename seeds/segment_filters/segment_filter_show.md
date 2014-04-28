@@ -1,14 +1,14 @@
 ---
 
 category_name: segment_filter
-title: セグメントフィルターの取得
+title: フィルターの取得
 priority: 999
 
 ---
 
-# セグメントフィルターの取得
+# フィルターの取得
 
-## セグメントフィルターを取得します。
+## セグメントのフィルターを取得します。
 
 auth_token*:
 : __string__

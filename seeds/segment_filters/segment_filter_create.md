@@ -1,14 +1,14 @@
 ---
 
 category_name: segment_filter
-title: セグメントフィルターの作成
+title: フィルターの作成
 priority: 999
 
 ---
 
-# セグメントフィルターの作成
+# フィルターの作成
 
-## セグメントフィルターを作成します。
+## セグメントのフィルターを作成します。
 
 auth_token*:
 : __string__

@@ -1,14 +1,14 @@
 ---
 
 category_name: segment_filter
-title: セグメントフィルターの更新
+title: フィルターの更新
 priority: 999
 
 ---
 
-# セグメントフィルターの更新
+# フィルターの更新
 
-## セグメントフィルターを更新します。
+## セグメントのフィルターを更新します。
 
 auth_token*:
 : __string__

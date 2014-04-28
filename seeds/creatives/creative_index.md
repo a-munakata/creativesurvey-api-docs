@@ -1,12 +1,12 @@
 ---
 
 category_name: creative
-title: 画像の取得
+title: 画像一覧の取得
 priority: 999
 
 ---
 
-# 画像の取得
+# 画像一覧の取得
 
 ## アンケートに使用されている画像の一覧を表示します。
 
@@ -18,15 +18,9 @@ survey_id*:
 : __integer__
 : 指定するアンケートid
 
-creative_id:
-: __integer__
-: 取得する画像のid
-: urlにidを指定すると、一覧ではなく特定の画像を取得します。
-
 ~~~
 定義
 GET https://creativesurvey.com/api/v1/surveys/:survey_id/creatives
-GET https://creativesurvey.com/api/v1/surveys/:survey_id/creatives/:creative_id
 
 リクエスト例
 $ curl https://creativesurvey.com/api/v1/surveys/47/creatives -X GET \
@@ -38,19 +32,19 @@ $ curl https://creativesurvey.com/api/v1/surveys/47/creatives -X GET \
     "width": 679,
     "updated_at": "2014-01-21T15:56:23+09:00",
     "trimming": "thumb",
-    "text_color": null,
+<!--    "text_color": null,-->
     "survey_id": 47,
-    "strong_color": null,
-    "priority": 1000,
+<!--    "strong_color": null,-->
+<!--    "priority": 1000,-->
     "id": 138,
     "height": 32,
     "created_at": "2013-10-18T11:36:16+09:00",
-    "background_size": "auto",
-    "background_repeat": true,
-    "background_position_y": null,
-    "background_position_x": null,
-    "background_color": null,
-    "image": {
+<!--    "background_size": "auto",-->
+<!--    "background_repeat": true,-->
+<!--    "background_position_y": null,-->
+<!--    "background_position_x": null,-->
+<!--    "background_color": null,-->
+<!--    "image": {
       "l_fit": {
         "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/138/l_fit_form_thank_you.png"
       },
@@ -74,13 +68,14 @@ $ curl https://creativesurvey.com/api/v1/surveys/47/creatives -X GET \
       },
       "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/138/form_thank_you.png"
     },
+-->
     "inbox_id": 6,
-    "insole_brightness": 0.5,
-    "is_awkward": null,
-    "is_sample": false,
-    "is_template": false,
+<!--    "insole_brightness": 0.5,-->
+<!--    "is_awkward": null,-->
+<!--    "is_sample": false,-->
+<!--    "is_template": false,-->
     "name": null,
-    "original_remote_url": null
+<!--    "original_remote_url": null-->
   }
 ]
 

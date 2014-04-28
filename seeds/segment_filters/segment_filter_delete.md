@@ -1,14 +1,14 @@
 ---
 
 category_name: segment_filter
-title: セグメントフィルターの削除
+title: フィルターの削除
 priority: 999
 
 ---
 
-# セグメントフィルターの削除
+# フィルターの削除
 
-## セグメントフィルターを削除します。
+## セグメントのフィルターを削除します。
 
 auth_token*:
 : __string__
