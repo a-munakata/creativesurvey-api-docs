@@ -18,33 +18,33 @@ collector_id*:
 : __integer__
 : 対象となるアンケートのid
  
-collector[name]*:
+name*:
 : __string__
 : 公開設定の名前
 
-collector[is_password]:
+is_password:
 : __boolean__
 : 公開設定にパスワードをかけるかどうか
 
-collector[password]:
+password:
 : __string__
 : 公開設定のパスワード
 : is_passwordがtrueでないとこの設定は有効になりません。
 
-collector[is_mail]:
+is_mail:
 : __boolean__
 : trueに設定すると、回答を即時メールします。
 
-collector[ban_mobile]:
+ban_mobile:
 : __boolean__
 : trueに設定すると、モバイルからの回答を禁止し、PCの回答のみを集めます。
 
 ~~~
 定義
-POST https://creativesurvey.com/api/v1/collectors/:collector_id
+PUT https://creativesurvey.com/api/v1/collectors/:collector_id
 
 リクエスト例
-$ curl -X POST \
+$ curl -X PUT \
 https://creativesurvey.com/api/v1/collectors/529 \
 -d "auth_token=Vp5vzALpGzhqkcpxxxxx" \
 -d "collector[name]=公開設定3" \

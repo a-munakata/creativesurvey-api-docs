@@ -18,17 +18,17 @@ questionnaire_id*:
 : __integer__
 : ランダム設定を指定する質問表のid
 
-randomizer[:start_index]:
+start_index:
 : __integer__
 : 何問目からランダムを設定するか指定します。
 : indexは0から始まる整数です。
 
-randomizer[:end_index]:
+end_index:
 : __integer__
 : 何問目までランダムを設定するか指定します。
 : indexは0から始まる整数です。
 
-randomizer[step_num]:
+step_num:
 : __integer__
 : ランダムを設定するステップ数
 : start_indexからend_indexまでで何問を抽出するかを設定するものです。
@@ -36,10 +36,10 @@ randomizer[step_num]:
 
 ~~~
 定義
-PUT https://creativesurvey.com/api/v1/questionnaires/:questionnaire_id/randomizers
+POST https://creativesurvey.com/api/v1/questionnaires/:questionnaire_id/randomizers
 
 リクエスト例
-curl -X PUT https://creativesurvey.com/api/v1/questionnaires/508/randomizers \
+curl -X POST https://creativesurvey.com/api/v1/questionnaires/508/randomizers \
 -d "auth_token=Vp5vzALpGzhqkcpxxxxx" \
 -d "randomizer[step_num]=1" \
 -d "randomizer[start_index]=0" \

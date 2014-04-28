@@ -18,16 +18,16 @@ egression_id*:
 : __integer__
 : 取得する最終画面のid
 
-egression[rendered_sentence]:
+rendered_sentence:
 : __string__
 : 最終画面の文言
 
-egression[:is_redirect]:
+is_redirect:
 : __boolean__
 : _(デフォルト: false)_
 : trueの場合、最終画面の表示ではなくリダイレクトをさせます
 
-egression[redirect_url]:
+redirect_url:
 : __string__
 : リダイレクトを指定する場合のurl
 

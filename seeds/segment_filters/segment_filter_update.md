@@ -18,19 +18,18 @@ segment_filter_id*:
 : __integer__
 : セグメントフィルターのid
 
-segment_filter[value]:
+value:
 : __string__
 : セグメントする回答項目id
 : 回答項目の取得については[こちら](#answer_item_index)を参照ください。
 
-segment_filter[segment_id]:
+segment_id:
 : __integer__
 : 対象となるセグメントのid
 
-segment_filter[question_id]:
+question_id:
 : __integer__
 : セグメントする質問のid
-
 
 ~~~
 定義

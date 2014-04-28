@@ -18,55 +18,55 @@ question_id*:
 : __integer__
 : 取得する回答項目を含む質問のid
 
-answer_item[answer_type]*:
+answer_type*:
 : __integer__
 : 質問タイプのid
 : TODO 質問タイプの一覧
 
-answer_item[validation_type]:
+validation_type:
 : TODO
 
-answer_item[validation_pattern]:
+validation_pattern:
 : __string__ _(デフォルト: "")_
 : 入力制限を指定した際の正規表現
 
-answer_item[is_required]:
+is_required:
 : __boolean__ _(デフォルト: false)_
 : 回答が必須かどうか
 
-answer_item[is_reject]:
+is_reject:
 : TODO
 
-answer_item[is_multiline]:
+is_multiline:
 : __boolean__ _(デフォルト: false)_
 : 入力エリアが複数行かどうか
 
-answer_item[max_value]:
+max_value:
 : __integer__ _(デフォルト: null)_
 : TODO
 
-answer_item[min_value]:
+min_value:
 : __integer__ _(デフォルト: null)_
 : TODO
 
-answer_item[order_index]:
+order_index:
 : __integer__
 : 質問内での回答項目の並び順
 : 0から始まる整数です。
 
-answer_item[placeholder]:
+placeholder:
 : __string__ _(デフォルト: "")_
 : 文字が入力されていない際に表示されるplaceholder
 
-answer_item[question_id]:
+question_id:
 : __integer__
 : 回答を含む質問のid
 
-answer_item[sentence]:
+sentence:
 : __string__
 : 回答項目で提示される文字列
 
-answer_item[val]:
+val:
 : __number__
 : rangeで回答する質問タイプの初期値
 : TODO

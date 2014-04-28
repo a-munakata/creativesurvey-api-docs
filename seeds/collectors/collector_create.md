@@ -18,7 +18,7 @@ survey_id*:
 : __integer__
 : 対象となるアンケートのid
 
-collector[name]*:
+name*:
 : __string__
 : 公開設定の名前
  

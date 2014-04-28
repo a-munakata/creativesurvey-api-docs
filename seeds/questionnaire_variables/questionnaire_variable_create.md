@@ -18,23 +18,23 @@ questionnaire_id*:
 : __integer__
 : 置き換え変数設定を取得したいアンケートのid
 
-questionnaire_variable[result_type]*:
+result_type*:
 : __integer__
 : 置き換え方式を1か2で指定します。
 : 1を指定すると"回答をテキストに置き換える"を設定します。
 : 2を指定すると"対象テキストを置き換える"を設定します。
 
-questionnaire_variable[target]:
+target:
 : __string__
 : 対象テキスト
 : 置き換え変数で置き換わる対象となるテキストを指定します。
 
-questionnaire_variable[result_id]:
+result_id:
 : __integer__
 : 回答される質問のidを指定します。
 : ここで指定された質問の回答が、対象テキストに置換されます。
 
-questionnaire_variable[separator]:
+separator:
 : __string__
 : 代入すべき回答テキストが複数だった場合に指定するセパレータ
 : 『A』と『B』という二つだった場合、セパレータに『と』と入力していれば『AとB』と表示され、『and』と入力していれば『AandB』と表示され、『&』と入力していれば『A&B』と表示されます。

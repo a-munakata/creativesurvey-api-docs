@@ -20,10 +20,10 @@ collector_id*:
  
 ~~~
 定義
-POST https://creativesurvey.com/api/v1/collectors/:collector_id
+GET https://creativesurvey.com/api/v1/collectors/:collector_id
 
 リクエスト例
-$ curl -X POST \
+$ curl -X GET \
 https://creativesurvey.com/api/v1/collectors/529 \
 -d "auth_token=Vp5vzALpGzhqkcpxxxxx"
 

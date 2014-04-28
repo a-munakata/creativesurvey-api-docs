@@ -10,7 +10,7 @@ priority: 999
 
 ## 認証されたユーザーのauth_tokenを失効させます。
 
-user_login[email]*:
+email*:
 : __string__ 
 : 登録しているユーザーのメールアドレス
 

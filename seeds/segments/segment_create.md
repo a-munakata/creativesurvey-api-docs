@@ -18,31 +18,31 @@ survey_id*:
 : __integer__
 : セグメントを作成するアンケートのid
 
-segment[name]*:
+name*:
 : __string__
 : セグメント名
 
-segment[due_start]:
+due_start:
 : __date__ _(デフォルト: null)_
 : 回答日時によってセグメントする際の開始日
 : その日の回答を含めます。
 
-segment[due_end]:
+due_end:
 : __date__ _(デフォルト: null)_
 : 回答日時によってセグメントする際の終了日
 : その日の回答を含めます。
 
-segment[disallow_duplicate_ip]:
+disallow_duplicate_ip:
 : __boolean__ _(デフォルト: false)_
 : 同一IPを許可するかどうか
 : trueに設定した場合、同一のIPからの回答を含めません。
 
-segment[allow_screen_out]:
+allow_screen_out:
 : __boolean__ _(デフォルト: false)_
 : スクリーンアウトした回答者を含めるかどうか
 : trueに設定した場合、スクリーンアウトした回答者も含めます。
 
-segment[is_uncompleted]:
+is_uncompleted:
 : __boolean__ _(デフォルト: false)_
 : 未回答項目を含めるかどうか
 : trueに設定した場合、回答が終了していない回答者も含めます。

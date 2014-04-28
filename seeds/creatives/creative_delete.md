@@ -1,14 +1,14 @@
 ---
 
 category_name: creative
-title: 素材の削除
+title: 画像の削除
 priority: 999
 
 ---
 
 # 画像の削除
 
-## アンケートに使用されている画像の削除について。
+## アンケートに使用されている画像の削除
 
 auth_token*:
 : __string__
@@ -16,11 +16,12 @@ auth_token*:
 
 creative_id*:
 : __integer__
-: urlに指定する素材のid
-: ex) https://creativesurvey.com/api/v1/creatives/:creative_id
- 
+: 画像のid 
  
 ~~~
+定義
+DELETE https://creativesurvey.com/api/v1/creatives/:creative_id
+
 リクエスト例
 $ curl -X DELETE \
 https://creativesurvey.com/api/v1/creatives/138 \

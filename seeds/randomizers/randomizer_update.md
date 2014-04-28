@@ -18,15 +18,15 @@ randomizer_id*:
 : __integer__
 : ランダム設定のid
 
-randomizer[:start_index]:
+start_index:
 : __integer__
 : 何問目からランダムを設定するか指定します。
 
-randomizer[:end_index]:
+end_index:
 : __integer__
 : 何問目までランダムを設定するか指定します。
 
-randomizer[step_num]:
+step_num:
 : __integer__
 : ランダムを設定するステップ数
 : start_indexからend_indexまでで何問を抽出するかを設定するものです。

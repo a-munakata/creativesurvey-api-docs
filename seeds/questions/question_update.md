@@ -18,20 +18,17 @@ question_id:
 : __integer__
 : 取得する質問が含まれる質問表のid
 
-question[rendered_sentence]:
+rendered_sentence:
 : __string__
 : 質問の文言
 
-question[is_timer]:
+is_timer:
 : __boolean__ _(デフォルト: false)_
 : 時間制限
 
-question[is_random]:
+is_random:
 : __boolean__ 
 : ランダム設定
-
-
-
 
 ~~~
 定義

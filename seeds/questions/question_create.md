@@ -18,25 +18,22 @@ questionnaire_id*:
 : __integer__
 : 質問を作成する質問表のid
 
-question[question_type]:
+question_type:
 : __integer__ _(デフォルト: 1)_
 : 質問タイプ
 : TODO 質問タイプ一覧
 
-question[rendered_sentence]:
+rendered_sentence:
 : __string__
 : 質問の文言
 
-question[is_timer]:
+is_timer:
 : __boolean__ _(デフォルト: false)_
 : 時間制限
 
-question[is_random]:
+is_random:
 : __boolean__ 
 : ランダム設定
-
-
-
 
 ~~~
 定義

@@ -10,11 +10,11 @@ priority: 999
 
 ## CREATIVE SURVEYのアカウントのメールアドレスとパスワードでユーザーの認証を行います。認証で取得したauth_tokenは、CREATIVE SURVEY APIの全てのリクエストで必要になります。auth_tokenを使用するとAPI全ての操作が可能になるので、厳重に管理してください。
 
-user_login[email]*:
+email*:
 : __string__ 
 : 登録しているユーザーのメールアドレス
 
-user_login[password]*:
+password*:
 : __string__
 : 登録しているユーザーのパスワード
 

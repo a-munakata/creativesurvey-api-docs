@@ -18,55 +18,55 @@ design_id*:
 : __integer__
 : 取得するデザインのid
 
-design[theme_id]:
+theme_id:
 : __integer__
 : テーマのid
 
-design[text_color]:
+text_color:
 : __string__
 : 文字色
 
-design[text_align]:
+text_align:
 : __string__
 : テキストの寄せ位置
 
-design[strong_color]:
+strong_color:
 : __string__
 : 強調文字色
 
-design[layout_position]:
+layout_position:
 : __string__
 : コンテンツの寄せ位置
 
-design[is_blur]:
+is_blur:
 : __boolean__
 : 背景ぼかし
 
-design[background_size]:
+background_size:
 : __string__
 : 背景の大きさ
 
-design[background_repeat]:
+background_repeat:
 : __boolean__
 : 背景の繰り返し
 
-design[background_position_y]:
+background_position_y:
 : __string__
 : 背景の縦位置
 
-design[background_position_x]:
+background_position_x:
 : __string__
 : 背景の横位置
 
-design[background_color]:
+background_color:
 : __string__
 : 背景色
 
-design[custom_css]:
+custom_css:
 : __string__ _(デフォルト: null)_
 : カスタムCSS
 
-design[font_size]:
+font_size:
 : __integer__ _(デフォルト: 14)_
 : フォントサイズ
 

@@ -18,7 +18,7 @@ survey_id*:
 : __integer__
 : 画像をアップロードするアンケートのid
 
-creative[image]*:
+image*:
 : __string__
 : アップロードする画像のパス。 @を付けて指定します。
 

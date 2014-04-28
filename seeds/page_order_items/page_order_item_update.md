@@ -18,12 +18,12 @@ page_order_item_id*:
 : __integer__
 : 更新する質問順序のid
 
-page_order_item[order_index]:
+order_index:
 : __integer__
 : 更新する質問順index
 : indexは0から始まる整数です。
 
-page_order_item[is_connect]:
+is_connect:
 : __boolean__ _(デフォルト: false)_
 : trueを指定すると、ページをつなげる設定が有効になります。
 

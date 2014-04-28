@@ -18,7 +18,7 @@ creative_id*:
 : __integer__
 : 取得する画像のid
 
-creative[trimming]:
+trimming:
 : __string__
 : 画像のトリミングの方法を指定します。指定出来るトリミング方法は以下の3つです。
 : 正方形: "thumb"
