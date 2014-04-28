@@ -210,6 +210,15 @@ pre {
         width: 100%;
         z-index: 25;
         line-height: 1.8em;
+
+        a {
+          color: #6d9cbe;
+
+          &:hover {
+            background: transparent;
+            text-decoration: underline;
+          }
+        }
       }
     }
 
