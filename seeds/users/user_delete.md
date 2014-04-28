@@ -8,7 +8,7 @@ priority: 999
 
 # ユーザーの認証解除
 
-## 認証されたユーザーのtokenを失効させます。
+## 認証されたユーザーのauth_tokenを失効させます。
 
 user_login[email]*:
 : __string__ 

@@ -1,14 +1,14 @@
 ---
 
 category_name: collector
-title: コレクターの公開
+title: 公開設定の公開
 priority: 999
 
 ---
 
-# コレクターの公開
+# 公開設定の公開
 
-## 公開したいアンケートのコレクターを公開します。
+## 公開したいアンケートの公開設定を公開します。
 
 auth_token*:
 : __string__
@@ -16,7 +16,7 @@ auth_token*:
 
 collector_id*:
 : __integer__
-: コレクターid 
+: 公開設定id 
  
 ~~~
 定義

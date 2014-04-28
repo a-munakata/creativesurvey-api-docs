@@ -16,7 +16,9 @@ module DocsHelper
       { title: "回答項目(answer_items)", name: "answer_item" },
       { title: "回答補助項目(sub_items)", name: "sub_item" },
       { title: "分岐設定(logics)", name: "logic" },
-      { title: "デザイン(designs)", name: "design" }
+      { title: "デザイン(designs)", name: "design" },
+      { title: "セグメント設定(segments)", name: "segment" },
+      { title: "フィルター設定(segment_filters)", name: "segment_filter" }
     ].collect{ |datum|
       Category.new(datum)
     }

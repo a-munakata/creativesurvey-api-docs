@@ -1,14 +1,14 @@
 ---
 
 category_name: collector
-title: 公開設定の公開中止
+title: 公開設定の削除
 priority: 999
 
 ---
 
-# 公開設定の公開中止
+# 公開設定の削除
 
-## 公開設定の公開を中止します。
+## 公開設定の削除
 
 auth_token*:
 : __string__
@@ -16,43 +16,42 @@ auth_token*:
 
 collector_id*:
 : __integer__
-: 公開設定のid 
+: 対象となるアンケートのid
  
 ~~~
 定義
-POST https://creativesurvey.com/api/v1/collectors/:collector_id/abort
+DELETE https://creativesurvey.com/api/v1/collectors/:collector_id
 
 リクエスト例
-$ curl -X POST \
-https://creativesurvey.com/api/v1/collectors/527/abort \
+$ curl -X DELETE \
+https://creativesurvey.com/api/v1/collectors/529 \
 -d "auth_token=Vp5vzALpGzhqkcpxxxxx"
 
-レスポンス例
 {
-  "updated_at": "2014-04-23T16:58:56+09:00",
+  "updated_at": "2014-04-23T17:16:55+09:00",
   "is_compact": null,
   "is_answer_limit": false,
   "is_activated": false,
   "inbox_id": 6,
-  "id": 527,
+  "id": 529,
   "export_at": null,
-  "end_at": "2014-04-23T16:58:56+09:00",
+  "end_at": null,
   "due": null,
   "allow_billboard": false,
   "answer_limit": null,
-  "ban_mobile": false,
+  "ban_mobile": true,
   "can_return": false,
   "completed_panels_count": 0,
-  "created_at": "2014-04-23T12:41:58+09:00",
+  "created_at": "2014-04-23T17:09:29+09:00",
   "description": null,
   "disallow_duplicate_machine": false,
   "is_due": false,
-  "is_mail": false,
-  "is_ogp": false,
-  "is_password": false,
+  "is_mail": true,
+  "is_ogp": null,
+  "is_password": true,
   "is_result": false,
-  "name": "公開設定",
-  "og_description": "",
+  "name": "公開設定3",
+  "og_description": null,
   "og_image": {
     "square": {
       "url": null
@@ -62,14 +61,14 @@ https://creativesurvey.com/api/v1/collectors/527/abort \
     },
     "url": null
   },
-  "og_title": "",
-  "panels_count": 7,
-  "password": "",
-  "request_billboard": false,
-  "start_at": "2014-04-23T15:30:45+09:00",
+  "og_title": null,
+  "panels_count": 0,
+  "password": "sample_pass",
+  "request_billboard": null,
+  "start_at": null,
   "survey_id": 520,
-  "sync_url": "",
-  "unique_id": "84bb57911b251458463fe639e5010e"
+  "sync_url": null,
+  "unique_id": "2437083d76a3bffba6c76ea885141b"
 }
 
 リソースが存在しない場合
