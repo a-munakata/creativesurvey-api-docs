@@ -1,12 +1,12 @@
 ---
 
-category_name: user
-title: ユーザーの認証解除
-priority: 999
+category_name: users
+title: ユーザー認証の失効
+priority: 998
 
 ---
 
-# ユーザーの認証解除
+# ユーザー認証の失効
 
 ## 認証されたユーザーのauth_tokenを失効させます。
 
@@ -32,7 +32,6 @@ $ curl -X DELETE https://creativesurvey.com/api/v1/users/sign_out \
   "success":false,
   "message":"Error with your login or password"
 }
-
 ~~~
 
 

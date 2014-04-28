@@ -1,14 +1,14 @@
 ---
 
-category_name: survey
+category_name: surveys
 title: アンケートの更新
-priority: 999
+priority: 996
 
 ---
 
 # アンケートの更新
 
-## 作成したアンケートの変更について
+## 作成したアンケートを更新します。
 
 auth_token*:
 : __string__
@@ -28,11 +28,11 @@ tag_color:
 : 指定出来る色は"cyan", "purple", "red", "green", "pink", "yellow", "orange", "gray"です。
 
 is_public:
-: __boolean__
+: __boolean__ _(デフォルト: false)_
 : trueを返すとアンケートの結果を公開します。
 
 password:
-: __string__
+: __string__ _(デフォルト: null)_
 : 結果を公開する際に求めるパスワード
 
 ~~~
@@ -43,7 +43,7 @@ PUT https://creativesurvey.com/api/v1/surveys/:survey_id
 $ curl -X PUT https://creativesurvey.com/api/v1/surveys/508 \
 -d "auth_token=Vp5vzALpGzhqkcpxxxxx" \
 -d "survey[name]=sample_survey2" \
--d "survey[tag_color]=blue"
+-d "survey[tag_color]=red"
 
 レスポンス例
 { 
@@ -58,7 +58,7 @@ $ curl -X PUT https://creativesurvey.com/api/v1/surveys/508 \
   "password":null,
   "published_at":null,
   "questions_count":0,
-  "tag_color":blue,
+  "tag_color":red,
   "updated_at":"2014-04-16T20:11:35+09:00"
 }
 ~~~

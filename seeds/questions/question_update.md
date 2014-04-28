@@ -2,7 +2,7 @@
 
 category_name: question
 title: 質問の更新
-priority: 999
+priority: 996
 
 ---
 

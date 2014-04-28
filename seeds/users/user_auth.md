@@ -1,6 +1,6 @@
 ---
 
-category_name: user
+category_name: users
 title: ユーザーの認証
 priority: 999
 

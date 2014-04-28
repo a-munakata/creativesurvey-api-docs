@@ -1,14 +1,14 @@
 ---
 
-category_name: survey
+category_name: surveys
 title: アンケートの作成
-priority: 999
+priority: 998
 
 ---
 
 # アンケートの作成
 
-## 新規アンケートの作成
+## 新規アンケートを作成します。
 
 
 auth_token*:

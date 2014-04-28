@@ -2,7 +2,7 @@
 
 category_name: question
 title: 質問の削除
-priority: 999
+priority: 995
 
 ---
 

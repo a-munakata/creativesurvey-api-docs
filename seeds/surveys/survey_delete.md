@@ -1,14 +1,14 @@
 ---
 
-category_name: survey
+category_name: surveys
 title: アンケートの削除
-priority: 999
+priority: 995
 
 ---
 
 # アンケートの削除
 
-## アンケートの削除について
+## アンケートを削除します。
 
 auth_token*:
 : __string__
