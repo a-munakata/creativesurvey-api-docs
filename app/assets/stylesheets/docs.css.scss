@@ -51,32 +51,12 @@
 
       .side-nav {
         padding-left: 10px;
-
-        @include font10;
-        .sub-title {
-          position: relative;
-          > a {
-            padding: 5px;
-            display: block;
-          }
-
-          &.selected, &:hover {
-            background: #4b4b4b;
-            cursor: pointer;
-            > a {
-              color: #f6f6f6;
-              &:hover {
-                background: inherit;
-              }
-            }
-          }
-        }
         .main-title {
           margin: 0px;
           position: relative;
           + ul {
             display: none;
-            padding-left: 30px;
+            padding-left: 20px;
           }
           &.selected {
             + ul {
@@ -84,8 +64,9 @@
             }
           }
           > a {
-            padding: 10px;
+            padding: 5px;
             display: block;
+            @include font11;
           }
 
           &.selected, &:hover {
@@ -100,6 +81,26 @@
             }
           }
         }
+        .sub-title {
+          position: relative;
+          > a {
+            padding: 5px;
+            display: block;
+            @include font12;
+          }
+
+          &.selected, &:hover {
+            background: #4b4b4b;
+            cursor: pointer;
+            > a {
+              color: #f6f6f6;
+              &:hover {
+                background: inherit;
+              }
+            }
+          }
+        }
+
       }
     }
   }
@@ -157,9 +158,65 @@ pre {
   }
 }
 
+.content {
+  > .inner {
+    padding: 30px 0px;
+    min-height: 400px;
+  }
 
-  //
- // Doc Block
+  h2 {
+    @include font15;
+    margin-bottom: 1em;
+    line-height: 1.4;
+    font-weight: normal;
+  }
+
+  background: #fdfdfd;
+  float: left;
+  margin-right: 50%;
+
+  .category {
+    h1 {
+      @include font16;
+      margin-bottom: 1em;
+    }
+
+    zoom: 1;
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
+  .entry {
+    padding-top: 35px;
+    position: relative;
+    zoom: 1;
+    @include font13;
+    line-height: 1.9;
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
+  .method {
+    padding-top: 0px;
+    position: relative;
+  }
+
+  .category-title {
+    margin: 0px;
+    padding: 55px 30px 0px;
+    margin-bottom: -35px;
+    @include font18;
+  }
+
+}
+
+
+//
+// Doc Block
 //===============
 
 .document-block {
@@ -172,9 +229,9 @@ pre {
   }
 
   h2 {
-    @include font12;
+    @include font13;
     margin-bottom: 1em;
-    line-height: 1.4;
+    line-height: 1.6;
     font-weight: normal;
   }
 
@@ -248,92 +305,5 @@ pre {
   .content-of-null {
     color: #9f9f9f;
     font-weight: lighter;
-  }
-
-}
-
-
-.content {
-  > .inner {
-    padding: 30px 0px;
-    min-height: 400px;
-  }
-
-  h2 {
-    @include font15;
-    margin-bottom: 1em;
-    line-height: 1.4;
-    font-weight: normal;
-  }
-
-  background: #fdfdfd;
-  float: left;
-  margin-right: 50%;
-
-  .category {
-    h1 {
-      @include font16;
-      margin-bottom: 1em;
-    }
-
-    zoom: 1;
-    &:after {
-      content: "";
-      display: block;
-      clear: both;
-    }
-  }
-  .entry {
-    padding-top: 35px;
-    position: relative;
-    zoom: 1;
-    @include font13;
-    line-height: 1.9;
-    &:after {
-      content: "";
-      display: block;
-      clear: both;
-    }
-  }
-  .method {
-    padding-top: 0px;
-    position: relative;
-  }
-
-  .category-title {
-    margin: 0px;
-    padding: 55px 30px 0px;
-    margin-bottom: -35px;
-    @include font18;
-  }
-
-}
-
-.methods {
-  -webkit-box-shadow: #0f131a -1px 0 0,rgba(0,0,0,0.05) 1px 0 2px inset;
-  -moz-box-shadow: #0f131a -1px 0 0,rgba(0,0,0,0.05) 1px 0 2px inset;
-  -ms-box-shadow: #0f131a -1px 0 0,rgba(0,0,0,0.05) 1px 0 2px inset;
-  -o-box-shadow: #0f131a -1px 0 0,rgba(0,0,0,0.05) 1px 0 2px inset;
-  box-shadow: #0f131a -1px 0 0,rgba(0,0,0,0.05) 1px 0 2px inset;
-  background-color: #292e33;
-  margin-left: 50%;
-  position: relative;
-}
-
-
-.method-section {
-  clear: left;
-  font-size: 13px;
-  line-height: 1.9em;
-  margin-left: -100%;
-  padding-top: 45px;
-  position: relative;
-  &:after {
-    clear: both;
-    content: "";
-    display: block;
-    font-size: 0;
-    height: 0;
-    visibility: hidden;
   }
 }
