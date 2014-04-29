@@ -132,15 +132,6 @@ ul {
   }
 }
 
-
-.hidden-submit {
-  display: none;
-}
-
-.code-editor {
-  width: 100%;
-}
-
 pre {
   width: 100%;
   overflow-x: hidden;
@@ -199,10 +190,6 @@ pre {
       display: block;
       clear: both;
     }
-  }
-  .method {
-    padding-top: 0px;
-    position: relative;
   }
 
   .category-title {
@@ -296,14 +283,5 @@ pre {
       }
     }
 
-  }
-
-  .editable-content {
-    word-break: break-all;
-  }
-
-  .content-of-null {
-    color: #9f9f9f;
-    font-weight: lighter;
   }
 }
