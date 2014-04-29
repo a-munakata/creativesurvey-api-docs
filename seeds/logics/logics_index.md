@@ -41,19 +41,8 @@ curl -X GET https://creativesurvey.com/api/v1/questions/1825/logics \
     "inbox_id": 6,
     "is_valid": true
   },
-  {
-    "updated_at": "2014-04-23T11:19:00+09:00",
-    "question_id": 1825,
-    "order_index": 0,
-    "answer_id": null,
-    "answer_item_id": null,
-    "created_at": "2014-04-23T11:19:00+09:00",
-    "destination_id": null,
-    "destination_index": null,
-    "id": 138,
-    "inbox_id": 6,
-    "is_valid": true
-  }
+  {...},
+  {...}  
 ]
 
 リソースが存在しない場合

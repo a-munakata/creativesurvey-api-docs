@@ -38,46 +38,8 @@ curl -X GET https://creativesurvey.com/api/v1/questionnaires/508/page_order_item
     "id": 1791,
     "created_at": "2014-04-22T10:50:26+09:00"
   },
-  {
-    "updated_at": "2014-04-22T10:50:27+09:00",
-    "questionnaire_id": 508,
-    "question_id": 1825,
-    "order_index": 1,
-    "is_connect": false,
-    "inbox_id": 6,
-    "id": 1792,
-    "created_at": "2014-04-22T10:50:27+09:00"
-  },
-  {
-    "updated_at": "2014-04-22T10:50:28+09:00",
-    "questionnaire_id": 508,
-    "question_id": 1826,
-    "order_index": 2,
-    "is_connect": false,
-    "inbox_id": 6,
-    "id": 1793,
-    "created_at": "2014-04-22T10:50:28+09:00"
-  },
-  {
-    "updated_at": "2014-04-22T11:40:09+09:00",
-    "questionnaire_id": 508,
-    "question_id": 1827,
-    "order_index": 3,
-    "is_connect": false,
-    "inbox_id": 6,
-    "id": 1794,
-    "created_at": "2014-04-22T11:40:08+09:00"
-  },
-  {
-    "updated_at": "2014-04-22T16:39:52+09:00",
-    "questionnaire_id": 508,
-    "question_id": null,
-    "order_index": null,
-    "is_connect": null,
-    "inbox_id": 6,
-    "id": 1796,
-    "created_at": "2014-04-22T16:39:52+09:00"
-  }
+  {...},
+  {...}
 ]
 
 リソースが存在しない場合

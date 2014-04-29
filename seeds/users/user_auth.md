@@ -30,7 +30,8 @@ $ curl -X POST https://creativesurvey.com/api/v1/users/sign_in \
 
 レスポンス例
 {
-  "success":true,"auth_token":"Vp5vzALpGzhqkcpxxxxx",
+  "success":true,
+  "auth_token":"Vp5vzALpGzhqkcpxxxxx",
   "email":"sample_email"
 }
 
