@@ -2,7 +2,7 @@
 
 category_name: answer_item
 title: 回答項目の更新
-priority: 999
+priority: 996
 
 ---
 

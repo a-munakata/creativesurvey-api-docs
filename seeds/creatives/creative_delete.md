@@ -2,7 +2,7 @@
 
 category_name: creative
 title: 画像の削除
-priority: 999
+priority: 995
 
 ---
 

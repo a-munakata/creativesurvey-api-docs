@@ -2,7 +2,7 @@
 
 category_name: creative
 title: 画像のアップロード
-priority: 999
+priority: 998
 
 ---
 

@@ -2,7 +2,7 @@
 
 category_name: creative
 title: 画像一覧の取得
-priority: 999
+priority: 997
 
 ---
 

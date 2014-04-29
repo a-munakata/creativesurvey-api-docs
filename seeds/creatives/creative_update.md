@@ -2,7 +2,7 @@
 
 category_name: creative
 title: 画像の更新
-priority: 999
+priority: 996
 
 ---
 
