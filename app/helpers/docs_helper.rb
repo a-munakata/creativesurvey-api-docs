@@ -17,6 +17,7 @@ module DocsHelper
       { title: "質問順序", name: "page_order_item" },
       { title: "分岐設定", name: "logic" },
       { title: "置き換え変数設定", name: "questionnaire_variable" },
+      { title: "表示ロジック", name: "visibility" },
       { title: "セグメント設定", name: "segment" },
       { title: "フィルター設定", name: "segment_filter" }
     ].collect{ |datum|
