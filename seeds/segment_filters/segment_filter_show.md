@@ -2,7 +2,7 @@
 
 category_name: segment_filter
 title: フィルターの取得
-priority: 999
+priority: 997
 
 ---
 

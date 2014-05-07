@@ -40,7 +40,8 @@ $ curl -X DELETE http://creativesurvey.com/api/v1/surveys/514 \
   "is_published": false,
   "name": "sample_survey",
   "panels_count": null,
-  "password": "4d"
+  "password": "4d",
+  "active_segment_id": null
 }
 ~~~
 

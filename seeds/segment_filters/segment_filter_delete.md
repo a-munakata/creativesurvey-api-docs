@@ -2,7 +2,7 @@
 
 category_name: segment_filter
 title: フィルターの削除
-priority: 999
+priority: 995
 
 ---
 

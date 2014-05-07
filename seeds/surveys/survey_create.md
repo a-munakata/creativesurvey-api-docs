@@ -57,7 +57,8 @@ $ curl -X POST https://creativesurvey.com/api/v1/surveys \
   "published_at":null,
   "questions_count":0,
   "tag_color":red,
-  "updated_at":"2014-04-16T20:11:35+09:00"
+  "updated_at":"2014-04-16T20:11:35+09:00",
+  "active_segment_id": null
 }
 ~~~
  

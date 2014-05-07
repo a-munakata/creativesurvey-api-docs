@@ -2,7 +2,7 @@
 
 category_name: collector
 title: 公開設定の公開中止
-priority: 999
+priority: 993
 
 ---
 
@@ -29,30 +29,24 @@ https://creativesurvey.com/api/v1/collectors/527/abort \
 
 レスポンス例
 {
-  "updated_at": "2014-04-23T16:58:56+09:00",
-  "is_compact": null,
+  "updated_at": "2014-04-23T17:09:29+09:00",
   "is_answer_limit": false,
   "is_activated": false,
   "inbox_id": 6,
-  "id": 527,
-  "export_at": null,
-  "end_at": "2014-04-23T16:58:56+09:00",
+  "id": 529,
   "due": null,
-  "allow_billboard": false,
   "answer_limit": null,
   "ban_mobile": false,
   "can_return": false,
   "completed_panels_count": 0,
-  "created_at": "2014-04-23T12:41:58+09:00",
-  "description": null,
+  "created_at": "2014-04-23T17:09:29+09:00",
   "disallow_duplicate_machine": false,
   "is_due": false,
   "is_mail": false,
   "is_ogp": false,
   "is_password": false,
-  "is_result": false,
-  "name": "公開設定",
-  "og_description": "",
+  "name": "公開設定2",
+  "og_description": null,
   "og_image": {
     "square": {
       "url": null
@@ -62,14 +56,12 @@ https://creativesurvey.com/api/v1/collectors/527/abort \
     },
     "url": null
   },
-  "og_title": "",
-  "panels_count": 7,
-  "password": "",
-  "request_billboard": false,
-  "start_at": "2014-04-23T15:30:45+09:00",
+  "og_title": null,
+  "panels_count": 0,
+  "password": null,
+  "request_billboard": null,
   "survey_id": 520,
-  "sync_url": "",
-  "unique_id": "84bb57911b251458463fe639e5010e"
+  "sync_url": null
 }
 
 リソースが存在しない場合

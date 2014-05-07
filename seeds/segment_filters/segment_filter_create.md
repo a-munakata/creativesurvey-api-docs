@@ -2,7 +2,7 @@
 
 category_name: segment_filter
 title: フィルターの作成
-priority: 999
+priority: 998
 
 ---
 
@@ -26,6 +26,10 @@ value:
 question_id:
 : __integer__
 : セグメントする質問のid
+
+inbox_id:
+: __integer__
+: 対象のセグメントを持つインボックスのidです。
 
 
 ~~~

@@ -2,13 +2,13 @@
 
 category_name: segment
 title: セグメント設定の作成
-priority: 999
+priority: 998
 
 ---
 
 # セグメント設定の作成
 
-## セグメント設定を作成します。作成したセグメントは、アンケートから設定します。適用については[こちら](#survey_update)を参照ください。
+## セグメント設定を作成します。作成したセグメントは、アンケートから設定します。セグメントの適用については[こちら](#survey_update)を参照ください。
 
 auth_token*:
 : __string__
@@ -23,12 +23,12 @@ name*:
 : セグメント名
 
 due_start:
-: __date__ _(デフォルト: null)_
+: __timestamp__ _(デフォルト: null)_
 : 回答日時によってセグメントする際の開始日
 : その日の回答を含めます。
 
 due_end:
-: __date__ _(デフォルト: null)_
+: __timestamp__ _(デフォルト: null)_
 : 回答日時によってセグメントする際の終了日
 : その日の回答を含めます。
 
@@ -59,13 +59,11 @@ curl -X POST https://creativesurvey.com/api/v1/surveys/520/segments \
 -d "segment[disallow_duplicate_ip]=true" \
 -d "segment[due_start]=20140427" \
 -d "segment[due_end]=20140430" \
--d "segment[is_uncompleted]=true
+-d "segment[is_uncompleted]=true"
 
 レスポンス例
 {
   "updated_at": "2014-04-28T17:04:37+09:00",
-<!--  "unique_id": null,-->
-<!--  "is_making": null,-->
   "inbox_id": 6,
   "id": 125,
   "due_start": "2014-04-27T00:00:00+09:00",
@@ -73,13 +71,8 @@ curl -X POST https://creativesurvey.com/api/v1/surveys/520/segments \
   "disallow_duplicate_ip": true,
   "created_at": "2014-04-28T17:04:37+09:00",
   "allow_screen_out": false,
-<!--  "is_public": null,-->
-<!--  "is_raw_data_error": null,-->
   "is_uncompleted": true,
-<!--  "make_at": null,-->
   "name": "40代女性",
-<!--  "pass_phrase": null,-->
-<!--  "raw_data_error": null,-->
   "survey_id": 524
 }
 

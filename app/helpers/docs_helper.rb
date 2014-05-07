@@ -18,6 +18,7 @@ module DocsHelper
       { title: "分岐設定", name: "logic" },
       { title: "置き換え変数設定", name: "questionnaire_variable" },
       { title: "表示ロジック", name: "visibility" },
+      { title: "公開設定", name: "collector"},
       { title: "セグメント設定", name: "segment" },
       { title: "フィルター設定", name: "segment_filter" }
     ].collect{ |datum|

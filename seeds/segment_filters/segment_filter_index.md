@@ -37,15 +37,8 @@ curl -X GET https://creativesurvey.com/api/v1/segments/117/segment_filters \
     "id": 14,
     "created_at": "2014-04-28T10:47:05+09:00"
   },
-  {
-    "value": "4385",
-    "updated_at": "2014-04-28T10:47:05+09:00",
-    "segment_id": 119,
-    "question_id": 1866,
-    "inbox_id": 6,
-    "id": 15,
-    "created_at": "2014-04-28T10:47:05+09:00"
-  }
+  {...},
+  {...}  
 ]
 
 リソースが存在しない場合

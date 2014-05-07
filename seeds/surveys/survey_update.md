@@ -1,3 +1,4 @@
+
 ---
 
 category_name: surveys
@@ -35,6 +36,10 @@ password:
 : __string__ _(デフォルト: null)_
 : 結果を公開する際に求めるパスワード
 
+active_segment_id:
+: __integer__ _(デフォルト: null)_
+: 適用するセグメントのid
+
 ~~~
 定義
 PUT https://creativesurvey.com/api/v1/surveys/:survey_id
@@ -59,6 +64,7 @@ $ curl -X PUT https://creativesurvey.com/api/v1/surveys/508 \
   "published_at":null,
   "questions_count":0,
   "tag_color":red,
+  "active_segment_id": null,
   "updated_at":"2014-04-16T20:11:35+09:00"
 }
 ~~~

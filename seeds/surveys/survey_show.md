@@ -41,6 +41,7 @@ $ curl -X GET https://creativesurvey.com/api/v1/surveys/514 \
   "name": "Sample Survey",
   "panels_count": null,
   "password": "4d"
+  "active_segment_id": null,
 }
 ~~~
 

@@ -2,7 +2,7 @@
 
 category_name: segment_filter
 title: フィルターの更新
-priority: 999
+priority: 996
 
 ---
 
@@ -31,6 +31,10 @@ question_id:
 : __integer__
 : セグメントする質問のid
 
+inbox_id:
+: __integer__
+: 対象のセグメントを持つインボックスのidです。
+
 ~~~
 定義
 PUT https://creativesurvey.com/api/v1/segment_filters/segment_filter_id
@@ -40,8 +44,6 @@ curl -X PUT https://creativesurvey.com/api/v1/segment_filters/14 \
 -d "segment_filter[question_id]=1866" \
 -d "segment_filter[value]=4386" \
 -d "auth_token=Vp5vzALpGzhqkcpxxxxx"
-
-
 
 レスポンス例
 {

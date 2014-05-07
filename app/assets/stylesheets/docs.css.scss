@@ -243,6 +243,11 @@ pre {
         word-wrap: break-word;
         width: 190px;
         z-index: 50;
+        padding-top: 1em;
+
+        + dd {
+          padding-top: 1em;
+        }
       }
       dd {
         box-sizing: border-box;
