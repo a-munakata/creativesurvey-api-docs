@@ -84,6 +84,7 @@ og_description:
 
 og_image:
 : アンケートを共有する際のog:imageを指定します。
+: 画像パスの前に@を付けて画像を指定します。
 
 is_password:
 : __boolean__ _(デフォルト: false)_
@@ -108,44 +109,49 @@ POST https://creativesurvey.com/api/v1/surveys/:survey_id/collectors
 リクエスト例
 $ curl -X POST \
 https://creativesurvey.com/api/v1/surveys/520/collectors \
--d "auth_token=Vp5vzALpGzhqkcpxxxxx" \
--d "collector[name]=公開設定2"
+-F "auth_token=KRXJUq7yxjT18VqpoTKp" \
+-F "collector[og_image]=@/Users/4dusers/Desktop/red.gif" \
+-F "collector[og_title]=creativesurvey" \
+-F "collector[og_description]=sample" \
+-F "collector[name]=公開設定2" \
+-F "collector[is_ogp]=true"
 
 レスポンス例
 {
-  "updated_at": "2014-04-23T17:09:29+09:00",
+  "updated_at": "2014-05-08T10:57:18+09:00",
   "is_answer_limit": false,
   "is_activated": false,
   "inbox_id": 6,
-  "id": 529,
+  "id": 540,
   "due": null,
   "answer_limit": null,
-  "ban_mobile": false,
+  "ban_mobile": null,
   "can_return": false,
   "completed_panels_count": 0,
-  "created_at": "2014-04-23T17:09:29+09:00",
+  "created_at": "2014-05-08T10:57:18+09:00",
   "disallow_duplicate_machine": false,
   "is_due": false,
   "is_mail": false,
-  "is_ogp": false,
+  "is_ogp": true,
   "is_password": false,
   "name": "公開設定2",
-  "og_description": null,
+  "og_description": "sample",
   "og_image": {
     "square": {
-      "url": null
+      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/collector/og_image/540/square_red.gif"
     },
     "thumb": {
-      "url": null
+      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/collector/og_image/540/thumb_red.gif"
     },
-    "url": null
+    "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/collector/og_image/540/red.gif"
   },
-  "og_title": null,
+  "og_title": "creativesurvey",
   "panels_count": 0,
   "password": null,
   "request_billboard": null,
-  "survey_id": 520,
-  "sync_url": null
+  "survey_id": 528,
+  "sync_url": null,
+  "unique_id": "555f62e773658431015ec6f6420672"
 }
 
 リソースが存在しない場合

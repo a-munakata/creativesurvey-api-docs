@@ -84,6 +84,7 @@ og_description:
 
 og_image:
 : アンケートを共有する際のog:imageを指定します。
+: 画像パスの前に@を付けて画像を指定します。
 
 is_password:
 : __boolean__ _(デフォルト: false)_
@@ -110,11 +111,17 @@ $ curl -X PUT \
 https://creativesurvey.com/api/v1/collectors/529 \
 -d "auth_token=Vp5vzALpGzhqkcpxxxxx" \
 -d "collector[name]=公開設定3" \
--d "collector[is_password]=true \
+-d "collector[is_password]=true" \
 -d "collector[password]=sample_pass" \
 -d "collector[is_mail]=true" \
 -d "collector[ban_mobile]=true"
 
+リクエスト例(画像のアップロードあり)
+$ curl -X PUT \
+https://creativesurvey.com/api/v1/collectors/529 \
+-F "auth_token=Vp5vzALpGzhqkcpxxxxx" \
+-F "collector[name]=OG設定あり" \
+-F "collector[og_image]=@/Users/Sampleusers/Desktop/og.gif"
 
 レスポンス例
 {
