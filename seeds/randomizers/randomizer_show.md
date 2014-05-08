@@ -2,7 +2,7 @@
 
 category_name: randomizer
 title: ランダム設定の取得
-priority: 999
+priority: 997
 
 ---
 

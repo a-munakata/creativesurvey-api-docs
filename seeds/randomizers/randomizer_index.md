@@ -40,18 +40,8 @@ curl -X GET https://creativesurvey.com/api/v1/questionnaires/508/randomizers \
     "questionnaire_id": 508,
     "start_index": 0
   },
-  {
-    "updated_at": "2014-04-22T11:41:12+09:00",
-    "step_num": 1,
-    "created_at": "2014-04-22T11:41:02+09:00",
-    "end_index": 3,
-    "id": 37,
-    "inbox_id": 6,
-    "is_valid": true,
-    "order_index": 0,
-    "questionnaire_id": 508,
-    "start_index": 2
-  }
+  {...},
+  {...}
 ]
 
 リソースが存在しない場合
