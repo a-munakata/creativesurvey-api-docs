@@ -19,17 +19,27 @@ egression_id*:
 : 取得する最終画面のid
 
 rendered_sentence:
-: __string__
+: __string__ _(デフォルト: "")_
 : 最終画面の文言
 
 is_redirect:
-: __boolean__
-: _(デフォルト: false)_
-: trueの場合、最終画面の表示ではなくリダイレクトをさせます
+: __boolean__ _(デフォルト: false)_
+: trueの場合、最終画面の表示ではなくリダイレクトをさせます。
 
 redirect_url:
-: __string__
+: __string__ _(デフォルト: null)_
 : リダイレクトを指定する場合のurl
+
+question_type:
+: __integer__ _(デフォルト: 1)_
+: 質問タイプ。 1,2,4から選択します。
+: 1: テキストのみ
+: 2: テキストと画像
+: 4: テキストと長文
+
+description:
+: __string__ _(デフォルト: "")_
+: 注意書きや補足などのテキストを入力します。
 
 ~~~
 定義
