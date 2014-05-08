@@ -16,7 +16,7 @@ auth_token*:
 
 questionnaire_id*:
 : __integer__
-: 取得したい質問順序を含むアンケートid
+: 取得したい質問順序を含む質問表のid
 
 ~~~
 定義

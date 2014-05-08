@@ -18,21 +18,32 @@ questionnaire_id*:
 : __integer__
 : ランダム設定を指定する質問表のid
 
-start_index:
-: __integer__
-: 何問目からランダムを設定するか指定します。
-: indexは0から始まる整数です。
-
-end_index:
-: __integer__
-: 何問目までランダムを設定するか指定します。
-: indexは0から始まる整数です。
-
-step_num:
+step_num*:
 : __integer__
 : ランダムを設定するステップ数
 : start_indexからend_indexまでで何問を抽出するかを設定するものです。
 
+start_index:
+: __integer__ _(デフォルト: null)_
+: 何問目からランダムを設定するか指定します。
+: indexは0から始まる整数です。
+
+end_index:
+: __integer__ _(デフォルト: null)_
+: 何問目までランダムを設定するか指定します。
+: indexは0から始まる整数です。
+
+is_valid:
+: __boolean__ _(デフォルト: true)_
+: 有効かどうか
+
+order_index:
+: __integer__ _(デフォルト: 0)_
+: ランダマイズ設定の順序を0から始まる整数で指定します。
+
+inbox_id:
+: __integer__
+: ランダマイズ設定を含むインボックスのid
 
 ~~~
 定義

@@ -2,7 +2,7 @@
 
 category_name: visibility
 title: 表示ロジックの取得
-priority: 999
+priority: 997
 
 ---
 

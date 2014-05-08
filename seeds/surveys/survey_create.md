@@ -21,17 +21,27 @@ name*:
 
 tag_color:
 : __string__ _(デフォルト: null)_
-: アンケートのタグの色
-: 指定出来る色は"cyan", "purple", "red", "green", "pink", "yellow", "orange", "gray"です。
+: アンケートのタグの色で、下記の色を指定することが出来ます。
+: cyan   : 水色
+: purple : 紫
+: red    : 赤
+: green  : 緑
+: pink   : ピンク
+: yellow : 黄色
+: orange : オレンジ
+: gray   : 灰色
 
 is_public:
 : __boolean__ _(デフォルト: false)_
 : trueを返すとアンケートの結果を公開します。
 
 password:
-: __string__ _(デフォルト : null)_
+: __string__ _(デフォルト: null)_
 : 結果を公開する際に求めるパスワード
 
+active_segment_id:
+: __integer__ _(デフォルト: null)_
+: 適用するセグメントのid
 
 ~~~
 定義

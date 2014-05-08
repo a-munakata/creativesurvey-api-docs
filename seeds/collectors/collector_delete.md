@@ -16,7 +16,7 @@ auth_token*:
 
 collector_id*:
 : __integer__
-: 対象となるアンケートのid
+: 対象となる公開設定のid
  
 ~~~
 定義

@@ -16,7 +16,7 @@ auth_token*:
 
 question_id*:
 : __integer__
-: 取得する質問が含まれる質問表のid
+: 対象の質問id
 
 question_type*:
 : __integer__ _(デフォルト: 1)_

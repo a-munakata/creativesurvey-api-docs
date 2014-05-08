@@ -16,7 +16,7 @@ auth_token*:
 
 egression_id*:
 : __integer__
-: 取得する最終画面のid
+: 更新する最終画面のid
 
 rendered_sentence:
 : __string__ _(デフォルト: "")_

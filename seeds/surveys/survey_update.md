@@ -19,14 +19,21 @@ survey_id*:
 : __integer__
 : 更新するアンケートのid
 
-name:
+name*:
 : __string__
 : アンケート名
 
 tag_color:
-: __string__
-: アンケートのタグの色
-: 指定出来る色は"cyan", "purple", "red", "green", "pink", "yellow", "orange", "gray"です。
+: __string__ _(デフォルト: null)_
+: アンケートのタグの色で、下記の色を指定することが出来ます。
+: cyan   : 水色
+: purple : 紫
+: red    : 赤
+: green  : 緑
+: pink   : ピンク
+: yellow : 黄色
+: orange : オレンジ
+: gray   : 灰色
 
 is_public:
 : __boolean__ _(デフォルト: false)_

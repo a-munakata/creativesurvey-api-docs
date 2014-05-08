@@ -2,7 +2,7 @@
 
 category_name: logic
 title: 分岐設定の削除
-priority: 999
+priority: 995
 
 ---
 
@@ -16,7 +16,7 @@ auth_token*:
 
 logic_id*:
 : __integer__
-: 取得する分岐設定のid
+: 削除する分岐設定のid
 
 ~~~
 定義

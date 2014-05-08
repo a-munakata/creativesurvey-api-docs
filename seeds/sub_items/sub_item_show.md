@@ -2,13 +2,13 @@
 
 category_name: sub_item
 title: 回答補助項目の取得
-priority: 999
+priority: 997
 
 ---
 
 # 回答補助項目の取得
 
-## 回答項目の補助項目を取得します。補助項目は質問タイプによって異なります。
+## 回答項目の補助項目を取得します。
 
 auth_token*:
 : __string__
@@ -16,7 +16,7 @@ auth_token*:
 
 sub_item_id*:
 : __integer__
-: 取得する回答項目を含む質問のid
+: 取得する回答補助項目のid
 
 ~~~
 定義

@@ -2,7 +2,7 @@
 
 category_name: page_order_item
 title: 質問順序の取得
-priority: 999
+priority: 998
 
 ---
 

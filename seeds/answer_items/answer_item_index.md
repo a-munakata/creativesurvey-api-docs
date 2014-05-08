@@ -48,26 +48,8 @@ curl -X GET https://creativesurvey.com/api/v1/questions/1829/answer_items \
     "updated_at": "2014-04-22T19:02:16+09:00",
     "val": 0.5
   },
-  {
-    "validation_type": null,
-    "validation_pattern": "",
-    "is_required": false,
-    "is_reject": null,
-    "is_multiline": false,
-    "is_impression": true,
-    "inbox_id": 6,
-    "id": 4302,
-    "created_at": "2014-04-22T17:39:40+09:00",
-    "answer_type": 2,
-    "max_value": null,
-    "min_value": null,
-    "order_index": 1,
-    "placeholder": "",
-    "question_id": 1829,
-    "sentence": "no",
-    "updated_at": "2014-04-22T19:02:16+09:00",
-    "val": 0.5
-  }
+  {...},
+  {...}
 ]
 
 リソースが存在しない場合

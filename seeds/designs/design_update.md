@@ -16,7 +16,7 @@ auth_token*:
 
 design_id*:
 : __integer__
-: 取得するデザインのid
+: 更新する対象のデザインのid
 
 inbox_id:
 : __integer__

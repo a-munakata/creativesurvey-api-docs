@@ -16,7 +16,7 @@ auth_token*:
 
 survey_id*:
 : __integer__
-: 指定するアンケートid
+: 対象となるアンケートid
 
 ~~~
 定義

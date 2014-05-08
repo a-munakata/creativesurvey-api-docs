@@ -2,7 +2,7 @@
 
 category_name: sub_item
 title: 回答補助項目の削除
-priority: 999
+priority: 995
 
 ---
 
@@ -16,7 +16,7 @@ auth_token*:
 
 sub_item_id*:
 : __integer__
-: 取得する回答項目を含む質問のid
+: 削除する回答補助項目のid
 
 ~~~
 定義

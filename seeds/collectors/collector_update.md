@@ -16,7 +16,7 @@ auth_token*:
 
 collector_id*:
 : __integer__
-: 対象となるアンケートのid
+: 対象となる公開設定のid
 
 name*:
 : __string__ _(デフォルト: "公開設定")_

@@ -16,7 +16,7 @@ auth_token*:
 
 creative_id*:
 : __integer__
-: 取得する画像のid
+: 更新する画像のid
 
 image*:
 : __string__ _(デフォルト: null)_

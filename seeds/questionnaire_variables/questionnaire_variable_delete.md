@@ -2,7 +2,7 @@
 
 category_name: questionnaire_variable
 title: 置き換え変数設定の削除
-priority: 999
+priority: 995
 
 ---
 
@@ -16,7 +16,7 @@ auth_token*:
 
 questionnaire_variable_id:
 : __integer__
-: アップデートしたい置き換え変数設定のid
+: 削除する置き換え変数設定のid
 
 ~~~
 定義

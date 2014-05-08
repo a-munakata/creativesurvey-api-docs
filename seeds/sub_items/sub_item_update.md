@@ -2,7 +2,7 @@
 
 category_name: sub_item
 title: 回答補助項目の更新
-priority: 999
+priority: 996
 
 ---
 
@@ -16,7 +16,27 @@ auth_token*:
 
 sub_item_id*:
 : __integer__
-: 取得する回答項目を含む質問のid
+: 更新する回答項目を含む質問のid
+
+sentence:
+: __string__ _(デフォルト: "")_
+: 回答項目の文言
+
+order_index:
+: __integer__ _(デフォルト: 0)_
+: 回答補助項目の順序を0から始まる整数で指定します。
+
+min_value:
+: __integer__ _(デフォルト: null)_
+: 回答項目の最小選択数
+
+max_value:
+: __integer__ _(デフォルト: null)_
+: 回答項目の最大選択数
+
+inbox_id:
+: __integer__
+: 該当の回答補助項目を含むインボックスid
 
 ~~~
 定義

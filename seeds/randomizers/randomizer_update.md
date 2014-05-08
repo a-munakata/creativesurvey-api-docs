@@ -18,19 +18,32 @@ randomizer_id*:
 : __integer__
 : ランダム設定のid
 
-start_index:
-: __integer__
-: 何問目からランダムを設定するか指定します。
-
-end_index:
-: __integer__
-: 何問目までランダムを設定するか指定します。
-
-step_num:
+step_num*:
 : __integer__
 : ランダムを設定するステップ数
 : start_indexからend_indexまでで何問を抽出するかを設定するものです。
 
+start_index:
+: __integer__ _(デフォルト: null)_
+: 何問目からランダムを設定するか指定します。
+: indexは0から始まる整数です。
+
+end_index:
+: __integer__ _(デフォルト: null)_
+: 何問目までランダムを設定するか指定します。
+: indexは0から始まる整数です。
+
+is_valid:
+: __boolean__ _(デフォルト: true)_
+: 有効かどうか
+
+order_index:
+: __integer__ _(デフォルト: 0)_
+: ランダマイズ設定の順序を0から始まる整数で指定します。
+
+inbox_id:
+: __integer__
+: ランダマイズ設定を含むインボックスのid
 
 ~~~
 定義
@@ -45,16 +58,16 @@ curl -X PUT https://creativesurvey.com/api/v1/randomizers/37 \
 
 レスポンス例
 {
-  "updated_at": "2014-04-22T11:41:12+09:00",
-  "step_num": 1,
-  "created_at": "2014-04-22T11:41:01+09:00",
-  "end_index": 1,
-  "id": 36,
+  "updated_at": "2014-05-08T12:28:38+09:00",
+  "step_num": 2,
+  "created_at": "2014-05-08T12:24:11+09:00",
+  "end_index": 5,
+  "id": 37,
   "inbox_id": 6,
   "is_valid": true,
   "order_index": 0,
-  "questionnaire_id": 508,
-  "start_index": 0
+  "questionnaire_id": 519,
+  "start_index": 1
 }
 
 リソースが存在しない場合

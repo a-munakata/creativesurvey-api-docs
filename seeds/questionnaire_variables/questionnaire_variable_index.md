@@ -16,7 +16,7 @@ auth_token*:
 
 questionnaire_id*:
 : __integer__
-: 置き換え変数設定を取得したいアンケートのid
+: 取得する置き換え変数設定を含む質問表のid
 
 ~~~
 定義
@@ -44,22 +44,8 @@ curl -X GET https://creativesurvey.com/api/v1/questionnaires/510/questionnaire_v
     "questionnaire_id": 510,
     "result_id": 1829
   },
-  {
-    "updated_at": "2014-04-22T18:02:38+09:00",
-    "target": "らっぱ",
-    "sub_item_id": null,
-    "separator": "",
-    "result_value": "",
-    "result_type": "1",
-    "answer_item_id": null,
-    "created_at": "2014-04-22T18:02:11+09:00",
-    "id": 101,
-    "inbox_id": 6,
-    "is_separate": false,
-    "order_index": null,
-    "questionnaire_id": 510,
-    "result_id": 1831
-  }
+  {...},
+  {...}
 ]
 
 リソースが存在しない場合
