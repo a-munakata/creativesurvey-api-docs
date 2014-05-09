@@ -21,3 +21,5 @@ app/mailers/.gitkeep
 config/application.yml
 
 .idea
+
+public/assets/*

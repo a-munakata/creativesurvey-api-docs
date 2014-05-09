@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='IE=Edge,chrome=1' http-equiv='X-UA-Compatible'>
+    <meta content='width=1024' name='viewport'>
+    <title>CREATIVE SURVEY</title>
+    <link href="http://yandex.st/highlightjs/8.0/styles/railscasts.min.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href='./stylesheets/application.css' media='screen' rel='stylesheet' type='text/css'>
+    <script src="http://yandex.st/highlightjs/8.0/highlight.min.js" type="text/javascript"></script>
+    <script src='./javascripts/jquery.js' type='text/javascript'></script>
+    <script src='./javascripts/application.js' type='text/javascript'></script>
+  </head>
+  <body>
+    <div class='header' id='global'>
+      <div class='container'>
+        <div class='inner clearfix'>
+          <div class='logo'>
+            <a href="http://localhost:3000/">CREATIVESURVEY</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='main'>
+      <div class='inner'>
+        <div class='control'>
+          <form accept-charset="UTF-8" action="/docs/spawn" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="CvNOXjXt6Y7yeODl7NZD9duBqzAxU70+nzxK4AOMLHs=" /></div>
+            <select class='dropdown'>
+              <option>
+                curl
+              </option>
+              <option>
+                ruby
+              </option>
+            </select>
+          </form>
+          <ul class='side-nav'>
+            <li>
+              <h3 class='main-title' data-category='overview'>
+                <a href="#overview">CREATIVE SURVEY API</a>
+              </h3>
+              <ul>
+                <li class='sub-title' data-entry='overview_index'>
+                  <a href="#overview_index">はじめに</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3 class='main-title' data-category='users'>
+                <a href="#users">ユーザー</a>
+              </h3>
+              <ul>
+                <li class='sub-title' data-entry='user_auth'>
+                  <a href="#user_auth">ユーザーの認証</a>
+                </li>
+                <li class='sub-title' data-entry='user_delete'>
+                  <a href="#user_delete">ユーザー認証の失効</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3 class='main-title' data-category='surveys'>
+                <a href="#surveys">アンケート</a>
+              </h3>
+              <ul>
+                <li class='sub-title' data-entry='survey_index'>
+                  <a href="#survey_index">アンケート一覧の取得</a>
+                </li>
+                <li class='sub-title' data-entry='survey_create'>
+                  <a href="#survey_create">アンケートの作成</a>
+                </li>
+                <li class='sub-title' data-entry='survey_show'>
+                  <a href="#survey_show">アンケートの取得</a>
+                </li>
+                <li class='sub-title' data-entry='survey_update'>
+                  <a href="#survey_update">アンケートの更新</a>
+                </li>
+                <li class='sub-title' data-entry='survey_delete'>
+                  <a href="#survey_delete">アンケートの削除</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3 class='main-title' data-category='questionnaire'>
+                <a href="#questionnaire">質問表</a>
+              </h3>
+              <ul>
+                <li class='sub-title' data-entry='questionnaire_show'>
+                  <a href="#questionnaire_show">質問表の取得</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3 class='main-title' data-category='question'>
+                <a href="#question">質問</a>
+              </h3>
+              <ul>
+                <li class='sub-title' data-entry='question_index'>
+                  <a href="#question_index">質問一覧の取得</a>
+                </li>
+                <li class='sub-title' data-entry='question_create'>
+                  <a href="#question_create">質問の作成</a>
+                </li>
+                <li class='sub-title' data-entry='question_show'>
+                  <a href="#question_show">質問の取得</a>
+                </li>
+                <li class='sub-title' data-entry='question_update'>
+                  <a href="#question_update">質問の更新</a>
+                </li>
+                <li class='sub-title' data-entry='question_delete'>
+                  <a href="#question_delete">質問の削除</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3 class='main-title' data-category='answer_item'>
+                <a href="#answer_item">回答項目</a>
+              </h3>
+              <ul>
+                <li class='sub-title' data-entry='answer_item_index'>
+                  <a href="#answer_item_index">回答項目一覧の取得</a>
+                </li>
+                <li class='sub-title' data-entry='answer_item_create'>
+                  <a href="#answer_item_create">回答項目の作成</a>
+                </li>
+                <li class='sub-title' data-entry='answer_item_show'>
+                  <a href="#answer_item_show">回答項目の取得</a>
+                </li>
+                <li class='sub-title' data-entry='answer_item_update'>
+                  <a href="#answer_item_update">回答項目の更新</a>
+                </li>
+                <li class='sub-title' data-entry='answer_item_delete'>
+                  <a href="#answer_item_delete">回答項目の削除</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3 class='main-title' data-category='sub_item'>
+                <a href="#sub_item">回答補助項目</a>
+              </h3>
+              <ul>
+                <li class='sub-title' data-entry='sub_item_show'>
+                  <a href="#sub_item_show">回答補助項目の取得</a>
+                </li>
+                <li class='sub-title' data-entry='sub_item_update'>
+                  <a href="#sub_item_update">回答補助項目の更新</a>
+                </li>
+                <li class='sub-title' data-entry='sub_item_delete'>
+                  <a href="#sub_item_delete">回答補助項目の削除</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3 class='main-title' data-category='creative'>
+                <a href="#creative">画像</a>
+              </h3>
+              <ul>
+                <li class='sub-title' data-entry='creative_index'>
+                  <a href="#creative_index">画像一覧の取得</a>
+                </li>
+                <li class='sub-title' data-entry='creative_create'>
+                  <a href="#creative_create">画像の作成</a>
+                </li>
+                <li class='sub-title' data-entry='creative_show'>
+                  <a href="#creative_show">画像の取得</a>
+                </li>
+                <li class='sub-title' data-entry='creative_update'>
+                  <a href="#creative_update">画像の更新</a>
+                </li>
+                <li class='sub-title' data-entry='creative_delete'>
+                  <a href="#creative_delete">画像の削除</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3 class='main-title' data-category='egression'>
+                <a href="#egression">最終画面</a>
+              </h3>
+              <ul>
+                <li class='sub-title' data-entry='egression_show'>
+                  <a href="#egression_show">最終画面の取得</a>
+                </li>
+                <li class='sub-title' data-entry='egression_update'>
+                  <a href="#egression_update">最終画面の変更</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3 class='main-title' data-category='randomizer'>
+                <a href="#randomizer">ランダム設定</a>
+              </h3>
+              <ul>
+                <li class='sub-title' data-entry='randomizer_index'>
+                  <a href="#randomizer_index">ランダム設定一覧の取得</a>
+                </li>
+                <li class='sub-title' data-entry='randomizer_create'>
+                  <a href="#randomizer_create">ランダム設定の作成</a>
+                </li>
+                <li class='sub-title' data-entry='randomizer_show'>
+                  <a href="#randomizer_show">ランダム設定の取得</a>
+                </li>
+                <li class='sub-title' data-entry='randomizer_update'>
+                  <a href="#randomizer_update">ランダム設定の更新</a>
+                </li>
+                <li class='sub-title' data-entry='randomizer_delete'>
+                  <a href="#randomizer_delete">ランダム設定の削除</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3 class='main-title' data-category='design'>
+                <a href="#design">デザイン</a>
+              </h3>
+              <ul>
+                <li class='sub-title' data-entry='design_show'>
+                  <a href="#design_show">デザインの取得</a>
+                </li>
+                <li class='sub-title' data-entry='design_update'>
+                  <a href="#design_update">デザインの更新</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3 class='main-title' data-category='page_order_item'>
+                <a href="#page_order_item">質問順序</a>
+              </h3>
+              <ul>
+                <li class='sub-title' data-entry='page_order_item_index'>
+                  <a href="#page_order_item_index">質問順序一覧の取得</a>
+                </li>
+                <li class='sub-title' data-entry='page_order_item_show'>
+                  <a href="#page_order_item_show">質問順序の取得</a>
+                </li>
+                <li class='sub-title' data-entry='page_order_item_update'>
+                  <a href="#page_order_item_update">質問順序の更新</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3 class='main-title' data-category='logic'>
+                <a href="#logic">分岐設定</a>
+              </h3>
+              <ul>
+                <li class='sub-title' data-entry='logics_index'>
+                  <a href="#logics_index">分岐設定一覧の取得</a>
+                </li>
+                <li class='sub-title' data-entry='logics_show'>
+                  <a href="#logics_show">分岐設定の取得</a>
+                </li>
+                <li class='sub-title' data-entry='logics_delete'>
+                  <a href="#logics_delete">分岐設定の削除</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3 class='main-title' data-category='questionnaire_variable'>
+                <a href="#questionnaire_variable">置き換え変数設定</a>
+              </h3>
+              <ul>
+                <li class='sub-title' data-entry='questionnaire_variable_index'>
+                  <a href="#questionnaire_variable_index">置き換え変数設定一覧の取得</a>
+                </li>
+                <li class='sub-title' data-entry='questionnaire_variable_create'>
+                  <a href="#questionnaire_variable_create">置き換え変数設定の作成</a>
+                </li>
+                <li class='sub-title' data-entry='questionnaire_variable_show'>
+                  <a href="#questionnaire_variable_show">置き換え変数設定の取得</a>
+                </li>
+                <li class='sub-title' data-entry='questionnaire_variable_update'>
+                  <a href="#questionnaire_variable_update">置き換え変数設定の更新</a>
+                </li>
+                <li class='sub-title' data-entry='questionnaire_variable_delete'>
+                  <a href="#questionnaire_variable_delete">置き換え変数設定の削除</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3 class='main-title' data-category='visibility'>
+                <a href="#visibility">表示ロジック</a>
+              </h3>
+              <ul>
+                <li class='sub-title' data-entry='visibility_index'>
+                  <a href="#visibility_index">表示ロジック一覧の取得</a>
+                </li>
+                <li class='sub-title' data-entry='visibility_show'>
+                  <a href="#visibility_show">表示ロジックの取得</a>
+                </li>
+                <li class='sub-title' data-entry='visibility_delete'>
+                  <a href="#visibility_delete">表示ロジックの削除</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3 class='main-title' data-category='collector'>
+                <a href="#collector">公開設定</a>
+              </h3>
+              <ul>
+                <li class='sub-title' data-entry='collector_index'>
+                  <a href="#collector_index">公開設定一覧の取得</a>
+                </li>
+                <li class='sub-title' data-entry='collector_create'>
+                  <a href="#collector_create">公開設定の作成</a>
+                </li>
+                <li class='sub-title' data-entry='collector_show'>
+                  <a href="#collector_show">公開設定の取得</a>
+                </li>
+                <li class='sub-title' data-entry='collector_update'>
+                  <a href="#collector_update">公開設定の更新</a>
+                </li>
+                <li class='sub-title' data-entry='collector_delete'>
+                  <a href="#collector_delete">公開設定の削除</a>
+                </li>
+                <li class='sub-title' data-entry='collector_publish'>
+                  <a href="#collector_publish">公開設定の公開</a>
+                </li>
+                <li class='sub-title' data-entry='collector_abort'>
+                  <a href="#collector_abort">公開設定の公開中止</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3 class='main-title' data-category='segment'>
+                <a href="#segment">セグメント設定</a>
+              </h3>
+              <ul>
+                <li class='sub-title' data-entry='segment_index'>
+                  <a href="#segment_index">セグメント設定一覧を取得</a>
+                </li>
+                <li class='sub-title' data-entry='segment_create'>
+                  <a href="#segment_create">セグメント設定の作成</a>
+                </li>
+                <li class='sub-title' data-entry='segment_show'>
+                  <a href="#segment_show">セグメント設定の取得</a>
+                </li>
+                <li class='sub-title' data-entry='segment_update'>
+                  <a href="#segment_update">セグメント設定の更新</a>
+                </li>
+                <li class='sub-title' data-entry='segment_delete'>
+                  <a href="#segment_delete">セグメント設定の削除</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3 class='main-title' data-category='segment_filter'>
+                <a href="#segment_filter">フィルター設定</a>
+              </h3>
+              <ul>
+                <li class='sub-title' data-entry='segment_filter_index'>
+                  <a href="#segment_filter_index">フィルター一覧の取得</a>
+                </li>
+                <li class='sub-title' data-entry='segment_filter_create'>
+                  <a href="#segment_filter_create">フィルターの作成</a>
+                </li>
+                <li class='sub-title' data-entry='segment_filter_show'>
+                  <a href="#segment_filter_show">フィルターの取得</a>
+                </li>
+                <li class='sub-title' data-entry='segment_filter_update'>
+                  <a href="#segment_filter_update">フィルターの更新</a>
+                </li>
+                <li class='sub-title' data-entry='segment_filter_delete'>
+                  <a href="#segment_filter_delete">フィルターの削除</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class='content'>
+          <div class='inner'>
+            <h1 class='overview category category-title' id='overview'>
+              CREATIVE SURVEY API
+            </h1>
+            <div class='document-block entry' data-category='overview' data-entry='overview_index' id='overview_index'>
+              <div class='inner'>
+                <h1 id="sample">はじめに(sample)</h1><h2 id="api-rest-urlhttpapihttphttphttpapiapi-json-">このAPIは REST を基本に構成しています。つまりは、開発者にとって予測可能で、リソース指向のURLを用い、HTTPレスポンスコードをAPIエラーの表示に用い、HTTP認証等のHTTPの機能に沿った実装を行っています。つまり、HTTP通信が利用できるあらゆるクライアント・技術で簡単に本APIを利用することが可能です。全てのAPIによるレスポンスはエラーも含めて、 JSON 形式で返します。</h2><h2 id="apiapiapiapiapi">このAPIを最大限楽しめるように、商用モードのAPIキーだけでなく、全てのユーザーはテストモードのAPIキーを利用することができます。テストモードのAPIキーを用いることで、実際のクレジットカードへの課金や手数料の支払い等を行うことなく、全てのAPIの機能を試すことができます。</h2><pre><code>エンドポイントhttps://creativesurvey.com</code></pre><pre><code>エンドポイントhttps://creativesurvey.com</code></pre>
+              </div>
+            </div>
+          </div>
+          <div class='inner'>
+            <h1 class='users category category-title' id='users'>
+              ユーザー
+            </h1>
+            <div class='document-block entry' data-category='users' data-entry='user_auth' id='user_auth'>
+              <div class='inner'>
+                <h1 id="section">ユーザーの認証</h1><h2 id="creative-surveyauthtokencreative-survey-apiauthtokenapi">CREATIVE SURVEYのアカウントのメールアドレスとパスワードでユーザーの認証を行います。認証で取得したauth_tokenは、CREATIVE SURVEY APIの全てのリクエストで必要になります。auth_tokenを使用するとAPI全ての操作が可能になるので、厳重に管理してください。</h2><dl>  <dt>email*:</dt>  <dd><strong>string</strong> </dd>  <dd>登録しているユーザーのメールアドレス</dd>  <dt>password*:</dt>  <dd><strong>string</strong></dd>  <dd>登録しているユーザーのパスワード</dd></dl><pre><code>定義POST https://creativesurvey.com/api/v1/users/sign_inリクエスト例$ curl -X POST https://creativesurvey.com/api/v1/users/sign_in \-d "user_login[email]=sample_email" \-d "user_login[password]=sample_password"レスポンス例{  "success":true,  "auth_token":"Vp5vzALpGzhqkcpxxxxx",  "email":"sample_email"}エラー例{  "success":false,  "message":"Error with your login or password"}</code></pre><pre><code>def rubyruby  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='users' data-entry='user_delete' id='user_delete'>
+              <div class='inner'>
+                <h1 id="section">ユーザー認証の失効</h1><h2 id="authtoken">認証されたユーザーのauth_tokenを失効させます。</h2><dl>  <dt>email*:</dt>  <dd><strong>string</strong> </dd>  <dd>登録しているユーザーのメールアドレス</dd></dl><pre><code>定義DELETE https://creativesurvey.com/api/v1/users/sign_outリクエスト例$ curl -X DELETE https://creativesurvey.com/api/v1/users/sign_out \-d "user_login[email]=sample_email"レスポンス例{  "success":true}エラー例{  "success":false,  "message":"Error with your login or password"}</code></pre><pre><code>def rubyruby  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+          </div>
+          <div class='inner'>
+            <h1 class='surveys category category-title' id='surveys'>
+              アンケート
+            </h1>
+            <div class='document-block entry' data-category='surveys' data-entry='survey_index' id='survey_index'>
+              <div class='inner'>
+                <h1 id="section">アンケート一覧の取得</h1><h2 id="section-1">ユーザーが保持しているアンケートの一覧を取得します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>offset:</dt>  <dd><strong>integer</strong></dd>  <dd>アンケートの表示では最新のアンケートが10件ずつ取得されますが、その際のオフセット値を指定します。</dd>  <dd>例えば<code>offset=10</code>を指定すると、11件目~20件目を取得します。</dd></dl><pre><code>定義GET https://creativesurvey.com/api/v1/surveysリクエスト例$ curl -X GET https://creativesurvey.com/api/v1/surveys \-d "auth_token=Vp5vzALpGzhqkcpxxxxx" \-d "offset=10"レスポンス例[  {    "updated_at": "2014-04-23T11:11:52+09:00",    "tag_color": null,    "statistic_make_at": null,    "questions_count": 0,    "published_at": null,    "public_token": "2a1ee3261d7120affb00da0f539db91eb3856af2",    "preview_count": 7,    "is_deleted": false,    "inbox_id": 6,    "id": 519,    "gift_count": 0,    "gift_code": null,    "edit_count": 16,    "created_at": "2014-04-22T17:39:28+09:00",    "active_segment_id": null,    "is_duplicating": false,    "is_gift": false,    "is_processing_statistic": null,    "is_public": null,    "is_published": false,    "name": "page_order_items",    "panels_count": 7,    "password": null  },  {...},  {...}]</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='surveys' data-entry='survey_create' id='survey_create'>
+              <div class='inner'>
+                <h1 id="section">アンケートの作成</h1><h2 id="section-1">新規アンケートを作成します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>name*:</dt>  <dd><strong>string</strong></dd>  <dd>アンケート名</dd>  <dt>tag_color:</dt>  <dd><strong>string</strong> <em>(デフォルト: null)</em></dd>  <dd>アンケートのタグの色で、下記の色を指定することが出来ます。</dd>  <dd>cyan   : 水色</dd>  <dd>purple : 紫</dd>  <dd>red    : 赤</dd>  <dd>green  : 緑</dd>  <dd>pink   : ピンク</dd>  <dd>yellow : 黄色</dd>  <dd>orange : オレンジ</dd>  <dd>gray   : 灰色</dd>  <dt>is_public:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: null)</em></dd>  <dd>trueを返すとアンケートの結果を公開します。</dd>  <dt>password:</dt>  <dd><strong>string</strong> <em>(デフォルト: null)</em></dd>  <dd>結果を公開する際に求めるパスワード</dd>  <dt>active_segment_id:</dt>  <dd><strong>integer</strong> <em>(デフォルト: null)</em></dd>  <dd>適用するセグメントのid</dd></dl><pre><code>定義POST https://creativesurvey.com/api/v1/surveysリクエスト例$ curl -X POST https://creativesurvey.com/api/v1/surveys \-d "auth_token=Vp5vzALpGzhqkcpxxxxx" \-d "survey[name]=sample_survey" \-d "survey[tag_color]=red"レスポンス例{  "updated_at": "2014-05-08T17:32:20+09:00",  "tag_color": "red",  "statistic_make_at": null,  "questions_count": 0,  "published_at": null,  "public_token": "1153bc8d38b5bbb0b2ce2247cdcae9c48ca0457c",  "preview_count": 0,  "is_deleted": false,  "inbox_id": 6,  "id": 533,  "gift_count": 0,  "gift_code": null,  "edit_count": 0,  "created_at": "2014-05-08T17:32:20+09:00",  "active_segment_id": null,  "is_duplicating": false,  "is_gift": false,  "is_processing_statistic": null,  "is_public": null,  "is_published": false,  "name": "sample_survey",  "panels_count": null,  "password": null}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre><p>　　</p>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='surveys' data-entry='survey_show' id='survey_show'>
+              <div class='inner'>
+                <h1 id="section">アンケートの取得</h1><h2 id="section-1">アンケートを個別に取得します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>survey_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>取得するアンケートのid</dd></dl><pre><code>定義GET https://creativesurvey.com/api/v1/surveys/:survey_idリクエスト例$ curl -X GET https://creativesurvey.com/api/v1/surveys/514 \-d "auth_token=Vp5vzALpGzhqkcpxxxxx"レスポンス例{  "updated_at": "2014-05-08T17:32:20+09:00",  "tag_color": "red",  "statistic_make_at": null,  "questions_count": 0,  "published_at": null,  "public_token": "1153bc8d38b5bbb0b2ce2247cdcae9c48ca0457c",  "preview_count": 0,  "is_deleted": false,  "inbox_id": 6,  "id": 533,  "gift_count": 0,  "gift_code": null,  "edit_count": 0,  "created_at": "2014-05-08T17:32:20+09:00",  "active_segment_id": null,  "is_duplicating": false,  "is_gift": false,  "is_processing_statistic": null,  "is_public": null,  "is_published": false,  "name": "sample_survey",  "panels_count": null,  "password": null}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='surveys' data-entry='survey_update' id='survey_update'>
+              <div class='inner'>
+                <h1 id="section">アンケートの更新</h1><h2 id="section-1">作成したアンケートを更新します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>survey_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>更新するアンケートのid</dd>  <dt>name*:</dt>  <dd><strong>string</strong></dd>  <dd>アンケート名</dd>  <dt>tag_color:</dt>  <dd><strong>string</strong> <em>(デフォルト: null)</em></dd>  <dd>アンケートのタグの色で、下記の色を指定することが出来ます。</dd>  <dd>cyan   : 水色</dd>  <dd>purple : 紫</dd>  <dd>red    : 赤</dd>  <dd>green  : 緑</dd>  <dd>pink   : ピンク</dd>  <dd>yellow : 黄色</dd>  <dd>orange : オレンジ</dd>  <dd>gray   : 灰色</dd>  <dt>is_public:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>trueを返すとアンケートの結果を公開します。</dd>  <dt>password:</dt>  <dd><strong>string</strong> <em>(デフォルト: null)</em></dd>  <dd>結果を公開する際に求めるパスワード</dd>  <dt>active_segment_id:</dt>  <dd><strong>integer</strong> <em>(デフォルト: null)</em></dd>  <dd>適用するセグメントのid</dd></dl><pre><code>定義PUT https://creativesurvey.com/api/v1/surveys/:survey_idリクエスト例$ curl -X PUT https://creativesurvey.com/api/v1/surveys/508 \-d "auth_token=Vp5vzALpGzhqkcpxxxxx" \-d "survey[name]=sample_survey2" \-d "survey[tag_color]=green"レスポンス例{  "updated_at": "2014-05-08T17:32:20+09:00",  "tag_color": "red",  "statistic_make_at": null,  "questions_count": 0,  "published_at": null,  "public_token": "1153bc8d38b5bbb0b2ce2247cdcae9c48ca0457c",  "preview_count": 0,  "is_deleted": false,  "inbox_id": 6,  "id": 533,  "gift_count": 0,  "gift_code": null,  "edit_count": 0,  "created_at": "2014-05-08T17:32:20+09:00",  "active_segment_id": null,  "is_duplicating": false,  "is_gift": false,  "is_processing_statistic": null,  "is_public": null,  "is_published": false,  "name": "sample_survey2",  "panels_count": null,  "password": null}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='surveys' data-entry='survey_delete' id='survey_delete'>
+              <div class='inner'>
+                <h1 id="section">アンケートの削除</h1><h2 id="section-1">アンケートを削除します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>survey_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>削除するアンケートのid</dd></dl><pre><code>定義DELETE http://creativesurvey.com/api/v1/surveys/:survey_idリクエスト例$ curl -X DELETE http://creativesurvey.com/api/v1/surveys/514 \-d "auth_token=Vp5vzALpGzhqkcpxxxxx"レスポンス例{  "updated_at": "2014-05-08T17:32:20+09:00",  "tag_color": "red",  "statistic_make_at": null,  "questions_count": 0,  "published_at": null,  "public_token": "1153bc8d38b5bbb0b2ce2247cdcae9c48ca0457c",  "preview_count": 0,  "is_deleted": false,  "inbox_id": 6,  "id": 533,  "gift_count": 0,  "gift_code": null,  "edit_count": 0,  "created_at": "2014-05-08T17:32:20+09:00",  "active_segment_id": null,  "is_duplicating": false,  "is_gift": false,  "is_processing_statistic": null,  "is_public": null,  "is_published": false,  "name": "sample_survey",  "panels_count": null,  "password": null}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+          </div>
+          <div class='inner'>
+            <h1 class='questionnaire category category-title' id='questionnaire'>
+              質問表
+            </h1>
+            <div class='document-block entry' data-category='questionnaire' data-entry='questionnaire_show' id='questionnaire_show'>
+              <div class='inner'>
+                <h1 id="section">質問表の取得</h1><h2 id="section-1">質問表を取得します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>questionnaire_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>取得する質問表のid</dd></dl><pre><code>定義GET https://creativesurvey.com/api/v1/questionnaires/:questionnaire_idリクエスト例curl -X GET https://creativesurvey.com/api/v1/questionnaires/518 \-d "auth_token=Vp5vzALpGzhqkcpxxxxx"レスポンス例{  "updated_at": "2014-05-07T11:52:42+09:00",  "survey_id": 527,  "questions_count": 3,  "inbox_id": 6,  "id": 518,  "current_order": 0,  "created_at": "2014-04-29T21:53:53+09:00",  "characters": "2問目leftrighcn1asd未設定次へ拡大を閉じる"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+          </div>
+          <div class='inner'>
+            <h1 class='question category category-title' id='question'>
+              質問
+            </h1>
+            <div class='document-block entry' data-category='question' data-entry='question_index' id='question_index'>
+              <div class='inner'>
+                <h1 id="section">質問一覧の取得</h1><h2 id="section-1">アンケートの質問一覧を取得します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>questionnaire_id:</dt>  <dd><strong>integer</strong></dd>  <dd>取得する質問が含まれる質問表のid</dd></dl><pre><code>定義GET https://creativesurvey.com/api/v1/questionnaires/:questionnaire_id/questionsリクエスト例curl -X GET https://creativesurvey.com/api/v1/questionnaires/508/questions \-d "auth_token=Vp5vzALpGzhqkcpxxxxx"レスポンス例[  {    "updated_at": "2014-04-22T17:11:40+09:00",    "timer_value": 5,    "timer_destination_id": null,    "sentence": "",    "rendered_sentence": "質問1",    "range_min": null,    "range_max": 1,    "questionnaire_id": 508,    "question_type": 1,    "placeholder": "",    "order_index": 1,    "launcher_string": "",    "is_timer": false,    "in_random_range": false,    "id": 1824,    "fix_last_row": null,    "fix_last_col": null,    "fix_last": false,    "description": "",    "created_at": "2014-04-22T10:50:26+09:00",    "answer_type": 2,    "inbox_id": 6,    "is_expand": false,    "is_logic": null,    "is_range": false,    "is_required": false,    "is_shuffle": false,    "is_shuffle_col": null,    "is_shuffle_row": null  },  {...},  {...}]リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='question' data-entry='question_create' id='question_create'>
+              <div class='inner'>
+                <h1 id="section">質問の作成</h1><h2 id="section-1">質問を作成します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>questionnaire_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>質問を作成する質問表のid</dd>  <dt>question_type*:</dt>  <dd><strong>integer</strong> <em>(デフォルト: 1)</em></dd>  <dd>質問タイプ。 1,2,4から選択します。</dd>  <dd>1: テキストのみ</dd>  <dd>2: テキストと画像</dd>  <dd>4: テキストと長文</dd>  <dt>answer_type*:</dt>  <dd><strong>integer</strong> <em>(デフォルト: 1)</em></dd>  <dd>質問ステップのタイプ。下記の質問タイプから選択します。</dd>  <dd>2: テキスト選択</dd>  <dd>4: 画像選択</dd>  <dd>5: 自由入力</dd>  <dd>6: エリアマッピング</dd>  <dd>7: スライドバー</dd>  <dd>8: マルチスライド</dd>  <dd>9: クリッツ</dd>  <dd>11: マトリクス</dd>  <dd>13: 開始画面</dd>  <dd>14: テキスト提示</dd>  <dd>16: マトリクス(画像)</dd>  <dd>17: 画像提示</dd>  <dd>18: サバイバル</dd>  <dd>19: サバイバル画像</dd>  <dd>20: マルチクリッツ</dd>  <dt>rendered_sentence:</dt>  <dd><strong>string</strong> <em>(デフォルト: ““)</em></dd>  <dd>質問の文言</dd>  <dt>description:</dt>  <dd><strong>string</strong> <em>(デフォルト: ““)</em></dd>  <dd>注意書きや補足などのテキストを指定します。</dd>  <dt>placeholder:</dt>  <dd><strong>string</strong> <em>(デフォルト: ““)</em></dd>  <dd>“次へ”ボタンの文言を指定します。</dd>  <dt>launcher_string:</dt>  <dd><strong>string</strong> <em>(デフォルト: ““)</em></dd>  <dd>クリッツポイントやエリアマッピングを始める際の”はじめる”ボタンの文言を指定します。</dd>  <dt>is_timer:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>時間制限を有効にするかどうか</dd>  <dd>trueにすると、設定した秒数(timer_value)で回答時間制限をします。</dd>  <dt>timer_value:</dt>  <dd><strong>integer</strong> <em>(デフォルト: 5)</em></dd>  <dd>時間制限の秒数を設定します。</dd>  <dd>is_timerがtrueの際、有効になります。</dd>  <dt>timer_distination_id:</dt>  <dd><strong>integer</strong> <em>(デフォルト: null)</em></dd>  <dd>時間制限が有効な際、時間を過ぎたらどの質問にスキップするかを設定します。</dd>  <dd>スキップ先の質問idを指定します。</dd>  <dt>is_random:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>ランダム設定を有効にするかどうか</dd>  <dt>range_min:</dt>  <dd><strong>integer</strong> <em>(デフォルト: null または 1)</em></dd>  <dd>回答数の最小値を指定します。</dd>  <dd>デフォルトは基本的にnullですが、質問タイプによってデフォルト値が1の場合があります。</dd>  <dd>この値を1に指定すると、必須回答となります。</dd>  <dt>range_max:</dt>  <dd><strong>integer</strong> <em>(デフォルト: null または 1)</em></dd>  <dd>回答数の最大値を指定します。</dd>  <dd>デフォルトは基本的にnullですが、質問タイプによってデフォルト値が1の場合があります。</dd>  <dd>この値を1に指定すると、単一回答になります。</dd>  <dt>order_index:</dt>  <dd><strong>integer</strong></dd>  <dd>質問順を指定します。</dd>  <dd>アンケートの質問はorder_index順に並びます。</dd>  <dt>inbox_id:</dt>  <dd><strong>integer</strong></dd>  <dd>該当の質問を含むインボックスのid</dd>  <dt>is_expand:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>画像を使用する質問ステップのタイプにおいて、画像をクリックで拡大するかどうかを設定します。</dd>  <dt>is_required:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>必須回答にするかどうかを指定します。</dd>  <dt>is_shuffle:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>回答項目をランダマイズするかどうか</dd>  <dt>is_shuffle_col:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>列項目をランダマイズするかどうか</dd>  <dt>is_shuffle_row:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>行項目をランダマイズするかどうか</dd>  <dt>fix_last_col:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: null)</em></dd>  <dd>行項目をランダムにした際に行末尾を固定します。</dd>  <dt>fix_last_row:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: null)</em></dd>  <dd>列項目をランダムにした際に列末尾を固定します。</dd></dl><pre><code>定義POST https://creativesurvey.com/api/v1/questionnaires/:questionnaire_id/questionsリクエスト例$ curl -X POST https://creativesurvey.com/api/v1/questionnaires/511/questions \-d "auth_token=Vp5vzALpGzhqkcpxxxxx" \-d "question[rendered_sentence]=MySurvey" \-d "question[is_timer]=false" \-d "question[is_shuffle]=false"レスポンス例{  "updated_at": "2014-05-08T18:30:14+09:00",  "timer_value": 5,  "timer_destination_id": null,  "sentence": "",  "rendered_sentence": "MySurvey",  "range_min": null,  "range_max": 1,  "questionnaire_id": 511,  "question_type": 1,  "placeholder": "",  "order_index": 0,  "launcher_string": "",  "is_timer": false,  "in_random_range": null,  "id": 1906,  "fix_last_row": null,  "fix_last_col": null,  "fix_last": null,  "description": null,  "created_at": "2014-05-08T18:30:14+09:00",  "answer_type": 1,  "inbox_id": 6,  "is_expand": false,  "is_logic": null,  "is_range": false,  "is_required": null,  "is_shuffle": false,  "is_shuffle_col": null,  "is_shuffle_row": null}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='question' data-entry='question_show' id='question_show'>
+              <div class='inner'>
+                <h1 id="section">質問の取得</h1><h2 id="section-1">質問表に含まれる質問を個別で取得します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>question_id:</dt>  <dd><strong>integer</strong></dd>  <dd>対象の質問id</dd></dl><pre><code>定義GET https://creativesurvey.com/api/v1/questions/:question_idリクエスト例curl -X GET https://creativesurvey.com/api/v1/questions/1906 \-d "auth_token=Vp5vzALpGzhqkcpxxxxx"レスポンス例{  "updated_at": "2014-05-08T18:30:14+09:00",  "timer_value": 5,  "timer_destination_id": null,  "sentence": "",  "rendered_sentence": "MySurvey",  "range_min": null,  "range_max": 1,  "questionnaire_id": 511,  "question_type": 1,  "placeholder": "",  "order_index": 0,  "launcher_string": "",  "is_timer": false,  "in_random_range": null,  "id": 1906,  "fix_last_row": null,  "fix_last_col": null,  "fix_last": null,  "description": null,  "created_at": "2014-05-08T18:30:14+09:00",  "answer_type": 1,  "inbox_id": 6,  "is_expand": false,  "is_logic": null,  "is_range": false,  "is_required": null,  "is_shuffle": false,  "is_shuffle_col": null,  "is_shuffle_row": null}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='question' data-entry='question_update' id='question_update'>
+              <div class='inner'>
+                <h1 id="section">質問の更新</h1><h2 id="section-1">質問を更新します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>question_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>対象の質問id</dd>  <dt>question_type*:</dt>  <dd><strong>integer</strong> <em>(デフォルト: 1)</em></dd>  <dd>質問タイプ。 1,2,4から選択します。</dd>  <dd>1: テキストのみ</dd>  <dd>2: テキストと画像</dd>  <dd>4: テキストと長文</dd>  <dt>answer_type*:</dt>  <dd><strong>integer</strong> <em>(デフォルト: 1)</em></dd>  <dd>質問ステップのタイプ。下記の質問タイプから選択します。</dd>  <dd>2: テキスト選択</dd>  <dd>4: 画像選択</dd>  <dd>5: 自由入力</dd>  <dd>6: エリアマッピング</dd>  <dd>7: スライドバー</dd>  <dd>8: マルチスライド</dd>  <dd>9: クリッツ</dd>  <dd>11: マトリクス</dd>  <dd>13: 開始画面</dd>  <dd>14: テキスト提示</dd>  <dd>16: マトリクス(画像)</dd>  <dd>17: 画像提示</dd>  <dd>18: サバイバル</dd>  <dd>19: サバイバル画像</dd>  <dd>20: マルチクリッツ</dd>  <dt>rendered_sentence:</dt>  <dd><strong>string</strong> <em>(デフォルト: ““)</em></dd>  <dd>質問の文言</dd>  <dt>description:</dt>  <dd><strong>string</strong> <em>(デフォルト: ““)</em></dd>  <dd>注意書きや補足などのテキストを指定します。</dd>  <dt>placeholder:</dt>  <dd><strong>string</strong> <em>(デフォルト: ““)</em></dd>  <dd>“次へ”ボタンの文言を指定します。</dd>  <dt>launcher_string:</dt>  <dd><strong>string</strong> <em>(デフォルト: ““)</em></dd>  <dd>クリッツポイントやエリアマッピングを始める際の”はじめる”ボタンの文言を指定します。</dd>  <dt>is_timer:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>時間制限を有効にするかどうか</dd>  <dd>trueにすると、設定した秒数(timer_value)で回答時間制限をします。</dd>  <dt>timer_value:</dt>  <dd><strong>integer</strong> <em>(デフォルト: 5)</em></dd>  <dd>時間制限の秒数を設定します。</dd>  <dd>is_timerがtrueの際、有効になります。</dd>  <dt>timer_distination_id:</dt>  <dd><strong>integer</strong> <em>(デフォルト: null)</em></dd>  <dd>時間制限が有効な際、時間を過ぎたらどの質問にスキップするかを設定します。</dd>  <dd>スキップ先の質問idを指定します。</dd>  <dt>is_random:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>ランダム設定を有効にするかどうか</dd>  <dt>range_min:</dt>  <dd><strong>integer</strong> <em>(デフォルト: null または 1)</em></dd>  <dd>回答数の最小値を指定します。</dd>  <dd>デフォルトは基本的にnullですが、質問タイプによってデフォルト値が1の場合があります。</dd>  <dd>この値を1に指定すると、必須回答となります。</dd>  <dt>range_max:</dt>  <dd><strong>integer</strong> <em>(デフォルト: null または 1)</em></dd>  <dd>回答数の最大値を指定します。</dd>  <dd>デフォルトは基本的にnullですが、質問タイプによってデフォルト値が1の場合があります。</dd>  <dd>この値を1に指定すると、単一回答になります。</dd>  <dt>questionnaire_id:</dt>  <dd><strong>integer</strong></dd>  <dd>質問を含む質問表のid</dd>  <dt>order_index:</dt>  <dd><strong>integer</strong></dd>  <dd>質問順を指定します。</dd>  <dd>アンケートの質問はorder_index順に並びます。</dd>  <dt>inbox_id:</dt>  <dd><strong>integer</strong></dd>  <dd>該当の質問を含むインボックスのid</dd>  <dt>is_expand:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>画像を使用する質問ステップのタイプにおいて、画像をクリックで拡大するかどうかを設定します。</dd>  <dt>is_required:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>必須回答にするかどうかを指定します。</dd>  <dt>is_shuffle:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>回答項目をランダマイズするかどうか</dd>  <dt>is_shuffle_col:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>列項目をランダマイズするかどうか</dd>  <dt>is_shuffle_row:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>行項目をランダマイズするかどうか</dd>  <dt>fix_last_col:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: null)</em></dd>  <dd>行項目をランダムにした際に行末尾を固定します。</dd>  <dt>fix_last_row:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: null)</em></dd>  <dd>列項目をランダムにした際に列末尾を固定します。</dd></dl><pre><code>定義PUT https://creativesurvey.com/api/v1/questions/:question_idリクエスト例curl -X PUT https://creativesurvey.com/api/v1/questions/1906 \-d "auth_token=Vp5vzALpGzhqkcpxxxxx" \-d "question[rendered_sentence]=MySurvey2" \-d "question[is_timer]=false" \-d "question[is_shuffle]=true"レスポンス例{  "updated_at": "2014-05-08T18:30:14+09:00",  "timer_value": 5,  "timer_destination_id": null,  "sentence": "",  "rendered_sentence": "MySurvey2",  "range_min": null,  "range_max": 1,  "questionnaire_id": 511,  "question_type": 1,  "placeholder": "",  "order_index": 0,  "launcher_string": "",  "is_timer": false,  "in_random_range": null,  "id": 1906,  "fix_last_row": null,  "fix_last_col": null,  "fix_last": null,  "description": null,  "created_at": "2014-05-08T18:30:14+09:00",  "answer_type": 1,  "inbox_id": 6,  "is_expand": false,  "is_logic": null,  "is_range": false,  "is_required": null,  "is_shuffle": true,  "is_shuffle_col": null,  "is_shuffle_row": null}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='question' data-entry='question_delete' id='question_delete'>
+              <div class='inner'>
+                <h1 id="section">質問の削除</h1><h2 id="section-1">質問を削除します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>question_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>対象の質問id</dd></dl><pre><code>定義DELETE https://creativesurvey.com/api/v1/questions/:question_idリクエスト例curl -X DELETE https://creativesurvey.com/api/v1/questions/1906 \-d "auth_token=Vp5vzALpGzhqkcpxxxxx"レスポンス例{  "updated_at": "2014-05-08T18:30:14+09:00",  "timer_value": 5,  "timer_destination_id": null,  "sentence": "",  "rendered_sentence": "MySurvey",  "range_min": null,  "range_max": 1,  "questionnaire_id": 511,  "question_type": 1,  "placeholder": "",  "order_index": 0,  "launcher_string": "",  "is_timer": false,  "in_random_range": null,  "id": 1906,  "fix_last_row": null,  "fix_last_col": null,  "fix_last": null,  "description": null,  "created_at": "2014-05-08T18:30:14+09:00",  "answer_type": 1,  "inbox_id": 6,  "is_expand": false,  "is_logic": null,  "is_range": false,  "is_required": null,  "is_shuffle": false,  "is_shuffle_col": null,  "is_shuffle_row": null}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+          </div>
+          <div class='inner'>
+            <h1 class='answer_item category category-title' id='answer_item'>
+              回答項目
+            </h1>
+            <div class='document-block entry' data-category='answer_item' data-entry='answer_item_index' id='answer_item_index'>
+              <div class='inner'>
+                <h1 id="section">回答項目一覧の取得</h1><h2 id="section-1">アンケートの回答項目一覧を取得します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>question_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>取得する回答項目を含む質問のid</dd></dl><pre><code>定義GET https://creativesurvey.com/api/v1/questions/:question_id/answer_itemsリクエスト例curl -X GET https://creativesurvey.com/api/v1/questions/1829/answer_items \-d "auth_token=Vp5vzALpGzhqkcpxxxxx"レスポンス例[  {    "validation_type": null,    "validation_pattern": "",    "is_required": false,    "is_reject": null,    "is_multiline": false,    "is_impression": true,    "inbox_id": 6,    "id": 4301,    "created_at": "2014-04-22T17:39:40+09:00",    "answer_type": 2,    "max_value": null,    "min_value": null,    "order_index": 0,    "placeholder": "",    "question_id": 1829,    "sentence": "yes",    "updated_at": "2014-04-22T19:02:16+09:00",    "val": 0.5  },  {...},  {...}]リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='answer_item' data-entry='answer_item_create' id='answer_item_create'>
+              <div class='inner'>
+                <h1 id="section">回答項目の作成</h1><h2 id="section-1">アンケートの回答項目を作成します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>question_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>対象の質問id</dd>  <dt>answer_type*:</dt>  <dd><strong>integer</strong> <em>(デフォルト: 1)</em></dd>  <dd>質問ステップのタイプ。下記の質問タイプから選択します。</dd>  <dd>2: テキスト選択</dd>  <dd>4: 画像選択</dd>  <dd>5: 自由入力</dd>  <dd>6: エリアマッピング</dd>  <dd>7: スライドバー</dd>  <dd>8: マルチスライド</dd>  <dd>9: クリッツ</dd>  <dd>11: マトリクス</dd>  <dd>13: 開始画面</dd>  <dd>14: テキスト提示</dd>  <dd>16: マトリクス(画像)</dd>  <dd>17: 画像提示</dd>  <dd>18: サバイバル</dd>  <dd>19: サバイバル画像</dd>  <dd>20: マルチクリッツ</dd>  <dt>validation_pattern:</dt>  <dd><strong>string</strong> <em>(デフォルト: ““)</em></dd>  <dd>入力制限を指定した際の正規表現</dd>  <dt>is_required:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>回答を必須にするかどうか</dd>  <dt>is_multiline:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>入力エリアが複数行かどうか</dd>  <dt>is_impression:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: true)</em></dd>  <dd>良い・良くないボタンを表示するかしないか</dd>  <dd>(良い・良くないボタンはエリアマッピングで設定出来ます。)</dd>  <dt>order_index:</dt>  <dd><strong>integer</strong> <em>(デフォルト: null)</em></dd>  <dd>質問内での回答項目の並び順</dd>  <dd>0から始まる整数です。</dd>  <dt>placeholder:</dt>  <dd><strong>string</strong> <em>(デフォルト: ““)</em></dd>  <dd>文字が入力されていない際に表示するplaceholder</dd>  <dt>sentence:</dt>  <dd><strong>string</strong></dd>  <dd>回答項目で提示される文字列</dd></dl><pre><code>定義POST https://creativesurvey.com/api/v1/questions/:question_id/answer_itemsリクエスト例curl -X POST https://creativesurvey.com/api/v1/questions/1829/answer_items \-d "auth_token=Vp5vzALpGzhqkcpxxxxx" \-d "answer_item[answer_type]=5" \-d "answer_item[sentence]=Please enter your address" \-d "answer_item[placeholder]=Address" \-d "answer_item[is_required]=true" \-d "answer_item[validation_pattern]=\d{3}-?\d{4}"レスポンス例{  "validation_type": null,  "validation_pattern": "\\d{3}-?\\d{4}",  "is_required": true,  "is_reject": null,  "is_multiline": false,  "is_impression": true,  "inbox_id": 6,  "id": 4321,  "created_at": "2014-04-22T19:30:40+09:00",  "answer_type": 5,  "max_value": null,  "min_value": null,  "order_index": null,  "placeholder": "Address",  "question_id": 1838,  "sentence": "Please enter your address",  "updated_at": "2014-04-22T19:30:40+09:00",  "val": 0.5}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='answer_item' data-entry='answer_item_show' id='answer_item_show'>
+              <div class='inner'>
+                <h1 id="section">回答項目の取得</h1><h2 id="section-1">アンケートの回答項目を個別に取得します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>answer_item_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>取得する回答項目のid</dd></dl><pre><code>定義GET https://creativesurvey.com/api/v1/answer_items/:answer_item_idリクエスト例curl -X GET https://creativesurvey.com/api/v1/answer_items/4321 \-d "auth_token=Vp5vzALpGzhqkcpxxxxx"レスポンス例{  "validation_type": null,  "validation_pattern": "\\d{3}-?\\d{4}",  "is_required": true,  "is_reject": null,  "is_multiline": false,  "is_impression": true,  "inbox_id": 6,  "id": 4321,  "created_at": "2014-04-22T19:30:40+09:00",  "answer_type": 5,  "max_value": null,  "min_value": null,  "order_index": null,  "placeholder": "Address",  "question_id": 1838,  "sentence": "Please enter your address",  "updated_at": "2014-04-22T19:30:40+09:00",  "val": 0.5}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='answer_item' data-entry='answer_item_update' id='answer_item_update'>
+              <div class='inner'>
+                <h1 id="section">回答項目の更新</h1><h2 id="section-1">アンケートの回答項目を更新します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>answer_item_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>取得する回答項目のid</dd>  <dt>answer_type*:</dt>  <dd><strong>integer</strong> <em>(デフォルト: 1)</em></dd>  <dd>質問ステップのタイプ。下記の質問タイプから選択します。</dd>  <dd>2: テキスト選択</dd>  <dd>4: 画像選択</dd>  <dd>5: 自由入力</dd>  <dd>6: エリアマッピング</dd>  <dd>7: スライドバー</dd>  <dd>8: マルチスライド</dd>  <dd>9: クリッツ</dd>  <dd>11: マトリクス</dd>  <dd>13: 開始画面</dd>  <dd>14: テキスト提示</dd>  <dd>16: マトリクス(画像)</dd>  <dd>17: 画像提示</dd>  <dd>18: サバイバル</dd>  <dd>19: サバイバル画像</dd>  <dd>20: マルチクリッツ</dd>  <dt>validation_pattern:</dt>  <dd><strong>string</strong> <em>(デフォルト: ““)</em></dd>  <dd>入力制限を指定した際の正規表現</dd>  <dt>is_required:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>回答を必須にするかどうか</dd>  <dt>is_multiline:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>入力エリアが複数行かどうか</dd>  <dt>is_impression:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: true)</em></dd>  <dd>良い・良くないボタンを表示するかしないか</dd>  <dd>(良い・良くないボタンはエリアマッピングで設定出来ます。)</dd>  <dt>order_index:</dt>  <dd><strong>integer</strong> <em>(デフォルト: null)</em></dd>  <dd>質問内での回答項目の並び順</dd>  <dd>0から始まる整数です。</dd>  <dt>placeholder:</dt>  <dd><strong>string</strong> <em>(デフォルト: ““)</em></dd>  <dd>文字が入力されていない際に表示するplaceholder</dd>  <dt>sentence:</dt>  <dd><strong>string</strong></dd>  <dd>回答項目で提示される文字列</dd></dl><pre><code>定義PUT https://creativesurvey.com/api/v1/answer_items/:answer_item_idリクエスト例curl -X PUT https://creativesurvey.com/api/v1/answer_items/4321 \-d "auth_token=Vp5vzALpGzhqkcpxxxxx" \-d "answer_item[answer_type]=5" \-d "answer_item[sentence]=Please enter your email" \-d "answer_item[placeholder]=Email" \-d "answer_item[is_required]=true" \-d "answer_item[validation_pattern]=^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$"レスポンス例{  "validation_type": null,  "validation_pattern": "^([a-zA-Z0-9_\\.\\-]) \\@(([a-zA-Z0-9\\-]) \\.) ([a-zA-Z0-9]{2,4}) $",  "is_required": true,  "is_reject": null,  "is_multiline": false,  "is_impression": true,  "inbox_id": 6,  "id": 4321,  "created_at": "2014-04-22T19:30:40+09:00",  "answer_type": 5,  "max_value": null,  "min_value": null,  "order_index": null,  "placeholder": "Email",  "question_id": 1838,  "sentence": "Please enter your email",  "updated_at": "2014-04-22T19:36:50+09:00",  "val": 0.5}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='answer_item' data-entry='answer_item_delete' id='answer_item_delete'>
+              <div class='inner'>
+                <h1 id="section">回答項目の削除</h1><h2 id="section-1">アンケートの回答項目を削除します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>answer_item_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>削除する回答項目のid</dd></dl><pre><code>定義DELETE https://creativesurvey.com/api/v1/answer_items/:answer_item_idリクエスト例curl -X DELETE https://creativesurvey.com/api/v1/answer_items/4321 \-d "auth_token=Vp5vzALpGzhqkcpxxxxx"レスポンス例{  "validation_type": null,  "validation_pattern": "^([a-zA-Z0-9_\\.\\-]) \\@(([a-zA-Z0-9\\-]) \\.) ([a-zA-Z0-9]{2,4}) $",  "is_required": true,  "is_reject": null,  "is_multiline": false,  "is_impression": true,  "inbox_id": 6,  "id": 4321,  "created_at": "2014-04-22T19:30:40+09:00",  "answer_type": 5,  "max_value": null,  "min_value": null,  "order_index": null,  "placeholder": "Email",  "question_id": 1838,  "sentence": "Please enter your email",  "updated_at": "2014-04-22T19:36:50+09:00",  "val": 0.5}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+          </div>
+          <div class='inner'>
+            <h1 class='sub_item category category-title' id='sub_item'>
+              回答補助項目
+            </h1>
+            <div class='document-block entry' data-category='sub_item' data-entry='sub_item_show' id='sub_item_show'>
+              <div class='inner'>
+                <h1 id="section">回答補助項目の取得</h1><h2 id="section-1">回答項目の補助項目を取得します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>sub_item_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>取得する回答補助項目のid</dd></dl><pre><code>定義GET https://creativesurvey.com/api/v1/sub_items/:sub_item_idリクエスト例curl -X GET https://creativesurvey.com/api/v1/sub_items/2731 \-d "auth_token=Vp5vzALpGzhqkcpxxxxx"レスポンス例{  "updated_at": "2014-04-23T10:40:17+09:00",  "sentence": "Q1",  "placeholder": "",  "order_index": 1,  "answer_type": 11,  "attachable_id": 1839,  "attachable_type": "Question",  "created_at": "2014-04-23T10:39:33+09:00",  "id": 2731,  "inbox_id": 6,  "max_value": null,  "min_value": null}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='sub_item' data-entry='sub_item_update' id='sub_item_update'>
+              <div class='inner'>
+                <h1 id="section">回答補助項目の更新</h1><h2 id="section-1">回答項目の補助項目を更新します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>sub_item_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>更新する回答項目を含む質問のid</dd>  <dt>sentence:</dt>  <dd><strong>string</strong> <em>(デフォルト: ““)</em></dd>  <dd>回答項目の文言</dd>  <dt>order_index:</dt>  <dd><strong>integer</strong> <em>(デフォルト: 0)</em></dd>  <dd>回答補助項目の順序を0から始まる整数で指定します。</dd>  <dt>min_value:</dt>  <dd><strong>integer</strong> <em>(デフォルト: null)</em></dd>  <dd>回答項目の最小選択数</dd>  <dt>max_value:</dt>  <dd><strong>integer</strong> <em>(デフォルト: null)</em></dd>  <dd>回答項目の最大選択数</dd>  <dt>inbox_id:</dt>  <dd><strong>integer</strong></dd>  <dd>該当の回答補助項目を含むインボックスid</dd></dl><pre><code>定義PUT https://creativesurvey.com/api/v1/sub_items/:sub_item_idリクエスト例curl -X PUT https://creativesurvey.com/api/v1/sub_items/2731 \-d "auth_token=Vp5vzALpGzhqkcpxxxxx" \-d "sub_item[order_index]=5" \-d "sub_item[sentence]=Q2"レスポンス例{  "updated_at": "2014-04-23T11:04:32+09:00",  "sentence": "Q2",  "placeholder": "",  "order_index": 5,  "answer_type": 11,  "attachable_id": 1839,  "attachable_type": "Question",  "created_at": "2014-04-23T10:39:33+09:00",  "id": 2731,  "inbox_id": 6,  "max_value": null,  "min_value": null}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='sub_item' data-entry='sub_item_delete' id='sub_item_delete'>
+              <div class='inner'>
+                <h1 id="section">回答補助項目の削除</h1><h2 id="section-1">回答項目の補助項目を削除します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>sub_item_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>削除する回答補助項目のid</dd></dl><pre><code>定義DELETE https://creativesurvey.com/api/v1/sub_items/:sub_item_idリクエスト例curl -X DELETE https://creativesurvey.com/api/v1/sub_items/2731 \-d "auth_token=Vp5vzALpGzhqkcpxxxxx"レスポンス例{  "updated_at": "2014-04-23T11:04:32+09:00",  "sentence": "Q2",  "placeholder": "",  "order_index": 5,  "answer_type": 11,  "attachable_id": 1839,  "attachable_type": "Question",  "created_at": "2014-04-23T10:39:33+09:00",  "id": 2731,  "inbox_id": 6,  "max_value": null,  "min_value": null}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+          </div>
+          <div class='inner'>
+            <h1 class='creative category category-title' id='creative'>
+              画像
+            </h1>
+            <div class='document-block entry' data-category='creative' data-entry='creative_index' id='creative_index'>
+              <div class='inner'>
+                <h1 id="section">画像一覧の取得</h1><h2 id="section-1">アンケートに使用されている画像の一覧を表示します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>survey_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>対象となるアンケートid</dd></dl><pre><code>定義GET https://creativesurvey.com/api/v1/surveys/:survey_id/creativesリクエスト例$ curl -X GET https://creativesurvey.com/api/v1/surveys/528/creatives \-d "auth_token=Vp5vzALpGzhqkcpxxxxx"レスポンス例[  {    "width": 250,    "updated_at": "2014-05-08T11:33:49+09:00",    "trimming": "thumb",    "text_color": null,    "survey_id": 528,    "strong_color": null,    "priority": 1000,    "id": 637,    "height": 197,    "created_at": "2014-05-08T11:33:49+09:00",    "background_size": "auto",    "background_repeat": true,    "background_position_y": null,    "background_position_x": null,    "background_color": null,    "image": {      "l_fit": {        "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/637/l_fit_4.gif"      },      "l_thumb": {        "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/637/l_thumb_4.gif"      },      "l_pad": {        "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/637/l_pad_4.gif"      },      "blur": {        "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/637/blur_4.gif"      },      "s_fit": {        "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/637/s_fit_4.gif"      },      "s_thumb": {        "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/637/s_thumb_4.gif"      },      "s_pad": {        "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/637/s_pad_4.gif"      },      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/637/4.gif"    },    "inbox_id": 6,    "insole_brightness": 0.5,    "is_awkward": null,    "is_sample": false,    "is_template": false,    "name": null,    "original_remote_url": null  }]リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre><p>　　</p>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='creative' data-entry='creative_create' id='creative_create'>
+              <div class='inner'>
+                <h1 id="section">画像の作成</h1><h2 id="section-1">アンケートに使用される画像をアップロードします。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>survey_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>対象となるアンケートのid</dd>  <dt>image*:</dt>  <dd><strong>string</strong> <em>(デフォルト: null)</em></dd>  <dd>アップロードする画像のパス。 @を付けて指定します。</dd>  <dt>trimming:</dt>  <dd><strong>string</strong> <em>(デフォルト: thumb)</em></dd>  <dd>画像のトリミングの方法を指定します。指定出来るトリミング方法は以下の3つです。</dd>  <dd>正方形: “thumb”</dd>  <dd>正方形・余白あり: “pad”</dd>  <dd>元サイズ優先: “fit”</dd></dl><pre><code>定義POST https://creativesurvey.com/api/v1/surveys/:survey_id/creativesリクエスト例$ curl -X POST https://creativesurvey.com/api/v1/surveys/516/creatives \-F "auth_token=KRXJUq7yxjT18Vxxxxxx" \-F "creative[image]=@/Users/4dusers/Desktop/4.gif"レスポンス例{  "width": 250,  "updated_at": "2014-05-08T11:33:49+09:00",  "trimming": "thumb",  "text_color": null,  "survey_id": 528,  "strong_color": null,  "id": 637,  "height": 197,  "created_at": "2014-05-08T11:33:49+09:00",  "background_size": "auto",  "background_repeat": true,  "background_position_y": null,  "background_position_x": null,  "background_color": null,  "image": {    "l_fit": {      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/637/l_fit_4.gif"    },    "l_thumb": {      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/637/l_thumb_4.gif"    },    "l_pad": {      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/637/l_pad_4.gif"    },    "blur": {      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/637/blur_4.gif"    },    "s_fit": {      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/637/s_fit_4.gif"    },    "s_thumb": {      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/637/s_thumb_4.gif"    },    "s_pad": {      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/637/s_pad_4.gif"    },    "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/637/4.gif"  },  "inbox_id": 6,  "insole_brightness": 0.5,  "name": null,  "original_remote_url": null}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre><p>　　</p>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='creative' data-entry='creative_show' id='creative_show'>
+              <div class='inner'>
+                <h1 id="section">画像の取得</h1><h2 id="section-1">アンケートに使用されている画像を表示します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>creative_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>取得する画像のid</dd></dl><pre><code>定義GET https://creativesurvey.com/api/v1/creatives/:creative_idリクエスト例$ curl -X GET https://creativesurvey.com/api/v1/creatives/637 \-d "auth_token=Vp5vzALpGzhqkcpxxxxx"レスポンス例{  "width": 250,  "updated_at": "2014-05-08T11:33:49+09:00",  "trimming": "thumb",  "text_color": null,  "survey_id": 528,  "strong_color": null,  "id": 637,  "height": 197,  "created_at": "2014-05-08T11:33:49+09:00",  "background_size": "auto",  "background_repeat": true,  "background_position_y": null,  "background_position_x": null,  "background_color": null,  "image": {    "l_fit": {      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/637/l_fit_4.gif"    },    "l_thumb": {      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/637/l_thumb_4.gif"    },    "l_pad": {      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/637/l_pad_4.gif"    },    "blur": {      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/637/blur_4.gif"    },    "s_fit": {      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/637/s_fit_4.gif"    },    "s_thumb": {      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/637/s_thumb_4.gif"    },    "s_pad": {      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/637/s_pad_4.gif"    },    "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/637/4.gif"  },  "inbox_id": 6,  "insole_brightness": 0.5,  "name": null,  "original_remote_url": null}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre><p>　　</p>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='creative' data-entry='creative_update' id='creative_update'>
+              <div class='inner'>
+                <h1 id="section">画像の更新</h1><h2 id="section-1">アンケートに使用されている画像を更新します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>creative_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>更新する画像のid</dd>  <dt>image*:</dt>  <dd><strong>string</strong> <em>(デフォルト: null)</em></dd>  <dd>アップロードする画像のパス。 @を付けて指定します。</dd>  <dt>trimming:</dt>  <dd><strong>string</strong> <em>(デフォルト: thumb)</em></dd>  <dd>画像のトリミングの方法を指定します。指定出来るトリミング方法は以下の3つです。</dd>  <dd>正方形: “thumb”</dd>  <dd>正方形・余白あり: “pad”</dd>  <dd>元サイズ優先: “fit”</dd></dl><pre><code>定義PUT https://creativesurvey.com/api/v1/creatives/:creative_idリクエスト例$ curl -X PUT https://creativesurvey.com/api/v1/creatives/637 \-d "auth_token=Vp5vzALpGzhqkcpxxxxx" \-d "creative[trimming]=fit"レスポンス例{  "width": 250,  "updated_at": "2014-05-08T11:33:49+09:00",  "trimming": "fit",  "text_color": null,  "survey_id": 528,  "strong_color": null,  "id": 637,  "height": 197,  "created_at": "2014-05-08T11:33:49+09:00",  "background_size": "auto",  "background_repeat": true,  "background_position_y": null,  "background_position_x": null,  "background_color": null,  "image": {    "l_fit": {      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/637/l_fit_4.gif"    },    "l_thumb": {      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/637/l_thumb_4.gif"    },    "l_pad": {      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/637/l_pad_4.gif"    },    "blur": {      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/637/blur_4.gif"    },    "s_fit": {      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/637/s_fit_4.gif"    },    "s_thumb": {      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/637/s_thumb_4.gif"    },    "s_pad": {      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/637/s_pad_4.gif"    },    "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/637/4.gif"  },  "inbox_id": 6,  "insole_brightness": 0.5,  "name": null,  "original_remote_url": null}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre><p>　　</p>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='creative' data-entry='creative_delete' id='creative_delete'>
+              <div class='inner'>
+                <h1 id="section">画像の削除</h1><h2 id="section-1">アンケートに使用されている画像の削除</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>creative_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>画像のid </dd></dl><pre><code>定義DELETE https://creativesurvey.com/api/v1/creatives/:creative_idリクエスト例$ curl -X DELETE \https://creativesurvey.com/api/v1/creatives/637 \-d "auth_token=Vp5vzALpGzhqkcpxxxxx"レスポンス例{  "width": 250,  "updated_at": "2014-05-08T11:33:49+09:00",  "trimming": "thumb",  "text_color": null,  "survey_id": 528,  "strong_color": null,  "id": 637,  "height": 197,  "created_at": "2014-05-08T11:33:49+09:00",  "background_size": "auto",  "background_repeat": true,  "background_position_y": null,  "background_position_x": null,  "background_color": null,  "image": {    "l_fit": {      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/637/l_fit_4.gif"    },    "l_thumb": {      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/637/l_thumb_4.gif"    },    "l_pad": {      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/637/l_pad_4.gif"    },    "blur": {      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/637/blur_4.gif"    },    "s_fit": {      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/637/s_fit_4.gif"    },    "s_thumb": {      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/637/s_thumb_4.gif"    },    "s_pad": {      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/637/s_pad_4.gif"    },    "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/637/4.gif"  },  "inbox_id": 6,  "insole_brightness": 0.5,  "name": null,  "original_remote_url": null}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre><p>　　</p>
+              </div>
+            </div>
+          </div>
+          <div class='inner'>
+            <h1 class='egression category category-title' id='egression'>
+              最終画面
+            </h1>
+            <div class='document-block entry' data-category='egression' data-entry='egression_show' id='egression_show'>
+              <div class='inner'>
+                <h1 id="section">最終画面の取得</h1><h2 id="section-1">最終画面の取得について</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>egression_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>取得する最終画面のid</dd></dl><pre><code>定義GET https://creativesurvey.com/api/v1/egressions/:egression_idリクエスト例$ curl -X GET https://creativesurvey.com/api/v1/egressions/520 \-d "auth_token=KRXJUq7yxjT18VqpoTKp"レスポンス例{  "updated_at": "2014-05-08T11:58:33+09:00",  "sentence": null,  "rendered_sentence": "回答ありがとうございました。",  "created_at": "2014-05-08T11:45:07+09:00",  "description": "  ",  "id": 520,  "inbox_id": 6,  "is_redirect": true,  "question_type": 1,  "questionnaire_id": 520,  "redirect_url": "https://creativesurvey.com"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='egression' data-entry='egression_update' id='egression_update'>
+              <div class='inner'>
+                <h1 id="section">最終画面の変更</h1><h2 id="section-1">最終画面の変更について</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>egression_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>更新する最終画面のid</dd>  <dt>rendered_sentence:</dt>  <dd><strong>string</strong> <em>(デフォルト: ““)</em></dd>  <dd>最終画面の文言</dd>  <dt>is_redirect:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>trueの場合、最終画面の表示ではなくリダイレクトをさせます。</dd>  <dt>redirect_url:</dt>  <dd><strong>string</strong> <em>(デフォルト: null)</em></dd>  <dd>リダイレクトを指定する場合のurl</dd>  <dt>question_type:</dt>  <dd><strong>integer</strong> <em>(デフォルト: 1)</em></dd>  <dd>質問タイプ。 1,2,4から選択します。</dd>  <dd>1: テキストのみ</dd>  <dd>2: テキストと画像</dd>  <dd>4: テキストと長文</dd>  <dt>description:</dt>  <dd><strong>string</strong> <em>(デフォルト: ““)</em></dd>  <dd>注意書きや補足などのテキストを入力します。</dd></dl><pre><code>定義PUT https://creativesurvey.com/api/v1/egressionsリクエスト例$ curl -X PUT https://creativesurvey.com/api/v1/egressions/507 \-d "auth_token=KRXJUq7yxjT18VqpoTKp" \-d "egression[redirect_url]=http://google.com" \-d "egression[rendered_sentence]=最終画面です。"レスポンス例{  "updated_at": "2014-04-21T23:38:13+09:00",  "sentence": null,  "rendered_sentence": "最終画面です。",  "created_at": "2014-04-21T19:27:26+09:00",  "description": "",  "id": 507,  "inbox_id": 6,  "is_redirect": true,  "question_type": 1,  "questionnaire_id": 507,  "redirect_url": "http://google.com"}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+          </div>
+          <div class='inner'>
+            <h1 class='randomizer category category-title' id='randomizer'>
+              ランダム設定
+            </h1>
+            <div class='document-block entry' data-category='randomizer' data-entry='randomizer_index' id='randomizer_index'>
+              <div class='inner'>
+                <h1 id="section">ランダム設定一覧の取得</h1><h2 id="section-1">アンケートに指定されたランダム設定の一覧を取得します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>questionnaire_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>取得するランダム設定を持つ質問表のid</dd></dl><pre><code>定義GET https://creativesurvey.com/api/v1/questionnaires/:questionnaire_id/randomizersリクエスト例curl -X GET https://creativesurvey.com/api/v1/questionnaires/508/randomizers \-d "auth_token=Vp5vzALpGzhqkcpxxxxx"レスポンス例[  {    "updated_at": "2014-04-22T11:41:12+09:00",    "step_num": 1,    "created_at": "2014-04-22T11:41:01+09:00",    "end_index": 1,    "id": 36,    "inbox_id": 6,    "is_valid": true,    "order_index": 0,    "questionnaire_id": 508,    "start_index": 0  },  {...},  {...}]リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='randomizer' data-entry='randomizer_create' id='randomizer_create'>
+              <div class='inner'>
+                <h1 id="section">ランダム設定の作成</h1><h2 id="section-1">新しいランダム設定を作成します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>questionnaire_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>ランダム設定を指定する質問表のid</dd>  <dt>step_num*:</dt>  <dd><strong>integer</strong></dd>  <dd>ランダムを設定するステップ数</dd>  <dd>start_indexからend_indexまでで何問を抽出するかを設定するものです。</dd>  <dt>start_index:</dt>  <dd><strong>integer</strong> <em>(デフォルト: null)</em></dd>  <dd>何問目からランダムを設定するか指定します。</dd>  <dd>indexは0から始まる整数です。</dd>  <dt>end_index:</dt>  <dd><strong>integer</strong> <em>(デフォルト: null)</em></dd>  <dd>何問目までランダムを設定するか指定します。</dd>  <dd>indexは0から始まる整数です。</dd>  <dt>is_valid:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: true)</em></dd>  <dd>有効かどうか</dd>  <dt>order_index:</dt>  <dd><strong>integer</strong> <em>(デフォルト: 0)</em></dd>  <dd>ランダマイズ設定の順序を0から始まる整数で指定します。</dd>  <dt>inbox_id:</dt>  <dd><strong>integer</strong></dd>  <dd>ランダマイズ設定を含むインボックスのid</dd></dl><pre><code>定義POST https://creativesurvey.com/api/v1/questionnaires/:questionnaire_id/randomizersリクエスト例curl -X POST https://creativesurvey.com/api/v1/questionnaires/508/randomizers \-d "auth_token=Vp5vzALpGzhqkcpxxxxx" \-d "randomizer[step_num]=1" \-d "randomizer[start_index]=0" \-d "randomizer[end_index]=3"レスポンス例{  "updated_at": "2014-04-22T16:19:38+09:00",  "step_num": 1,  "created_at": "2014-04-22T16:19:38+09:00",  "end_index": 3,  "id": 40,  "inbox_id": 6,  "is_valid": true,  "order_index": 0,  "questionnaire_id": 508,  "start_index": 0}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='randomizer' data-entry='randomizer_show' id='randomizer_show'>
+              <div class='inner'>
+                <h1 id="section">ランダム設定の取得</h1><h2 id="section-1">アンケートに指定されたランダム設定を個別で取得します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>randomizers_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>ランダム設定のid</dd></dl><pre><code>定義GET https://creativesurvey.com/api/v1/randomizers/:randomizers_idリクエスト例curl -X GET https://creativesurvey.com/api/v1/randomizers/36 \-d "auth_token=Vp5vzALpGzhqkcpxxxxx"レスポンス例{  "updated_at": "2014-04-22T11:41:12+09:00",  "step_num": 1,  "created_at": "2014-04-22T11:41:01+09:00",  "end_index": 1,  "id": 36,  "inbox_id": 6,  "is_valid": true,  "order_index": 0,  "questionnaire_id": 508,  "start_index": 0}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='randomizer' data-entry='randomizer_update' id='randomizer_update'>
+              <div class='inner'>
+                <h1 id="section">ランダム設定の更新</h1><h2 id="section-1">ランダム設定の更新についてです。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>randomizer_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>ランダム設定のid</dd>  <dt>step_num*:</dt>  <dd><strong>integer</strong></dd>  <dd>ランダムを設定するステップ数</dd>  <dd>start_indexからend_indexまでで何問を抽出するかを設定するものです。</dd>  <dt>start_index:</dt>  <dd><strong>integer</strong> <em>(デフォルト: null)</em></dd>  <dd>何問目からランダムを設定するか指定します。</dd>  <dd>indexは0から始まる整数です。</dd>  <dt>end_index:</dt>  <dd><strong>integer</strong> <em>(デフォルト: null)</em></dd>  <dd>何問目までランダムを設定するか指定します。</dd>  <dd>indexは0から始まる整数です。</dd>  <dt>is_valid:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: true)</em></dd>  <dd>有効かどうか</dd>  <dt>order_index:</dt>  <dd><strong>integer</strong> <em>(デフォルト: 0)</em></dd>  <dd>ランダマイズ設定の順序を0から始まる整数で指定します。</dd>  <dt>inbox_id:</dt>  <dd><strong>integer</strong></dd>  <dd>ランダマイズ設定を含むインボックスのid</dd></dl><pre><code>定義PUT https://creativesurvey.com/api/v1/randomizers/:randomizers_idリクエスト例curl -X PUT https://creativesurvey.com/api/v1/randomizers/37 \-d "auth_token=Vp5vzALpGzhqkcpxxxxx" \-d "randomizer[step_num]=2" \-d "randomizer[start_index]=1"レスポンス例{  "updated_at": "2014-05-08T12:28:38+09:00",  "step_num": 2,  "created_at": "2014-05-08T12:24:11+09:00",  "end_index": 5,  "id": 37,  "inbox_id": 6,  "is_valid": true,  "order_index": 0,  "questionnaire_id": 519,  "start_index": 1}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='randomizer' data-entry='randomizer_delete' id='randomizer_delete'>
+              <div class='inner'>
+                <h1 id="section">ランダム設定の削除</h1><h2 id="section-1">ランダム設定を削除します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>randomizers_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>ランダム設定のid</dd></dl><pre><code>定義DELETE https://creativesurvey.com/api/v1/randomizers/:randomizers_idリクエスト例curl -X DELTE https://creativesurvey.com/api/v1/randomizers/36 \-d "auth_token=Vp5vzALpGzhqkcpxxxxx"レスポンス例{  "updated_at": "2014-04-22T11:41:12+09:00",  "step_num": 1,  "created_at": "2014-04-22T11:41:01+09:00",  "end_index": 1,  "id": 36,  "inbox_id": 6,  "is_valid": true,  "order_index": 0,  "questionnaire_id": 508,  "start_index": 0}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+          </div>
+          <div class='inner'>
+            <h1 class='design category category-title' id='design'>
+              デザイン
+            </h1>
+            <div class='document-block entry' data-category='design' data-entry='design_show' id='design_show'>
+              <div class='inner'>
+                <h1 id="section">デザインの取得</h1><h2 id="section-1">デザインを個別で取得します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>design_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>取得するデザインのid</dd></dl><pre><code>定義GET https://creativesurvey.com/api/v1/designs/:design_idリクエスト例$ curl -X GET https://creativesurvey.com/api/v1/designs/515 \-d "auth_token=KRXJUq7yxjT18Vqxxxxx"レスポンス例{  "updated_at": "2014-04-23T12:58:13+09:00",  "theme_path": null,  "theme_id": 7,  "text_color": "#dadada",  "text_align": "left",  "survey_id": 520,  "strong_color": "#e19d9d",  "published_source": "#character-collection {\n\tfont-family:  'Droid Sans',  '新丸ゴ R','Shin Maru Go Regular', sans-serif;\n}\n\n.answer-background &gt; .before,\nbody &gt; .main &gt; .inner.answer-background &gt; .before,\nbody &gt; .main &gt; .inner &gt; .workbench.answer-background &gt; .before,\nbody &gt; .main &gt; .inner &gt; .workbench .content.answer-background &gt; .before,\n.answer-background .answer-background-insole,\nbody &gt; .main &gt; .inner.answer-background .answer-background-insole,\nbody &gt; .main &gt; .inner &gt; .workbench.answer-background .answer-background-insole,\nbody &gt; .main &gt; .inner &gt; .workbench .content.answer-background .answer-background-insole\n{\n\tcontent: \"\";\n\tposition: fixed !important;\n\tpointer-events: none;\n\ttop: 0;\n\tleft: 0;\n\twidth: 100%;\n\theight: 100%;\n\n\tbackground-image: url(https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/558/08.jpg);\n\n\t\n\tbackground-color: #fff;\n\t\n\n\tbackground-position: center center;\n\tbackground-repeat: repeat;\n\tbackground-size: auto;\n\tbackground-attachment: scroll;\n}\n\n.answer-background.edit &gt; .before,\nbody &gt; .main &gt; .inner.answer-background.edit &gt; .before,\nbody &gt; .main &gt; .inner &gt; .workbench.answer-background.edit &gt; .before,\nbody &gt; .main &gt; .inner &gt; .workbench .content.answer-background.edit &gt; .before,\n.answer-background.edit .answer-background-insole,\nbody &gt; .main &gt; .inner.answer-background.edit .answer-background-insole,\nbody &gt; .main &gt; .inner &gt; .workbench.answer-background.edit .answer-background-insole,\nbody &gt; .main &gt; .inner &gt; .workbench .content.answer-background.edit .answer-background-insole,\n.answer-background.abs &gt; .before,\nbody &gt; .main &gt; .inner.answer-background.abs &gt; .before,\nbody &gt; .main &gt; .inner &gt; .workbench.answer-background.abs &gt; .before,\nbody &gt; .main &gt; .inner &gt; .workbench .content.answer-background.abs &gt; .before,\n.answer-background.abs .answer-background-insole,\nbody &gt; .main &gt; .inner.answer-background.abs .answer-background-insole,\nbody &gt; .main &gt; .inner &gt; .workbench.answer-background.abs .answer-background-insole,\nbody &gt; .main &gt; .inner &gt; .workbench .content.answer-background.abs .answer-background-insole\n{\n\tposition: absolute !important;\n\ttop: 0px;\n\tleft: 0px;\n\tright: 0px;\n\tbottom: 0px;\n\tmargin-top: 0px;\n\tmargin-left: 0px;\n\tmargin-right: 0px;\n\tmargin-bottom: 0px;\n\n\n\twidth: auto;\n\theight: auto;\n}\n\n.answer-theme {\n\tcolor:#dadada;\n\tborder-color: #dadada;\n\tfont-size:14px;\n\tfont-family: 'Droid Sans',  '新丸ゴ R','Shin Maru Go Regular', sans-serif;\n}\n\n.answer-item {\n\tfont-size:14px;\n}\n\nhtml.answer-background &gt; .after, body.answer-background &gt; .after, .answer-background &gt; .after, .answer-background-insole &gt; .inner {\n\tcontent: \"\";\n\tposition: fixed !important;\n\tdisplay: block;\n\tpointer-events: none;\n\ttop: 0;\n\tleft: 0;\n\twidth: 100%;\n\theight: 100%;\n\tclear: both;\n\tbackground-color: rgba(255,255,255,0.5);\n  background: transparent url(/assets/black80.png) top left repeat\\9;\n\n}\n\nhtml.answer-background.edit:after,\nbody.answer-background.edit:after,\n.answer-background.edit:after,\n.answer-background.edit .answer-background-insole &gt; .inner,\nhtml.answer-background.abs:after,\nbody.answer-background.abs:after,\n.answer-background.abs:after,\n.answer-background.abs .answer-background-insole &gt; .inner {\n\tposition: absolute !important;\n}\n\nhtml.answer-background.edit:after, body.answer-background.edit:after, .answer-background.edit:after {\n\tdisplay: none;\n}\n\n.answer-container &gt; .inner {\n\n\t\n\t\tmargin: 0 auto 0 0;\n\t\n}\n\n.answer-container .markdown em,\n.answer-container .markdown strong,\n.answer-container .markdown .bold\n{\n\n\tcolor: #e19d9d;\n\tborder-color: #e19d9d;\n}\n\n.answer-container .answer-flex-block .answer-item {\n\tfont-size: 14px;\n}",  "published_at": null,  "layout_position": "left",  "is_google_font": true,  "is_font": true,  "is_blur": false,  "is_background_image": true,  "custom_class": "",  "creative_id": 558,  "created_at": "2014-04-23T12:41:58+09:00",  "background_size": "auto",  "background_repeat": true,  "background_position_y": "center",  "background_position_x": "center",  "background_color": "#fff",  "custom_css": null,  "font_id": 83,  "font_size": 14,  "font_source": "",  "google_font_id": 29,  "id": 515,  "inbox_id": 6,  "insole_brightness": 0.75}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='design' data-entry='design_update' id='design_update'>
+              <div class='inner'>
+                <h1 id="section">デザインの更新</h1><h2 id="section-1">デザインを更新します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>design_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>更新する対象のデザインのid</dd>  <dt>inbox_id:</dt>  <dd><strong>integer</strong></dd>  <dd>該当のデザインを含むインボックスのid</dd>  <dt>id:</dt>  <dd><strong>integer</strong></dd>  <dd>デザインのid</dd>  <dt>theme_id:</dt>  <dd><strong>integer</strong> <em>(デフォルト: null)</em></dd>  <dd>テーマのid</dd>  <dt>text_color:</dt>  <dd><strong>string</strong> <em>(デフォルト: “#333”)</em></dd>  <dd>文字色</dd>  <dt>text_align:</dt>  <dd><strong>string</strong> <em>(デフォルト: “left”)</em></dd>  <dd>テキストの寄せ位置</dd>  <dd>“left”, “center”, “right”から選択します。</dd>  <dt>strong_color:</dt>  <dd><strong>string</strong> <em>(デフォルト: ““)</em></dd>  <dd>強調文字色</dd>  <dt>layout_position:</dt>  <dd><strong>string</strong> <em>(デフォルト: “center”)</em></dd>  <dd>コンテンツの寄せ位置</dd>  <dd>“left”, “center”, “right”から選択します。</dd>  <dt>is_blur:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: null)</em> </dd>  <dd>背景ぼかし</dd>  <dt>background_size:</dt>  <dd><strong>string</strong> <em>(デフォルト: cover)</em></dd>  <dd>背景の大きさ</dd>  <dd>“cover”(画面いっぱいに背景を広げる), “auto”(並べて表示), “false”(左上に元画像のサイズで表示)から選択します。</dd>  <dt>background_repeat:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: true)</em></dd>  <dd>背景の繰り返し</dd>  <dt>background_position_y:</dt>  <dd><strong>string</strong> <em>(デフォルト: “top”)</em></dd>  <dd>背景の縦位置</dd>  <dd>“top”, “center”, “bottom”から選択します。</dd>  <dt>background_position_x:</dt>  <dd><strong>string</strong> <em>(デフォルト: “left”)</em></dd>  <dd>背景の横位置</dd>  <dd>“left”, “center”, “right”から選択します。</dd>  <dt>background_color:</dt>  <dd><strong>string</strong> <em>(デフォルト: “#f6f6f6”)</em></dd>  <dd>背景色</dd>  <dt>is_background_image:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: null)</em></dd>  <dd>trueを指定すると背景を画像にします。</dd>  <dt>creative_id:</dt>  <dd><strong>integer</strong> <em>(デフォルト: null)</em></dd>  <dd>背景にする画像のid</dd>  <dt>custom_class:</dt>  <dd><strong>string</strong> <em>(デフォルト: ““)</em></dd>  <dd>適用するカスタマイズされたクラスを指定します。</dd>  <dt>custom_css:</dt>  <dd><strong>string</strong> <em>(デフォルト: null)</em></dd>  <dd>カスタムCSS</dd>  <dt>font_size:</dt>  <dd><strong>integer</strong> <em>(デフォルト: 14)</em></dd>  <dd>フォントサイズ</dd>  <dt>is_font:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>和文フォントを適用するかどうか</dd>  <dd>trueを指定するとfont_idで指定した和文フォントが適用されます。</dd>  <dt>font_id:</dt>  <dd><strong>integer</strong> <em>(デフォルト: null)</em></dd>  <dd>適用する和文フォントのid</dd>  <dt>is_google_font:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>欧文フォントを適用するかどうか</dd>  <dd>trueを指定するとgoogle_font_idで指定した和文フォントが適用されます。</dd>  <dt>google_font_id:</dt>  <dd><strong>integer</strong> <em>(デフォルト: null)</em></dd>  <dd>適用する欧文フォントのid</dd>  <dt>insole_brightness:</dt>  <dd><strong>float</strong> <em>(デフォルト: 0.5)</em></dd>  <dd>背景の明るさを0~1の範囲で指定します。</dd></dl><pre><code>定義PUT https://creativesurvey.com/api/v1/designs/:design_idリクエスト例$ curl -X PUT https://creativesurvey.com/api/v1/designs/512 \-d "auth_token=KRXJUq7yxjT18Vqxxxxx" \-d "design[layout_position]=left" \-d "design[theme_id]=7" \-d "design[is_blur]=false" \-d "design[background_color]=#fff" \-d "design[text_align]=left"レスポンス例{  "updated_at": "2014-04-23T12:58:13+09:00",  "theme_path": null,  "theme_id": 7,  "text_color": "#dadada",  "text_align": "left",  "survey_id": 520,  "strong_color": "#e19d9d",  "published_source": "#character-collection {\n\tfont-family:  'Droid Sans',  '新丸ゴ R','Shin Maru Go Regular', sans-serif;\n}\n\n.answer-background &gt; .before,\nbody &gt; .main &gt; .inner.answer-background &gt; .before,\nbody &gt; .main &gt; .inner &gt; .workbench.answer-background &gt; .before,\nbody &gt; .main &gt; .inner &gt; .workbench .content.answer-background &gt; .before,\n.answer-background .answer-background-insole,\nbody &gt; .main &gt; .inner.answer-background .answer-background-insole,\nbody &gt; .main &gt; .inner &gt; .workbench.answer-background .answer-background-insole,\nbody &gt; .main &gt; .inner &gt; .workbench .content.answer-background .answer-background-insole\n{\n\tcontent: \"\";\n\tposition: fixed !important;\n\tpointer-events: none;\n\ttop: 0;\n\tleft: 0;\n\twidth: 100%;\n\theight: 100%;\n\n\tbackground-image: url(https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/558/08.jpg);\n\n\t\n\tbackground-color: #fff;\n\t\n\n\tbackground-position: center center;\n\tbackground-repeat: repeat;\n\tbackground-size: auto;\n\tbackground-attachment: scroll;\n}\n\n.answer-background.edit &gt; .before,\nbody &gt; .main &gt; .inner.answer-background.edit &gt; .before,\nbody &gt; .main &gt; .inner &gt; .workbench.answer-background.edit &gt; .before,\nbody &gt; .main &gt; .inner &gt; .workbench .content.answer-background.edit &gt; .before,\n.answer-background.edit .answer-background-insole,\nbody &gt; .main &gt; .inner.answer-background.edit .answer-background-insole,\nbody &gt; .main &gt; .inner &gt; .workbench.answer-background.edit .answer-background-insole,\nbody &gt; .main &gt; .inner &gt; .workbench .content.answer-background.edit .answer-background-insole,\n.answer-background.abs &gt; .before,\nbody &gt; .main &gt; .inner.answer-background.abs &gt; .before,\nbody &gt; .main &gt; .inner &gt; .workbench.answer-background.abs &gt; .before,\nbody &gt; .main &gt; .inner &gt; .workbench .content.answer-background.abs &gt; .before,\n.answer-background.abs .answer-background-insole,\nbody &gt; .main &gt; .inner.answer-background.abs .answer-background-insole,\nbody &gt; .main &gt; .inner &gt; .workbench.answer-background.abs .answer-background-insole,\nbody &gt; .main &gt; .inner &gt; .workbench .content.answer-background.abs .answer-background-insole\n{\n\tposition: absolute !important;\n\ttop: 0px;\n\tleft: 0px;\n\tright: 0px;\n\tbottom: 0px;\n\tmargin-top: 0px;\n\tmargin-left: 0px;\n\tmargin-right: 0px;\n\tmargin-bottom: 0px;\n\n\n\twidth: auto;\n\theight: auto;\n}\n\n.answer-theme {\n\tcolor:#dadada;\n\tborder-color: #dadada;\n\tfont-size:14px;\n\tfont-family: 'Droid Sans',  '新丸ゴ R','Shin Maru Go Regular', sans-serif;\n}\n\n.answer-item {\n\tfont-size:14px;\n}\n\nhtml.answer-background &gt; .after, body.answer-background &gt; .after, .answer-background &gt; .after, .answer-background-insole &gt; .inner {\n\tcontent: \"\";\n\tposition: fixed !important;\n\tdisplay: block;\n\tpointer-events: none;\n\ttop: 0;\n\tleft: 0;\n\twidth: 100%;\n\theight: 100%;\n\tclear: both;\n\tbackground-color: rgba(255,255,255,0.5);\n  background: transparent url(/assets/black80.png) top left repeat\\9;\n\n}\n\nhtml.answer-background.edit:after,\nbody.answer-background.edit:after,\n.answer-background.edit:after,\n.answer-background.edit .answer-background-insole &gt; .inner,\nhtml.answer-background.abs:after,\nbody.answer-background.abs:after,\n.answer-background.abs:after,\n.answer-background.abs .answer-background-insole &gt; .inner {\n\tposition: absolute !important;\n}\n\nhtml.answer-background.edit:after, body.answer-background.edit:after, .answer-background.edit:after {\n\tdisplay: none;\n}\n\n.answer-container &gt; .inner {\n\n\t\n\t\tmargin: 0 auto 0 0;\n\t\n}\n\n.answer-container .markdown em,\n.answer-container .markdown strong,\n.answer-container .markdown .bold\n{\n\n\tcolor: #e19d9d;\n\tborder-color: #e19d9d;\n}\n\n.answer-container .answer-flex-block .answer-item {\n\tfont-size: 14px;\n}",  "published_at": null,  "layout_position": "left",  "is_google_font": true,  "is_font": true,  "is_blur": false,  "is_background_image": true,  "custom_class": "",  "creative_id": 558,  "created_at": "2014-04-23T12:41:58+09:00",  "background_size": "auto",  "background_repeat": true,  "background_position_y": "center",  "background_position_x": "center",  "background_color": "#fff",  "custom_css": null,  "font_id": 83,  "font_size": 14,  "font_source": "",  "google_font_id": 29,  "id": 515,  "inbox_id": 6,  "insole_brightness": 0.75}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+          </div>
+          <div class='inner'>
+            <h1 class='page_order_item category category-title' id='page_order_item'>
+              質問順序
+            </h1>
+            <div class='document-block entry' data-category='page_order_item' data-entry='page_order_item_index' id='page_order_item_index'>
+              <div class='inner'>
+                <h1 id="section">質問順序一覧の取得</h1><h2 id="section-1">アンケートの質問順を一覧で取得します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>questionnaire_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>取得したい質問順序を含む質問表のid</dd></dl><pre><code>定義GET https://creativesurvey.com/api/v1/questionnaires/:questionnaire_id/page_order_itemsリクエスト例curl -X GET https://creativesurvey.com/api/v1/questionnaires/508/page_order_items \-d "auth_token=Vp5vzALpGzhqkcpxxxxx"レスポンス例[  {    "updated_at": "2014-04-22T10:50:27+09:00",    "questionnaire_id": 508,    "question_id": 1824,    "order_index": 0,    "is_connect": false,    "inbox_id": 6,    "id": 1791,    "created_at": "2014-04-22T10:50:26+09:00"  },  {...},  {...}]リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='page_order_item' data-entry='page_order_item_show' id='page_order_item_show'>
+              <div class='inner'>
+                <h1 id="section">質問順序の取得</h1><h2 id="section-1">アンケート内の質問順序を個別で取得します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>page_order_item_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>取得したい質問順序のid</dd></dl><pre><code>定義GET https://creativesurvey.com/api/v1/page_order_items/:page_order_item_idリクエスト例curl -X GET https://creativesurvey.com/api/v1/page_order_items/1798 \-d "auth_token=Vp5vzALpGzhqkcpxxxxx"レスポンス例{  "updated_at": "2014-04-22T17:39:41+09:00",  "questionnaire_id": 510,  "question_id": 1830,  "order_index": 1,  "is_connect": false,  "inbox_id": 6,  "id": 1798,  "created_at": "2014-04-22T17:39:40+09:00"}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='page_order_item' data-entry='page_order_item_update' id='page_order_item_update'>
+              <div class='inner'>
+                <h1 id="section">質問順序の更新</h1><h2 id="section-1">アンケート内の質問順序を更新します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>page_order_item_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>更新する質問順序のid</dd>  <dt>order_index:</dt>  <dd><strong>integer</strong> <em>(デフォルト: null)</em></dd>  <dd>更新する質問順index</dd>  <dd>indexは0から始まる整数です。</dd>  <dt>is_connect:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>trueを指定するとページをつなげる設定が有効になり、設定した質問とその次の質問が同一ページに表示されます。</dd></dl><pre><code>定義PUT https://creativesurvey.com/api/v1/page_order_items/:page_order_item_idリクエスト例curl -X PUT https://creativesurvey.com/api/v1/page_order_items/1798 \-d "auth_token=Vp5vzALpGzhqkcpxxxxx" \-d "page_order_item[order_index]=3" \-d "page_order_item[is_connect]=true"レスポンス例{  "updated_at": "2014-04-22T17:47:00+09:00",  "questionnaire_id": 510,  "question_id": 1830,  "order_index": 3,  "is_connect": true,  "inbox_id": 6,  "id": 1798,  "created_at": "2014-04-22T17:39:40+09:00"}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+          </div>
+          <div class='inner'>
+            <h1 class='logic category category-title' id='logic'>
+              分岐設定
+            </h1>
+            <div class='document-block entry' data-category='logic' data-entry='logics_index' id='logics_index'>
+              <div class='inner'>
+                <h1 id="section">分岐設定一覧の取得</h1><h2 id="section-1">分岐設定一覧を取得します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>question_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>取得する分岐設定を含む質問のid</dd></dl><pre><code>定義GET https://creativesurvey.com/api/v1/questions/:question_id/logicsリクエスト例curl -X GET https://creativesurvey.com/api/v1/questions/1825/logics \-d "auth_token=Vp5vzALpGzhqkcpxxxxx"レスポンス例[  {    "updated_at": "2014-04-23T11:18:45+09:00",    "question_id": 1825,    "order_index": 0,    "answer_id": null,    "answer_item_id": null,    "created_at": "2014-04-23T11:18:45+09:00",    "destination_id": null,    "destination_index": null,    "id": 137,    "inbox_id": 6,    "is_valid": true  },  {...},  {...}  ]リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='logic' data-entry='logics_show' id='logics_show'>
+              <div class='inner'>
+                <h1 id="section">分岐設定の取得</h1><h2 id="section-1">分岐設定を取得します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>logic_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>取得する分岐設定のid</dd></dl><pre><code>定義GET https://creativesurvey.com/api/v1/api/v1/logics/:logic_idリクエスト例curl -X GET https://creativesurvey.com/api/v1/logics/137 \-d "auth_token=Vp5vzALpGzhqkcpxxxxx"レスポンス例{  "updated_at": "2014-04-23T11:18:45+09:00",  "question_id": 1825,  "order_index": 0,  "answer_id": null,  "answer_item_id": null,  "created_at": "2014-04-23T11:18:45+09:00",  "destination_id": null,  "destination_index": null,  "id": 137,  "inbox_id": 6,  "is_valid": true}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='logic' data-entry='logics_delete' id='logics_delete'>
+              <div class='inner'>
+                <h1 id="section">分岐設定の削除</h1><h2 id="section-1">分岐設定を削除します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>logic_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>削除する分岐設定のid</dd></dl><pre><code>定義DELETE https://creativesurvey.com/api/v1/api/v1/logics/:logic_idリクエスト例curl -X DELETE https://creativesurvey.com/api/v1/logics/137 \-d "auth_token=Vp5vzALpGzhqkcpxxxxx"レスポンス例{  "updated_at": "2014-04-23T11:38:46+09:00",  "question_id": 1825,  "order_index": 3,  "answer_id": null,  "answer_item_id": null,  "created_at": "2014-04-23T11:18:45+09:00",  "destination_id": null,  "destination_index": null,  "id": 137,  "inbox_id": 6,  "is_valid": true}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+          </div>
+          <div class='inner'>
+            <h1 class='questionnaire_variable category category-title' id='questionnaire_variable'>
+              置き換え変数設定
+            </h1>
+            <div class='document-block entry' data-category='questionnaire_variable' data-entry='questionnaire_variable_index' id='questionnaire_variable_index'>
+              <div class='inner'>
+                <h1 id="section">置き換え変数設定一覧の取得</h1><h2 id="section-1">アンケートの置き換え変数設定一覧を取得します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>questionnaire_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>取得する置き換え変数設定を含む質問表のid</dd></dl><pre><code>定義GET https://creativesurvey.com/api/v1/questionnaires/:questionnaire_id/questionnaire_variablesリクエスト例curl -X GET https://creativesurvey.com/api/v1/questionnaires/510/questionnaire_variables \-d "auth_token=Vp5vzALpGzhqkcpxxxxx"レスポンス例[  {    "updated_at": "2014-04-22T18:00:50+09:00",    "target": "result",    "sub_item_id": null,    "separator": "",    "result_value": "りんご",    "result_type": "2",    "answer_item_id": null,    "created_at": "2014-04-22T17:55:16+09:00",    "id": 100,    "inbox_id": 6,    "is_separate": false,    "order_index": 0,    "questionnaire_id": 510,    "result_id": 1829  },  {...},  {...}]リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='questionnaire_variable' data-entry='questionnaire_variable_create' id='questionnaire_variable_create'>
+              <div class='inner'>
+                <h1 id="section">置き換え変数設定の作成</h1><h2 id="section-1">アンケートの置き換え変数設定を作成します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>questionnaire_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>置き換え変数設定を取得したい質問表のid</dd>  <dt>result_type*:</dt>  <dd><strong>integer</strong> <em>(デフォルト: null)</em></dd>  <dd>置き換え方式を1か2で指定します。</dd>  <dd>1: “回答をテキストに置き換える”</dd>  <dd>2: “対象テキストを置き換える”</dd>  <dt>target:</dt>  <dd><strong>string</strong> <em>(デフォルト: null)</em></dd>  <dd>対象テキスト。</dd>  <dd>置き換え変数で置き換わる対象となるテキストを指定します。</dd>  <dt>result_id:</dt>  <dd><strong>integer</strong> <em>(デフォルト: null)</em></dd>  <dd>回答される質問のidを指定します。</dd>  <dd>ここで指定された質問の回答が、対象テキストに置換されます。</dd>  <dt>result_value:</dt>  <dd><strong>string</strong> <em>(デフォルト: ““)</em></dd>  <dd>対象テキストを置き換える設定をした際の、置き換えるテキスト。</dd>  <dt>separator:</dt>  <dd><strong>string</strong> <em>(デフォルト: null)</em></dd>  <dd>代入すべき回答テキストが複数だった場合に指定するセパレータ</dd>  <dd>回答テキストが『A』と『B』という二つだった場合、セパレータに『と』と入力していれば『AとB』と表示され、『&amp;』と入力していれば『A&amp;B』と表示されます。</dd>  <dt>answer_item_id:</dt>  <dd><strong>integer</strong> <em>(デフォルト: null)</em></dd>  <dd>対象となる回答項目のid</dd>  <dt>order_index:</dt>  <dd><strong>integer</strong> <em>(デフォルト: null)</em></dd>  <dd>置き換え変数設定の順序を、0から始まる整数で指定します。</dd></dl><pre><code>定義POST https://creativesurvey.com/api/v1/questionnaires/:questionnaire_id/questionnaire_variablesリクエスト例curl -X POST https://creativesurvey.com/api/v1/questionnaires/510/questionnaire_variables \-d "auth_token=Vp5vzALpGzhqkcpxxxxx" \-d "questionnaire_variable[target]=color" \-d "questionnaire_variable[result_id]=1831" \-d "questionnaire_variable[result_type]=1"レスポンス例{  "updated_at": "2014-04-22T18:08:36+09:00",  "target": "color",  "sub_item_id": null,  "separator": null,  "result_value": null,  "result_type": "1",  "answer_item_id": null,  "created_at": "2014-04-22T18:08:36+09:00",  "id": 103,  "inbox_id": 6,  "is_separate": null,  "order_index": null,  "questionnaire_id": 510,  "result_id": 1831}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='questionnaire_variable' data-entry='questionnaire_variable_show' id='questionnaire_variable_show'>
+              <div class='inner'>
+                <h1 id="section">置き換え変数設定の取得</h1><h2 id="section-1">アンケートの置き換え変数設定を個別で取得します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>questionnaire_variable_id:</dt>  <dd><strong>integer</strong></dd>  <dd>取得する置き換え変数設定のid</dd></dl><pre><code>定義GET https://creativesurvey.com/api/v1/questionnaire_variables/:questionnaire_variable_idリクエスト例curl -X GET https://creativesurvey.com/api/v1/questionnaire_variables/100 \-d "auth_token=Vp5vzALpGzhqkcpxxxxx"レスポンス例{  "updated_at": "2014-04-22T18:00:50+09:00",  "target": "result",  "sub_item_id": null,  "separator": "",  "result_value": "りんご",  "result_type": "2",  "answer_item_id": null,  "created_at": "2014-04-22T17:55:16+09:00",  "id": 100,  "inbox_id": 6,  "is_separate": false,  "order_index": 0,  "questionnaire_id": 510,  "result_id": 1829}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='questionnaire_variable' data-entry='questionnaire_variable_update' id='questionnaire_variable_update'>
+              <div class='inner'>
+                <h1 id="section">置き換え変数設定の更新</h1><h2 id="section-1">アンケートの置き換え変数設定を更新します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>questionnaire_variable_id:</dt>  <dd><strong>integer</strong></dd>  <dd>アップデートする置き換え変数設定のid</dd></dl><pre><code>定義PUT https://creativesurvey.com/api/v1/questionnaire_variables/:questionnaire_variable_idリクエスト例curl -X PUT https://creativesurvey.com/api/v1/questionnaire_variables/100 \-d "auth_token=Vp5vzALpGzhqkcpxxxxx" \-d "questionnaire_variable[target]=question_result" \-d "questionnaire_variable[result_value]=hoge"レスポンス例{  "updated_at": "2014-04-22T18:42:34+09:00",  "target": "question_result",  "sub_item_id": null,  "separator": "",  "result_value": "hoge",  "result_type": "2",  "answer_item_id": null,  "created_at": "2014-04-22T17:55:16+09:00",  "id": 100,  "inbox_id": 6,  "is_separate": false,  "order_index": 0,  "questionnaire_id": 510,  "result_id": 1829}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='questionnaire_variable' data-entry='questionnaire_variable_delete' id='questionnaire_variable_delete'>
+              <div class='inner'>
+                <h1 id="section">置き換え変数設定の削除</h1><h2 id="section-1">アンケートの置き換え変数設定を削除します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>questionnaire_variable_id:</dt>  <dd><strong>integer</strong></dd>  <dd>削除する置き換え変数設定のid</dd></dl><pre><code>定義DELETE https://creativesurvey.com/api/v1/questionnaire_variables/:questionnaire_variable_idリクエスト例curl -X DELETE https://creativesurvey.com/api/v1/questionnaire_variables/100 \-d "auth_token=Vp5vzALpGzhqkcpxxxxx"レスポンス例{  "updated_at": "2014-04-22T18:42:34+09:00",  "target": "question_result",  "sub_item_id": null,  "separator": "",  "result_value": "hoge",  "result_type": "2",  "answer_item_id": null,  "created_at": "2014-04-22T17:55:16+09:00",  "id": 100,  "inbox_id": 6,  "is_separate": false,  "order_index": 0,  "questionnaire_id": 510,  "result_id": 1829}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+          </div>
+          <div class='inner'>
+            <h1 class='visibility category category-title' id='visibility'>
+              表示ロジック
+            </h1>
+            <div class='document-block entry' data-category='visibility' data-entry='visibility_index' id='visibility_index'>
+              <div class='inner'>
+                <h1 id="section">表示ロジック一覧の取得</h1><h2 id="section-1">表示ロジック一覧を取得します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>question_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>取得する分岐設定を含む質問のid</dd></dl><pre><code>定義GET https://creativesurvey.com/api/v1/questions/:question_id/visibilitiesリクエスト例curl -X GET https://creativesurvey.com/api/v1/questions/1824/visibilities \-d "auth_token=Vp5vzALpGzhqkcpxxxxx"レスポンス例[  {    "updated_at": "2014-04-23T11:46:40+09:00",    "question_id": 1824,    "order_index": null,    "inbox_id": 6,    "id": 58,    "created_at": "2014-04-23T11:46:40+09:00"  }]リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='visibility' data-entry='visibility_show' id='visibility_show'>
+              <div class='inner'>
+                <h1 id="section">表示ロジックの取得</h1><h2 id="section-1">表示ロジックを取得します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>visibility_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>取得する分岐設定を含む質問のid</dd></dl><pre><code>定義GET https://creativesurvey.com/api/v1/visibilities/:visibility_idリクエスト例curl -X GET https://creativesurvey.com/api/v1/visibilities/58 \-d "auth_token=Vp5vzALpGzhqkcpxxxxx"レスポンス例{  "updated_at": "2014-04-23T11:46:40+09:00",  "question_id": 1824,  "order_index": null,  "inbox_id": 6,  "id": 58,  "created_at": "2014-04-23T11:46:40+09:00"}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='visibility' data-entry='visibility_delete' id='visibility_delete'>
+              <div class='inner'>
+                <h1 id="section">表示ロジックの削除</h1><h2 id="section-1">表示ロジックを削除します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>visibility_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>取得する分岐設定を含む質問のid</dd></dl><pre><code>定義DELETE https://creativesurvey.com/api/v1/visibilities/:visibility_idリクエスト例curl -X DELETE https://creativesurvey.com/api/v1/visibilities/58 \-d "auth_token=Vp5vzALpGzhqkcpxxxxx"レスポンス例{  "updated_at": "2014-04-23T11:46:40+09:00",  "question_id": 1824,  "order_index": null,  "inbox_id": 6,  "id": 58,  "created_at": "2014-04-23T11:46:40+09:00"}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+          </div>
+          <div class='inner'>
+            <h1 class='collector category category-title' id='collector'>
+              公開設定
+            </h1>
+            <div class='document-block entry' data-category='collector' data-entry='collector_index' id='collector_index'>
+              <div class='inner'>
+                <h1 id="section">公開設定一覧の取得</h1><h2 id="section-1">公開設定の一覧を取得します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>survey_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>対象となるアンケートのid</dd></dl><pre><code>定義GET https://creativesurvey.com/api/v1/surveys/:survey_id/collectorsリクエスト例$ curl -X GET \https://creativesurvey.com/api/v1/surveys/520/collectors \-d "auth_token=Vp5vzALpGzhqkcpxxxxx"レスポンス例[  {    "updated_at": "2014-04-23T23:33:42+09:00",    "is_compact": null,    "is_answer_limit": false,    "is_activated": true,    "inbox_id": 6,    "id": 527,    "export_at": null,    "end_at": null,    "due": null,    "allow_billboard": false,    "answer_limit": null,    "ban_mobile": false,    "can_return": false,    "completed_panels_count": 0,    "created_at": "2014-04-23T12:41:58+09:00",    "description": null,    "disallow_duplicate_machine": false,    "is_due": false,    "is_mail": false,    "is_ogp": false,    "is_password": false,    "is_result": false,    "name": "公開設定",    "og_description": "",    "og_image": {      "square": {        "url": null      },      "thumb": {        "url": null      },      "url": null    },    "og_title": "",    "panels_count": 9,    "password": "",    "request_billboard": false,    "start_at": "2014-04-23T23:33:42+09:00",    "survey_id": 520,    "sync_url": "",    "unique_id": "84bb57911b251458463fe639e5010e"  },  {...},  {...}]リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre><p>　　</p>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='collector' data-entry='collector_create' id='collector_create'>
+              <div class='inner'>
+                <h1 id="section">公開設定の作成</h1><h2 id="section-1">公開設定の作成</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>survey_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>対象となるアンケートのid</dd>  <dt>name*:</dt>  <dd><strong>string</strong> <em>(デフォルト: “公開設定”)</em></dd>  <dd>公開設定の名前</dd>  <dt>is_answer_limit:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>回答数によって自動的に終了させるかどうか</dd>  <dd>trueを指定すると、指定した回答数(answer_limit)に達したら自動的に終了させます。</dd>  <dt>answer_limit:</dt>  <dd><strong>integer</strong> <em>(デフォルト: null)</em></dd>  <dd>回答数の制限数</dd>  <dd>is_answer_limitがtrueの場合適用され、指定した制限数に達すると自動的にアンケートを終了します。</dd>  <dt>is_activated:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>公開されているかどうか</dd>  <dt>inbox_id:</dt>  <dd><strong>integer</strong></dd>  <dd>該当の公開設定を持つインボックスのid</dd>  <dt>is_due:</dt>  <dd><strong>boolean</strong> <strong>(デフォルト: false)</strong></dd>  <dd>日付によって自動的に終了させるかどうか</dd>  <dd>trueを指定すると、日付(due)で回答の受付を終了します。</dd>  <dt>due:</dt>  <dd><strong>timestamp</strong> <em>(デフォルト: null)</em></dd>  <dd>指定した日時にアンケートを自動的に終了させます。</dd>  <dd>is_dueがtrueの際に、指定した日付で自動的にアンケートを終了します。</dd>  <dt>ban_mobile:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>回答をPC専用にするかどうか</dd>  <dd>trueを指定すると、モバイルからの回答を禁止します。</dd>  <dt>can_return:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>戻って回答を修正出来るかどうか</dd>  <dd>trueを指定すると、回答者は質問をさかのぼって回答を修正出来るようになります。</dd>  <dt>disallow_duplicate_machine:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>繰り返し回答を制限するかどうか</dd>  <dd>trueを指定すると、回答者は1度しか回答出来なくなります。</dd>  <dt>is_mail:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>回答を即時メールするかどうか</dd>  <dd>trueを指定すると、回答があったらメールで通知します。</dd>  <dt>is_ogp:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>trueを指定するとOpen Graph protocolの設定を有効にします。</dd>  <dt>og_title:</dt>  <dd><strong>string</strong> <em>(デフォルト: null)</em></dd>  <dd>アンケートを共有する際のog:titleを指定します。</dd>  <dt>og_description:</dt>  <dd><strong>string</strong> <em>(デフォルト: null)</em></dd>  <dd>アンケートを共有する際のog:descriptionを指定します。</dd>  <dt>og_image:</dt>  <dd>アンケートを共有する際のog:imageを指定します。</dd>  <dd>画像パスの前に@を付けて画像を指定します。</dd>  <dt>is_password:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>trueを指定するとパスワードを有効にします。</dd>  <dt>password:</dt>  <dd><strong>string</strong> <em>(デフォルト: null)</em></dd>  <dd>パスワードを指定します。is_passwordがtrueの時に有効になります。</dd>  <dt>request_billboard:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>trueを指定すると、ビルボードへの掲載を希望します。</dd>  <dt>sync_url:</dt>  <dd><strong>string</strong> <em>(デフォルト: null)</em></dd>  <dd>WebHookで使用するURLを指定します。</dd></dl><pre><code>定義POST https://creativesurvey.com/api/v1/surveys/:survey_id/collectorsリクエスト例$ curl -X POST \https://creativesurvey.com/api/v1/surveys/520/collectors \-F "auth_token=KRXJUq7yxjT18Vqxxxxx" \-F "collector[og_image]=@/Users/4dusers/Desktop/red.gif" \-F "collector[og_title]=creativesurvey" \-F "collector[og_description]=sample" \-F "collector[name]=公開設定2" \-F "collector[is_ogp]=true"レスポンス例{  "updated_at": "2014-05-08T19:14:47+09:00",  "is_compact": null,  "is_answer_limit": false,  "is_activated": false,  "inbox_id": 6,  "id": 547,  "export_at": null,  "end_at": null,  "due": null,  "allow_billboard": false,  "answer_limit": null,  "ban_mobile": null,  "can_return": false,  "completed_panels_count": 0,  "created_at": "2014-05-08T19:14:47+09:00",  "description": null,  "disallow_duplicate_machine": false,  "is_due": false,  "is_mail": false,  "is_ogp": true,  "is_password": false,  "is_result": false,  "name": "公開設定2",  "og_description": "sample",  "og_image": {    "square": {      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/collector/og_image/547/square_red.gif"    },    "thumb": {      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/collector/og_image/547/thumb_red.gif"    },    "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/collector/og_image/547/red.gif"  },  "og_title": "creativesurvey",  "panels_count": 0,  "password": null,  "request_billboard": null,  "start_at": null,  "survey_id": 520,  "sync_url": null,  "unique_id": "0a7a83043678b983d1c8b73038bc3a"}リソースが存在しない場合{  "message": "resource not found"}必須項目が入力されていない場合{  "name": [    "を入力してください。"  ]}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre><p>　　</p>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='collector' data-entry='collector_show' id='collector_show'>
+              <div class='inner'>
+                <h1 id="section">公開設定の取得</h1><h2 id="section-1">公開設定を個別に取得します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>collector_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>対象となる公開設定のid</dd></dl><pre><code>定義GET https://creativesurvey.com/api/v1/collectors/:collector_idリクエスト例$ curl -X GET \https://creativesurvey.com/api/v1/collectors/547 \-d "auth_token=Vp5vzALpGzhqkcpxxxxx"レスポンス例{  "updated_at": "2014-05-08T19:21:55+09:00",  "is_compact": null,  "is_answer_limit": false,  "is_activated": true,  "inbox_id": 6,  "id": 547,  "export_at": null,  "end_at": null,  "due": null,  "allow_billboard": false,  "answer_limit": null,  "ban_mobile": null,  "can_return": false,  "completed_panels_count": 0,  "created_at": "2014-05-08T19:14:47+09:00",  "description": null,  "disallow_duplicate_machine": false,  "is_due": false,  "is_mail": false,  "is_ogp": true,  "is_password": false,  "is_result": false,  "name": "公開設定2",  "og_description": "sample",  "og_image": {    "square": {      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/collector/og_image/547/square_red.gif"    },    "thumb": {      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/collector/og_image/547/thumb_red.gif"    },    "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/collector/og_image/547/red.gif"  },  "og_title": "creativesurvey",  "panels_count": 0,  "password": null,  "request_billboard": null,  "start_at": "2014-05-08T19:21:55+09:00",  "survey_id": 520,  "sync_url": null,  "unique_id": "0a7a83043678b983d1c8b73038bc3a"}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre><p>　　</p>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='collector' data-entry='collector_update' id='collector_update'>
+              <div class='inner'>
+                <h1 id="section">公開設定の更新</h1><h2 id="section-1">公開設定を更新します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>collector_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>対象となる公開設定のid</dd>  <dt>name*:</dt>  <dd><strong>string</strong> <em>(デフォルト: “公開設定”)</em></dd>  <dd>公開設定の名前</dd>  <dt>is_answer_limit:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>回答数によって自動的に終了させるかどうか</dd>  <dd>trueを指定すると、指定した回答数(answer_limit)に達したら自動的に終了させます。</dd>  <dt>answer_limit:</dt>  <dd><strong>integer</strong> <em>(デフォルト: null)</em></dd>  <dd>回答数の制限数</dd>  <dd>is_answer_limitがtrueの場合適用され、指定した制限数に達すると自動的にアンケートを終了します。</dd>  <dt>is_activated:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>公開されているかどうか</dd>  <dt>inbox_id:</dt>  <dd><strong>integer</strong></dd>  <dd>該当の公開設定を持つインボックスのid</dd>  <dt>is_due:</dt>  <dd><strong>boolean</strong> <strong>(デフォルト: false)</strong></dd>  <dd>日付によって自動的に終了させるかどうか</dd>  <dd>trueを指定すると、日付(due)で回答の受付を終了します。</dd>  <dt>due:</dt>  <dd><strong>timestamp</strong> <em>(デフォルト: null)</em></dd>  <dd>指定した日時にアンケートを自動的に終了させます。</dd>  <dd>is_dueがtrueの際に、指定した日付で自動的にアンケートを終了します。</dd>  <dt>ban_mobile:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>回答をPC専用にするかどうか</dd>  <dd>trueを指定すると、モバイルからの回答を禁止します。</dd>  <dt>can_return:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>戻って回答を修正出来るかどうか</dd>  <dd>trueを指定すると、回答者は質問をさかのぼって回答を修正出来るようになります。</dd>  <dt>disallow_duplicate_machine:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>繰り返し回答を制限するかどうか</dd>  <dd>trueを指定すると、回答者は1度しか回答出来なくなります。</dd>  <dt>is_mail:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>回答を即時メールするかどうか</dd>  <dd>trueを指定すると、回答があったらメールで通知します。</dd>  <dt>is_ogp:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>trueを指定するとOpen Graph protocolの設定を有効にします。</dd>  <dt>og_title:</dt>  <dd><strong>string</strong> <em>(デフォルト: null)</em></dd>  <dd>アンケートを共有する際のog:titleを指定します。</dd>  <dt>og_description:</dt>  <dd><strong>string</strong> <em>(デフォルト: null)</em></dd>  <dd>アンケートを共有する際のog:descriptionを指定します。</dd>  <dt>og_image:</dt>  <dd>アンケートを共有する際のog:imageを指定します。</dd>  <dd>画像パスの前に@を付けて画像を指定します。</dd>  <dt>is_password:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>trueを指定するとパスワードを有効にします。</dd>  <dt>password:</dt>  <dd><strong>string</strong> <em>(デフォルト: null)</em></dd>  <dd>パスワードを指定します。is_passwordがtrueの時に有効になります。</dd>  <dt>request_billboard:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>trueを指定すると、ビルボードへの掲載を希望します。</dd>  <dt>sync_url:</dt>  <dd><strong>string</strong> <em>(デフォルト: null)</em></dd>  <dd>WebHookで使用するURLを指定します。</dd></dl><pre><code>定義PUT https://creativesurvey.com/api/v1/collectors/:collector_idリクエスト例$ curl -X PUT \https://creativesurvey.com/api/v1/collectors/547 \-d "auth_token=Vp5vzALpGzhqkcpxxxxx" \-d "collector[name]=公開設定3" \-d "collector[is_password]=true" \-d "collector[password]=sample_pass" \-d "collector[is_mail]=true" \-d "collector[ban_mobile]=true"レスポンス例{  "updated_at": "2014-05-08T19:23:28+09:00",  "is_compact": null,  "is_answer_limit": false,  "is_activated": true,  "inbox_id": 6,  "id": 547,  "export_at": null,  "end_at": null,  "due": null,  "allow_billboard": false,  "answer_limit": null,  "ban_mobile": true,  "can_return": false,  "completed_panels_count": 0,  "created_at": "2014-05-08T19:14:47+09:00",  "description": null,  "disallow_duplicate_machine": false,  "is_due": false,  "is_mail": true,  "is_ogp": true,  "is_password": true,  "is_result": false,  "name": "公開設定3",  "og_description": "sample",  "og_image": {    "square": {      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/collector/og_image/547/square_red.gif"    },    "thumb": {      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/collector/og_image/547/thumb_red.gif"    },    "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/collector/og_image/547/red.gif"  },  "og_title": "creativesurvey",  "panels_count": 0,  "password": "sample_pass",  "request_billboard": null,  "start_at": "2014-05-08T19:21:55+09:00",  "survey_id": 520,  "sync_url": null,  "unique_id": "0a7a83043678b983d1c8b73038bc3a"}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre><p>　　</p>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='collector' data-entry='collector_delete' id='collector_delete'>
+              <div class='inner'>
+                <h1 id="section">公開設定の削除</h1><h2 id="section-1">公開設定の削除</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>collector_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>対象となる公開設定のid</dd></dl><pre><code>定義DELETE https://creativesurvey.com/api/v1/collectors/:collector_idリクエスト例$ curl -X DELETE \https://creativesurvey.com/api/v1/collectors/529 \-d "auth_token=Vp5vzALpGzhqkcpxxxxx"{  "updated_at": "2014-05-08T19:14:47+09:00",  "is_compact": null,  "is_answer_limit": false,  "is_activated": false,  "inbox_id": 6,  "id": 547,  "export_at": null,  "end_at": null,  "due": null,  "allow_billboard": false,  "answer_limit": null,  "ban_mobile": null,  "can_return": false,  "completed_panels_count": 0,  "created_at": "2014-05-08T19:14:47+09:00",  "description": null,  "disallow_duplicate_machine": false,  "is_due": false,  "is_mail": false,  "is_ogp": true,  "is_password": false,  "is_result": false,  "name": "公開設定2",  "og_description": "sample",  "og_image": {    "square": {      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/collector/og_image/547/square_red.gif"    },    "thumb": {      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/collector/og_image/547/thumb_red.gif"    },    "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/collector/og_image/547/red.gif"  },  "og_title": "creativesurvey",  "panels_count": 0,  "password": null,  "request_billboard": null,  "start_at": null,  "survey_id": 520,  "sync_url": null,  "unique_id": "0a7a83043678b983d1c8b73038bc3a"}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre><p>　　</p>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='collector' data-entry='collector_publish' id='collector_publish'>
+              <div class='inner'>
+                <h1 id="section">公開設定の公開</h1><h2 id="section-1">公開したいアンケートの公開設定を公開します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>collector_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>公開設定id </dd></dl><pre><code>定義POST https://creativesurvey.com/api/v1/collectors/:collector_id/publishリクエスト例$ curl -X POST \https://creativesurvey.com/api/v1/collectors/547/publish \-d "auth_token=Vp5vzALpGzhqkcpxxxxx"レスポンス例{  "updated_at": "2014-05-08T19:21:55+09:00",  "is_compact": null,  "is_answer_limit": false,  "is_activated": true,  "inbox_id": 6,  "id": 547,  "export_at": null,  "end_at": null,  "due": null,  "allow_billboard": false,  "answer_limit": null,  "ban_mobile": null,  "can_return": false,  "completed_panels_count": 0,  "created_at": "2014-05-08T19:14:47+09:00",  "description": null,  "disallow_duplicate_machine": false,  "is_due": false,  "is_mail": false,  "is_ogp": true,  "is_password": false,  "is_result": false,  "name": "公開設定2",  "og_description": "sample",  "og_image": {    "square": {      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/collector/og_image/547/square_red.gif"    },    "thumb": {      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/collector/og_image/547/thumb_red.gif"    },    "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/collector/og_image/547/red.gif"  },  "og_title": "creativesurvey",  "panels_count": 0,  "password": null,  "request_billboard": null,  "start_at": "2014-05-08T19:21:55+09:00",  "survey_id": 520,  "sync_url": null,  "unique_id": "0a7a83043678b983d1c8b73038bc3a"}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre><p>　　</p>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='collector' data-entry='collector_abort' id='collector_abort'>
+              <div class='inner'>
+                <h1 id="section">公開設定の公開中止</h1><h2 id="section-1">公開設定の公開を中止します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>collector_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>公開設定のid </dd></dl><pre><code>定義POST https://creativesurvey.com/api/v1/collectors/:collector_id/abortリクエスト例$ curl -X POST \https://creativesurvey.com/api/v1/collectors/547/abort \-d "auth_token=Vp5vzALpGzhqkcpxxxxx"レスポンス例{  "updated_at": "2014-05-08T19:23:28+09:00",  "is_compact": null,  "is_answer_limit": false,  "is_activated": false,  "inbox_id": 6,  "id": 547,  "export_at": null,  "end_at": null,  "due": null,  "allow_billboard": false,  "answer_limit": null,  "ban_mobile": true,  "can_return": false,  "completed_panels_count": 0,  "created_at": "2014-05-08T19:14:47+09:00",  "description": null,  "disallow_duplicate_machine": false,  "is_due": false,  "is_mail": true,  "is_ogp": true,  "is_password": true,  "is_result": false,  "name": "公開設定3",  "og_description": "sample",  "og_image": {    "square": {      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/collector/og_image/547/square_red.gif"    },    "thumb": {      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/collector/og_image/547/thumb_red.gif"    },    "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/collector/og_image/547/red.gif"  },  "og_title": "creativesurvey",  "panels_count": 0,  "password": "sample_pass",  "request_billboard": null,  "start_at": "2014-05-08T19:21:55+09:00",  "survey_id": 520,  "sync_url": null,  "unique_id": "0a7a83043678b983d1c8b73038bc3a"}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre><p>　　</p>
+              </div>
+            </div>
+          </div>
+          <div class='inner'>
+            <h1 class='segment category category-title' id='segment'>
+              セグメント設定
+            </h1>
+            <div class='document-block entry' data-category='segment' data-entry='segment_index' id='segment_index'>
+              <div class='inner'>
+                <h1 id="section">セグメント設定一覧を取得</h1><h2 id="section-1">セグメント設定一覧を取得します。セグメントを設定すると、集計結果をセグメント条件によって分けることが出来ます。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>survey_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>対象のセグメントを持つアンケートのid</dd></dl><pre><code>定義GET https://creativesurvey.com/api/v1/surveys/:survey_id/segmentsリクエスト例curl -X GET https://creativesurvey.com/api/v1/surveys/520/segments \-d "auth_token=Vp5vzALpGzhqkcpxxxxx"レスポンス例[  {    "updated_at": "2014-04-25T20:17:00+09:00",    "unique_id": null,    "is_making": null,    "inbox_id": 6,    "id": 116,    "due_start": null,    "due_end": null,    "disallow_duplicate_ip": true,    "created_at": "2014-04-23T17:27:53+09:00",    "allow_screen_out": true,    "is_public": null,    "is_raw_data_error": null,    "is_uncompleted": true,    "make_at": null,    "name": "女性",    "pass_phrase": null,    "raw_data_error": null,    "survey_id": 520  },  {...},  {...}]リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='segment' data-entry='segment_create' id='segment_create'>
+              <div class='inner'>
+                <h1 id="section">セグメント設定の作成</h1><h2 id="surveyupdate">セグメント設定を作成します。作成したセグメントは、アンケートから設定します。セグメントの適用については<a href="#survey_update">こちら</a>を参照ください。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>survey_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>セグメントを作成するアンケートのid</dd>  <dt>name*:</dt>  <dd><strong>string</strong></dd>  <dd>セグメント名</dd>  <dt>due_start:</dt>  <dd><strong>timestamp</strong> <em>(デフォルト: null)</em></dd>  <dd>回答日時によってセグメントする際の開始日</dd>  <dd>その日の回答を含めます。</dd>  <dt>due_end:</dt>  <dd><strong>timestamp</strong> <em>(デフォルト: null)</em></dd>  <dd>回答日時によってセグメントする際の終了日</dd>  <dd>その日の回答を含めます。</dd>  <dt>disallow_duplicate_ip:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>同一IPを許可するかどうか</dd>  <dd>trueに設定した場合、同一のIPからの回答を含めません。</dd>  <dt>allow_screen_out:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>スクリーンアウトした回答者を含めるかどうか</dd>  <dd>trueに設定した場合、スクリーンアウトした回答者も含めます。</dd>  <dt>is_uncompleted:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>未回答項目を含めるかどうか</dd>  <dd>trueに設定した場合、回答が終了していない回答者も含めます。</dd></dl><pre><code>定義POST https://creativesurvey.com/api/v1/surveys/:survey_id/segmentsリクエスト例$ curl -X POST https://creativesurvey.com/api/v1/surveys/520/segments \-d "auth_token=Vp5vzALpGzhqkcpxxxxx" \-d "segment[name]=40代女性" \-d "segment[disallow_duplicate_ip]=true" \-d "segment[due_start]=20140427" \-d "segment[due_end]=20140430" \-d "segment[is_uncompleted]=true"レスポンス例{  "updated_at": "2014-05-08T19:48:59+09:00",  "unique_id": null,  "is_making": null,  "inbox_id": 6,  "id": 131,  "due_start": "2014-04-27T00:00:00+09:00",  "due_end": "2014-04-30T00:00:00+09:00",  "disallow_duplicate_ip": true,  "created_at": "2014-05-08T19:48:59+09:00",  "allow_screen_out": false,  "is_public": null,  "is_raw_data_error": null,  "is_uncompleted": true,  "make_at": null,  "name": "40代女性",  "pass_phrase": null,  "raw_data_error": null,  "survey_id": 520}リソースが存在しない場合{  "message": "resource not found"}セグメント名が入力されていない場合{  "name": [    "を入力してください。"  ]}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='segment' data-entry='segment_show' id='segment_show'>
+              <div class='inner'>
+                <h1 id="section">セグメント設定の取得</h1><h2 id="section-1">セグメント設定を個別で取得します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>segment_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>セグメントのid</dd></dl><pre><code>定義GET https://creativesurvey.com/api/v1/segments/:segment_idリクエスト例curl -X GET https://creativesurvey.com/api/v1/segments/131 \-d "auth_token=Vp5vzALpGzhqkcpxxxxx"レスポンス例{  "updated_at": "2014-05-08T19:48:59+09:00",  "unique_id": null,  "is_making": null,  "inbox_id": 6,  "id": 131,  "due_start": "2014-04-27T00:00:00+09:00",  "due_end": "2014-04-30T00:00:00+09:00",  "disallow_duplicate_ip": true,  "created_at": "2014-05-08T19:48:59+09:00",  "allow_screen_out": false,  "is_public": null,  "is_raw_data_error": null,  "is_uncompleted": true,  "make_at": null,  "name": "40代女性",  "pass_phrase": null,  "raw_data_error": null,  "survey_id": 520}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='segment' data-entry='segment_update' id='segment_update'>
+              <div class='inner'>
+                <h1 id="section">セグメント設定の更新</h1><h2 id="section-1">セグメント設定を更新します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>segment_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>セグメントのid</dd>  <dt>name*:</dt>  <dd><strong>string</strong></dd>  <dd>セグメント名</dd>  <dt>due_start:</dt>  <dd><strong>timestamp</strong> <em>(デフォルト: null)</em></dd>  <dd>回答日時によってセグメントする際の開始日</dd>  <dd>その日の回答を含めます。</dd>  <dt>due_end:</dt>  <dd><strong>timestamp</strong> <em>(デフォルト: null)</em></dd>  <dd>回答日時によってセグメントする際の終了日</dd>  <dd>その日の回答を含めます。</dd>  <dt>disallow_duplicate_ip:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>同一IPを許可するかどうか</dd>  <dd>trueに設定した場合、同一のIPからの回答を含めません。</dd>  <dt>allow_screen_out:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>スクリーンアウトした回答者を含めるかどうか</dd>  <dd>trueに設定した場合、スクリーンアウトした回答者も含めます。</dd>  <dt>is_uncompleted:</dt>  <dd><strong>boolean</strong> <em>(デフォルト: false)</em></dd>  <dd>未回答項目を含めるかどうか</dd>  <dd>trueに設定した場合、回答が終了していない回答者も含めます。</dd></dl><pre><code>定義PUT https://creativesurvey.com/api/v1/segments/:segment_idリクエスト例curl -X PUT https://creativesurvey.com/api/v1/segments/131 \-d "auth_token=Vp5vzALpGzhqkcpxxxxx" \-d "segment[name]=30代男性"レスポンス例{  "updated_at": "2014-05-08T19:48:59+09:00",  "unique_id": null,  "is_making": null,  "inbox_id": 6,  "id": 131,  "due_start": "2014-04-27T00:00:00+09:00",  "due_end": "2014-04-30T00:00:00+09:00",  "disallow_duplicate_ip": true,  "created_at": "2014-05-08T19:48:59+09:00",  "allow_screen_out": false,  "is_public": null,  "is_raw_data_error": null,  "is_uncompleted": true,  "make_at": null,  "name": "30代男性",  "pass_phrase": null,  "raw_data_error": null,  "survey_id": 520}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='segment' data-entry='segment_delete' id='segment_delete'>
+              <div class='inner'>
+                <h1 id="section">セグメント設定の削除</h1><h2 id="section-1">セグメント設定を削除します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>segment_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>セグメントのid</dd></dl><pre><code>定義DELETE https://creativesurvey.com/api/v1/segments/:segment_idリクエスト例curl -X DELETE https://creativesurvey.com/api/v1/segments/131 \-d "auth_token=Vp5vzALpGzhqkcpxxxxx"レスポンス例{  "updated_at": "2014-05-08T19:48:59+09:00",  "unique_id": null,  "is_making": null,  "inbox_id": 6,  "id": 131,  "due_start": "2014-04-27T00:00:00+09:00",  "due_end": "2014-04-30T00:00:00+09:00",  "disallow_duplicate_ip": true,  "created_at": "2014-05-08T19:48:59+09:00",  "allow_screen_out": false,  "is_public": null,  "is_raw_data_error": null,  "is_uncompleted": true,  "make_at": null,  "name": "40代女性",  "pass_phrase": null,  "raw_data_error": null,  "survey_id": 520}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+          </div>
+          <div class='inner'>
+            <h1 class='segment_filter category category-title' id='segment_filter'>
+              フィルター設定
+            </h1>
+            <div class='document-block entry' data-category='segment_filter' data-entry='segment_filter_index' id='segment_filter_index'>
+              <div class='inner'>
+                <h1 id="section">フィルター一覧の取得</h1><h2 id="section-1">セグメントのフィルターを一覧で取得します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>segment_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>セグメントのid</dd></dl><pre><code>定義GET https://creativesurvey.com/api/v1/segments/:segment_id/segment_filtersリクエスト例$ curl -X GET https://creativesurvey.com/api/v1/segments/117/segment_filters \-d "auth_token=Vp5vzALpGzhqkcpxxxxx"レスポンス例[  {    "value": "4383",    "updated_at": "2014-04-28T10:47:05+09:00",    "segment_id": 119,    "question_id": 1865,    "inbox_id": 6,    "id": 14,    "created_at": "2014-04-28T10:47:05+09:00"  },  {...},  {...}  ]リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='segment_filter' data-entry='segment_filter_create' id='segment_filter_create'>
+              <div class='inner'>
+                <h1 id="section">フィルターの作成</h1><h2 id="section-1">セグメントのフィルターを作成します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>segment_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>セグメントフィルターを追加するセグメントのid</dd>  <dt>value:</dt>  <dd><strong>string</strong></dd>  <dd>セグメントする回答項目id</dd>  <dd>回答項目の取得については<a href="#answer_item_index">こちら</a>を参照ください。</dd>  <dt>question_id:</dt>  <dd><strong>integer</strong></dd>  <dd>セグメントする質問のid</dd>  <dt>inbox_id:</dt>  <dd><strong>integer</strong></dd>  <dd>対象のセグメントを持つインボックスのidです。</dd></dl><pre><code>定義POST https://creativesurvey.com/api/v1/segments/:segment_id/segment_filtersリクエスト例$ curl -X POST https://creativesurvey.com/api/v1/segments/120/segment_filters \-d "auth_token=Vp5vzALpGzhqkcpxxxxx" \-d "segment_filter[question_id]=1866" \-d "segment_filter[value]=4386"レスポンス例{  "value": "4386",  "updated_at": "2014-04-28T11:03:11+09:00",  "segment_id": 119,  "question_id": 1866,  "inbox_id": 6,  "id": 14,  "created_at": "2014-04-28T10:47:05+09:00"}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='segment_filter' data-entry='segment_filter_show' id='segment_filter_show'>
+              <div class='inner'>
+                <h1 id="section">フィルターの取得</h1><h2 id="section-1">セグメントのフィルターを取得します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>segment_filter_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>セグメントフィルターのid</dd></dl><pre><code>定義GET https://creativesurvey.com/api/v1/segment_filters/segment_filter_idリクエスト例$ curl -X GET https://creativesurvey.com/api/v1/segment_filters/10 \-d "auth_token=Vp5vzALpGzhqkcpxxxxx"レスポンス例{  "value": "2760",  "updated_at": "2014-04-23T17:54:17+09:00",  "segment_id": 116,  "question_id": 1847,  "inbox_id": 6,  "id": 10,  "created_at": "2014-04-23T17:54:17+09:00"}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='segment_filter' data-entry='segment_filter_update' id='segment_filter_update'>
+              <div class='inner'>
+                <h1 id="section">フィルターの更新</h1><h2 id="section-1">セグメントのフィルターを更新します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>segment_filter_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>セグメントフィルターのid</dd>  <dt>value:</dt>  <dd><strong>string</strong></dd>  <dd>セグメントする回答項目id</dd>  <dd>回答項目の取得については<a href="#answer_item_index">こちら</a>を参照ください。</dd>  <dt>segment_id:</dt>  <dd><strong>integer</strong></dd>  <dd>対象となるセグメントのid</dd>  <dt>question_id:</dt>  <dd><strong>integer</strong></dd>  <dd>セグメントする質問のid</dd>  <dt>inbox_id:</dt>  <dd><strong>integer</strong></dd>  <dd>対象のセグメントを持つインボックスのidです。</dd></dl><pre><code>定義PUT https://creativesurvey.com/api/v1/segment_filters/segment_filter_idリクエスト例$ curl -X PUT https://creativesurvey.com/api/v1/segment_filters/14 \-d "segment_filter[question_id]=1866" \-d "segment_filter[value]=4386" \-d "auth_token=Vp5vzALpGzhqkcpxxxxx"レスポンス例{  "value": "4386",  "updated_at": "2014-04-28T11:03:11+09:00",  "segment_id": 119,  "question_id": 1866,  "inbox_id": 6,  "id": 14,  "created_at": "2014-04-28T10:47:05+09:00"}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+            <div class='document-block entry' data-category='segment_filter' data-entry='segment_filter_delete' id='segment_filter_delete'>
+              <div class='inner'>
+                <h1 id="section">フィルターの削除</h1><h2 id="section-1">セグメントのフィルターを削除します。</h2><dl>  <dt>auth_token*:</dt>  <dd><strong>string</strong></dd>  <dd>認証時に必要なトークンです。</dd>  <dt>segment_filter_id*:</dt>  <dd><strong>integer</strong></dd>  <dd>セグメントフィルターのid</dd></dl><pre><code>定義DELETE https://creativesurvey.com/api/v1/segment_filters/segment_filter_idリクエスト例$ curl -X DELETE https://creativesurvey.com/api/v1/segment_filters/14 \-d "auth_token=Vp5vzALpGzhqkcpxxxxx"レスポンス例{  "value": "4383",  "updated_at": "2014-04-28T16:24:39+09:00",  "segment_id": 119,  "question_id": 1865,  "inbox_id": 6,  "id": 14,  "created_at": "2014-04-28T10:47:05+09:00"}リソースが存在しない場合{  "message": "resource not found"}</code></pre><pre><code>def ruby_code  # ruby code goes hereend</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
