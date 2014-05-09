@@ -1,11 +1,10 @@
-= content_for :body do
-  .content
-    - categories.each do |category|
-      .inner
-        %h1{ id: category.name, class: "#{category.name} category category-title" }
-          = category.title
+= content_for :head do
+  = stylesheet_link_tag "application", :media => "all"
+  = stylesheet_link_tag "//yandex.st/highlightjs/8.0/styles/railscasts.min.css"
 
-        - docs.select{|doc| doc.category_name == category.name }.each do |doc|
-          .document-block{ id: doc.base_name, class: "entry", "data-entry" => doc.base_name, "data-category" => category.name }
-            .inner
-              = markdown doc.body
+  = javascript_include_tag "application"
+  = javascript_include_tag "//yandex.st/highlightjs/8.0/highlight.min.js"
+
+= content_for :body do
+  = link_to "Export HTML", :spawn_docs, remote: true, class: "spawn-button"
+  = render partial: "docs_contents"

@@ -6,6 +6,12 @@
     %meta{:content => "width=1024", :name => "viewport"}/
     %title= content_for?(:title) ? yield(:title) : "#{ENV["APPLICATION_DISPLAY_NAME"]}"
 
+    = stylesheet_link_tag "application", :media => "all"
+    = stylesheet_link_tag "http://yandex.st/highlightjs/8.0/styles/railscasts.min.css"
+
+    = javascript_include_tag "application"
+    = javascript_include_tag "http://yandex.st/highlightjs/8.0/highlight.min.js"
+
     = yield :head
 
   %body
@@ -17,8 +23,8 @@
     .main
       .inner
 
-        = render "partials/side_nav"
+        -#= render "partials/side_nav"
 
         = yield :body
 
-    -#= render "partials/footer"
+    = render "partials/footer"

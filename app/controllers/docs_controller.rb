@@ -6,4 +6,11 @@ class DocsController < ApplicationController
       format.html
     end
   end
+
+  def spawn
+    File.write(
+      "#{Rails.root}/public/source/index.html",
+      render_to_string
+    )
+  end
 end
