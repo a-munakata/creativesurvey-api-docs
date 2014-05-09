@@ -32,7 +32,7 @@ tag_color:
 : gray   : 灰色
 
 is_public:
-: __boolean__ _(デフォルト: false)_
+: __boolean__ _(デフォルト: null)_
 : trueを返すとアンケートの結果を公開します。
 
 password:
@@ -54,21 +54,30 @@ $ curl -X POST https://creativesurvey.com/api/v1/surveys \
 -d "survey[tag_color]=red"
 
 レスポンス例
-{ 
-  "created_at":"2014-04-16T20:11:35+09:00",
-  "id":508,
-  "inbox_id":6,
-  "is_deleted":false,
-  "is_public":null,
-  "is_published":false,
-  "name":"sample_survey",
-  "panels_count":null,
-  "password":null,
-  "published_at":null,
-  "questions_count":0,
-  "tag_color":red,
-  "updated_at":"2014-04-16T20:11:35+09:00",
-  "active_segment_id": null
+{
+  "updated_at": "2014-05-08T17:32:20+09:00",
+  "tag_color": "red",
+  "statistic_make_at": null,
+  "questions_count": 0,
+  "published_at": null,
+  "public_token": "1153bc8d38b5bbb0b2ce2247cdcae9c48ca0457c",
+  "preview_count": 0,
+  "is_deleted": false,
+  "inbox_id": 6,
+  "id": 533,
+  "gift_count": 0,
+  "gift_code": null,
+  "edit_count": 0,
+  "created_at": "2014-05-08T17:32:20+09:00",
+  "active_segment_id": null,
+  "is_duplicating": false,
+  "is_gift": false,
+  "is_processing_statistic": null,
+  "is_public": null,
+  "is_published": false,
+  "name": "sample_survey",
+  "panels_count": null,
+  "password": null
 }
 ~~~
  

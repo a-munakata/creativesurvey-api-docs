@@ -30,7 +30,7 @@ curl -X DELETE https://creativesurvey.com/api/v1/sub_items/2731 \
 レスポンス例
 {
   "updated_at": "2014-04-23T11:04:32+09:00",
-  "sentence": "changed_sentence",
+  "sentence": "Q2",
   "placeholder": "",
   "order_index": 5,
   "answer_type": 11,

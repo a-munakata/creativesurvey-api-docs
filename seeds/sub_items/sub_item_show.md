@@ -29,7 +29,7 @@ curl -X GET https://creativesurvey.com/api/v1/sub_items/2731 \
 レスポンス例
 {
   "updated_at": "2014-04-23T10:40:17+09:00",
-  "sentence": "1",
+  "sentence": "Q1",
   "placeholder": "",
   "order_index": 1,
   "answer_type": 11,

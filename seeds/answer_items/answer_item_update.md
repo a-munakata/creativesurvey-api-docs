@@ -78,7 +78,7 @@ curl -X PUT https://creativesurvey.com/api/v1/answer_items/4321 \
 -d "answer_item[sentence]=Please enter your email" \
 -d "answer_item[placeholder]=Email" \
 -d "answer_item[is_required]=true" \
--d "answer_item[validation_pattern]=^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$
+-d "answer_item[validation_pattern]=^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$"
 
 レスポンス例
 {

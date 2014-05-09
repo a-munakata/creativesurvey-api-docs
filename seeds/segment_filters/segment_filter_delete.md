@@ -23,7 +23,7 @@ segment_filter_id*:
 DELETE https://creativesurvey.com/api/v1/segment_filters/segment_filter_id
 
 リクエスト例
-curl -X DELETE https://creativesurvey.com/api/v1/segment_filters/14 \
+$ curl -X DELETE https://creativesurvey.com/api/v1/segment_filters/14 \
 -d "auth_token=Vp5vzALpGzhqkcpxxxxx"
 
 レスポンス例

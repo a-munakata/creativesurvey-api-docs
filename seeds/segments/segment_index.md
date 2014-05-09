@@ -29,16 +29,23 @@ curl -X GET https://creativesurvey.com/api/v1/surveys/520/segments \
 レスポンス例
 [
   {
-    "updated_at": "2014-04-23T17:28:24+09:00",
+    "updated_at": "2014-04-25T20:17:00+09:00",
+    "unique_id": null,
+    "is_making": null,
     "inbox_id": 6,
     "id": 116,
     "due_start": null,
     "due_end": null,
-    "disallow_duplicate_ip": false,
+    "disallow_duplicate_ip": true,
     "created_at": "2014-04-23T17:27:53+09:00",
-    "allow_screen_out": false,
+    "allow_screen_out": true,
+    "is_public": null,
+    "is_raw_data_error": null,
     "is_uncompleted": true,
-    "name": "名称未設定",
+    "make_at": null,
+    "name": "女性",
+    "pass_phrase": null,
+    "raw_data_error": null,
     "survey_id": 520
   },
   {...},

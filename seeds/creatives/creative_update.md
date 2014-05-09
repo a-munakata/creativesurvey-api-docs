@@ -35,13 +35,14 @@ PUT https://creativesurvey.com/api/v1/creatives/:creative_id
 
 リクエスト例
 $ curl -X PUT https://creativesurvey.com/api/v1/creatives/637 \
--d "auth_token=Vp5vzALpGzhqkcpxxxxx"
+-d "auth_token=Vp5vzALpGzhqkcpxxxxx" \
+-d "creative[trimming]=fit"
 
 レスポンス例
 {
   "width": 250,
   "updated_at": "2014-05-08T11:33:49+09:00",
-  "trimming": "thumb",
+  "trimming": "fit",
   "text_color": null,
   "survey_id": 528,
   "strong_color": null,

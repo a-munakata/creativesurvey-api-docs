@@ -27,16 +27,16 @@ curl -X GET https://creativesurvey.com/api/v1/questionnaires/518 \
 -d "auth_token=Vp5vzALpGzhqkcpxxxxx"
 
 レスポンス例
-[
-  {
-    "updated_at": "2014-04-16T20:48:22+09:00",
-    "survey_id": 513,
-    "questions_count": 2,
-    "inbox_id": 6,
-    "id": 504,
-    "created_at": "2014-04-16T20:48:22+09:00"
-  }
-]
+{
+  "updated_at": "2014-05-07T11:52:42+09:00",
+  "survey_id": 527,
+  "questions_count": 3,
+  "inbox_id": 6,
+  "id": 518,
+  "current_order": 0,
+  "created_at": "2014-04-29T21:53:53+09:00",
+  "characters": "2問目leftrighcn1asd未設定次へ拡大を閉じる"
+}
 ~~~
 
 ~~~

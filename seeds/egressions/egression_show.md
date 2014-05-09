@@ -2,7 +2,7 @@
 
 category_name: egression
 title: 最終画面の取得
-priority: 999
+priority: 997
 
 ---
 

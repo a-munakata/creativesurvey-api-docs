@@ -46,13 +46,13 @@ PUT https://creativesurvey.com/api/v1/sub_items/:sub_item_id
 curl -X PUT https://creativesurvey.com/api/v1/sub_items/2731 \
 -d "auth_token=Vp5vzALpGzhqkcpxxxxx" \
 -d "sub_item[order_index]=5" \
--d "sub_item[sentence]=changed_sentence"
+-d "sub_item[sentence]=Q2"
 
 
 レスポンス例
 {
   "updated_at": "2014-04-23T11:04:32+09:00",
-  "sentence": "changed_sentence",
+  "sentence": "Q2",
   "placeholder": "",
   "order_index": 5,
   "answer_type": 11,

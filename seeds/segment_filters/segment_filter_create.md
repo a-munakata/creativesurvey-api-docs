@@ -37,10 +37,10 @@ inbox_id:
 POST https://creativesurvey.com/api/v1/segments/:segment_id/segment_filters
 
 リクエスト例
-curl -X POST https://creativesurvey.com/api/v1/segments/120/segment_filters \
+$ curl -X POST https://creativesurvey.com/api/v1/segments/120/segment_filters \
 -d "auth_token=Vp5vzALpGzhqkcpxxxxx" \
 -d "segment_filter[question_id]=1866" \
--d "segment_filter[value]=4386
+-d "segment_filter[value]=4386"
 
 レスポンス例
 {

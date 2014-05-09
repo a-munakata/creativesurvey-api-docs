@@ -2,7 +2,7 @@
 
 category_name: egression
 title: 最終画面の変更
-priority: 999
+priority: 996
 
 ---
 
