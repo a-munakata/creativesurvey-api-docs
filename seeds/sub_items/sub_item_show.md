@@ -2,7 +2,7 @@
 
 category_name: sub_item
 title: 回答補助項目の取得
-priority: 997
+priority: 995
 
 ---
 
@@ -23,7 +23,7 @@ sub_item_id*:
 GET https://creativesurvey.com/api/v1/sub_items/:sub_item_id
 
 リクエスト例
-curl -X GET https://creativesurvey.com/api/v1/sub_items/2731 \
+$ curl -X GET https://creativesurvey.com/api/v1/sub_items/2731 \
 -d "auth_token=Vp5vzALpGzhqkcpxxxxx"
 
 レスポンス例

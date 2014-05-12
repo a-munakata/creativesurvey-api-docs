@@ -2,7 +2,7 @@
 
 category_name: sub_item
 title: 回答補助項目の削除
-priority: 995
+priority: 993
 
 ---
 
@@ -23,7 +23,7 @@ sub_item_id*:
 DELETE https://creativesurvey.com/api/v1/sub_items/:sub_item_id
 
 リクエスト例
-curl -X DELETE https://creativesurvey.com/api/v1/sub_items/2731 \
+$ curl -X DELETE https://creativesurvey.com/api/v1/sub_items/2731 \
 -d "auth_token=Vp5vzALpGzhqkcpxxxxx"
 
 

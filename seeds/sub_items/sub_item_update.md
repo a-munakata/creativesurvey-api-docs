@@ -2,7 +2,7 @@
 
 category_name: sub_item
 title: 回答補助項目の更新
-priority: 996
+priority: 994
 
 ---
 
@@ -43,7 +43,7 @@ inbox_id:
 PUT https://creativesurvey.com/api/v1/sub_items/:sub_item_id
 
 リクエスト例
-curl -X PUT https://creativesurvey.com/api/v1/sub_items/2731 \
+$ curl -X PUT https://creativesurvey.com/api/v1/sub_items/2731 \
 -d "auth_token=Vp5vzALpGzhqkcpxxxxx" \
 -d "sub_item[order_index]=5" \
 -d "sub_item[sentence]=Q2"
