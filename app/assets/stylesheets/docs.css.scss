@@ -29,6 +29,20 @@
       clear: both;
     }
 
+    .spawn-button {
+      background: #eee;
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 999;
+      padding: 0px 10px;
+      line-height: 34px;
+      &:hover {
+        color: inherit;
+        text-decoration: underline;
+      }
+    }
+
     .control {
       overflow-y: scroll;
       right: 0px;
