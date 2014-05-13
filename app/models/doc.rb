@@ -9,7 +9,8 @@ class Doc
                 :file_name,
                 :category_id,
                 :priority,
-                :is_disabled
+                :is_disabled,
+                :method
 
   def initialize(doc_file)
     @_header, @_body = Preamble.load(doc_file)
@@ -36,11 +37,28 @@ class Doc
     @_header["category_name"]
   end
 
-  def priority
-    @_header["priority"]
+  def order_index
+    order.index(method.to_sym).present? ? order.index(method.to_sym) : 999
   end
 
   def is_disabled
     @_header["is_disabled"]
+  end
+
+  def method
+    @_header["method"]
+  end
+
+private
+  def order
+    [
+      :index,
+      :create,
+      :show,
+      :update,
+      :delete,
+      :publish,
+      :abort
+    ]
   end
 end

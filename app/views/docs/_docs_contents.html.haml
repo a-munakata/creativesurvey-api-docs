@@ -3,6 +3,12 @@
     .inner
       %h1{ id: category.name, class: "#{category.name} category category-title" }
         = category.title
+        (
+        = category.name
+        )
+
+      .description
+        = markdown category.body
 
       - docs.select{|doc| doc.category_name == category.name }.each do |doc|
         .document-block{ id: doc.base_name, class: "entry", "data-entry" => doc.base_name, "data-category" => category.name }
