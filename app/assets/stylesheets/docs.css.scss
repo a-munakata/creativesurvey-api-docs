@@ -12,6 +12,7 @@
 .header#global {
   position: fixed;
   width: 100%;
+  z-idndex: 999;
 }
 
 .main {
@@ -20,7 +21,7 @@
   > .inner {
     position: relative;
     margin-left: 201px;
-    background: #4b4b4b;
+    background: #333;
     zoom: 1;
 
     &:after {
@@ -51,12 +52,9 @@
       left: 200px;
       height: 100%;
       position: fixed;
-
       width: 200px;
       margin-left: -201px;
-      min-height: 800px;
-      background: #f6f6f6;
-      border-right: 1px dotted #999;
+      background: #72b1c0;
 
       > .inner {
         padding: 40px;
@@ -64,10 +62,12 @@
       }
 
       .side-nav {
-        padding-left: 10px;
+        padding: 0 0 60px 10px;
+
         .main-title {
           margin: 0px;
           position: relative;
+          color: #fafafa;
           + ul {
             display: none;
             padding-left: 20px;
@@ -81,14 +81,16 @@
             padding: 5px;
             display: block;
             @include font11;
+            color: #fafafa;
           }
 
           &.selected, &:hover {
-            background: #4b4b4b;
+            background: #fafafa;
+            color: #4b4b4b;
             cursor: pointer;
 
             > a {
-              color: #f6f6f6;
+              color: #4b4b4b;
               &:hover {
                 background: inherit;
               }
@@ -101,13 +103,18 @@
             padding: 5px;
             display: block;
             @include font12;
+            color: #fafafa;
+            &:visited {
+              color: #fafafa;
+            }
           }
 
           &.selected, &:hover {
-            background: #4b4b4b;
+            background: #fafafa;
+            color: #4b4b4b;
             cursor: pointer;
             > a {
-              color: #f6f6f6;
+              color: #4b4b4b;
               &:hover {
                 background: inherit;
               }
@@ -127,6 +134,7 @@ ul {
 }
 
 .dropdown {
+  display: none;
   border-radius: 0px;
   margin: 0px;
   width: 200px;
@@ -149,12 +157,17 @@ ul {
 pre {
   width: 100%;
   overflow-x: hidden;
+  color: white;
+  background: #333;
 
   code.hljs {
     background: #4b4b4b;
   }
 
   code {
+    font-family: Monaco,Consolas,"Lucida Console",monospace;
+    @include font12;
+    padding: 30px;
     overflow-x: scroll;
     &.hljs {
       background: #4b4b4b;
@@ -170,6 +183,40 @@ pre {
 
     &:first-child {
       padding-top: 0px;
+    }
+
+    a {
+      color: #72b1c0;
+      &:hover {
+        background: inherit;
+        color: #72b1c0;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .description {
+    position: relative;
+    @include font13;
+    padding: 1em 30px 0px 30px;
+    line-height: 1.6;
+    font-weight: normal;
+    ul {
+      padding-left: 0px;
+    }
+    table {
+      width: 100%;
+      td, th {
+        border: 1px solid #dadada;
+        padding: 5px 10px;
+      }
+      thead {
+        tr {
+          &:first-child {
+            border-bottom: 2px dotted #dadada;
+          }
+        }
+      }
     }
   }
 
@@ -213,7 +260,7 @@ pre {
   .category-title {
     margin: 0px;
     padding: 55px 30px 0px;
-    margin-bottom: -35px;
+    //margin-bottom: -35px;
     @include font18;
   }
 
@@ -241,7 +288,7 @@ pre {
   }
 
   > .inner {
-    padding: 20px 30px;
+    padding: 0px 30px;
 
     dl {
       zoom: 1;
@@ -288,23 +335,21 @@ pre {
         }
       }
     }
+  }
+}
 
-    pre {
-      position: absolute;
-      right: -100%;
-      top: 0;
-      width: 100%;
-      box-sizing: border-box;
-      padding-top: 55px;
-      margin: 0px;
+pre {
+  position: absolute;
+  right: -100%;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0px;
 
-      code {
-        display: none;
-        &.selected-lang {
-          display: block;
-        }
-      }
+  code {
+    display: none;
+    &.selected-lang {
+      display: block;
     }
-
   }
 }

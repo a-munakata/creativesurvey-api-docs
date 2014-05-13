@@ -1,12 +1,11 @@
 jQuery ->
-  hljs.initHighlightingOnLoad();
+  #  hljs.initHighlightingOnLoad();
   header_height = $(".header").innerHeight()
   footer_height = $(".footer").innerHeight()
 
     #/
    #/ Navigation
   #/========================
-
 
   $(".entry").waypoint ()->
     $(".sub-title").removeClass("selected")
@@ -24,7 +23,7 @@ jQuery ->
     else
       main_title.addClass("selected")
 
-  , { offset: header_height + 20 }
+  , { offset: "200px" }
 
   $(".content > .inner:last-child .entry:last-child").css({
     height: $(window).height() - (header_height + footer_height)
