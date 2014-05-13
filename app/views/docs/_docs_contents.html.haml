@@ -3,9 +3,10 @@
     .inner
       %h1{ id: category.name, class: "#{category.name} category category-title" }
         = category.title
-        (
-        = category.name
-        )
+        - if category.name != "overview"
+          (
+          = category.name
+          )
 
       .description
         = markdown category.body
