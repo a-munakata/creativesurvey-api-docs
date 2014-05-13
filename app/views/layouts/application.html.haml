@@ -13,12 +13,10 @@
       .container
         .inner.clearfix
           .logo
-            = link_to "#{ENV["APPLICATION_NAME"]}", root_url
+            = link_to "#{ENV["APPLICATION_NAME"]}", "https://creativesurvey.com"
     .main
       .inner
 
         = render "partials/side_nav"
 
         = yield :body
-
-    -#= render "partials/footer"
