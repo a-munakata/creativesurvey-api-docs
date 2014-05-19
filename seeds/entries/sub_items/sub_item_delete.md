@@ -19,24 +19,18 @@ sub_item_id _(必須)_:
 DELETE https://creativesurvey.com/api/v1/sub_items/:sub_item_id
 
 リクエスト例
-$ curl -X DELETE https://creativesurvey.com/api/v1/sub_items/2731 \
+$ curl -X DELETE https://creativesurvey.com/api/v1/sub_items/2865 \
 -d "auth_token=YourAuthToken"
-
 
 レスポンス例
 {
-  "updated_at": "2014-04-23T11:04:32+09:00",
-  "sentence": "Q2",
-  "placeholder": "",
-  "order_index": 5,
-  "answer_type": 11,
-  "attachable_id": 1839,
-  "attachable_type": "Question",
-  "created_at": "2014-04-23T10:39:33+09:00",
-  "id": 2731,
-  "inbox_id": 6,
+  "id": 2865,
   "max_value": null,
-  "min_value": null
+  "min_value": null,
+  "order_index": 3,
+  "answer_type": 19,
+  "placeholder": "insert text here",
+  "sentence": "new_text"
 }
 
 リソースが存在しない場合

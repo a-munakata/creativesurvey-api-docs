@@ -9,9 +9,8 @@ parent_klass: question
 
 # 回答補助項目一覧の取得(質問から)
 
-## 回答補助項目一覧を取得します。回答補助項目はQuestion(質問)とAnswerItem(回答項目)のいずれかが親になるため、その親から参照します。
+## [質問(question)](#question)の回答補助項目一覧を取得します。
 
-## Question(質問)の回答補助項目一覧を取得する
 question_id _(必須)_:
 : __integer__
 : 取得したい回答補助項目を含む質問のid
@@ -27,18 +26,13 @@ $ curl -X GET https://creativesurvey.com/api/v1/questions/1900/sub_items \
 レスポンス例
 [
   {
-    "updated_at": "2014-05-08T16:02:53+09:00",
-    "sentence": "book",
-    "placeholder": "",
+    "id": 2820,
+    "max_value": null,
+    "min_value": null,
     "order_index": 1,
     "answer_type": 9,
-    "attachable_id": 1900,
-    "attachable_type": "Question",
-    "created_at": "2014-05-08T14:22:12+09:00",
-    "id": 2820,
-    "inbox_id": 6,
-    "max_value": null,
-    "min_value": null
+    "placeholder": "",
+    "sentence": "1"
   },
   {...},
   {...}

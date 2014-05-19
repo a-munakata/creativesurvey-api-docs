@@ -9,9 +9,8 @@ parent_klass: answer_item
 
 # 回答補助項目一覧の取得(回答項目から)
 
-## 回答補助項目一覧を取得します。回答補助項目はQuestion(質問)とAnswerItem(回答項目)のいずれかが親になるため、その親から参照します。
+## [回答項目(answer_item)](#answer_item)の回答補助項目一覧を取得します。
 
-## AnswerItem(回答項目)の回答補助項目一覧を取得する
 answer_item_id _(必須)_:
 : __integer__
 : 取得したい回答補助項目を含む回答項目のid
