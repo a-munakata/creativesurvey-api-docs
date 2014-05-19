@@ -25,17 +25,12 @@ curl -X GET https://creativesurvey.com/api/v1/questions/1825/logics \
 レスポンス例
 [
   {
-    "updated_at": "2014-04-28T18:40:28+09:00",
-    "question_id": 1876,
+    "question_id": 1825,
+    "id": 138,
     "order_index": 0,
-    "answer_id": null,
-    "answer_item_id": null,
-    "created_at": "2014-04-28T18:40:28+09:00",
+    "is_valid": true,
     "destination_id": null,
-    "destination_index": null,
-    "id": 139,
-    "inbox_id": 6,
-    "is_valid": true
+    "answer_item_id": null
   },
   {...},
   {...}

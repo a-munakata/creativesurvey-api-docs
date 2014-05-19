@@ -19,22 +19,17 @@ logic_id _(必須)_:
 GET https://creativesurvey.com/api/v1/api/v1/logics/:logic_id
 
 リクエスト例
-curl -X GET https://creativesurvey.com/api/v1/logics/139 \
+curl -X GET https://creativesurvey.com/api/v1/logics/138 \
 -d "auth_token=YourAuthToken"
 
 レスポンス例
 {
-  "updated_at": "2014-04-28T18:40:28+09:00",
-  "question_id": 1876,
+  "question_id": 1825,
+  "id": 138,
   "order_index": 0,
-  "answer_id": null,
-  "answer_item_id": null,
-  "created_at": "2014-04-28T18:40:28+09:00",
+  "is_valid": true,
   "destination_id": null,
-  "destination_index": null,
-  "id": 139,
-  "inbox_id": 6,
-  "is_valid": true
+  "answer_item_id": null
 }
 
 リソースが存在しない場合
