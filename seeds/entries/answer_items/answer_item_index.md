@@ -19,30 +19,27 @@ question_id _(必須)_:
 GET https://creativesurvey.com/api/v1/questions/:question_id/answer_items
 
 リクエスト例
-curl -X GET https://creativesurvey.com/api/v1/questions/1829/answer_items \
+$ curl -X GET https://creativesurvey.com/api/v1/questions/1829/answer_items \
 -d "auth_token=YourAuthToken"
 
 レスポンス例
 [
   {
-    "validation_type": null,
-    "validation_pattern": "",
-    "is_required": false,
-    "is_reject": null,
-    "is_multiline": false,
-    "is_impression": true,
-    "inbox_id": 6,
+    "question_id": 1829,
     "id": 4301,
-    "created_at": "2014-04-22T17:39:40+09:00",
-    "answer_type": 2,
     "max_value": null,
     "min_value": null,
-    "order_index": 0,
-    "placeholder": "",
-    "question_id": 1829,
+    "is_reject": null,
+    "validation_pattern": "",
+    "validation_type": null,
     "sentence": "yes",
-    "updated_at": "2014-04-22T19:02:16+09:00",
-    "val": 0.5
+    "placeholder": "",
+    "order_index": 0,
+    "answer_type": 2,
+    "val": 0.5,
+    "is_multiline": false,
+    "is_impression": true,
+    "is_required": false
   },
   {...},
   {...}

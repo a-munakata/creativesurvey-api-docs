@@ -19,29 +19,26 @@ answer_item_id _(必須)_:
 GET https://creativesurvey.com/api/v1/answer_items/:answer_item_id
 
 リクエスト例
-curl -X GET https://creativesurvey.com/api/v1/answer_items/4321 \
+$ curl -X GET https://creativesurvey.com/api/v1/answer_items/4301 \
 -d "auth_token=YourAuthToken"
 
 レスポンス例
 {
-  "validation_type": null,
-  "validation_pattern": "\\d{3}-?\\d{4}",
-  "is_required": true,
-  "is_reject": null,
-  "is_multiline": false,
-  "is_impression": true,
-  "inbox_id": 6,
-  "id": 4321,
-  "created_at": "2014-04-22T19:30:40+09:00",
-  "answer_type": 5,
+  "question_id": 1829,
+  "id": 4301,
   "max_value": null,
   "min_value": null,
-  "order_index": null,
-  "placeholder": "Address",
-  "question_id": 1838,
-  "sentence": "Please enter your address",
-  "updated_at": "2014-04-22T19:30:40+09:00",
-  "val": 0.5
+  "is_reject": null,
+  "validation_pattern": "",
+  "validation_type": null,
+  "sentence": "yes",
+  "placeholder": "",
+  "order_index": 0,
+  "answer_type": 2,
+  "val": 0.5,
+  "is_multiline": false,
+  "is_impression": true,
+  "is_required": false
 }
 
 リソースが存在しない場合

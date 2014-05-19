@@ -68,7 +68,7 @@ sentence:
 PUT https://creativesurvey.com/api/v1/answer_items/:answer_item_id
 
 リクエスト例
-curl -X PUT https://creativesurvey.com/api/v1/answer_items/4321 \
+$ curl -X PUT https://creativesurvey.com/api/v1/answer_items/4321 \
 -d "auth_token=YourAuthToken" \
 -d "answer_item[answer_type]=5" \
 -d "answer_item[sentence]=Please enter your email" \
@@ -78,24 +78,21 @@ curl -X PUT https://creativesurvey.com/api/v1/answer_items/4321 \
 
 レスポンス例
 {
-  "validation_type": null,
-  "validation_pattern": "^([a-zA-Z0-9_\\.\\-]) \\@(([a-zA-Z0-9\\-]) \\.) ([a-zA-Z0-9]{2,4}) $",
-  "is_required": true,
-  "is_reject": null,
-  "is_multiline": false,
-  "is_impression": true,
-  "inbox_id": 6,
+  "question_id": 1829,
   "id": 4321,
-  "created_at": "2014-04-22T19:30:40+09:00",
-  "answer_type": 5,
   "max_value": null,
   "min_value": null,
-  "order_index": null,
-  "placeholder": "Email",
-  "question_id": 1838,
+  "is_reject": null,
+  "validation_pattern": "^([a-zA-Z0-9_\\.\\-])+\\@(([a-zA-Z0-9\\-])+\\.)+([a-zA-Z0-9]{2,4})+$",
+  "validation_type": null,
   "sentence": "Please enter your email",
-  "updated_at": "2014-04-22T19:36:50+09:00",
-  "val": 0.5
+  "placeholder": "Email",
+  "order_index": 0,
+  "answer_type": 5,
+  "val": 0.5,
+  "is_multiline": false,
+  "is_impression": true,
+  "is_required": true
 }
 
 リソースが存在しない場合
