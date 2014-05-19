@@ -25,30 +25,17 @@ curl -X GET https://creativesurvey.com/api/v1/questions/1825/logics \
 レスポンス例
 [
   {
-    "logic_items": [
-      {
-        "condition": "==",
-        "answer_item_id": 4409,
-        "question_id": 1875
-      },
-      {
-        "condition": "!=",
-        "answer_item_id": 4411,
-        "question_id": 1876
-      }
-    ],
-    "message": "女性にスキップ",
-    "destination_id": null,
-    "answer_item_id": null,
     "updated_at": "2014-04-28T18:40:28+09:00",
+    "question_id": 1876,
+    "order_index": 0,
+    "answer_id": null,
+    "answer_item_id": null,
+    "created_at": "2014-04-28T18:40:28+09:00",
+    "destination_id": null,
+    "destination_index": null,
     "id": 139,
     "inbox_id": 6,
-    "question_id": 1878,
-    "answer_id": null,
-    "destination_index": null,
-    "order_index": 0,
-    "is_valid": true,
-    "created_at": "2014-04-28T18:40:28+09:00"
+    "is_valid": true
   },
   {...},
   {...}

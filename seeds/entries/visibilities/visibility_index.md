@@ -19,19 +19,21 @@ question_id _(必須)_:
 GET https://creativesurvey.com/api/v1/questions/:question_id/visibilities
 
 リクエスト例
-curl -X GET https://creativesurvey.com/api/v1/questions/1824/visibilities \
+curl -X GET https://creativesurvey.com/api/v1/questions/1911/visibilities \
 -d "auth_token=YourAuthToken"
 
 レスポンス例
 [
   {
-    "updated_at": "2014-04-23T11:46:40+09:00",
-    "question_id": 1824,
+    "updated_at": "2014-05-19T16:34:05+09:00",
+    "question_id": 1911,
     "order_index": null,
     "inbox_id": 6,
-    "id": 58,
-    "created_at": "2014-04-23T11:46:40+09:00"
-  }
+    "id": 62,
+    "created_at": "2014-05-19T16:34:05+09:00"
+  },
+  {...},
+  {...}
 ]
 
 リソースが存在しない場合
