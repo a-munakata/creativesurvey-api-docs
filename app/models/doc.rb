@@ -10,7 +10,8 @@ class Doc
                 :category_id,
                 :priority,
                 :is_disabled,
-                :method
+                :method,
+                :parent_klass
 
   def initialize(doc_file)
     @_header, @_body = Preamble.load(doc_file)
@@ -38,7 +39,11 @@ class Doc
   end
 
   def order_index
-    order.index(method.to_sym).present? ? order.index(method.to_sym) : 999
+    order.index(method.try(:to_sym)).present? ? order.index(method.try(:to_sym)) : 999
+  end
+
+  def parent_klass_order_index
+    parent_klass_order.index(parent_klass.try(:to_sym)).present? ? parent_klass_order.index(parent_klass.try(:to_sym)) : 999
   end
 
   def is_disabled
@@ -47,6 +52,10 @@ class Doc
 
   def method
     @_header["method"]
+  end
+
+  def parent_klass
+    @_header["parent_klass"]
   end
 
 private
@@ -59,6 +68,13 @@ private
       :delete,
       :publish,
       :abort
+    ]
+  end
+
+  def parent_klass_order
+    [
+      :question,
+      :answer_item
     ]
   end
 end

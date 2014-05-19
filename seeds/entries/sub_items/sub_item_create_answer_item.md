@@ -3,6 +3,7 @@
 category_name: sub_item
 title: 回答補助項目の作成　　　(回答項目から)
 method: create
+parent_klass: answer_item
 
 ---
 

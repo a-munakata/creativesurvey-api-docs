@@ -3,6 +3,7 @@
 category_name: sub_item
 title: 回答補助項目一覧の取得　(回答項目から)
 method: index
+parent_klass: answer_item
 
 ---
 

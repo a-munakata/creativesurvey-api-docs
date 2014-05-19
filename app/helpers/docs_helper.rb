@@ -13,6 +13,8 @@ module DocsHelper
     Dir.glob(File.join(Rails.root, "seeds/entries/**/*.md")).collect { |file|
       Doc.new(file)
     }.select{|doc| !doc.is_disabled }.sort{|a, b|
+      a.parent_klass_order_index <=> b.parent_klass_order_index
+    }.select{|doc| !doc.is_disabled }.sort{|a, b|
       a.order_index <=> b.order_index
     }
   end
