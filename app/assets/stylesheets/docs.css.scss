@@ -201,6 +201,13 @@ pre {
     padding: 1em 30px 0px 30px;
     line-height: 1.6;
     font-weight: normal;
+    p {
+
+      line-height: 1.6;
+      img {
+        width: 100%;
+      }
+    }
     ul {
       padding-left: 0px;
     }
@@ -245,7 +252,7 @@ pre {
     }
   }
   .entry {
-    padding-top: 15px;
+    padding-top: 45px;
     position: relative;
     zoom: 1;
     @include font13;
