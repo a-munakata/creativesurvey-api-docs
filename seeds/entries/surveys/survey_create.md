@@ -10,10 +10,13 @@ method: create
 
 ## 新規アンケートを作成します。
 
-
 name _(必須)_:
 : __string__
 : アンケート名
+
+password:
+: __string__ _(デフォルト: null)_
+: 結果を公開する際に求めるパスワード
 
 tag_color:
 : __string__ _(デフォルト: null)_
@@ -31,10 +34,6 @@ is_public:
 : __boolean__ _(デフォルト: null)_
 : trueを返すとアンケートの結果を公開します。
 
-password:
-: __string__ _(デフォルト: null)_
-: 結果を公開する際に求めるパスワード
-
 active_segment_id:
 : __integer__ _(デフォルト: null)_
 : 適用するセグメントのid
@@ -51,29 +50,12 @@ $ curl -X POST https://creativesurvey.com/api/v1/surveys \
 
 レスポンス例
 {
-  "updated_at": "2014-05-08T17:32:20+09:00",
-  "tag_color": "red",
-  "statistic_make_at": null,
-  "questions_count": 0,
-  "published_at": null,
-  "public_token": "1153bc8d38b5bbb0b2ce2247cdcae9c48ca0457c",
-  "preview_count": 0,
-  "is_deleted": false,
-  "inbox_id": 6,
-  "id": 533,
-  "gift_count": 0,
-  "gift_code": null,
-  "edit_count": 0,
-  "created_at": "2014-05-08T17:32:20+09:00",
-  "active_segment_id": null,
-  "is_duplicating": false,
-  "is_gift": false,
-  "is_processing_statistic": null,
+  "id": 532,
+  "password": null,
   "is_public": null,
-  "is_published": false,
-  "name": "sample_survey",
-  "panels_count": null,
-  "password": null
+  "active_segment_id": null,
+  "tag_color": "red",
+  "name": "sample_survey"
 }
 ~~~
  
