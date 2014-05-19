@@ -43,23 +43,20 @@ PUT https://creativesurvey.com/api/v1/egressions
 
 リクエスト例
 $ curl -X PUT https://creativesurvey.com/api/v1/egressions/507 \
--d "auth_token=KRXJUq7yxjT18VqpoTKp" \
+-d "auth_token=YourAuthToken" \
 -d "egression[redirect_url]=http://google.com" \
 -d "egression[rendered_sentence]=最終画面です。"
 
 レスポンス例
 {
-  "updated_at": "2014-04-21T23:38:13+09:00",
-  "sentence": null,
-  "rendered_sentence": "最終画面です。",
-  "created_at": "2014-04-21T19:27:26+09:00",
-  "description": "",
-  "id": 507,
-  "inbox_id": 6,
-  "is_redirect": true,
-  "question_type": 1,
   "questionnaire_id": 507,
-  "redirect_url": "http://google.com"
+  "id": 507,
+  "question_type": 3,
+  "description": "",
+  "rendered_sentence": "最終画面です。",
+  "sentence": null,
+  "redirect_url": "http://google.com",
+  "is_redirect": true
 }
 
 リソースが存在しない場合

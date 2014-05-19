@@ -20,22 +20,20 @@ GET https://creativesurvey.com/api/v1/egressions/:egression_id
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/egressions/520 \
--d "auth_token=KRXJUq7yxjT18VqpoTKp"
+-d "auth_token=YourAuthToken"
 
 レスポンス例
 {
-  "updated_at": "2014-05-08T11:58:33+09:00",
-  "sentence": null,
-  "rendered_sentence": "回答ありがとうございました。",
-  "created_at": "2014-05-08T11:45:07+09:00",
-  "description": "  ",
-  "id": 520,
-  "inbox_id": 6,
-  "is_redirect": true,
-  "question_type": 1,
   "questionnaire_id": 520,
-  "redirect_url": "https://creativesurvey.com"
+  "id": 520,
+  "question_type": 1,
+  "description": "",
+  "rendered_sentence": "回答ありがとうございました。",
+  "sentence": null,
+  "redirect_url": "https://creativesurvey.com",
+  "is_redirect": true
 }
+
 ~~~
 
 ~~~
