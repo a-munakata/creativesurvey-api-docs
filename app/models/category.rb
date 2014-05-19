@@ -50,8 +50,12 @@ private
       :design,
       :page_order_item,
       :logic,
+      :logic_item,
+      :logic_action,
       :questionnaire_variable,
       :visibility,
+      :visibility_target,
+      :visibility_item,
       :collector,
       :segment,
       :segment_filter
