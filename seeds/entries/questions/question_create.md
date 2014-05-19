@@ -66,14 +66,14 @@ timer_value:
 : 時間制限の秒数を設定します。
 : is_timerがtrueの際、有効になります。
 
-timer_distination_id:
+timer_destination_id:
 : __integer__ _(デフォルト: null)_
 : 時間制限が有効な際、時間を過ぎたらどの質問にスキップするかを設定します。
 : スキップ先の質問idを指定します。
 
-is_random:
-: __boolean__ _(デフォルト: false)_
-: ランダム設定を有効にするかどうか
+in_random_range:
+: __boolean__ _(デフォルト:false)_
+: [ランダム設定](#randomizer)の範囲に含まれているかどうか
 
 range_min:
 : __integer__ _(デフォルト: null または 1)_
@@ -102,15 +102,19 @@ is_required:
 
 is_shuffle:
 : __boolean__ _(デフォルト: false)_
-: 回答項目をランダマイズするかどうか
+: 回答項目をランダムするかどうか
 
 is_shuffle_col:
-: __boolean__ _(デフォルト: false)_
-: 列項目をランダマイズするかどうか
+: __boolean__ _(デフォルト: null)_
+: 列項目をランダムするかどうか
 
 is_shuffle_row:
-: __boolean__ _(デフォルト: false)_
-: 行項目をランダマイズするかどうか
+: __boolean__ _(デフォルト: null)_
+: 行項目をランダムするかどうか
+
+fix_last:
+: __boolean__ _(デフォルト: null)_
+: 回答項目をランダムにした際に、末尾を固定するかどうか
 
 fix_last_col:
 : __boolean__ _(デフォルト: null)_
@@ -133,35 +137,32 @@ $ curl -X POST https://creativesurvey.com/api/v1/questionnaires/511/questions \
 
 レスポンス例
 {
-  "updated_at": "2014-05-08T18:30:14+09:00",
-  "timer_value": 5,
-  "timer_destination_id": null,
-  "sentence": "",
-  "rendered_sentence": "MySurvey",
-  "range_min": null,
-  "range_max": 1,
   "questionnaire_id": 511,
-  "question_type": 1,
-  "placeholder": "",
-  "order_index": 0,
-  "launcher_string": "",
-  "is_timer": false,
-  "in_random_range": null,
   "id": 1906,
-  "fix_last_row": null,
-  "fix_last_col": null,
-  "fix_last": null,
-  "description": null,
-  "created_at": "2014-05-08T18:30:14+09:00",
-  "answer_type": 1,
-  "inbox_id": 6,
-  "is_expand": false,
+  "in_random_range": false,
   "is_logic": null,
-  "is_range": false,
+  "timer_destination_id": null,
+  "timer_value": 5,
+  "is_timer": false,
+  "is_expand": false,
   "is_required": null,
+  "fix_last_col": null,
+  "launcher_string": "",
+  "placeholder": "",
+  "description": null,
+  "rendered_sentence": "MySurvey",
+  "sentence": "",
+  "answer_type": 1,
+  "question_type": 1,
+  "order_index": 0,
+  "is_range": false,
+  "range_max": 1,
+  "range_min": null,
   "is_shuffle": false,
+  "is_shuffle_row": null,
   "is_shuffle_col": null,
-  "is_shuffle_row": null
+  "fix_last": null,
+  "fix_last_row": null
 }
 
 リソースが存在しない場合
