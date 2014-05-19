@@ -19,21 +19,18 @@ randomizers_id _(必須)_:
 DELETE https://creativesurvey.com/api/v1/randomizers/:randomizers_id
 
 リクエスト例
-curl -X DELTE https://creativesurvey.com/api/v1/randomizers/36 \
+$ curl -X DELTE https://creativesurvey.com/api/v1/randomizers/40 \
 -d "auth_token=YourAuthToken"
 
 レスポンス例
 {
-  "updated_at": "2014-04-22T11:41:12+09:00",
-  "step_num": 1,
-  "created_at": "2014-04-22T11:41:01+09:00",
-  "end_index": 1,
-  "id": 36,
-  "inbox_id": 6,
-  "is_valid": true,
-  "order_index": 0,
   "questionnaire_id": 508,
-  "start_index": 0
+  "id": 40,
+  "order_index": 0,
+  "step_num": 2,
+  "start_index": 0,
+  "is_valid": true,
+  "end_index": 4
 }
 
 リソースが存在しない場合

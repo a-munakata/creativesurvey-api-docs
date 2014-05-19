@@ -42,24 +42,21 @@ order_index:
 PUT https://creativesurvey.com/api/v1/randomizers/:randomizers_id
 
 リクエスト例
-curl -X PUT https://creativesurvey.com/api/v1/randomizers/37 \
+$ curl -X PUT https://creativesurvey.com/api/v1/randomizers/40 \
 -d "auth_token=YourAuthToken" \
 -d "randomizer[step_num]=2" \
--d "randomizer[start_index]=1"
+-d "randomizer[end_index]=4"
 
 
 レスポンス例
 {
-  "updated_at": "2014-05-08T12:28:38+09:00",
-  "step_num": 2,
-  "created_at": "2014-05-08T12:24:11+09:00",
-  "end_index": 5,
-  "id": 37,
-  "inbox_id": 6,
-  "is_valid": true,
+  "questionnaire_id": 508,
+  "id": 40,
   "order_index": 0,
-  "questionnaire_id": 519,
-  "start_index": 1
+  "step_num": 2,
+  "start_index": 0,
+  "is_valid": true,
+  "end_index": 4
 }
 
 リソースが存在しない場合
