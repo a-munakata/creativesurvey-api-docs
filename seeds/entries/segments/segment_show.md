@@ -19,29 +19,21 @@ segment_id _(必須)_:
 GET https://creativesurvey.com/api/v1/segments/:segment_id
 
 リクエスト例
-curl -X GET https://creativesurvey.com/api/v1/segments/131 \
+$ curl -X GET https://creativesurvey.com/api/v1/segments/131 \
 -d "auth_token=YourAuthToken"
 
 レスポンス例
 {
-  "updated_at": "2014-05-08T19:48:59+09:00",
-  "unique_id": null,
-  "is_making": null,
-  "inbox_id": 6,
+  "survey_id": 520,
   "id": 131,
-  "due_start": "2014-04-27T00:00:00+09:00",
-  "due_end": "2014-04-30T00:00:00+09:00",
-  "disallow_duplicate_ip": true,
-  "created_at": "2014-05-08T19:48:59+09:00",
-  "allow_screen_out": false,
-  "is_public": null,
-  "is_raw_data_error": null,
-  "is_uncompleted": true,
-  "make_at": null,
   "name": "40代女性",
+  "due_end": null,
+  "due_start": "2014-04-27T00:00:00+09:00",
+  "is_uncompleted": true,
+  "disallow_duplicate_ip": true,
+  "allow_screen_out": false,
   "pass_phrase": null,
-  "raw_data_error": null,
-  "survey_id": 520
+  "is_public": null
 }
 
 リソースが存在しない場合

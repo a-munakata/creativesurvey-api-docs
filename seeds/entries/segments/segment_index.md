@@ -19,30 +19,22 @@ survey_id _(必須)_:
 GET https://creativesurvey.com/api/v1/surveys/:survey_id/segments
 
 リクエスト例
-curl -X GET https://creativesurvey.com/api/v1/surveys/520/segments \
+$ curl -X GET https://creativesurvey.com/api/v1/surveys/520/segments \
 -d "auth_token=YourAuthToken"
 
 レスポンス例
 [
   {
-    "updated_at": "2014-04-25T20:17:00+09:00",
-    "unique_id": null,
-    "is_making": null,
-    "inbox_id": 6,
+    "survey_id": 520,
     "id": 116,
-    "due_start": null,
-    "due_end": null,
-    "disallow_duplicate_ip": true,
-    "created_at": "2014-04-23T17:27:53+09:00",
-    "allow_screen_out": true,
-    "is_public": null,
-    "is_raw_data_error": null,
-    "is_uncompleted": true,
-    "make_at": null,
     "name": "女性",
+    "due_end": null,
+    "due_start": null,
+    "is_uncompleted": true,
+    "disallow_duplicate_ip": true,
+    "allow_screen_out": true,
     "pass_phrase": null,
-    "raw_data_error": null,
-    "survey_id": 520
+    "is_public": null
   },
   {...},
   {...}
