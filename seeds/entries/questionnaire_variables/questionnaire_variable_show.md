@@ -19,25 +19,22 @@ questionnaire_variable_id:
 GET https://creativesurvey.com/api/v1/questionnaire_variables/:questionnaire_variable_id
 
 リクエスト例
-curl -X GET https://creativesurvey.com/api/v1/questionnaire_variables/100 \
+$ curl -X GET https://creativesurvey.com/api/v1/questionnaire_variables/103 \
 -d "auth_token=YourAuthToken"
 
 レスポンス例
 {
-  "updated_at": "2014-04-22T18:00:50+09:00",
-  "target": "result",
-  "sub_item_id": null,
-  "separator": "",
-  "result_value": "りんご",
-  "result_type": "2",
-  "answer_item_id": null,
-  "created_at": "2014-04-22T17:55:16+09:00",
-  "id": 100,
-  "inbox_id": 6,
-  "is_separate": false,
-  "order_index": 0,
   "questionnaire_id": 510,
-  "result_id": 1829
+  "id": 103,
+  "sub_item_id": null,
+  "result_type": "1",
+  "result_value": "",
+  "result_id": 1831,
+  "target": "color",
+  "order_index": 1,
+  "is_separate": false,
+  "separator": "",
+  "answer_item_id": null
 }
 
 リソースが存在しない場合

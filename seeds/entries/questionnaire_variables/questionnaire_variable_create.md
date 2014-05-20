@@ -47,12 +47,17 @@ order_index:
 : __integer__ _(デフォルト: null)_
 : 置き換え変数設定の順序を、0から始まる整数で指定します。
 
+is_separate:
+: __boolean__ _(デフォルト: null)_
+: 回答項目指定をするかどうか
+: trueにした場合、設定した回答項目の指定が有効になります。
+
 ~~~
 定義
 POST https://creativesurvey.com/api/v1/questionnaires/:questionnaire_id/questionnaire_variables
 
 リクエスト例
-curl -X POST https://creativesurvey.com/api/v1/questionnaires/510/questionnaire_variables \
+$ curl -X POST https://creativesurvey.com/api/v1/questionnaires/510/questionnaire_variables \
 -d "auth_token=YourAuthToken" \
 -d "questionnaire_variable[target]=color" \
 -d "questionnaire_variable[result_id]=1831" \
@@ -60,20 +65,17 @@ curl -X POST https://creativesurvey.com/api/v1/questionnaires/510/questionnaire_
 
 レスポンス例
 {
-  "updated_at": "2014-04-22T18:08:36+09:00",
-  "target": "color",
-  "sub_item_id": null,
-  "separator": null,
-  "result_value": null,
-  "result_type": "1",
-  "answer_item_id": null,
-  "created_at": "2014-04-22T18:08:36+09:00",
-  "id": 103,
-  "inbox_id": 6,
-  "is_separate": null,
-  "order_index": null,
   "questionnaire_id": 510,
-  "result_id": 1831
+  "id": 110,
+  "sub_item_id": null,
+  "result_type": "1",
+  "result_value": null,
+  "result_id": 1831,
+  "target": "color",
+  "order_index": null,
+  "is_separate": null,
+  "separator": null,
+  "answer_item_id": null
 }
 
 リソースが存在しない場合
