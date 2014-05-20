@@ -44,10 +44,14 @@ private
       :question,
       :answer_item,
       :sub_item,
-      :creative,
       :egression,
       :randomizer,
       :design,
+      :theme,
+      :font,
+      :google_font,
+      :creative,
+      :creative_chain,
       :page_order_item,
       :logic,
       :logic_item,
@@ -58,7 +62,8 @@ private
       :visibility_item,
       :collector,
       :segment,
-      :segment_filter
+      :segment_filter,
+      :collector_segment_chain
     ]
   end
 end

@@ -74,7 +74,10 @@ private
   def parent_klass_order
     [
       :question,
-      :answer_item
+      :answer_item,
+      :sub_item,
+      :collector,
+      :segment
     ]
   end
 end
