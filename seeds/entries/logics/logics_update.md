@@ -23,25 +23,20 @@ is_valid:
 : __boolean__ _(デフォルト: true)_
 : 有効かどうか
 
-destination_id:
-: __integer__
-: 
-
-answer_item_id:
-
 ~~~
 定義
 PUT https://creativesurvey.com/api/v1/api/v1/logics/:logic_id
 
 リクエスト例
-curl -X PUT https://creativesurvey.com/api/v1/logics/138 \
--d "logic[order_index]=3" \
--d "auth_token=YourAuthToken"
+$ curl -X PUT https://creativesurvey.com/api/v1/logics/138 \
+-d "auth_token=YourAuthToken" \
+-d "logic[order_index]=3"
+
 
 レスポンス例
 {
-  "question_id": 1825,
-  "id": 138,
+  "question_id": 1876,
+  "id": 139,
   "order_index": 3,
   "is_valid": true,
   "destination_id": null,

@@ -19,7 +19,7 @@ question_id _(必須)_:
 GET https://creativesurvey.com/api/v1/questions/:question_id/logics
 
 リクエスト例
-curl -X GET https://creativesurvey.com/api/v1/questions/1825/logics \
+$ curl -X GET https://creativesurvey.com/api/v1/questions/1825/logics \
 -d "auth_token=YourAuthToken"
 
 レスポンス例
