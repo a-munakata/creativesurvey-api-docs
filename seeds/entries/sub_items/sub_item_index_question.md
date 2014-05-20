@@ -32,7 +32,7 @@ $ curl -X GET https://creativesurvey.com/api/v1/questions/1900/sub_items \
     "order_index": 1,
     "answer_type": 9,
     "placeholder": "",
-    "sentence": "1"
+    "sentence": ""
   },
   {...},
   {...}

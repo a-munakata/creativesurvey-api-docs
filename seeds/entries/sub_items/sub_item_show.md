@@ -30,7 +30,7 @@ $ curl -X GET https://creativesurvey.com/api/v1/sub_items/2865 \
   "order_index": 0,
   "answer_type": 19,
   "placeholder": "insert text here",
-  "sentence": "sample_text"
+  "sentence": ""
 }
 
 リソースが存在しない場合

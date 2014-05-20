@@ -42,7 +42,6 @@ GET https://creativesurvey.com/api/v1/questions/:question_id/sub_items
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/questions/1900/sub_items \
 -d "auth_token=YourAuthToken" \
--d "sub_item[sentence]=sample_text" \
 -d "sub_item[placeholder]=insert text here"
 
 レスポンス例
@@ -53,7 +52,7 @@ $ curl -X GET https://creativesurvey.com/api/v1/questions/1900/sub_items \
   "order_index": 0,
   "answer_type": 1,
   "placeholder": "insert text here",
-  "sentence": "sample_text"
+  "sentence": ""
 }
   
 リソースが存在しない場合
