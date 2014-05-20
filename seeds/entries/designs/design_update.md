@@ -21,6 +21,7 @@ id:
 theme_id:
 : __integer__ _(デフォルト: null)_
 : テーマのid
+: テーマ一覧は[こちら](#theme)から取得してください。
 
 text_color:
 : __string__ _(デフォルト: "#333")_
@@ -95,11 +96,13 @@ is_font:
 font_id:
 : __integer__ _(デフォルト: null)_
 : 適用する和文フォントのid
+: 和文フォント一覧は[こちら](#font)から取得してください。
 
 is_google_font:
 : __boolean__ _(デフォルト: false)_
 : 欧文フォントを適用するかどうか
 : trueを指定するとgoogle_font_idで指定した和文フォントが適用されます。
+: 欧文フォント一覧は[こちら](#google_font)から取得してください。
 
 google_font_id:
 : __integer__ _(デフォルト: null)_
