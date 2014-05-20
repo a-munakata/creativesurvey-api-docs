@@ -35,13 +35,10 @@ $ curl -X POST https://creativesurvey.com/api/v1/segments/120/segment_filters \
 
 レスポンス例
 {
+  "segment_id": 120,
+  "id": 23,
   "value": "4386",
-  "updated_at": "2014-04-28T11:03:11+09:00",
-  "segment_id": 119,
-  "question_id": 1866,
-  "inbox_id": 6,
-  "id": 14,
-  "created_at": "2014-04-28T10:47:05+09:00"
+  "question_id": 1866
 }
 
 リソースが存在しない場合

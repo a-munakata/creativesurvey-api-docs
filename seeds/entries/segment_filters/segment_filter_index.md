@@ -19,19 +19,16 @@ segment_id _(必須)_:
 GET https://creativesurvey.com/api/v1/segments/:segment_id/segment_filters
 
 リクエスト例
-$ curl -X GET https://creativesurvey.com/api/v1/segments/117/segment_filters \
+$ curl -X GET https://creativesurvey.com/api/v1/segments/131/segment_filters \
 -d "auth_token=YourAuthToken"
 
 レスポンス例
 [
   {
-    "value": "4383",
-    "updated_at": "2014-04-28T10:47:05+09:00",
-    "segment_id": 119,
-    "question_id": 1865,
-    "inbox_id": 6,
-    "id": 14,
-    "created_at": "2014-04-28T10:47:05+09:00"
+    "segment_id": 131,
+    "id": 22,
+    "value": "2833",
+    "question_id": 1905
   },
   {...},
   {...}  

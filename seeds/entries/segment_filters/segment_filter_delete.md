@@ -19,18 +19,15 @@ segment_filter_id _(必須)_:
 DELETE https://creativesurvey.com/api/v1/segment_filters/segment_filter_id
 
 リクエスト例
-$ curl -X DELETE https://creativesurvey.com/api/v1/segment_filters/14 \
+$ curl -X DELETE https://creativesurvey.com/api/v1/segment_filters/22 \
 -d "auth_token=YourAuthToken"
 
 レスポンス例
 {
-  "value": "4383",
-  "updated_at": "2014-04-28T16:24:39+09:00",
-  "segment_id": 119,
-  "question_id": 1865,
-  "inbox_id": 6,
-  "id": 14,
-  "created_at": "2014-04-28T10:47:05+09:00"
+  "segment_id": 131,
+  "id": 22,
+  "value": "2833",
+  "question_id": 1905
 }
 
 リソースが存在しない場合

@@ -19,10 +19,6 @@ value:
 : セグメントする回答項目id
 : 回答項目の取得については[こちら](#answer_item_index)を参照ください。
 
-segment_id:
-: __integer__
-: 対象となるセグメントのid
-
 question_id:
 : __integer__
 : セグメントする質問のid
@@ -32,20 +28,17 @@ question_id:
 PUT https://creativesurvey.com/api/v1/segment_filters/segment_filter_id
 
 リクエスト例
-$ curl -X PUT https://creativesurvey.com/api/v1/segment_filters/14 \
+$ curl -X PUT https://creativesurvey.com/api/v1/segment_filters/22 \
+-d "auth_token=YourAuthToken" \
 -d "segment_filter[question_id]=1866" \
--d "segment_filter[value]=4386" \
--d "auth_token=YourAuthToken"
+-d "segment_filter[value]=4386"
 
 レスポンス例
 {
+  "segment_id": 131,
+  "id": 22,
   "value": "4386",
-  "updated_at": "2014-04-28T11:03:11+09:00",
-  "segment_id": 119,
-  "question_id": 1866,
-  "inbox_id": 6,
-  "id": 14,
-  "created_at": "2014-04-28T10:47:05+09:00"
+  "question_id": 1866
 }
 
 リソースが存在しない場合
