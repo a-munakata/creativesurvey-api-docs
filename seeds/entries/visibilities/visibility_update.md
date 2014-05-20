@@ -23,18 +23,15 @@ order_index:
 GET https://creativesurvey.com/api/v1/visibilities/:visibility_id
 
 リクエスト例
-curl -X GET https://creativesurvey.com/api/v1/visibilities/66 \
+$ curl -X GET https://creativesurvey.com/api/v1/visibilities/66 \
 -d "visibility[order_index]=3" \
 -d "auth_token=YourAuthToken"
 
 レスポンス例
 {
-  "updated_at": "2014-05-19T16:35:04+09:00",
   "question_id": 1911,
-  "order_index": 3,
-  "inbox_id": 6,
   "id": 66,
-  "created_at": "2014-05-19T16:35:04+09:00"
+  "order_index": 3
 }
 
 リソースが存在しない場合
