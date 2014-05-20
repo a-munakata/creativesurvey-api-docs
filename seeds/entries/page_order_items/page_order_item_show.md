@@ -24,14 +24,8 @@ curl -X GET https://creativesurvey.com/api/v1/page_order_items/1798 \
 
 レスポンス例
 {
-  "updated_at": "2014-04-22T17:39:41+09:00",
-  "questionnaire_id": 510,
-  "question_id": 1830,
-  "order_index": 1,
-  "is_connect": false,
-  "inbox_id": 6,
-  "id": 1798,
-  "created_at": "2014-04-22T17:39:40+09:00"
+  "questionnaire_id": 508,
+  "id": 1796
 }
 
 リソースが存在しない場合
