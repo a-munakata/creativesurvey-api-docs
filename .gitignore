@@ -22,4 +22,4 @@ config/application.yml
 
 .idea
 
-public/assets/*
+public/dev-assets/*

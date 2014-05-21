@@ -1,6 +1,6 @@
 ---
 
-name: error
+name: error_example
 title: エラーについて
 
 ---

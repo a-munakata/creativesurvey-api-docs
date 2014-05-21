@@ -54,11 +54,11 @@
       width: 100%;
       z-index: 9999;
       height: 0px;
-      max-height: 500px;
       -webkit-transition: all 0.3s ease-in-out;
       -moz-transition: all 0.3s ease-in-out;
       -o-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out;
+      opacity: 0.95;
 
       > .inner {
         padding: 40px;
@@ -138,7 +138,7 @@
             cursor: pointer;
 
             > a {
-              color: #555;
+              color: #777;
 
               &:hover {
                 background: inherit;
@@ -421,7 +421,12 @@ table {
   td, th {
     border: 1px solid #dadada;
     padding: 5px 10px;
+
+    &:last-child {
+      width: 60%;
+    }
   }
+
   thead {
     tr {
       &:first-child {

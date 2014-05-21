@@ -3,7 +3,7 @@
     .inner
       %h1{ id: category.name, class: "#{category.name} category category-title", "data-category" => category.name }
         = category.title
-        - unless %w(overview basic).include? category.name
+        - unless %w(overview error_example user).include? category.name.to_s
           (
           = category.name
           )

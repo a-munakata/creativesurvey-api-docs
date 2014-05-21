@@ -43,7 +43,7 @@ class Category
       # basic
       :overview => :basic,
       :user => :basic,
-      :error => :basic,
+      :error_example => :basic,
 
       # create
       :survey => :create,
