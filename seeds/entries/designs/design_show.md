@@ -51,10 +51,6 @@ $ curl -X GET https://creativesurvey.com/api/v1/designs/515 \
   "font_source": ""
 }
 
-リソースが存在しない場合
-{
-  "message": "resource not found"
-}
 ~~~
 
 ~~~

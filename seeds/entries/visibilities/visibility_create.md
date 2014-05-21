@@ -34,10 +34,6 @@ $ curl -X POST https://creativesurvey.com/api/v1/questions/1911/visibilities \
   "order_index": 5
 }
 
-リソースが存在しない場合
-{
-  "message": "resource not found"
-}
 ~~~
 
 ~~~

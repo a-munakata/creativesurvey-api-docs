@@ -49,10 +49,6 @@ https://creativesurvey.com/api/v1/collectors/547/abort \
   "is_ogp": true
 }
 
-リソースが存在しない場合
-{
-  "message": "resource not found"
-}
 ~~~
 
 

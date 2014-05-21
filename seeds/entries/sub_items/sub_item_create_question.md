@@ -54,11 +54,7 @@ $ curl -X GET https://creativesurvey.com/api/v1/questions/1900/sub_items \
   "placeholder": "insert text here",
   "sentence": ""
 }
-  
-リソースが存在しない場合
-{
-  "message": "resource not found"
-}
+
 ~~~
 
 ~~~

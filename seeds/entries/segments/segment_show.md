@@ -36,10 +36,6 @@ $ curl -X GET https://creativesurvey.com/api/v1/segments/131 \
   "is_public": null
 }
 
-リソースが存在しない場合
-{
-  "message": "resource not found"
-}
 ~~~
 
 ~~~

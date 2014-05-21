@@ -165,10 +165,6 @@ $ curl -X POST https://creativesurvey.com/api/v1/questionnaires/511/questions \
   "fix_last_row": null
 }
 
-リソースが存在しない場合
-{
-  "message": "resource not found"
-}
 
 ~~~
 

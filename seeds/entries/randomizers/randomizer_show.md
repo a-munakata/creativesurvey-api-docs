@@ -33,10 +33,6 @@ $ curl -X GET https://creativesurvey.com/api/v1/randomizers/40 \
   "end_index": 3
 }
 
-リソースが存在しない場合
-{
-  "message": "resource not found"
-}
 ~~~
 
 ~~~

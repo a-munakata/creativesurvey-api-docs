@@ -78,10 +78,6 @@ $ curl -X POST https://creativesurvey.com/api/v1/questionnaires/510/questionnair
   "answer_item_id": null
 }
 
-リソースが存在しない場合
-{
-  "message": "resource not found"
-}
 ~~~
 
 ~~~

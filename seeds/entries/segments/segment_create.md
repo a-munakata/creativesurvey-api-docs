@@ -79,10 +79,6 @@ $ curl -X POST https://creativesurvey.com/api/v1/surveys/520/segments \
   "survey_id": 520
 }
 
-リソースが存在しない場合
-{
-  "message": "resource not found"
-}
 
 セグメント名が入力されていない場合
 {

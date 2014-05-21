@@ -42,11 +42,7 @@ $ curl -X GET https://creativesurvey.com/api/v1/answer_item/4337/sub_items \
   {...},
   {...}
 ]  
-  
-リソースが存在しない場合
-{
-  "message": "resource not found"
-}
+
 ~~~
 
 ~~~

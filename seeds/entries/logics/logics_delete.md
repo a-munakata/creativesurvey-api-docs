@@ -32,10 +32,6 @@ $ curl -X DELETE https://creativesurvey.com/api/v1/logics/139 \
   "answer_item_id": null
 }
 
-リソースが存在しない場合
-{
-  "message": "resource not found"
-}
 ~~~
 
 ~~~

@@ -29,10 +29,6 @@ $ curl -X DELETE https://creativesurvey.com/api/v1/visibilities/66 \
   "order_index": 4
 }
 
-リソースが存在しない場合
-{
-  "message": "resource not found"
-}
 ~~~
 
 ~~~

@@ -59,10 +59,6 @@ $ curl -X POST https://creativesurvey.com/api/v1/questionnaires/508/randomizers 
   "end_index": 3
 }
 
-リソースが存在しない場合
-{
-  "message": "resource not found"
-}
 ~~~
 
 ~~~

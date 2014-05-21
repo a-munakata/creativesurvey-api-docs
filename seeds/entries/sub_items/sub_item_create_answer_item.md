@@ -60,11 +60,7 @@ $ curl -X POST https://creativesurvey.com/api/v1/answer_item/4337/sub_items \
   "max_value": null,
   "min_value": null
 }
-  
-リソースが存在しない場合
-{
-  "message": "resource not found"
-}
+
 ~~~
 
 ~~~

@@ -95,10 +95,6 @@ $ curl -X PUT https://creativesurvey.com/api/v1/answer_items/4321 \
   "is_required": true
 }
 
-リソースが存在しない場合
-{
-  "message": "resource not found"
-}
 ~~~
 
 ~~~

@@ -57,10 +57,6 @@ $ curl -X POST https://creativesurvey.com/api/v1/logics/139/logic_items \
   "answer_item_id": 4487
 }
 
-リソースが存在しない場合
-{
-  "message": "resource not found"
-}
 ~~~
 
 ~~~

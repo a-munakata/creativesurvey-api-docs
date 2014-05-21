@@ -52,10 +52,6 @@ $ curl -X PUT https://creativesurvey.com/api/v1/sub_items/2865 \
   "sentence": "new_text"
 }
 
-リソースが存在しない場合
-{
-  "message": "resource not found"
-}
 ~~~
 
 ~~~

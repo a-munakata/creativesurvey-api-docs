@@ -34,10 +34,6 @@ $ curl -X POST https://creativesurvey.com/api/v1/visibilities/71/visibility_targ
   "answer_item_id": 4491
 }
 
-リソースが存在しない場合
-{
-  "message": "resource not found"
-}
 ~~~
 
 ~~~

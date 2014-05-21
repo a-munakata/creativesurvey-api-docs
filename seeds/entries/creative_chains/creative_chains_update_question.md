@@ -47,10 +47,6 @@ $ curl -X PUT https://creativesurvey.com/api/v1/questions/creative_chains/9650 \
   "attachable_id": 1918
 }
 
-リソースが存在しない場合
-{
-  "message": "resource not found"
-}
 ~~~
 
  

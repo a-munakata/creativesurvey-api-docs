@@ -35,10 +35,6 @@ https://creativesurvey.com/api/v1/creatives/528 \
   "image": null
 }
 
-リソースが存在しない場合
-{
-  "message": "resource not found"
-}
 ~~~
 
 

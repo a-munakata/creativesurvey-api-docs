@@ -46,10 +46,6 @@ $ curl -X PUT https://creativesurvey.com/api/v1/creatives/638 \
   "image": "grid.gif"
 }
 
-リソースが存在しない場合
-{
-  "message": "resource not found"
-}
 
 ~~~
 

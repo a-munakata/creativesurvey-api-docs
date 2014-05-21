@@ -41,10 +41,6 @@ $ curl -X POST https://creativesurvey.com/api/v1/segments/120/segment_filters \
   "question_id": 1866
 }
 
-リソースが存在しない場合
-{
-  "message": "resource not found"
-}
 ~~~
 
 ~~~

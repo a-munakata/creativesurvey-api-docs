@@ -34,10 +34,6 @@ $ curl -X GET https://creativesurvey.com/api/v1/questionnaires/508/page_order_it
   {...}
 ]
 
-リソースが存在しない場合
-{
-  "message": "resource not found"
-}
 ~~~
 
 ~~~

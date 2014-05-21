@@ -34,10 +34,6 @@ $ curl -X GET https://creativesurvey.com/api/v1/creatives/637 \
   "image": null
 }
 
-リソースが存在しない場合
-{
-  "message": "resource not found"
-}
 ~~~
 
 ~~~

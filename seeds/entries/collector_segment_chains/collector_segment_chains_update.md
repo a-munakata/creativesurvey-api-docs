@@ -31,10 +31,6 @@ $ curl -X PUT https://creativesurvey.com/api/v1/collector_segment_chains/8 \
   "collector_id": 537
 }
 
-リソースが存在しない場合
-{
-  "message": "resource not found"
-}
 ~~~
 
  

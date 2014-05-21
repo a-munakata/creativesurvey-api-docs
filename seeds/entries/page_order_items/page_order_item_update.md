@@ -41,10 +41,6 @@ curl -X PUT https://creativesurvey.com/api/v1/page_order_items/1798 \
   "order_index": 3
 }
 
-リソースが存在しない場合
-{
-  "message": "resource not found"
-}
 ~~~
 
 ~~~

@@ -40,10 +40,6 @@ $ curl -X DELETE https://creativesurvey.com/api/v1/questionnaire_variables/100 \
   "result_id": 1829
 }
 
-リソースが存在しない場合
-{
-  "message": "resource not found"
-}
 ~~~
 
 ~~~

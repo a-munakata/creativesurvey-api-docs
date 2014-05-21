@@ -33,10 +33,6 @@ $ curl -X GET https://creativesurvey.com/api/v1/logic_items/98 \
   "answer_item_id": 4409
 }
 
-リソースが存在しない場合
-{
-  "message": "resource not found"
-}
 ~~~
 
 ~~~

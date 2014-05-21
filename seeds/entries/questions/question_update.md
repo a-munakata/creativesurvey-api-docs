@@ -166,10 +166,6 @@ curl -X PUT https://creativesurvey.com/api/v1/questions/1906 \
   "fix_last_row": null
 }
 
-リソースが存在しない場合
-{
-  "message": "resource not found"
-}
 
 ~~~
 

@@ -126,10 +126,6 @@ https://creativesurvey.com/api/v1/surveys/520/collectors \
   "is_ogp": true
 }
 
-リソースが存在しない場合
-{
-  "message": "resource not found"
-}
 
 必須項目が入力されていない場合
 {

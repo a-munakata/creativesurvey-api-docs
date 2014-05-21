@@ -36,10 +36,6 @@ $ curl -X POST https://creativesurvey.com/api/v1/collectors/546/collector_segmen
   "collector_id": 546
 }
 
-リソースが存在しない場合
-{
-  "message": "resource not found"
-}
 
 リソースが重複した場合
 {

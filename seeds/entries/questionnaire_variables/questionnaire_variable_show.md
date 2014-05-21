@@ -37,10 +37,6 @@ $ curl -X GET https://creativesurvey.com/api/v1/questionnaire_variables/103 \
   "answer_item_id": null
 }
 
-リソースが存在しない場合
-{
-  "message": "resource not found"
-}
 ~~~
 
 ~~~

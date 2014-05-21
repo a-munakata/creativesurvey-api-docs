@@ -31,10 +31,6 @@ $ curl -X GET https://creativesurvey.com/api/v1/answer_items/4501/creative_chain
   "attachable_id": 4501
 }
 
-リソースが存在しない場合
-{
-  "message": "resource not found"
-}
 ~~~
 
  

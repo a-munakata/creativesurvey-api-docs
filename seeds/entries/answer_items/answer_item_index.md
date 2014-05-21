@@ -45,10 +45,6 @@ $ curl -X GET https://creativesurvey.com/api/v1/questions/1829/answer_items \
   {...}
 ]
 
-リソースが存在しない場合
-{
-  "message": "resource not found"
-}
 ~~~
 
 ~~~

@@ -33,10 +33,6 @@ $ curl -X DELTE https://creativesurvey.com/api/v1/randomizers/40 \
   "end_index": 4
 }
 
-リソースが存在しない場合
-{
-  "message": "resource not found"
-}
 ~~~
 
 ~~~

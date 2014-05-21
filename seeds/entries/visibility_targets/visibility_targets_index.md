@@ -33,10 +33,6 @@ $ curl -X GET https://creativesurvey.com/api/v1/visibilities/71/visibility_targe
   {...}
 ]
 
-リソースが存在しない場合
-{
-  "message": "resource not found"
-}
 ~~~
 
 ~~~
