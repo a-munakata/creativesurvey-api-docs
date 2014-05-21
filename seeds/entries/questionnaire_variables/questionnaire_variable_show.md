@@ -20,7 +20,7 @@ GET https://creativesurvey.com/api/v1/questionnaire_variables/:questionnaire_var
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/questionnaire_variables/103 \
--d "auth_token=YourAuthToken"
+-u "auth_token=YourAuthToken":
 
 レスポンス例
 {

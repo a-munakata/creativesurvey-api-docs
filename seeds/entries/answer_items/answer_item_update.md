@@ -60,8 +60,12 @@ placeholder:
 : 文字が入力されていない際に表示するplaceholder
 
 sentence:
-: __string__
+: __string__ _(デフォルト: "")_
 : 回答項目で提示される文字列
+
+val:
+: __float__ _(デフォルト: 0.5)_
+: rangeタイプの質問の初期値
 
 ~~~
 定義
@@ -69,7 +73,7 @@ PUT https://creativesurvey.com/api/v1/answer_items/:answer_item_id
 
 リクエスト例
 $ curl -X PUT https://creativesurvey.com/api/v1/answer_items/4321 \
--d "auth_token=YourAuthToken" \
+-u "auth_token=YourAuthToken": \
 -d "answer_item[answer_type]=5" \
 -d "answer_item[sentence]=Please enter your email" \
 -d "answer_item[placeholder]=Email" \

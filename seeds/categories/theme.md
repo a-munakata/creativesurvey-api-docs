@@ -1,7 +1,7 @@
 ---
 
 name: theme
-title: テーマ
+title: テーマの取得
 
 ---
 

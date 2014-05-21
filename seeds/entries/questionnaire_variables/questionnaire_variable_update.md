@@ -62,7 +62,7 @@ PUT https://creativesurvey.com/api/v1/questionnaire_variables/:questionnaire_var
 
 リクエスト例
 $ curl -X PUT https://creativesurvey.com/api/v1/questionnaire_variables/103 \
--d "auth_token=YourAuthToken" \
+-u "auth_token=YourAuthToken": \
 -d "questionnaire_variable[target]=question_result" \
 -d "questionnaire_variable[result_value]=hoge"
 

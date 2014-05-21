@@ -130,7 +130,7 @@ POST https://creativesurvey.com/api/v1/questionnaires/:questionnaire_id/question
 
 リクエスト例
 $ curl -X POST https://creativesurvey.com/api/v1/questionnaires/511/questions \
--d "auth_token=YourAuthToken" \
+-u "auth_token=YourAuthToken": \
 -d "question[rendered_sentence]=MySurvey" \
 -d "question[is_timer]=false" \
 -d "question[is_shuffle]=false"

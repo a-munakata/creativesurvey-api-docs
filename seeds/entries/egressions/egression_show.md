@@ -8,7 +8,7 @@ method: show
 
 # 最終画面の取得
 
-## 最終画面の取得について
+## 最終画面を取得します。
 
 egression_id _(必須)_:
 : __integer__
@@ -20,7 +20,7 @@ GET https://creativesurvey.com/api/v1/egressions/:egression_id
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/egressions/520 \
--d "auth_token=YourAuthToken"
+-u "auth_token=YourAuthToken":
 
 レスポンス例
 {

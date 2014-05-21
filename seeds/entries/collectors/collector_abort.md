@@ -21,7 +21,7 @@ POST https://creativesurvey.com/api/v1/collectors/:collector_id/abort
 リクエスト例
 $ curl -X POST \
 https://creativesurvey.com/api/v1/collectors/547/abort \
--d "auth_token=YourAuthToken"
+-u "auth_token=YourAuthToken":
 
 レスポンス例
 {

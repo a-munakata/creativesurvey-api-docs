@@ -19,8 +19,8 @@ questionnaire_id:
 GET https://creativesurvey.com/api/v1/questionnaires/:questionnaire_id/questions
 
 リクエスト例
-curl -X GET https://creativesurvey.com/api/v1/questionnaires/508/questions \
--d "auth_token=YourAuthToken"
+$ curl -X GET https://creativesurvey.com/api/v1/questionnaires/508/questions \
+-u "auth_token=YourAuthToken":
 
 レスポンス例
 [

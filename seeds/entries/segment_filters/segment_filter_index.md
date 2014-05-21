@@ -20,7 +20,7 @@ GET https://creativesurvey.com/api/v1/segments/:segment_id/segment_filters
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/segments/131/segment_filters \
--d "auth_token=YourAuthToken"
+-u "auth_token=YourAuthToken":
 
 レスポンス例
 [

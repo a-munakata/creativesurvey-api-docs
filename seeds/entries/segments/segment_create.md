@@ -50,7 +50,7 @@ POST https://creativesurvey.com/api/v1/surveys/:survey_id/segments
 
 リクエスト例
 $ curl -X POST https://creativesurvey.com/api/v1/surveys/520/segments \
--d "auth_token=YourAuthToken" \
+-u "auth_token=YourAuthToken": \
 -d "segment[name]=40代女性" \
 -d "segment[disallow_duplicate_ip]=true" \
 -d "segment[due_start]=20140427" \

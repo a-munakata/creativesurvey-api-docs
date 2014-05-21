@@ -35,7 +35,7 @@ PUT https://creativesurvey.com/api/v1/questions/creative_chains/:creative_chain_
 
 リクエスト例
 $ curl -X PUT https://creativesurvey.com/api/v1/questions/creative_chains/9650 \
--d "auth_token=YourAuthToken" \
+-u "auth_token=YourAuthToken": \
 -d "creative_chain[attachable_id]=1918" \
 -d "creative_chain[creative_id]=3"
 

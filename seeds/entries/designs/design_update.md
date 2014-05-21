@@ -119,7 +119,7 @@ PUT https://creativesurvey.com/api/v1/designs/:design_id
 
 リクエスト例
 $ curl -X PUT https://creativesurvey.com/api/v1/designs/512 \
--d "auth_token=YourAuthToken" \
+-u "auth_token=YourAuthToken": \
 -d "design[layout_position]=left" \
 -d "design[theme_id]=7" \
 -d "design[is_blur]=false" \

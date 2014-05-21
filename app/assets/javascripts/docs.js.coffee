@@ -1,5 +1,4 @@
 jQuery ->
-  #  hljs.initHighlightingOnLoad();
   header_height = $(".header").innerHeight()
   footer_height = $(".footer").innerHeight()
 
@@ -7,27 +6,28 @@ jQuery ->
    #/ Navigation
   #/========================
 
-  $(".entry").waypoint ()->
-    $(".sub-title").removeClass("selected")
-    $(".sub-title[data-entry=" + $(this).data("entry") + "]").addClass("selected")
+  $(".main-title").on "click hover", (e)->
+    $(".main-title").removeClass("selected")
+    $(e.currentTarget).addClass("selected")
 
-  , { offset: header_height }
+  $(".handle").on "click", ->
+    if $(".big-panel").is(":hidden")
 
-  $(".entry").waypoint ()->
-
-    main_title = $(".main-title[data-category=" + $(this).data("category") + "]")
-
-    if $(".main-title.selected").length > 0
-      $(".main-title").removeClass("selected")
-      main_title.addClass("selected")
+      $(".control").css({ "height" : '70%' })
+      $(".big-panel").slideDown(180)
     else
-      main_title.addClass("selected")
+      $(".big-panel").slideUp(180)
+      $(".control").css({ "height": 0 })
 
-  , { offset: "200px" }
 
-  $(".content > .inner:last-child .entry:last-child").css({
-    height: $(window).height() - (header_height + footer_height)
-  })
+  $(".sub-title a").on "click", ->
+    $(".big-panel").slideUp(180)
+    $(".control").css({ "height": 0 })
+
+
+  $(".header").on "click", ->
+    $(window).scrollTop(0)
+
 
     #/
    #/ Select Language
@@ -36,7 +36,10 @@ jQuery ->
 
   set_entry_height = ->
     $(".document-block > .inner").each ->
-      $(this).height($(this).find(".selected-lang").innerHeight())
+      if $(this).height() < $(this).find(".selected-lang").innerHeight()
+        $(this).height($(this).find(".selected-lang").innerHeight())
+      else
+        $(this).find(".selected-lang").height($(this).innerHeight())
 
   $("select").on "change", ()->
     $("code").removeClass("selected-lang")

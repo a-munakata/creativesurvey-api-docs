@@ -1,0 +1,13 @@
+ja:
+  basic:
+    title: "はじめに"
+  get_started:
+    title: "Get Started"
+  create:
+    title: "質問作成"
+  design:
+    title: "デザイン"
+  publish:
+    title: "公開設定"
+  result:
+    title: "集計結果"

@@ -43,7 +43,7 @@ PUT https://creativesurvey.com/api/v1/randomizers/:randomizers_id
 
 リクエスト例
 $ curl -X PUT https://creativesurvey.com/api/v1/randomizers/40 \
--d "auth_token=YourAuthToken" \
+-u "auth_token=YourAuthToken": \
 -d "randomizer[step_num]=2" \
 -d "randomizer[end_index]=4"
 

@@ -93,7 +93,7 @@ PUT https://creativesurvey.com/api/v1/collectors/:collector_id
 リクエスト例
 $ curl -X PUT \
 https://creativesurvey.com/api/v1/collectors/547 \
--d "auth_token=YourAuthToken" \
+-u "auth_token=YourAuthToken": \
 -d "collector[name]=公開設定3" \
 -d "collector[is_password]=true" \
 -d "collector[password]=sample_pass" \

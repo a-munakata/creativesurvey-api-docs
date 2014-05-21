@@ -20,7 +20,7 @@ DELETE https://creativesurvey.com/api/v1/segments/:segment_id
 
 リクエスト例
 $ curl -X DELETE https://creativesurvey.com/api/v1/segments/131 \
--d "auth_token=YourAuthToken"
+-u "auth_token=YourAuthToken":
 
 レスポンス例
 {

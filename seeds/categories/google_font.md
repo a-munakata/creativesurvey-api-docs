@@ -1,7 +1,7 @@
 ---
 
 name: google_font
-title: 欧文フォント
+title: 欧文フォントの取得
 
 ---
 

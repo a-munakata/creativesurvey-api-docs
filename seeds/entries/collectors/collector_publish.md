@@ -21,7 +21,7 @@ POST https://creativesurvey.com/api/v1/collectors/:collector_id/publish
 リクエスト例
 $ curl -X POST \
 https://creativesurvey.com/api/v1/collectors/547/publish \
--d "auth_token=YourAuthToken"
+-u "auth_token=YourAuthToken":
 
 レスポンス例
 {

@@ -35,7 +35,7 @@ class Doc
   end
 
   def category_name
-    @_header["category_name"]
+    @_header["category_name"].to_sym
   end
 
   def order_index
@@ -61,13 +61,13 @@ class Doc
 private
   def order
     [
-      :index,
       :create,
-      :show,
-      :update,
-      :delete,
       :publish,
-      :abort
+      :abort,
+      :index,
+      :update,
+      :show,
+      :delete
     ]
   end
 

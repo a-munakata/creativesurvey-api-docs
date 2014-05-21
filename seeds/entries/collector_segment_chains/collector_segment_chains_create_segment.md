@@ -1,7 +1,7 @@
 ---
 
 category_name: collector_segment_chain
-title: 公開設定とセグメントの関連一覧の作成　(セグメント設定から)
+title: 公開設定とセグメントの関連の作成　(セグメント設定から)
 method: create
 parent_klass: segment
 
@@ -26,7 +26,7 @@ POST https://creativesurvey.com/api/v1/segments/:segment_id/collector_segment_ch
 
 リクエスト例
 $ curl -X POST https://creativesurvey.com/api/v1/segments/116/collector_segment_chains \
--d "auth_token=YourAuthToken" \
+-u "auth_token=YourAuthToken": \
 -d "collector_segment_chain[collector_id]=527"
 
 レスポンス例

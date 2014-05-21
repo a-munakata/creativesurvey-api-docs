@@ -1,15 +1,15 @@
 ---
 
 category_name: sub_item
-title: 回答補助項目の作成　　　(質問から)
+title: 回答補助項目の作成
 method: create
 parent_klass: question
 
 ---
 
-# 回答補助項目の作成(質問から)
+# 回答補助項目の作成
 
-## Question(質問)に回答補助項目を作成します。
+## [質問(question)](#question)に回答補助項目を作成します。
 
 question_id _(必須)_:
 : __integer__
@@ -41,7 +41,7 @@ GET https://creativesurvey.com/api/v1/questions/:question_id/sub_items
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/questions/1900/sub_items \
--d "auth_token=YourAuthToken" \
+-u "auth_token=YourAuthToken": \
 -d "sub_item[placeholder]=insert text here"
 
 レスポンス例
