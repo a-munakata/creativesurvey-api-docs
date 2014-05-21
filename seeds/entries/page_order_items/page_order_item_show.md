@@ -19,13 +19,15 @@ page_order_item_id _(必須)_:
 GET https://creativesurvey.com/api/v1/page_order_items/:page_order_item_id
 
 リクエスト例
-curl -X GET https://creativesurvey.com/api/v1/page_order_items/1798 \
+$ curl -X GET https://creativesurvey.com/api/v1/page_order_items/1798 \
 -d "auth_token=YourAuthToken"
 
 レスポンス例
 {
-  "questionnaire_id": 508,
-  "id": 1796
+  "questionnaire_id": 507,
+  "id": 1789,
+  "is_connect": false,
+  "order_index": 1
 }
 
 リソースが存在しない場合

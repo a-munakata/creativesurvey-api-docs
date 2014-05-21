@@ -35,14 +35,10 @@ curl -X PUT https://creativesurvey.com/api/v1/page_order_items/1798 \
 
 レスポンス例
 {
-  "updated_at": "2014-04-22T17:47:00+09:00",
-  "questionnaire_id": 510,
-  "question_id": 1830,
-  "order_index": 3,
+  "questionnaire_id": 507,
+  "id": 1789,
   "is_connect": true,
-  "inbox_id": 6,
-  "id": 1798,
-  "created_at": "2014-04-22T17:39:40+09:00"
+  "order_index": 3
 }
 
 リソースが存在しない場合
