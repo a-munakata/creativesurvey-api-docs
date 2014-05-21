@@ -1,13 +1,13 @@
 ---
 
 category_name: sub_item
-title: 回答補助項目一覧の取得　(質問から)
+title: 回答補助項目一覧の取得
 method: index
 parent_klass: question
 
 ---
 
-# 回答補助項目一覧の取得(質問から)
+# 回答補助項目一覧の取得
 
 ## [質問(question)](#question)の回答補助項目一覧を取得します。
 
