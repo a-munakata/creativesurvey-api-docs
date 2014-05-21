@@ -15,7 +15,7 @@ class Category
   end
 
   def name
-    @_header["name"]
+    @_header["name"].to_sym
   end
 
   def base_name
@@ -34,36 +34,57 @@ class Category
     @_header["is_disabled"]
   end
 
+  def role
+    self.class.roles[name].try(:to_sym)
+  end
+
+  def self.roles
+    {
+      # basic
+      :overview => :basic,
+      :user => :basic,
+      :basic => :basic,
+
+      # create
+      :survey => :create,
+      :questionnaire => :create,
+      :question => :create,
+      :answer_item => :create,
+      :sub_item => :create,
+      :egression => :create,
+      :randomizer => :create,
+      :page_order_item => :create,
+      :logic => :create,
+      :logic_item => :create,
+      :logic_action => :create,
+      :questionnaire_variable => :create,
+      :visibility => :create,
+      :visibility_target => :create,
+      :visibility_item => :create,
+
+      # design
+      :design => :design,
+      :theme => :design,
+      :font => :design,
+      :google_font => :design,
+      :creative => :design,
+      :creative_chain => :design,
+
+      # publish
+      :collector => :publish,
+      :collector_segment_chain => :publish,
+
+      # result
+      :panel => :result,
+      :answer => :result,
+      :segment => :result,
+      :segment_filter => :result
+
+    }
+  end
+
 private
   def order
-    [
-      :overview,
-      :user,
-      :survey,
-      :questionnaire,
-      :question,
-      :answer_item,
-      :sub_item,
-      :egression,
-      :randomizer,
-      :design,
-      :theme,
-      :font,
-      :google_font,
-      :creative,
-      :creative_chain,
-      :page_order_item,
-      :logic,
-      :logic_item,
-      :logic_action,
-      :questionnaire_variable,
-      :visibility,
-      :visibility_target,
-      :visibility_item,
-      :collector,
-      :segment,
-      :segment_filter,
-      :collector_segment_chain
-    ]
+    self.class.roles.keys
   end
 end

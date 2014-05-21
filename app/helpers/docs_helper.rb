@@ -18,4 +18,12 @@ module DocsHelper
       a.order_index <=> b.order_index
     }
   end
+
+  def categories_with_roles
+    Category.roles
+  end
+
+  def roles
+    categories_with_roles.values.uniq.compact
+  end
 end
