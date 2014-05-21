@@ -19,7 +19,7 @@ question_id _(必須)_:
 DELETE https://creativesurvey.com/api/v1/questions/:question_id
 
 リクエスト例
-curl -X DELETE https://creativesurvey.com/api/v1/questions/1906 \
+$ curl -X DELETE https://creativesurvey.com/api/v1/questions/1906 \
 -u "auth_token=YourAuthToken":
 
 レスポンス例

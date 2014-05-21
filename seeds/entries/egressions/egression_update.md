@@ -8,7 +8,7 @@ method: update
 
 # 最終画面の変更
 
-## 最終画面の変更について
+## 最終画面を変更します。
 
 egression_id _(必須)_:
 : __integer__

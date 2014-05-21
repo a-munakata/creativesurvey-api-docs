@@ -9,3 +9,4 @@ title: 最終画面
 |:---|:---|:---|
 |belongs_to|[questionnaire](#questionnaire)|質問表|
 |has_one|[creative](#creative)|画像|
+||[creative_chain](#creative_chain)|画像の関連|

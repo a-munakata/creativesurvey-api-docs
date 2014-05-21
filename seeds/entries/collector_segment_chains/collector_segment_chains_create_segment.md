@@ -1,7 +1,7 @@
 ---
 
 category_name: collector_segment_chain
-title: 公開設定とセグメントの関連一覧の作成　(セグメント設定から)
+title: 公開設定とセグメントの関連の作成　(セグメント設定から)
 method: create
 parent_klass: segment
 

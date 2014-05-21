@@ -8,7 +8,7 @@ method: show
 
 # 最終画面の取得
 
-## 最終画面の取得について
+## 最終画面を取得します。
 
 egression_id _(必須)_:
 : __integer__
