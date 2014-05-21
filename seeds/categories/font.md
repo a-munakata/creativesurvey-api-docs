@@ -1,7 +1,7 @@
 ---
 
 name: font
-title: 和文フォント
+title: 和文フォントの取得
 
 ---
 

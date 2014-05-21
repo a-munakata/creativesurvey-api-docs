@@ -1,7 +1,7 @@
 ---
 
 name: user
-title: ユーザー
+title: ユーザー認証
 
 ---
 

@@ -60,8 +60,12 @@ placeholder:
 : 文字が入力されていない際に表示するplaceholder
 
 sentence:
-: __string__
+: __string__ _(デフォルト: "")_
 : 回答項目で提示される文字列
+
+val:
+: __float__ _(デフォルト: 0.5)_
+: rangeタイプの質問の初期値
 
 ~~~
 定義
