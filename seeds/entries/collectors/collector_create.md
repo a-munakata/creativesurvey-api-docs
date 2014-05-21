@@ -104,6 +104,7 @@ https://creativesurvey.com/api/v1/surveys/520/collectors \
 {
   "survey_id": 520,
   "id": 563,
+  "is_activated": false,
   "og_image": "grid.gif",
   "og_description": "sample",
   "og_title": "creativesurvey",

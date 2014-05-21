@@ -27,6 +27,7 @@ https://creativesurvey.com/api/v1/collectors/547/publish \
 {
   "survey_id": 520,
   "id": 547,
+  "is_activated": true,
   "og_image": "red.gif",
   "og_description": "sample",
   "og_title": "creativesurvey",

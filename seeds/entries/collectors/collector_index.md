@@ -28,6 +28,7 @@ https://creativesurvey.com/api/v1/surveys/520/collectors \
   {
     "survey_id": 520,
     "id": 527,
+    "is_activated": false,
     "og_image": null,
     "og_description": "",
     "og_title": "",
