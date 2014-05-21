@@ -26,7 +26,7 @@ POST https://creativesurvey.com/api/v1/segments/:segment_id/collector_segment_ch
 
 リクエスト例
 $ curl -X POST https://creativesurvey.com/api/v1/segments/116/collector_segment_chains \
--d "auth_token=YourAuthToken" \
+-u "auth_token=YourAuthToken": \
 -d "collector_segment_chain[collector_id]=527"
 
 レスポンス例

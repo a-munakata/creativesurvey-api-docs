@@ -20,7 +20,7 @@ PUT https://creativesurvey.com/api/v1/collector_segment_chains/:collector_segmen
 
 リクエスト例
 $ curl -X PUT https://creativesurvey.com/api/v1/collector_segment_chains/8 \
--d "auth_token=YourAuthToken" \
+-u "auth_token=YourAuthToken": \
 -d "collector_segment_chain[segment_id]=130"
 
 

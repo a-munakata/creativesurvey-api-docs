@@ -20,7 +20,7 @@ GET https://creativesurvey.com/api/v1/collector_segment_chains/:collector_segmen
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/collector_segment_chains/8 \
--d "auth_token=YourAuthToken"
+-u "auth_token=YourAuthToken":
 
 レスポンス例
 {

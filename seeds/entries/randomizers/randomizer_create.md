@@ -43,7 +43,7 @@ POST https://creativesurvey.com/api/v1/questionnaires/:questionnaire_id/randomiz
 
 リクエスト例
 $ curl -X POST https://creativesurvey.com/api/v1/questionnaires/508/randomizers \
--d "auth_token=YourAuthToken" \
+-u "auth_token=YourAuthToken": \
 -d "randomizer[step_num]=1" \
 -d "randomizer[start_index]=0" \
 -d "randomizer[end_index]=3"

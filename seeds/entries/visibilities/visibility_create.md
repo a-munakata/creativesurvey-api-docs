@@ -25,7 +25,7 @@ POST https://creativesurvey.com/api/v1/questions/:question_id/visibilities
 リクエスト例
 $ curl -X POST https://creativesurvey.com/api/v1/questions/1911/visibilities \
 -d "visibility[order_index]=5" \
--d "auth_token=YourAuthToken"
+-u "auth_token=YourAuthToken":
 
 レスポンス例
 {

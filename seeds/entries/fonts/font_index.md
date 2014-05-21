@@ -16,7 +16,7 @@ GET https://creativesurvey.com/api/v1/fonts
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/fonts \
--d "auth_token=YourAuthToken"
+-u "auth_token=YourAuthToken":
 
 レスポンス例
 [

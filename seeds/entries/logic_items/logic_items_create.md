@@ -40,7 +40,7 @@ POST https://creativesurvey.com/api/v1/logics/:logic_id/logic_items
 
 リクエスト例
 $ curl -X POST https://creativesurvey.com/api/v1/logics/139/logic_items \
--d "auth_token=YourAuthToken" \
+-u "auth_token=YourAuthToken": \
 -d "logic_item[condition]===" \
 -d "logic_item[question_id]=1914" \
 -d "logic_item[answer_item_id]=4487" \

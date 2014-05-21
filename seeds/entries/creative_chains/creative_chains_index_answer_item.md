@@ -21,7 +21,7 @@ GET https://creativesurvey.com/api/v1/answer_items/:answer_item_id/creative_chai
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/answer_items/4501/creative_chains \
--d "auth_token=YourAuthToken"
+-u "auth_token=YourAuthToken":
 
 レスポンス例
 {

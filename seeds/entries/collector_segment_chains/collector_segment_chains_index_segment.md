@@ -21,7 +21,7 @@ GET https://creativesurvey.com/api/v1/segments/:segment_id/collector_segment_cha
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/segments/116/collector_segment_chains \
--d "auth_token=YourAuthToken"
+-u "auth_token=YourAuthToken":
 
 レスポンス例
 [

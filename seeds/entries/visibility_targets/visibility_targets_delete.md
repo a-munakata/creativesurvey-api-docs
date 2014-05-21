@@ -20,7 +20,7 @@ DELETE https://creativesurvey.com/api/v1/visibility_targets/:visibility_target_i
 
 リクエスト例
 $ curl -X DELETE https://creativesurvey.com/api/v1/visibility_targets/82 \
--d "auth_token=YourAuthToken"
+-u "auth_token=YourAuthToken":
 
 レスポンス例
 {

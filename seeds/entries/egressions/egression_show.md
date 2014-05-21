@@ -20,7 +20,7 @@ GET https://creativesurvey.com/api/v1/egressions/:egression_id
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/egressions/520 \
--d "auth_token=YourAuthToken"
+-u "auth_token=YourAuthToken":
 
 レスポンス例
 {

@@ -20,7 +20,7 @@ GET https://creativesurvey.com/api/v1/api/v1/logics/:logic_id
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/logics/138 \
--d "auth_token=YourAuthToken"
+-u "auth_token=YourAuthToken":
 
 レスポンス例
 {

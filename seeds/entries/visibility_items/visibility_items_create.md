@@ -41,7 +41,7 @@ POST https://creativesurvey.com/api/v1/visibilities/:visibility_id/visibility_it
 
 リクエスト例
 $ curl -X POST https://creativesurvey.com/api/v1/visibilities/71/visibility_items \
--d "auth_token=YourAuthToken" \
+-u "auth_token=YourAuthToken": \
 -d "visibility_item[question_id]=1916" \
 -d "visibility_item[order_index]=3" \
 -d "visibility_item[condition]=!=" \

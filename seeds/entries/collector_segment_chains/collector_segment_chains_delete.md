@@ -20,7 +20,7 @@ DELETE https://creativesurvey.com/api/v1/collector_segment_chains/:collector_seg
 
 リクエスト例
 $ curl -X DELETE https://creativesurvey.com/api/v1/collector_segment_chains/8 \
--d "auth_token=YourAuthToken"
+-u "auth_token=YourAuthToken":
 
 レスポンス例
 {
