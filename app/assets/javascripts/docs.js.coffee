@@ -12,12 +12,18 @@ jQuery ->
 
   $(".handle").on "click", ->
     if $(".big-panel").is(":hidden")
-      $(".big-panel").slideDown(300)
+
+      $(".control").css({ "height" : '70%' })
+      $(".big-panel").slideDown(180)
     else
-      $(".big-panel").hide()
+      $(".big-panel").slideUp(180)
+      $(".control").css({ "height": 0 })
+
 
   $(".sub-title a").on "click", ->
-    $(".big-panel").hide()
+    $(".big-panel").slideUp(180)
+    $(".control").css({ "height": 0 })
+
 
   $(".header").on "click", ->
     $(window).scrollTop(0)
@@ -30,7 +36,10 @@ jQuery ->
 
   set_entry_height = ->
     $(".document-block > .inner").each ->
-      $(this).height($(this).find(".selected-lang").innerHeight())
+      if $(this).height() < $(this).find(".selected-lang").innerHeight()
+        $(this).height($(this).find(".selected-lang").innerHeight())
+      else
+        $(this).find(".selected-lang").height($(this).innerHeight())
 
   $("select").on "change", ()->
     $("code").removeClass("selected-lang")
