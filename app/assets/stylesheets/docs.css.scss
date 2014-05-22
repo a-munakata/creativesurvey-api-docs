@@ -296,7 +296,6 @@ ul {
   }
   .entry {
     padding-top: 55px;
-    margin-top: -25px;
     position: relative;
     zoom: 1;
     @include font13;
@@ -345,6 +344,21 @@ ul {
 
   > .inner {
     padding: 0px 30px;
+
+    > p{
+      margin: 30px 0;
+      > code {
+        background-color: #f8f8f8;
+        border: 1px solid #ddd;
+        font-size: 13px;
+        line-height: 19px;
+        overflow: auto;
+        padding: 6px 10px;
+        border-radius: 3px;
+        padding: 10px;
+        border: 1px solid #ddd;
+      }
+    }
 
     dl {
       zoom: 1;
@@ -423,7 +437,7 @@ table {
     padding: 5px 10px;
 
     &:last-child {
-      width: 60%;
+      //width: 60%;
     }
   }
 
@@ -431,6 +445,15 @@ table {
     tr {
       &:first-child {
         border-bottom: 2px dotted #dadada;
+      }
+    }
+  }
+
+  &:first-child{
+    margin-bottom: 20px;
+    td, th {
+      &:last-child {
+        width: 80%;
       }
     }
   }
