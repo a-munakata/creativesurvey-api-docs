@@ -10,7 +10,7 @@ method: show
 
 ## 回答者を取得します。
 
-`GET https://creativesurvey.com/api/v1/panels/:panel_id`
+`GET https://creativesurvey.com/api/v1/panels/:id`
 
 id _(必須)_:
 : __integer__

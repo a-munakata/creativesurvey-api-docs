@@ -10,7 +10,7 @@ method: create
 
 ## 分岐設定を作成します。
 
-`POST https://creativesurvey.com/api/v1/questions/:question_id/logics`
+`POST https://creativesurvey.com/api/v1/questions/:id/logics`
 
 id _(必須)_:
 : __integer__

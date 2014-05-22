@@ -10,7 +10,7 @@ method: index
 
 ## アンケートに指定されたランダム設定の一覧を取得します。
 
-`GET https://creativesurvey.com/api/v1/questionnaires/:questionnaire_id/randomizers`
+`GET https://creativesurvey.com/api/v1/questionnaires/:id/randomizers`
 
 id _(必須)_:
 : __integer__

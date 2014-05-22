@@ -10,7 +10,7 @@ method: update
 
 ## デザインを更新します。
 
-`PUT https://creativesurvey.com/api/v1/designs/:design_id`
+`PUT https://creativesurvey.com/api/v1/designs/:id`
 
 id _(必須)_:
 : __integer__

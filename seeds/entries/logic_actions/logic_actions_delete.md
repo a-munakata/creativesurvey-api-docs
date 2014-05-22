@@ -10,7 +10,7 @@ method: delete
 
 ## 分岐アクションを削除します。
 
-`DELETE https://creativesurvey.com/api/v1/logic_actions/:logic_action_id`
+`DELETE https://creativesurvey.com/api/v1/logic_actions/:id`
 
 id _(必須)_:
 : __integer__

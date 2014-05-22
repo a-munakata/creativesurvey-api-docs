@@ -10,7 +10,7 @@ method: show
 
 ## 分岐アクションを更新します。
 
-`PUT https://creativesurvey.com/api/v1/logic_actions/:logic_action_id`
+`PUT https://creativesurvey.com/api/v1/logic_actions/:id`
 
 id _(必須)_:
 : __integer__

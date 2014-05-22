@@ -10,7 +10,7 @@ method: delete
 
 ## 公開設定の削除
 
-`DELETE https://creativesurvey.com/api/v1/collectors/:collector_id`
+`DELETE https://creativesurvey.com/api/v1/collectors/:id`
 
 id _(必須)_:
 : __integer__

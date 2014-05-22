@@ -10,7 +10,7 @@ method: create
 
 ## 分岐アイテムを作成します。
 
-`POST https://creativesurvey.com/api/v1/logics/:logic_id/logic_items`
+`POST https://creativesurvey.com/api/v1/logics/:id/logic_items`
 
 id _(必須)_:
 : __integer__

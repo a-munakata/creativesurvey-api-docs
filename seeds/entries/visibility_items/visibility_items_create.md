@@ -10,7 +10,7 @@ method: create
 
 ## 表示アイテムを作成します。
 
-`POST https://creativesurvey.com/api/v1/visibilities/:visibility_id/visibility_items`
+`POST https://creativesurvey.com/api/v1/visibilities/:id/visibility_items`
 
 visibility_id _(必須)_:
 : __integer__

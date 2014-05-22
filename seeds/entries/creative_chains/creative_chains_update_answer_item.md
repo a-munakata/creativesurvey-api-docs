@@ -11,7 +11,7 @@ parent_klass: answer_item
 
 ## 回答項目に使用されている画像の関連を更新します。
 
-`PUT https://creativesurvey.com/api/v1/answer_items/creative_chains/:creative_chain_id`
+`PUT https://creativesurvey.com/api/v1/answer_items/creative_chains/:id`
 
 id _(必須)_:
 : __integer__

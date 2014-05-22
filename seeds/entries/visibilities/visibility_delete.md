@@ -10,7 +10,7 @@ method: delete
 
 ## 表示ロジックを削除します。
 
-`DELETE https://creativesurvey.com/api/v1/visibilities/:visibility_id`
+`DELETE https://creativesurvey.com/api/v1/visibilities/:id`
 
 id _(必須)_:
 : __integer__

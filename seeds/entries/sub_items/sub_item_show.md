@@ -10,7 +10,7 @@ method: show
 
 ## 回答項目の補助項目を取得します。
 
-`GET https://creativesurvey.com/api/v1/sub_items/:sub_item_id`
+`GET https://creativesurvey.com/api/v1/sub_items/:id`
 
 id _(必須)_:
 : __integer__

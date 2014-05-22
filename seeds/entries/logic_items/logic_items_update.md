@@ -10,7 +10,7 @@ method: update
 
 ## 分岐アイテムを更新します。
 
-`PUT https://creativesurvey.com/api/v1/logic_items/:logic_item_id`
+`PUT https://creativesurvey.com/api/v1/logic_items/:id`
 
 id _(必須)_:
 : __integer__

@@ -10,7 +10,7 @@ method: delete
 
 ## 分岐設定を削除します。
 
-`DELETE https://creativesurvey.com/api/v1/api/v1/logics/:logic_id`
+`DELETE https://creativesurvey.com/api/v1/api/v1/logics/:id`
 
 logic_id _(必須)_:
 : __integer__

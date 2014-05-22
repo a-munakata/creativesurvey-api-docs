@@ -10,7 +10,7 @@ method: delete
 
 ## アンケートの回答項目を削除します。
 
-`DELETE https://creativesurvey.com/api/v1/answer_items/:answer_item_id`
+`DELETE https://creativesurvey.com/api/v1/answer_items/:id`
 
 id _(必須)_:
 : __integer__

@@ -10,7 +10,7 @@ method: create
 
 ## 表示ターゲットを作成します。
 
-`POST https://creativesurvey.com/api/v1/visibilities/:visibility_id/visibility_targets`
+`POST https://creativesurvey.com/api/v1/visibilities/:id/visibility_targets`
 
 id _(必須)_:
 : __integer__

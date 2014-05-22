@@ -10,7 +10,7 @@ method: index
 
 ## アンケートに答えた回答者の一覧を取得します。
 
-`GET https://creativesurvey.com/api/v1/surveys/:survey_id/panels`
+`GET https://creativesurvey.com/api/v1/surveys/:id/panels`
 
 id _(必須)_:
 : __integer__

@@ -10,7 +10,7 @@ method: show
 
 ## 表示ロジックを取得します。
 
-`GET https://creativesurvey.com/api/v1/visibilities/:visibility_id`
+`GET https://creativesurvey.com/api/v1/visibilities/:id`
 
 id _(必須)_:
 : __integer__

@@ -10,7 +10,7 @@ method: delete
 
 ## アンケートに使用されている画像の削除
 
-`DELETE https://creativesurvey.com/api/v1/creatives/:creative_id`
+`DELETE https://creativesurvey.com/api/v1/creatives/:id`
 
 id _(必須)_:
 : __integer__

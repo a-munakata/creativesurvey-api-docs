@@ -10,7 +10,7 @@ method: create
 
 ## セグメント設定を作成します。作成したセグメントは、アンケートから設定します。セグメントの適用については[こちら](#survey_update)を参照ください。
 
-`POST https://creativesurvey.com/api/v1/surveys/:survey_id/segments`
+`POST https://creativesurvey.com/api/v1/surveys/:id/segments`
 
 id _(必須)_:
 : __integer__

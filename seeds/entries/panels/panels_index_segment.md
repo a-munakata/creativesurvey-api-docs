@@ -10,7 +10,7 @@ method: index
 
 ## 回答者の一覧をセグメントを指定して取得します。
 
-`GET https://creativesurvey.com/api/v1/segments/:segment_id/panels`
+`GET https://creativesurvey.com/api/v1/segments/:id/panels`
 
 id _(必須)_:
 : __integer__

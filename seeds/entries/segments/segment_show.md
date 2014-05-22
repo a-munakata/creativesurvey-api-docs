@@ -10,7 +10,7 @@ method: show
 
 ## セグメント設定を個別で取得します。
 
-`GET https://creativesurvey.com/api/v1/segments/:segment_id`
+`GET https://creativesurvey.com/api/v1/segments/:id`
 
 id _(必須)_:
 : __integer__

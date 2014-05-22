@@ -10,7 +10,7 @@ method: show
 
 ## 分岐アクションを個別に取得します。
 
-`GET https://creativesurvey.com/api/v1/logic_actions/:logic_action_id`
+`GET https://creativesurvey.com/api/v1/logic_actions/:id`
 
 id _(必須)_:
 : __integer__

@@ -10,7 +10,7 @@ method: update
 
 ## アンケートに使用されている画像を更新します。
 
-`PUT https://creativesurvey.com/api/v1/creatives/:creative_id`
+`PUT https://creativesurvey.com/api/v1/creatives/:id`
 
 id _(必須)_:
 : __integer__

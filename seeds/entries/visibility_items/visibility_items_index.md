@@ -10,7 +10,7 @@ method: index
 
 ## 表示アイテム一覧を取得します。
 
-`GET https://creativesurvey.com/api/v1/visibilities/:visibility_id/visibility_items`
+`GET https://creativesurvey.com/api/v1/visibilities/:id/visibility_items`
 
 id _(必須)_:
 : __integer__

@@ -10,7 +10,7 @@ method: update
 
 ## 公開設定とセグメントの関連を更新します。
 
-`PUT https://creativesurvey.com/api/v1/collector_segment_chains/:collector_segment_chain_id`
+`PUT https://creativesurvey.com/api/v1/collector_segment_chains/:id`
 
 id _(必須)_:
 : __integer__

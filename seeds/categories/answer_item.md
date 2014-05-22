@@ -7,8 +7,8 @@ title: 回答項目
 
 |メソッド|概要|
 |:---|:---|
-|index|[GET /api/v1/questions/:question_id/answer_items](#answer_item_index)|
-|create|[POST /api/v1/questions/:question_id/answer_items](#answer_item_create)|
+|index|[GET /api/v1/questions/:id/answer_items](#answer_item_index)|
+|create|[POST /api/v1/questions/:id/answer_items](#answer_item_create)|
 |show|[GET /api/v1/answer_items/:id](#answer_item_show)|
 |update|[PUT /api/v1/answer_items/:id](#answer_item_update)|
 |destroy|[DELETE /api/v1/answer_items/:id](#answer_item_delete)|

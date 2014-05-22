@@ -10,8 +10,8 @@ title: セグメント設定
 
 |メソッド|概要|
 |:---|:---|
-|index|[GET /api/v1/surveys/:survey_id/segments](#segment_index)|
-|create|[POST /api/v1/surveys/:survey_id/segments](#segment_create)|
+|index|[GET /api/v1/surveys/:id/segments](#segment_index)|
+|create|[POST /api/v1/surveys/:id/segments](#segment_create)|
 |show|[GET /api/v1/segments/:id](#segment_show)|
 |update|[PUT /api/v1/segments/:id](#segment_update)|
 |destroy|[DELETE /api/v1/segments/:id](#segment_delete)|

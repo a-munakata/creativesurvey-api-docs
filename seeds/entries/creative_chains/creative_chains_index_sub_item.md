@@ -11,7 +11,7 @@ parent_klass: sub_item
 
 ## 回答補助項目に使用されている画像の関連を取得します。
 
-`GET https://creativesurvey.com/api/v1/sub_items/:sub_item_id/creative_chains`
+`GET https://creativesurvey.com/api/v1/sub_items/:id/creative_chains`
 
 id _(必須)_:
 : __integer__

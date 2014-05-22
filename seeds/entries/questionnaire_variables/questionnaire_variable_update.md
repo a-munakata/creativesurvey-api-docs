@@ -10,7 +10,7 @@ method: update
 
 ## アンケートの置き換え変数設定を更新します。
 
-`PUT https://creativesurvey.com/api/v1/questionnaire_variables/:questionnaire_variable_id`
+`PUT https://creativesurvey.com/api/v1/questionnaire_variables/:id`
 
 id _(必須)_:
 : __integer__

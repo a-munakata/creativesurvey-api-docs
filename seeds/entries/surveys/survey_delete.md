@@ -10,7 +10,7 @@ method: delete
 
 ## アンケートを削除します。
 
-`DELETE http://creativesurvey.com/api/v1/surveys/:survey_id`
+`DELETE http://creativesurvey.com/api/v1/surveys/:id`
 
 id _(必須)_:
 : __integer__

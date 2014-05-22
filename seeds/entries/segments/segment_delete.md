@@ -10,7 +10,7 @@ method: delete
 
 ## セグメント設定を削除します。
 
-`DELETE https://creativesurvey.com/api/v1/segments/:segment_id`
+`DELETE https://creativesurvey.com/api/v1/segments/:id`
 
 id _(必須)_:
 : __integer__

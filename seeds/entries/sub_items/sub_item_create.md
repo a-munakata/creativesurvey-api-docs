@@ -11,7 +11,7 @@ parent_klass: question
 
 ## [質問(question)](#question)に回答補助項目を作成します。
 
-`GET https://creativesurvey.com/api/v1/questions/:question_id/sub_items`
+`GET https://creativesurvey.com/api/v1/questions/:id/sub_items`
 
 id _(必須)_:
 : __integer__

@@ -7,8 +7,8 @@ title: 質問
 
 |メソッド|概要|
 |:---|:---|
-|index|[GET /api/v1/questionnaires/:questionnaire_id/questions](#question_index)|
-|create|[POST /api/v1/questionnaires/:questionnaire_id/questions](#question_create)|
+|index|[GET /api/v1/questionnaires/:id/questions](#question_index)|
+|create|[POST /api/v1/questionnaires/:id/questions](#question_create)|
 |show|[GET /api/v1/questions/:id](#question_show)|
 |update|[PUT /api/v1/questions/:id](#question_update)|
 |destroy|[DELETE /api/v1/questions/:id](#question_delete)|

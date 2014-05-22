@@ -10,7 +10,7 @@ method: create
 
 ## 分岐アクションを作成します。
 
-`GET https://creativesurvey.com/api/v1/logics/:logic_id/logic_items`
+`GET https://creativesurvey.com/api/v1/logics/:id/logic_items`
 
 id _(必須)_:
 : __integer__
@@ -27,7 +27,7 @@ question_id:
 ~~~
 
 リクエスト例
-$ curl -X GET https://creativesurvey.com/api/v1/logics/:logic_id/logic_items \
+$ curl -X GET https://creativesurvey.com/api/v1/logics/:id/logic_items \
 -u "auth_token=YourAuthToken": \
 -d "logic_action[message]=New Message" \
 -d "logic_action[question_id]=1878"

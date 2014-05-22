@@ -10,7 +10,7 @@ method: index
 
 ## セグメントのフィルターを一覧で取得します。
 
-`GET https://creativesurvey.com/api/v1/segments/:segment_id/segment_filters`
+`GET https://creativesurvey.com/api/v1/segments/:id/segment_filters`
 
 id _(必須)_:
 : __integer__

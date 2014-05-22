@@ -10,8 +10,8 @@ title: 画像
 
 |メソッド|概要|
 |:---|:---|
-|index|[GET /api/v1/surveys/:survey_id/creatives](#creative_index)|
-|create|[POST /api/v1/surveys/:survey_id/creatives](#creative_create)|
+|index|[GET /api/v1/surveys/:id/creatives](#creative_index)|
+|create|[POST /api/v1/surveys/:id/creatives](#creative_create)|
 |show|[GET /api/v1/creatives/:id](#creative_show)|
 |update|[PUT /api/v1/creatives/:id](#creative_update)|
 |destroy|[DELETE /api/v1/creatives/:id](#creative_delete)|

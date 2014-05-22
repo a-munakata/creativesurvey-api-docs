@@ -10,7 +10,7 @@ method: show
 
 ## 質問表を取得します。
 
-`GET https://creativesurvey.com/api/v1/questionnaires/:questionnaire_id`
+`GET https://creativesurvey.com/api/v1/questionnaires/:id`
 
 id _(必須)_:
 : __integer__

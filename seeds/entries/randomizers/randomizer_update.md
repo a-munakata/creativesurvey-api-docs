@@ -10,7 +10,7 @@ method: update
 
 ## ランダム設定の更新についてです。
 
-`PUT https://creativesurvey.com/api/v1/randomizers/:randomizers_id`
+`PUT https://creativesurvey.com/api/v1/randomizers/:id`
 
 id _(必須)_:
 : __integer__

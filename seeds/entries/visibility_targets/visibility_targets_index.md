@@ -10,7 +10,7 @@ method: index
 
 ## 表示ターゲット一覧を取得します。
 
-`GET https://creativesurvey.com/api/v1/visibilities/:visibility_id/visibility_targets`
+`GET https://creativesurvey.com/api/v1/visibilities/:id/visibility_targets`
 
 id _(必須)_:
 : __integer__

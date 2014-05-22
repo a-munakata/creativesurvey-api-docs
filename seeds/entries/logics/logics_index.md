@@ -10,7 +10,7 @@ method: index
 
 ## 分岐設定一覧を取得します。
 
-`GET https://creativesurvey.com/api/v1/questions/:question_id/logics`
+`GET https://creativesurvey.com/api/v1/questions/:id/logics`
 
 id _(必須)_:
 : __integer__

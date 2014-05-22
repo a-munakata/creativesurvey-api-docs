@@ -10,7 +10,7 @@ method: create
 
 ## アンケートの回答項目を作成します。
 
-`POST https://creativesurvey.com/api/v1/questions/:question_id/answer_items`
+`POST https://creativesurvey.com/api/v1/questions/:id/answer_items`
 
 id _(必須)_:
 : __integer__

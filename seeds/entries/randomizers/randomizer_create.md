@@ -10,7 +10,7 @@ method: create
 
 ## 新しいランダム設定を作成します。
 
-`POST https://creativesurvey.com/api/v1/questionnaires/:questionnaire_id/randomizers`
+`POST https://creativesurvey.com/api/v1/questionnaires/:id/randomizers`
 
 id _(必須)_:
 : __integer__

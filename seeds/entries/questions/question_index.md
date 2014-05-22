@@ -10,7 +10,7 @@ method: index
 
 ## アンケートの質問一覧を取得します。
 
-`GET https://creativesurvey.com/api/v1/questionnaires/:questionnaire_id/questions`
+`GET https://creativesurvey.com/api/v1/questionnaires/:id/questions`
 
 id _(必須)_:
 : __integer__

@@ -14,9 +14,9 @@ attachable_idはその親となったオブジェクトのidになります。
 
 |メソッド|概要|
 |:---|:---|
-|index|[GET /api/v1/questions/:question_id/creative_chains](#questions/creative_chains_index_question)|
-|index|[GET /api/v1/sub_items/:sub_item_id/creative_chains](#sub_items/creative_chains_index_sub_item)|
-|index|[GET /api/v1/answer_items/:answer_item_id/creative_chains](#answer_items/creative_chains_index_answer_item)|
+|index|[GET /api/v1/questions/:id/creative_chains](#questions/creative_chains_index_question)|
+|index|[GET /api/v1/sub_items/:id/creative_chains](#sub_items/creative_chains_index_sub_item)|
+|index|[GET /api/v1/answer_items/:id/creative_chains](#answer_items/creative_chains_index_answer_item)|
 |update|[PUT /api/v1/questions/creative_chains/:id](#questions/creative_chains_update_question)|
 |update|[PUT /api/v1/sub_items/creative_chains/:id](#sub_items/creative_chains_update_sub_item)|
 |update|[PUT /api/v1/answer_items/creative_chains/:id](#answer_items/creative_chains_update_answer_item)|

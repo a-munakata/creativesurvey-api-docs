@@ -9,8 +9,8 @@ title: 表示アイテム
 
 |メソッド|概要|
 |:---|:---|
-|index|[GET /api/v1/visibilities/:visibility_id/visibility_items](#visibility_item_index)|
-|create|[POST /api/v1/visibilities/:visibility_id/visibility_items](#visibility_item_create)|
+|index|[GET /api/v1/visibilities/:id/visibility_items](#visibility_item_index)|
+|create|[POST /api/v1/visibilities/:id/visibility_items](#visibility_item_create)|
 |show|[GET /api/v1/visibility_items/:id](#visibility_item_show)|
 |update|[PUT /api/v1/visibility_items/:id](#visibility_item_update)|
 |destroy|[DELETE /api/v1/visibility_items/:id](#visibility_item_delete)|

@@ -10,7 +10,7 @@ method: show
 
 ## アンケートの回答項目を個別に取得します。
 
-`GET https://creativesurvey.com/api/v1/answer_items/:answer_item_id`
+`GET https://creativesurvey.com/api/v1/answer_items/:id`
 
 id _(必須)_:
 : __integer__

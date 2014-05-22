@@ -10,7 +10,7 @@ method: create
 
 ## アンケートに使用される画像をアップロードします。
 
-`POST https://creativesurvey.com/api/v1/surveys/:survey_id/creatives`
+`POST https://creativesurvey.com/api/v1/surveys/:id/creatives`
 
 id _(必須)_:
 : __integer__

@@ -10,7 +10,7 @@ method: index
 
 ## アンケートの置き換え変数設定一覧を取得します。
 
-`GET https://creativesurvey.com/api/v1/questionnaires/:questionnaire_id/questionnaire_variables`
+`GET https://creativesurvey.com/api/v1/questionnaires/:id/questionnaire_variables`
 
 id _(必須)_:
 : __integer__

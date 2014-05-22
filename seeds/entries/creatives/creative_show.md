@@ -10,7 +10,7 @@ method: show
 
 ## アンケートに使用されている画像を表示します。
 
-`GET https://creativesurvey.com/api/v1/creatives/:creative_id`
+`GET https://creativesurvey.com/api/v1/creatives/:id`
 
 id _(必須)_:
 : __integer__

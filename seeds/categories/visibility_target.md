@@ -9,8 +9,8 @@ title: 表示ターゲット
 
 |メソッド|概要|
 |:---|:---|
-|index|[GET /api/v1/visibilities/:visibility_id/visibility_targets](#visibility_target_index)|
-|create|[POST /api/v1/visibilities/:visibility_id/visibility_targets](#visibility_target_create)|
+|index|[GET /api/v1/visibilities/:id/visibility_targets](#visibility_target_index)|
+|create|[POST /api/v1/visibilities/:id/visibility_targets](#visibility_target_create)|
 |show|[GET /api/v1/visibility_targets/:id](#visibility_target_show)|
 |update|[PUT /api/v1/visibility_targets/:id](#visibility_target_update)|
 |destroy|[DELETE /api/v1/visibility_targets/:id](#visibility_target_delete)|

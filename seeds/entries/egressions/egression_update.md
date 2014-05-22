@@ -10,7 +10,7 @@ method: update
 
 ## 最終画面を変更します。
 
-`PUT https://creativesurvey.com/api/v1/egressions/:egression_id`
+`PUT https://creativesurvey.com/api/v1/egressions/:id`
 
 id _(必須)_:
 : __integer__

@@ -10,7 +10,7 @@ method: update
 
 ## 公開設定を更新します。
 
-`PUT https://creativesurvey.com/api/v1/collectors/:collector_id`
+`PUT https://creativesurvey.com/api/v1/collectors/:id`
 
 id _(必須)_:
 : __integer__

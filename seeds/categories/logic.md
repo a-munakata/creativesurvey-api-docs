@@ -10,8 +10,8 @@ title: 分岐設定
 
 |メソッド|概要|
 |:---|:---|
-|index|[GET /api/v1/questions/:question_id/logics](#logic_index)|
-|create|[POST /api/v1/questions/:question_id/logics](#logic_create)|
+|index|[GET /api/v1/questions/:id/logics](#logic_index)|
+|create|[POST /api/v1/questions/:id/logics](#logic_create)|
 |show|[GET /api/v1/logics/:id](#logic_show)|
 |update|[PUT /api/v1/logics/:id](#logic_update)|
 |destroy|[DELETE /api/v1/logics/:id](#logic_delete)|

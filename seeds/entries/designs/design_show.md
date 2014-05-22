@@ -10,7 +10,7 @@ method: show
 
 ## デザインを個別で取得します。
 
-`GET https://creativesurvey.com/api/v1/designs/:design_id`
+`GET https://creativesurvey.com/api/v1/designs/:id`
 
 id _(必須)_:
 : __integer__

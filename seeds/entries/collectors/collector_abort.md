@@ -10,7 +10,7 @@ method: abort
 
 ## 公開設定の公開を中止します。
 
-`POST https://creativesurvey.com/api/v1/collectors/:collector_id/abort`
+`POST https://creativesurvey.com/api/v1/collectors/:id/abort`
 
 id _(必須)_:
 : __integer__

@@ -10,7 +10,7 @@ method: update
 
 ## 質問を更新します。
 
-`PUT https://creativesurvey.com/api/v1/questions/:question_id`
+`PUT https://creativesurvey.com/api/v1/questions/:id`
 
 id _(必須)_:
 : __integer__

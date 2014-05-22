@@ -10,7 +10,7 @@ method: create
 
 ## セグメントのフィルターを作成します。
 
-`POST https://creativesurvey.com/api/v1/segments/:segment_id/segment_filters`
+`POST https://creativesurvey.com/api/v1/segments/:id/segment_filters`
 
 id _(必須)_:
 : __integer__

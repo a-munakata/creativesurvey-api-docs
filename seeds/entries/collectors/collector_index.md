@@ -10,7 +10,7 @@ method: index
 
 ## 公開設定の一覧を取得します。
 
-`GET https://creativesurvey.com/api/v1/surveys/:survey_id/collectors`
+`GET https://creativesurvey.com/api/v1/surveys/:id/collectors`
 
 id _(必須)_:
 : __integer__

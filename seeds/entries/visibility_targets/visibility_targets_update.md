@@ -10,7 +10,7 @@ method: update
 
 ## 表示ターゲットを更新します。
 
-`PUT https://creativesurvey.com/api/v1/visibility_targets/:visibility_target_id`
+`PUT https://creativesurvey.com/api/v1/visibility_targets/:id`
 
 id _(必須)_:
 : __integer__

@@ -10,7 +10,7 @@ method: publish
 
 ## 公開したいアンケートの公開設定を公開します。
 
-`POST https://creativesurvey.com/api/v1/collectors/:collector_id/publish`
+`POST https://creativesurvey.com/api/v1/collectors/:id/publish`
 
 id _(必須)_:
 : __integer__

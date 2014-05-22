@@ -10,7 +10,7 @@ method: index
 
 ## 表示ロジックの作成
 
-`POST https://creativesurvey.com/api/v1/questions/:question_id/visibilities`
+`POST https://creativesurvey.com/api/v1/questions/:id/visibilities`
 
 question_id _(必須)_:
 : __integer__

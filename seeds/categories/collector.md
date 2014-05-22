@@ -7,8 +7,8 @@ title: 公開設定
 
 |メソッド|概要|
 |:---|:---|
-|index|[GET /api/v1/surveys/:survey_id/collectors](#collector_index)|
-|create|[POST /api/v1/surveys/:survey_id/collectors](#collector_create)|
+|index|[GET /api/v1/surveys/:id/collectors](#collector_index)|
+|create|[POST /api/v1/surveys/:id/collectors](#collector_create)|
 |show|[GET /api/v1/collectors/:id](#collector_show)|
 |update|[PUT /api/v1/collectors/:id](#collector_update)|
 |destroy|[DELETE /api/v1/collectors/:id](#collector_delete)|

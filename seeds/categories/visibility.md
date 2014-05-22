@@ -9,8 +9,8 @@ AND条件を追加、編集する場合は[表示アイテム(visibility_items)]
 
 |メソッド|概要|
 |:---|:---|
-|index|[GET /api/v1/questions/:question_id/visibilities](#visibility_index)|
-|create|[POST /api/v1/questions/:question_id/visibilities](#visibility_create)|
+|index|[GET /api/v1/questions/:id/visibilities](#visibility_index)|
+|create|[POST /api/v1/questions/:id/visibilities](#visibility_create)|
 |show|[GET /api/v1/visibilities/:id](#visibility_show)|
 |update|[PUT /api/v1/visibilities/:id](#visibility_update)|
 |destroy|[DELETE /api/v1/visibilities/:id](#visibility_delete)|

@@ -10,7 +10,7 @@ method: create
 
 ## アンケートの置き換え変数設定を作成します。
 
-`POST https://creativesurvey.com/api/v1/questionnaires/:questionnaire_id/questionnaire_variables`
+`POST https://creativesurvey.com/api/v1/questionnaires/:id/questionnaire_variables`
 
 id _(必須)_:
 : __integer__

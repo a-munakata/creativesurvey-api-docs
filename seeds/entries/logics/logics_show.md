@@ -10,7 +10,7 @@ method: show
 
 ## 分岐設定を取得します。
 
-`GET https://creativesurvey.com/api/v1/api/v1/logics/:logic_id`
+`GET https://creativesurvey.com/api/v1/api/v1/logics/:id`
 
 id _(必須)_:
 : __integer__

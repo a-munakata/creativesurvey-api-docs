@@ -10,7 +10,7 @@ method: index
 
 ## セグメント設定一覧を取得します。セグメントを設定すると、集計結果をセグメント条件によって分けることが出来ます。
 
-`GET https://creativesurvey.com/api/v1/surveys/:survey_id/segments`
+`GET https://creativesurvey.com/api/v1/surveys/:id/segments`
 
 id _(必須)_:
 : __integer__

@@ -10,7 +10,7 @@ method: show
 
 ## 分岐アイテムを個別に取得します。
 
-`GET https://creativesurvey.com/api/v1/logic_items/:logic_item_id`
+`GET https://creativesurvey.com/api/v1/logic_items/:id`
 
 id _(必須)_:
 : __integer__

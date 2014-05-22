@@ -11,7 +11,7 @@ parent_klass: question
 
 ## 質問に使用されている画像の関連を取得します。
 
-`GET https://creativesurvey.com/api/v1/questions/:question_id/creative_chains`
+`GET https://creativesurvey.com/api/v1/questions/:id/creative_chains`
 
 id _(必須)_:
 : __integer__

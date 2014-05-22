@@ -10,7 +10,7 @@ method: create
 
 ## 質問を作成します。
 
-`POST https://creativesurvey.com/api/v1/questionnaires/:questionnaire_id/questions`
+`POST https://creativesurvey.com/api/v1/questionnaires/:id/questions`
 
 id _(必須)_:
 : __integer__

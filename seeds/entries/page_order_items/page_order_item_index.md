@@ -10,7 +10,7 @@ method: index
 
 ## アンケートの質問順を一覧で取得します。
 
-`GET https://creativesurvey.com/api/v1/questionnaires/:questionnaire_id/page_order_items`
+`GET https://creativesurvey.com/api/v1/questionnaires/:id/page_order_items`
 
 id _(必須)_:
 : __integer__

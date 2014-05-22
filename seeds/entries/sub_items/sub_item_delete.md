@@ -10,7 +10,7 @@ method: delete
 
 ## 回答項目の補助項目を削除します。
 
-`DELETE https://creativesurvey.com/api/v1/sub_items/:sub_item_id`
+`DELETE https://creativesurvey.com/api/v1/sub_items/:id`
 
 id _(必須)_:
 : __integer__

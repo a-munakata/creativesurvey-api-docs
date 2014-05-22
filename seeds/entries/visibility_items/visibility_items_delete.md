@@ -10,7 +10,7 @@ method: delete
 
 ## 表示アイテムを削除します。
 
-`DELETE https://creativesurvey.com/api/v1/visibility_items/:visibility_item_id`
+`DELETE https://creativesurvey.com/api/v1/visibility_items/:id`
 
 id _(必須)_:
 : __integer__

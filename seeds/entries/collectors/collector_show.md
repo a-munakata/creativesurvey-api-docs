@@ -10,7 +10,7 @@ method: show
 
 ## 公開設定を個別に取得します。
 
-`GET https://creativesurvey.com/api/v1/collectors/:collector_id`
+`GET https://creativesurvey.com/api/v1/collectors/:id`
 
 id _(必須)_:
 : __integer__

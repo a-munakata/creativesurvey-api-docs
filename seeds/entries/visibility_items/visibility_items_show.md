@@ -10,7 +10,7 @@ method: show
 
 ## 表示アイテムを個別に取得します。
 
-`GET https://creativesurvey.com/api/v1/visibility_items/:visibility_item_id`
+`GET https://creativesurvey.com/api/v1/visibility_items/:id`
 
 id _(必須)_:
 : __integer__

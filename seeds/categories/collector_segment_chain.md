@@ -12,10 +12,10 @@ collector_segment_chainはsegment_idとcollector_idを持ち、それぞれを�
 
 |メソッド|概要|
 |:---|:---|
-|index|[GET /api/v1/collectors/:collector_id/collector_segment_chains](#collectors/collector_segment_chains_index_collector)|
-|create|[POST /api/v1/collectors/:collector_id/collector_segment_chains](#collectors/collector_segment_chains_create_collector)|
-|index|[GET /api/v1/segments/:segment_id/collector_segment_chains](#segments/collector_segment_chains_index_segment)|
-|create|[POST /api/v1/segments/:segment_id/collector_segment_chains](#segments/collector_segment_chains_create_segment)|
+|index|[GET /api/v1/collectors/:id/collector_segment_chains](#collectors/collector_segment_chains_index_collector)|
+|create|[POST /api/v1/collectors/:id/collector_segment_chains](#collectors/collector_segment_chains_create_collector)|
+|index|[GET /api/v1/segments/:id/collector_segment_chains](#segments/collector_segment_chains_index_segment)|
+|create|[POST /api/v1/segments/:id/collector_segment_chains](#segments/collector_segment_chains_create_segment)|
 |show|[GET /api/v1/collector_segment_chains/:id](#collectors/collector_segment_chains_show)|
 |update|[PUT /api/v1/collector_segment_chains/:id](#collectors/collector_segment_chains_update)|
 |destroy|[DELETE /api/v1/collector_segment_chains/:id](#collectors/collector_segment_chains_delete)|

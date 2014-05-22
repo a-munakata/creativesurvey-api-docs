@@ -11,8 +11,8 @@ title: 分岐アイテム
 
 |メソッド|概要|
 |:---|:---|
-|index|[GET /api/v1/logics/:logic_id/logic_items](#logic_item_index)|
-|create|[POST /api/v1/logics/:logic_id/logic_items](#logic_item_create)|
+|index|[GET /api/v1/logics/:id/logic_items](#logic_item_index)|
+|create|[POST /api/v1/logics/:id/logic_items](#logic_item_create)|
 |show|[GET /api/v1/logic_items/:id](#logic_item_show)|
 |update|[PUT /api/v1/logic_items/:id](#logic_item_update)|
 |destroy|[DELETE /api/v1/logic_items/:id](#logic_item_delete)|

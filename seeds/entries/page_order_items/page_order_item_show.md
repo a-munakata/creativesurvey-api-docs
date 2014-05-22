@@ -10,7 +10,7 @@ method: show
 
 ## アンケート内の質問順序を個別で取得します。
 
-`GET https://creativesurvey.com/api/v1/page_order_items/:page_order_item_id`
+`GET https://creativesurvey.com/api/v1/page_order_items/:id`
 
 id _(必須)_:
 : __integer__

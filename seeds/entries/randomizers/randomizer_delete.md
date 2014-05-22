@@ -10,7 +10,7 @@ method: delete
 
 ## ランダム設定を削除します。
 
-`DELETE https://creativesurvey.com/api/v1/randomizers/:randomizers_id`
+`DELETE https://creativesurvey.com/api/v1/randomizers/:id`
 
 id _(必須)_:
 : __integer__

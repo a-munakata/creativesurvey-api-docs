@@ -10,7 +10,7 @@ method: update
 
 ## セグメント設定を更新します。
 
-`PUT https://creativesurvey.com/api/v1/segments/:segment_id`
+`PUT https://creativesurvey.com/api/v1/segments/:id`
 
 id _(必須)_:
 : __integer__

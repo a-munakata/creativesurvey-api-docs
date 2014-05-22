@@ -10,7 +10,7 @@ method: show
 
 ## 公開設定とセグメントの関連を個別で取得します。
 
-`GET https://creativesurvey.com/api/v1/collector_segment_chains/:collector_segment_chain_id`
+`GET https://creativesurvey.com/api/v1/collector_segment_chains/:id`
 
 id _(必須)_:
 : __integer__

@@ -11,7 +11,7 @@ method: update
 
 ## 作成したアンケートを更新します。
 
-`PUT https://creativesurvey.com/api/v1/surveys/:survey_id`
+`PUT https://creativesurvey.com/api/v1/surveys/:id`
 
 id _(必須)_:
 : __integer__

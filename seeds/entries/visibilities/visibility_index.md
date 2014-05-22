@@ -10,7 +10,7 @@ method: index
 
 ## 表示ロジック一覧を取得します。
 
-`GET https://creativesurvey.com/api/v1/questions/:question_id/visibilities`
+`GET https://creativesurvey.com/api/v1/questions/:id/visibilities`
 
 id _(必須)_:
 : __integer__

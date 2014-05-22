@@ -10,7 +10,7 @@ method: show
 
 ## アンケートに指定されたランダム設定を個別で取得します。
 
-`GET https://creativesurvey.com/api/v1/randomizers/:randomizers_id`
+`GET https://creativesurvey.com/api/v1/randomizers/:id`
 
 id _(必須)_:
 : __integer__

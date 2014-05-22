@@ -10,7 +10,7 @@ method: create
 
 ## 公開設定の作成
 
-`POST https://creativesurvey.com/api/v1/surveys/:survey_id/collectors`
+`POST https://creativesurvey.com/api/v1/surveys/:id/collectors`
 
 id _(必須)_:
 : __integer__

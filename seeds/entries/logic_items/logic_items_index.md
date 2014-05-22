@@ -10,7 +10,7 @@ method: index
 
 ## 分岐アイテム一覧を取得します。
 
-`GET https://creativesurvey.com/api/v1/logics/:logic_id/logic_items`
+`GET https://creativesurvey.com/api/v1/logics/:id/logic_items`
 
 id _(必須)_:
 : __integer__

@@ -10,7 +10,7 @@ method: update
 
 ## 表示ロジックを更新します。
 
-`GET https://creativesurvey.com/api/v1/visibilities/:visibility_id`
+`GET https://creativesurvey.com/api/v1/visibilities/:id`
 
 id _(必須)_:
 : __integer__
