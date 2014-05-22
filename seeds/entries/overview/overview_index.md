@@ -21,22 +21,13 @@ method: index
 ~~~
 
 エンドポイント
-https://creativesurvey.com
+https://creativesurvey.com/api/v1
 
 ~~~
 
 ~~~
 
 エンドポイント
-https://creativesurvey.com
+https://creativesurvey.com/api/v1
 
 ~~~
-
-
-
-
-
-
-
-
-
