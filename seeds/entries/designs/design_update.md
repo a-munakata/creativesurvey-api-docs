@@ -10,7 +10,9 @@ method: update
 
 ## デザインを更新します。
 
-design_id _(必須)_:
+`PUT https://creativesurvey.com/api/v1/designs/:design_id`
+
+id _(必須)_:
 : __integer__
 : 更新する対象のデザインのid
 
@@ -114,8 +116,6 @@ insole_brightness:
 
 
 ~~~
-定義
-PUT https://creativesurvey.com/api/v1/designs/:design_id
 
 リクエスト例
 $ curl -X PUT https://creativesurvey.com/api/v1/designs/512 \

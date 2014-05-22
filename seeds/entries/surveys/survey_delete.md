@@ -10,13 +10,13 @@ method: delete
 
 ## アンケートを削除します。
 
-survey_id _(必須)_:
+`DELETE http://creativesurvey.com/api/v1/surveys/:survey_id`
+
+id _(必須)_:
 : __integer__
 : 削除するアンケートのid
 
 ~~~
-定義
-DELETE http://creativesurvey.com/api/v1/surveys/:survey_id
 
 リクエスト例
 $ curl -X DELETE http://creativesurvey.com/api/v1/surveys/532 \

@@ -10,7 +10,9 @@ method: update
 
 ## 最終画面を変更します。
 
-egression_id _(必須)_:
+`PUT https://creativesurvey.com/api/v1/egressions/:egression_id`
+
+id _(必須)_:
 : __integer__
 : 更新する最終画面のid
 
@@ -38,8 +40,6 @@ description:
 : 注意書きや補足などのテキストを入力します。
 
 ~~~
-定義
-PUT https://creativesurvey.com/api/v1/egressions
 
 リクエスト例
 $ curl -X PUT https://creativesurvey.com/api/v1/egressions/507 \

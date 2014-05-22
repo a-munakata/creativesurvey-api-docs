@@ -10,13 +10,13 @@ method: show
 
 ## 回答者を取得します。
 
-panel_id _(必須)_:
+`GET https://creativesurvey.com/api/v1/panels/:panel_id`
+
+id _(必須)_:
 : __integer__
 : 取得したい回答者のid
 
 ~~~
-定義
-GET https://creativesurvey.com/api/v1/panels/:panel_id
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/panels/3810 \

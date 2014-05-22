@@ -10,7 +10,9 @@ method: create
 
 ## 公開設定の作成
 
-survey_id _(必須)_:
+`POST https://creativesurvey.com/api/v1/surveys/:survey_id/collectors`
+
+id _(必須)_:
 : __integer__
 : 対象となるアンケートのid
 
@@ -87,8 +89,6 @@ request_billboard:
 : trueを指定すると、ビルボードへの掲載を希望します。
 
 ~~~
-定義
-POST https://creativesurvey.com/api/v1/surveys/:survey_id/collectors
 
 リクエスト例
 $ curl -X POST \

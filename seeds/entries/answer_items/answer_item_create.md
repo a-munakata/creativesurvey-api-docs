@@ -10,7 +10,9 @@ method: create
 
 ## アンケートの回答項目を作成します。
 
-question_id _(必須)_:
+`POST https://creativesurvey.com/api/v1/questions/:question_id/answer_items`
+
+id _(必須)_:
 : __integer__
 : 対象の質問id
 
@@ -68,8 +70,6 @@ val:
 : rangeタイプの質問の初期値
 
 ~~~
-定義
-POST https://creativesurvey.com/api/v1/questions/:question_id/answer_items
 
 リクエスト例
 $ curl -X POST https://creativesurvey.com/api/v1/questions/1829/answer_items \

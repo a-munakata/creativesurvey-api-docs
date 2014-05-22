@@ -10,7 +10,9 @@ method: update
 
 ## 表示ターゲットを更新します。
 
-visibility_target_id _(必須)_:
+`PUT https://creativesurvey.com/api/v1/visibility_targets/:visibility_target_id`
+
+id _(必須)_:
 : __integer__
 : 更新する表示ターゲットのid
 
@@ -19,8 +21,6 @@ answer_item_id:
 : 非表示にする回答項目のidを指定します。
 
 ~~~
-定義
-PUT https://creativesurvey.com/api/v1/visibility_targets/:visibility_target_id
 
 リクエスト例
 $ curl -X PUT https://creativesurvey.com/api/v1/visibility_targets/82 \

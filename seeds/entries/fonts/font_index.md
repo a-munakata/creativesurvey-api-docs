@@ -10,9 +10,9 @@ method: index
 
 ## アンケートに使用出来る和文フォント一覧を取得します。
 
+`GET https://creativesurvey.com/api/v1/fonts`
+
 ~~~
-定義
-GET https://creativesurvey.com/api/v1/fonts
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/fonts \

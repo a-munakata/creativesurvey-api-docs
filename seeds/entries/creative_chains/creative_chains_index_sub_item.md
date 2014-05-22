@@ -11,13 +11,13 @@ parent_klass: sub_item
 
 ## 回答補助項目に使用されている画像の関連を取得します。
 
-sub_item_id _(必須)_:
+`GET https://creativesurvey.com/api/v1/sub_items/:sub_item_id/creative_chains`
+
+id _(必須)_:
 : __integer__
 : 対象となる回答補助項目id
 
 ~~~
-定義
-GET https://creativesurvey.com/api/v1/sub_items/:sub_item_id/creative_chains
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/sub_items/287/creative_chains \

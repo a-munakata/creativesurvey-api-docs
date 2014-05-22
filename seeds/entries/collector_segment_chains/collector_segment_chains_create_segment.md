@@ -11,7 +11,9 @@ parent_klass: segment
 
 ## 公開設定とセグメントの関連を作成します。
 
-segment_id _(必須)_:
+`POST https://creativesurvey.com/api/v1/segments/:segment_id/collector_segment_chains`
+
+id _(必須)_:
 : __integer__
 : 対象となるセグメント設定id
 
@@ -21,8 +23,6 @@ collector_id:
 : 詳しくは[collector_segment_chain](#collector_segment_chain)を参照ください。
 
 ~~~
-定義
-POST https://creativesurvey.com/api/v1/segments/:segment_id/collector_segment_chains
 
 リクエスト例
 $ curl -X POST https://creativesurvey.com/api/v1/segments/116/collector_segment_chains \

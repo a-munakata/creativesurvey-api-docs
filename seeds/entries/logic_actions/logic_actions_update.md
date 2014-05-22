@@ -10,7 +10,9 @@ method: show
 
 ## 分岐アクションを更新します。
 
-logic_action_id _(必須)_:
+`PUT https://creativesurvey.com/api/v1/logic_actions/:logic_action_id`
+
+id _(必須)_:
 : __integer__
 : 更新する分岐アクションのid
 
@@ -23,8 +25,6 @@ question_id:
 : 分岐設定の条件に一致した際にスキップされる質問のid
 
 ~~~
-定義
-PUT https://creativesurvey.com/api/v1/logic_actions/:logic_action_id
 
 リクエスト例
 $ curl -X PUT https://creativesurvey.com/api/v1/logic_actions/143 \

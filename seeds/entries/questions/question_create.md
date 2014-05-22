@@ -10,7 +10,9 @@ method: create
 
 ## 質問を作成します。
 
-questionnaire_id _(必須)_:
+`POST https://creativesurvey.com/api/v1/questionnaires/:questionnaire_id/questions`
+
+id _(必須)_:
 : __integer__
 : 質問を作成する質問表のid
 
@@ -125,8 +127,6 @@ fix_last_row:
 : 列項目をランダムにした際に列末尾を固定します。
 
 ~~~
-定義
-POST https://creativesurvey.com/api/v1/questionnaires/:questionnaire_id/questions
 
 リクエスト例
 $ curl -X POST https://creativesurvey.com/api/v1/questionnaires/511/questions \

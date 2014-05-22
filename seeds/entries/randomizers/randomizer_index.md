@@ -10,13 +10,13 @@ method: index
 
 ## アンケートに指定されたランダム設定の一覧を取得します。
 
-questionnaire_id _(必須)_:
+`GET https://creativesurvey.com/api/v1/questionnaires/:questionnaire_id/randomizers`
+
+id _(必須)_:
 : __integer__
 : 取得するランダム設定を持つ質問表のid
 
 ~~~
-定義
-GET https://creativesurvey.com/api/v1/questionnaires/:questionnaire_id/randomizers
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/questionnaires/508/randomizers \

@@ -5,6 +5,11 @@ title: デザイン
 
 ---
 
+|メソッド|概要|
+|:---|:---|
+|show|[GET /api/v1/designs/:id](#design_show)|
+|update|[PUT /api/v1/designs/:id](#design_update)|
+
 |リレーション|リソース名|日本語名|
 |:---|:---|:---|
 |belongs_to|[survey](#survey)|アンケート|

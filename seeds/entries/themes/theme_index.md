@@ -10,9 +10,9 @@ method: index
 
 ## アンケートに使用出来るテーマ一覧を取得します。
 
+`GET https://creativesurvey.com/api/v1/themes`
+
 ~~~
-定義
-GET https://creativesurvey.com/api/v1/themes
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/themes \

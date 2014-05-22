@@ -10,7 +10,9 @@ method: show
 
 ## 分岐設定を更新します。
 
-logic_id _(必須)_:
+`PUT https://creativesurvey.com/api/v1/api/v1/logics/:logic_id`
+
+id _(必須)_:
 : __integer__
 : 更新する分岐設定のid
 
@@ -24,8 +26,6 @@ is_valid:
 : 有効かどうか
 
 ~~~
-定義
-PUT https://creativesurvey.com/api/v1/api/v1/logics/:logic_id
 
 リクエスト例
 $ curl -X PUT https://creativesurvey.com/api/v1/logics/138 \

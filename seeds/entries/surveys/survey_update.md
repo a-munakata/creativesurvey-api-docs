@@ -11,7 +11,9 @@ method: update
 
 ## 作成したアンケートを更新します。
 
-survey_id _(必須)_:
+`PUT https://creativesurvey.com/api/v1/surveys/:survey_id`
+
+id _(必須)_:
 : __integer__
 : 更新するアンケートのid
 
@@ -44,8 +46,6 @@ active_segment_id:
 : 適用するセグメントのid
 
 ~~~
-定義
-PUT https://creativesurvey.com/api/v1/surveys/:survey_id
 
 リクエスト例
 $ curl -X PUT https://creativesurvey.com/api/v1/surveys/508 \

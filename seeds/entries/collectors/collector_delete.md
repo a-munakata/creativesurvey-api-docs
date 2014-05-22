@@ -10,13 +10,13 @@ method: delete
 
 ## 公開設定の削除
 
-collector_id _(必須)_:
+`DELETE https://creativesurvey.com/api/v1/collectors/:collector_id`
+
+id _(必須)_:
 : __integer__
 : 対象となる公開設定のid
  
 ~~~
-定義
-DELETE https://creativesurvey.com/api/v1/collectors/:collector_id
 
 リクエスト例
 $ curl -X DELETE \

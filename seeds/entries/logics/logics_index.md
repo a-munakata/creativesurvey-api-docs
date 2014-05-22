@@ -10,13 +10,13 @@ method: index
 
 ## 分岐設定一覧を取得します。
 
-question_id _(必須)_:
+`GET https://creativesurvey.com/api/v1/questions/:question_id/logics`
+
+id _(必須)_:
 : __integer__
-: 取得する分岐設定を含む質問のid
+: 対象の質問id
 
 ~~~
-定義
-GET https://creativesurvey.com/api/v1/questions/:question_id/logics
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/questions/1825/logics \

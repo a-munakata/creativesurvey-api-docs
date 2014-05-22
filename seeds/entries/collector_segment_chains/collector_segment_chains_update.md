@@ -10,13 +10,13 @@ method: update
 
 ## 公開設定とセグメントの関連を更新します。
 
-collector_segment_chain_id _(必須)_:
+`PUT https://creativesurvey.com/api/v1/collector_segment_chains/:collector_segment_chain_id`
+
+id _(必須)_:
 : __integer__
 : 対象となる公開設定とセグメントの関連のid
 
 ~~~
-定義
-PUT https://creativesurvey.com/api/v1/collector_segment_chains/:collector_segment_chain_id
 
 リクエスト例
 $ curl -X PUT https://creativesurvey.com/api/v1/collector_segment_chains/8 \

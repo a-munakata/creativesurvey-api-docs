@@ -10,7 +10,9 @@ method: update
 
 ## 公開設定を更新します。
 
-collector_id _(必須)_:
+`PUT https://creativesurvey.com/api/v1/collectors/:collector_id`
+
+id _(必須)_:
 : __integer__
 : 対象となる公開設定のid
 
@@ -87,8 +89,6 @@ request_billboard:
 : trueを指定すると、ビルボードへの掲載を希望します。
 
 ~~~
-定義
-PUT https://creativesurvey.com/api/v1/collectors/:collector_id
 
 リクエスト例
 $ curl -X PUT \

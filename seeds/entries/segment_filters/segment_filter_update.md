@@ -10,7 +10,9 @@ method: update
 
 ## セグメントのフィルターを更新します。
 
-segment_filter_id _(必須)_:
+`PUT https://creativesurvey.com/api/v1/segment_filters/segment_filter_id`
+
+id _(必須)_:
 : __integer__
 : セグメントフィルターのid
 
@@ -24,8 +26,6 @@ question_id:
 : セグメントする質問のid
 
 ~~~
-定義
-PUT https://creativesurvey.com/api/v1/segment_filters/segment_filter_id
 
 リクエスト例
 $ curl -X PUT https://creativesurvey.com/api/v1/segment_filters/22 \

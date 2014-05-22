@@ -10,13 +10,13 @@ method: delete
 
 ## 表示ロジックを削除します。
 
-visibility_id _(必須)_:
+`DELETE https://creativesurvey.com/api/v1/visibilities/:visibility_id`
+
+id _(必須)_:
 : __integer__
-: 取得する分岐設定を含む質問のid
+: 削除する分岐設定を含む質問のid
 
 ~~~
-定義
-DELETE https://creativesurvey.com/api/v1/visibilities/:visibility_id
 
 リクエスト例
 $ curl -X DELETE https://creativesurvey.com/api/v1/visibilities/66 \

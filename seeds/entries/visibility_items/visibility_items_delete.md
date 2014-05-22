@@ -10,13 +10,13 @@ method: delete
 
 ## 表示アイテムを削除します。
 
-visibility_item_id _(必須)_:
+`DELETE https://creativesurvey.com/api/v1/visibility_items/:visibility_item_id`
+
+id _(必須)_:
 : __integer__
 : 削除する表示アイテムのid
 
 ~~~
-定義
-DELETE https://creativesurvey.com/api/v1/visibility_items/:visibility_item_id
 
 リクエスト例
 $ curl -X DELETE https://creativesurvey.com/api/v1/visibility_items/102 \

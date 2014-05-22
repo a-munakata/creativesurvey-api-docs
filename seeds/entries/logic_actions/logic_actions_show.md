@@ -10,13 +10,13 @@ method: show
 
 ## 分岐アクションを個別に取得します。
 
-logic_action_id _(必須)_:
+`GET https://creativesurvey.com/api/v1/logic_actions/:logic_action_id`
+
+id _(必須)_:
 : __integer__
 : 取得する分岐アクションのid
 
 ~~~
-定義
-GET https://creativesurvey.com/api/v1/logic_actions/:logic_action_id
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/logic_actions/143 \

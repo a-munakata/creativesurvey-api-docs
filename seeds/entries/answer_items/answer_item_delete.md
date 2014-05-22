@@ -10,13 +10,13 @@ method: delete
 
 ## アンケートの回答項目を削除します。
 
-answer_item_id _(必須)_:
+`DELETE https://creativesurvey.com/api/v1/answer_items/:answer_item_id`
+
+id _(必須)_:
 : __integer__
 : 削除する回答項目のid
 
 ~~~
-定義
-DELETE https://creativesurvey.com/api/v1/answer_items/:answer_item_id
 
 リクエスト例
 $ curl -X DELETE https://creativesurvey.com/api/v1/answer_items/4321 \

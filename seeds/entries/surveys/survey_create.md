@@ -10,6 +10,8 @@ method: create
 
 ## 新規アンケートを作成します。
 
+`POST https://creativesurvey.com/api/v1/surveys`
+
 name _(必須)_:
 : __string__
 : アンケート名
@@ -39,8 +41,6 @@ active_segment_id:
 : 適用するセグメントのid
 
 ~~~
-定義
-POST https://creativesurvey.com/api/v1/surveys
 
 リクエスト例
 $ curl -X POST https://creativesurvey.com/api/v1/surveys \

@@ -10,7 +10,9 @@ method: update
 
 ## アンケートの置き換え変数設定を更新します。
 
-questionnaire_variable_id:
+`PUT https://creativesurvey.com/api/v1/questionnaire_variables/:questionnaire_variable_id`
+
+id _(必須)_:
 : __integer__
 : アップデートする置き換え変数設定のid
 
@@ -57,8 +59,6 @@ is_separate:
 : trueにした場合、設定した回答項目の指定が有効になります。
 
 ~~~
-定義
-PUT https://creativesurvey.com/api/v1/questionnaire_variables/:questionnaire_variable_id
 
 リクエスト例
 $ curl -X PUT https://creativesurvey.com/api/v1/questionnaire_variables/103 \

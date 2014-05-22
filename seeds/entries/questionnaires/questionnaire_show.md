@@ -10,13 +10,13 @@ method: show
 
 ## 質問表を取得します。
 
-questionnaire_id _(必須)_:
+`GET https://creativesurvey.com/api/v1/questionnaires/:questionnaire_id`
+
+id _(必須)_:
 : __integer__
 : 取得する質問表のid
 
 ~~~
-定義
-GET https://creativesurvey.com/api/v1/questionnaires/:questionnaire_id
 
 リクエスト例
 curl -X GET https://creativesurvey.com/api/v1/questionnaires/518 \

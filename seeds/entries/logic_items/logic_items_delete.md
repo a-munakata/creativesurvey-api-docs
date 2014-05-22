@@ -10,13 +10,13 @@ method: delete
 
 ## 分岐アイテムを削除します。
 
+`DELETE https://creativesurvey.com/api/v1/logic_items/:logic_item_id`
+
 logic_item_id _(必須)_:
 : __integer__
-: 取得する分岐アイテムのid
+: 削除する分岐アイテムのid
 
 ~~~
-定義
-DELETE https://creativesurvey.com/api/v1/logic_items/:logic_item_id
 
 リクエスト例
 $ curl -X DELETE https://creativesurvey.com/api/v1/logic_items/98 \

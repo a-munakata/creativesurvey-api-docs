@@ -10,7 +10,9 @@ method: create
 
 ## 分岐アクションを作成します。
 
-logic_id _(必須)_:
+`GET https://creativesurvey.com/api/v1/logics/:logic_id/logic_items`
+
+id _(必須)_:
 : __integer__
 : 分岐アクションを作成するロジックのid
 
@@ -23,8 +25,6 @@ question_id:
 : 分岐設定の条件に一致した際にスキップされる質問のid
 
 ~~~
-定義
-GET https://creativesurvey.com/api/v1/logics/:logic_id/logic_items
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/logics/:logic_id/logic_items \

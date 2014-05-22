@@ -10,13 +10,13 @@ method: index
 
 ## 回答者の一覧をセグメントを指定して取得します。
 
-segment_id _(必須)_:
+`GET https://creativesurvey.com/api/v1/segments/:segment_id/panels`
+
+id _(必須)_:
 : __integer__
 : 取得したい回答者のセグメントid
 
 ~~~
-定義
-GET https://creativesurvey.com/api/v1/segments/:segment_id/panels
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/segments/132/panels \

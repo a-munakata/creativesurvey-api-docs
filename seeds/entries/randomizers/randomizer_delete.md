@@ -10,13 +10,13 @@ method: delete
 
 ## ランダム設定を削除します。
 
-randomizers_id _(必須)_:
+`DELETE https://creativesurvey.com/api/v1/randomizers/:randomizers_id`
+
+id _(必須)_:
 : __integer__
 : ランダム設定のid
 
 ~~~
-定義
-DELETE https://creativesurvey.com/api/v1/randomizers/:randomizers_id
 
 リクエスト例
 $ curl -X DELTE https://creativesurvey.com/api/v1/randomizers/40 \

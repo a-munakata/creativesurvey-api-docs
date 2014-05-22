@@ -10,7 +10,9 @@ method: create
 
 ## 表示ターゲットを作成します。
 
-visibility_id _(必須)_:
+`POST https://creativesurvey.com/api/v1/visibilities/:visibility_id/visibility_targets`
+
+id _(必須)_:
 : __integer__
 : 表示ターゲットを作成する表示ロジックのid
 
@@ -19,8 +21,6 @@ answer_item_id:
 : 非表示にする回答項目のidを指定します。
 
 ~~~
-定義
-POST https://creativesurvey.com/api/v1/visibilities/:visibility_id/visibility_targets
 
 リクエスト例
 $ curl -X POST https://creativesurvey.com/api/v1/visibilities/71/visibility_targets \

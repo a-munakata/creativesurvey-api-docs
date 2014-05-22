@@ -10,7 +10,9 @@ method: update
 
 ## 回答項目の補助項目を更新します。
 
-sub_item_id _(必須)_:
+`PUT https://creativesurvey.com/api/v1/sub_items/:sub_item_id`
+
+id _(必須)_:
 : __integer__
 : 更新する回答項目を含む質問のid
 
@@ -31,8 +33,6 @@ max_value:
 : 回答項目の最大選択数
 
 ~~~
-定義
-PUT https://creativesurvey.com/api/v1/sub_items/:sub_item_id
 
 リクエスト例
 $ curl -X PUT https://creativesurvey.com/api/v1/sub_items/2865 \

@@ -10,13 +10,13 @@ method: show
 
 ## 分岐設定を取得します。
 
-logic_id _(必須)_:
+`GET https://creativesurvey.com/api/v1/api/v1/logics/:logic_id`
+
+id _(必須)_:
 : __integer__
 : 取得する分岐設定のid
 
 ~~~
-定義
-GET https://creativesurvey.com/api/v1/api/v1/logics/:logic_id
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/logics/138 \

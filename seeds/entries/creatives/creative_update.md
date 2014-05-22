@@ -10,7 +10,9 @@ method: update
 
 ## アンケートに使用されている画像を更新します。
 
-creative_id _(必須)_:
+`PUT https://creativesurvey.com/api/v1/creatives/:creative_id`
+
+id _(必須)_:
 : __integer__
 : 更新する画像のid
 
@@ -26,8 +28,6 @@ trimming:
 : 元サイズ優先: "fit"
 
 ~~~
-定義
-PUT https://creativesurvey.com/api/v1/creatives/:creative_id
 
 リクエスト例
 $ curl -X PUT https://creativesurvey.com/api/v1/creatives/638 \

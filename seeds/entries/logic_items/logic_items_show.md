@@ -10,13 +10,13 @@ method: show
 
 ## 分岐アイテムを個別に取得します。
 
-logic_item_id _(必須)_:
+`GET https://creativesurvey.com/api/v1/logic_items/:logic_item_id`
+
+id _(必須)_:
 : __integer__
 : 取得する分岐アイテムのid
 
 ~~~
-定義
-GET https://creativesurvey.com/api/v1/logic_items/:logic_item_id
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/logic_items/98 \

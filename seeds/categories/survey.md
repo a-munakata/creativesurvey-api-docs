@@ -5,6 +5,14 @@ title: アンケート
 
 ---
 
+|メソッド|概要|
+|:---|:---|
+|index|[GET /api/v1/surveys](#survey_index)|
+|create|[POST /api/v1/surveys](#survey_create)|
+|show|[GET /api/v1/surveys/:id](#survey_show)|
+|update|[PUT /api/v1/surveys/:id](#survey_update)|
+|destroy|[DELETE /api/v1/surveys/:id](#survey_delete)|
+
 |リレーション|リソース名|日本語名|
 |:---|:---|:---|
 |has_one|[design](#design)|デザイン|

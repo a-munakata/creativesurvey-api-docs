@@ -10,13 +10,13 @@ method: show
 
 ## デザインを個別で取得します。
 
-design_id _(必須)_:
+`GET https://creativesurvey.com/api/v1/designs/:design_id`
+
+id _(必須)_:
 : __integer__
 : 取得するデザインのid
 
 ~~~
-定義
-GET https://creativesurvey.com/api/v1/designs/:design_id
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/designs/515 \

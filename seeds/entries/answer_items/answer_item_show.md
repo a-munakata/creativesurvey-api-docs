@@ -10,13 +10,13 @@ method: show
 
 ## アンケートの回答項目を個別に取得します。
 
-answer_item_id _(必須)_:
+`GET https://creativesurvey.com/api/v1/answer_items/:answer_item_id`
+
+id _(必須)_:
 : __integer__
 : 取得する回答項目のid
 
 ~~~
-定義
-GET https://creativesurvey.com/api/v1/answer_items/:answer_item_id
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/answer_items/4301 \

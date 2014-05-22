@@ -10,7 +10,9 @@ method: create
 
 ## 新しいランダム設定を作成します。
 
-questionnaire_id _(必須)_:
+`POST https://creativesurvey.com/api/v1/questionnaires/:questionnaire_id/randomizers`
+
+id _(必須)_:
 : __integer__
 : ランダム設定を指定する質問表のid
 
@@ -38,8 +40,6 @@ order_index:
 : ランダマイズ設定の順序を0から始まる整数で指定します。
 
 ~~~
-定義
-POST https://creativesurvey.com/api/v1/questionnaires/:questionnaire_id/randomizers
 
 リクエスト例
 $ curl -X POST https://creativesurvey.com/api/v1/questionnaires/508/randomizers \

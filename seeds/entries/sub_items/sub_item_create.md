@@ -11,7 +11,9 @@ parent_klass: question
 
 ## [質問(question)](#question)に回答補助項目を作成します。
 
-question_id _(必須)_:
+`GET https://creativesurvey.com/api/v1/questions/:question_id/sub_items`
+
+id _(必須)_:
 : __integer__
 : 回答補助項目を作成する質問のid
 
@@ -36,8 +38,6 @@ min_value:
 : 回答補助項目の最小選択数
 
 ~~~
-定義
-GET https://creativesurvey.com/api/v1/questions/:question_id/sub_items
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/questions/1900/sub_items \

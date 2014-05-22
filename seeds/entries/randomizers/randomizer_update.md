@@ -10,7 +10,9 @@ method: update
 
 ## ランダム設定の更新についてです。
 
-randomizer_id _(必須)_:
+`PUT https://creativesurvey.com/api/v1/randomizers/:randomizers_id`
+
+id _(必須)_:
 : __integer__
 : ランダム設定のid
 
@@ -38,8 +40,6 @@ order_index:
 : ランダマイズ設定の順序を0から始まる整数で指定します。
 
 ~~~
-定義
-PUT https://creativesurvey.com/api/v1/randomizers/:randomizers_id
 
 リクエスト例
 $ curl -X PUT https://creativesurvey.com/api/v1/randomizers/40 \

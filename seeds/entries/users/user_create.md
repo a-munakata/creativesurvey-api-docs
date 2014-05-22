@@ -10,6 +10,8 @@ method: create
 
 ## CREATIVE SURVEYのアカウントのメールアドレスとパスワードでユーザーの認証を行います。認証で取得したauth_tokenは、CREATIVE SURVEY APIの全てのリクエストで必要になります。auth_tokenを使用するとAPI全ての操作が可能になるので、厳重に管理してください。
 
+`POST https://creativesurvey.com/api/v1/users/sign_in`
+
 email _(必須)_:
 : __string__ 
 : 登録しているユーザーのメールアドレス
@@ -20,8 +22,6 @@ password _(必須)_:
 
 
 ~~~
-定義
-POST https://creativesurvey.com/api/v1/users/sign_in
 
 リクエスト例
 $ curl -X POST https://creativesurvey.com/api/v1/users/sign_in \

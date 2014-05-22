@@ -10,7 +10,9 @@ method: update
 
 ## 質問を更新します。
 
-question_id _(必須)_:
+`PUT https://creativesurvey.com/api/v1/questions/:question_id`
+
+id _(必須)_:
 : __integer__
 : 対象の質問id
 
@@ -126,8 +128,6 @@ fix_last_row:
 
 
 ~~~
-定義
-PUT https://creativesurvey.com/api/v1/questions/:question_id
 
 リクエスト例
 curl -X PUT https://creativesurvey.com/api/v1/questions/1906 \

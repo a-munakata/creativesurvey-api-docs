@@ -10,13 +10,13 @@ method: abort
 
 ## 公開設定の公開を中止します。
 
-collector_id _(必須)_:
+`POST https://creativesurvey.com/api/v1/collectors/:collector_id/abort`
+
+id _(必須)_:
 : __integer__
 : 公開設定のid 
  
 ~~~
-定義
-POST https://creativesurvey.com/api/v1/collectors/:collector_id/abort
 
 リクエスト例
 $ curl -X POST \

@@ -10,7 +10,9 @@ method: update
 
 ## アンケート内の質問順序を更新します。
 
-page_order_item_id _(必須)_:
+`PUT https://creativesurvey.com/api/v1/page_order_items/:page_order_item_id`
+
+id _(必須)_:
 : __integer__
 : 更新する質問順序のid
 
@@ -24,8 +26,6 @@ is_connect:
 : trueを指定するとページをつなげる設定が有効になり、設定した質問とその次の質問が同一ページに表示されます。
 
 ~~~
-定義
-PUT https://creativesurvey.com/api/v1/page_order_items/:page_order_item_id
 
 リクエスト例
 curl -X PUT https://creativesurvey.com/api/v1/page_order_items/1798 \

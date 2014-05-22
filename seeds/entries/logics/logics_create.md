@@ -10,9 +10,11 @@ method: create
 
 ## 分岐設定を作成します。
 
-question_id _(必須)_:
+`POST https://creativesurvey.com/api/v1/questions/:question_id/logics`
+
+id _(必須)_:
 : __integer__
-: 取得する分岐設定を含む質問のid
+: 対象の質問id
 
 order_index:
 : __integer__ _(デフォルト: 0)_
@@ -24,8 +26,6 @@ is_valid:
 : 有効かどうか
 
 ~~~
-定義
-POST https://creativesurvey.com/api/v1/questions/:question_id/logics
 
 リクエスト例
 $ curl -X POST https://creativesurvey.com/api/v1/questions/1876/logics \

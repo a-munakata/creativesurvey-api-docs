@@ -10,13 +10,13 @@ method: index
 
 ## 表示ターゲット一覧を取得します。
 
-visibility_id _(必須)_:
+`GET https://creativesurvey.com/api/v1/visibilities/:visibility_id/visibility_targets`
+
+id _(必須)_:
 : __integer__
 : 取得する表示ターゲットを含む表示ロジックのid
 
 ~~~
-定義
-GET https://creativesurvey.com/api/v1/visibilities/:visibility_id/visibility_targets
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/visibilities/71/visibility_targets \

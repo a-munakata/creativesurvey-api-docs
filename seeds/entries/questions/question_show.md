@@ -10,13 +10,13 @@ method: show
 
 ## 質問表に含まれる質問を個別で取得します。
 
-question_id:
+`GET https://creativesurvey.com/api/v1/questions/:question_id`
+
+id _(必須)_:
 : __integer__
 : 対象の質問id
 
 ~~~
-定義
-GET https://creativesurvey.com/api/v1/questions/:question_id
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/questions/1906 \

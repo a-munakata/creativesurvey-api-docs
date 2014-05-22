@@ -10,7 +10,9 @@ method: update
 
 ## セグメント設定を更新します。
 
-segment_id _(必須)_:
+`PUT https://creativesurvey.com/api/v1/segments/:segment_id`
+
+id _(必須)_:
 : __integer__
 : セグメントのid
 
@@ -44,8 +46,6 @@ is_uncompleted:
 : trueに設定した場合、回答が終了していない回答者も含めます。
 
 ~~~
-定義
-PUT https://creativesurvey.com/api/v1/segments/:segment_id
 
 リクエスト例
 $ curl -X PUT https://creativesurvey.com/api/v1/segments/131 \

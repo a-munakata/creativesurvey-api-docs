@@ -10,7 +10,9 @@ method: create
 
 ## アンケートの置き換え変数設定を作成します。
 
-questionnaire_id _(必須)_:
+`POST https://creativesurvey.com/api/v1/questionnaires/:questionnaire_id/questionnaire_variables`
+
+id _(必須)_:
 : __integer__
 : 置き換え変数設定を取得したい質問表のid
 
@@ -53,8 +55,6 @@ is_separate:
 : trueにした場合、設定した回答項目の指定が有効になります。
 
 ~~~
-定義
-POST https://creativesurvey.com/api/v1/questionnaires/:questionnaire_id/questionnaire_variables
 
 リクエスト例
 $ curl -X POST https://creativesurvey.com/api/v1/questionnaires/510/questionnaire_variables \

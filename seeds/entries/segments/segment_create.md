@@ -10,7 +10,9 @@ method: create
 
 ## セグメント設定を作成します。作成したセグメントは、アンケートから設定します。セグメントの適用については[こちら](#survey_update)を参照ください。
 
-survey_id _(必須)_:
+`POST https://creativesurvey.com/api/v1/surveys/:survey_id/segments`
+
+id _(必須)_:
 : __integer__
 : セグメントを作成するアンケートのid
 
@@ -45,8 +47,6 @@ is_uncompleted:
 
 
 ~~~
-定義
-POST https://creativesurvey.com/api/v1/surveys/:survey_id/segments
 
 リクエスト例
 $ curl -X POST https://creativesurvey.com/api/v1/surveys/520/segments \

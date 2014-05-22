@@ -10,13 +10,13 @@ method: delete
 
 ## セグメントのフィルターを削除します。
 
-segment_filter_id _(必須)_:
+`DELETE https://creativesurvey.com/api/v1/segment_filters/segment_filter_id`
+
+id _(必須)_:
 : __integer__
 : セグメントフィルターのid
 
 ~~~
-定義
-DELETE https://creativesurvey.com/api/v1/segment_filters/segment_filter_id
 
 リクエスト例
 $ curl -X DELETE https://creativesurvey.com/api/v1/segment_filters/22 \

@@ -10,13 +10,13 @@ method: delete
 
 ## 質問を削除します。
 
-question_id _(必須)_:
+`DELETE https://creativesurvey.com/api/v1/questions/:question_id`
+
+id _(必須)_:
 : __integer__
 : 対象の質問id
 
 ~~~
-定義
-DELETE https://creativesurvey.com/api/v1/questions/:question_id
 
 リクエスト例
 $ curl -X DELETE https://creativesurvey.com/api/v1/questions/1906 \

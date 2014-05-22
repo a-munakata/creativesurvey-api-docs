@@ -10,13 +10,13 @@ method: index
 
 ## アンケートの質問順を一覧で取得します。
 
-questionnaire_id _(必須)_:
+`GET https://creativesurvey.com/api/v1/questionnaires/:questionnaire_id/page_order_items`
+
+id _(必須)_:
 : __integer__
-: 取得したい質問順序を含む質問表のid
+: 対象の質問表id
 
 ~~~
-定義
-GET https://creativesurvey.com/api/v1/questionnaires/:questionnaire_id/page_order_items
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/questionnaires/508/page_order_items \

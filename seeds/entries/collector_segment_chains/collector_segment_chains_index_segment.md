@@ -11,13 +11,13 @@ parent_klass: segment
 
 ## 公開設定とセグメントの関連を一覧で取得します。
 
-segment_id _(必須)_:
+`GET https://creativesurvey.com/api/v1/segments/:segment_id/collector_segment_chains`
+
+id _(必須)_:
 : __integer__
 : 対象となるセグメント設定id
 
 ~~~
-定義
-GET https://creativesurvey.com/api/v1/segments/:segment_id/collector_segment_chains
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/segments/116/collector_segment_chains \

@@ -10,9 +10,11 @@ method: create
 
 ## 分岐アイテムを作成します。
 
-logic_id _(必須)_:
+`POST https://creativesurvey.com/api/v1/logics/:logic_id/logic_items`
+
+id _(必須)_:
 : __integer__
-: 取得する分岐アイテムを含む分岐設定のid
+: 対象の分岐設定ids
 
 condition:
 : __string__ _(デフォルト: null)_
@@ -35,8 +37,6 @@ sub_item_id:
 : 分岐設定の条件対象となる回答補助項目のid
 
 ~~~
-定義
-POST https://creativesurvey.com/api/v1/logics/:logic_id/logic_items
 
 リクエスト例
 $ curl -X POST https://creativesurvey.com/api/v1/logics/139/logic_items \

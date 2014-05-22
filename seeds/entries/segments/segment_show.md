@@ -10,13 +10,13 @@ method: show
 
 ## セグメント設定を個別で取得します。
 
-segment_id _(必須)_:
+`GET https://creativesurvey.com/api/v1/segments/:segment_id`
+
+id _(必須)_:
 : __integer__
 : セグメントのid
 
 ~~~
-定義
-GET https://creativesurvey.com/api/v1/segments/:segment_id
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/segments/131 \

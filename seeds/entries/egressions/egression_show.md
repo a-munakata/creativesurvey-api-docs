@@ -10,13 +10,13 @@ method: show
 
 ## 最終画面を取得します。
 
-egression_id _(必須)_:
+`GET https://creativesurvey.com/api/v1/egressions/:egression_id`
+
+id _(必須)_:
 : __integer__
 : 取得する最終画面のid
 
 ~~~
-定義
-GET https://creativesurvey.com/api/v1/egressions/:egression_id
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/egressions/520 \

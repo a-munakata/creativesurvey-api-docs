@@ -10,13 +10,13 @@ method: publish
 
 ## 公開したいアンケートの公開設定を公開します。
 
-collector_id _(必須)_:
+`POST https://creativesurvey.com/api/v1/collectors/:collector_id/publish`
+
+id _(必須)_:
 : __integer__
 : 公開設定id 
  
 ~~~
-定義
-POST https://creativesurvey.com/api/v1/collectors/:collector_id/publish
 
 リクエスト例
 $ curl -X POST \

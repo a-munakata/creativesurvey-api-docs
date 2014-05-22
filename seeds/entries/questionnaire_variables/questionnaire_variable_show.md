@@ -10,13 +10,13 @@ method: show
 
 ## アンケートの置き換え変数設定を個別で取得します。
 
-questionnaire_variable_id:
+`GET https://creativesurvey.com/api/v1/questionnaire_variables/:questionnaire_variable_id`
+
+id _(必須)_:
 : __integer__
 : 取得する置き換え変数設定のid
 
 ~~~
-定義
-GET https://creativesurvey.com/api/v1/questionnaire_variables/:questionnaire_variable_id
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/questionnaire_variables/103 \

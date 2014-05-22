@@ -10,13 +10,13 @@ method: show
 
 ## アンケートに指定されたランダム設定を個別で取得します。
 
-randomizers_id _(必須)_:
+`GET https://creativesurvey.com/api/v1/randomizers/:randomizers_id`
+
+id _(必須)_:
 : __integer__
 : ランダム設定のid
 
 ~~~
-定義
-GET https://creativesurvey.com/api/v1/randomizers/:randomizers_id
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/randomizers/40 \

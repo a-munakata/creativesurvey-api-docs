@@ -10,7 +10,9 @@ method: create
 
 ## セグメントのフィルターを作成します。
 
-segment_id _(必須)_:
+`POST https://creativesurvey.com/api/v1/segments/:segment_id/segment_filters`
+
+id _(必須)_:
 : __integer__
 : セグメントフィルターを追加するセグメントのid
 
@@ -24,8 +26,6 @@ question_id:
 : セグメントする質問のid
 
 ~~~
-定義
-POST https://creativesurvey.com/api/v1/segments/:segment_id/segment_filters
 
 リクエスト例
 $ curl -X POST https://creativesurvey.com/api/v1/segments/120/segment_filters \

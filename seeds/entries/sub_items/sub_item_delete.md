@@ -10,13 +10,13 @@ method: delete
 
 ## 回答項目の補助項目を削除します。
 
-sub_item_id _(必須)_:
+`DELETE https://creativesurvey.com/api/v1/sub_items/:sub_item_id`
+
+id _(必須)_:
 : __integer__
 : 削除する回答補助項目のid
 
 ~~~
-定義
-DELETE https://creativesurvey.com/api/v1/sub_items/:sub_item_id
 
 リクエスト例
 $ curl -X DELETE https://creativesurvey.com/api/v1/sub_items/2865 \

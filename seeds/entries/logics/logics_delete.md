@@ -10,13 +10,13 @@ method: delete
 
 ## 分岐設定を削除します。
 
+`DELETE https://creativesurvey.com/api/v1/api/v1/logics/:logic_id`
+
 logic_id _(必須)_:
 : __integer__
 : 削除する分岐設定のid
 
 ~~~
-定義
-DELETE https://creativesurvey.com/api/v1/api/v1/logics/:logic_id
 
 リクエスト例
 $ curl -X DELETE https://creativesurvey.com/api/v1/logics/139 \

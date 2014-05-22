@@ -10,7 +10,9 @@ method: create
 
 ## アンケートに使用される画像をアップロードします。
 
-survey_id _(必須)_:
+`POST https://creativesurvey.com/api/v1/surveys/:survey_id/creatives`
+
+id _(必須)_:
 : __integer__
 : 対象となるアンケートのid
 
@@ -26,8 +28,6 @@ trimming:
 : 元サイズ優先: "fit"
 
 ~~~
-定義
-POST https://creativesurvey.com/api/v1/surveys/:survey_id/creatives
 
 リクエスト例
 $ curl -X POST https://creativesurvey.com/api/v1/surveys/548/creatives \

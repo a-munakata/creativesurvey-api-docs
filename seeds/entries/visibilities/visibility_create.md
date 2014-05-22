@@ -10,17 +10,17 @@ method: index
 
 ## 表示ロジックの作成
 
+`POST https://creativesurvey.com/api/v1/questions/:question_id/visibilities`
+
 question_id _(必須)_:
 : __integer__
-: 取得する分岐設定を含む質問のid
+: 作成する分岐設定を含む質問のid
 
 order_index:
 : __integer__ _(デフォルト: null)_
 : 表示ロジックの順序を0から始まる整数で指定します。
 
 ~~~
-定義
-POST https://creativesurvey.com/api/v1/questions/:question_id/visibilities
 
 リクエスト例
 $ curl -X POST https://creativesurvey.com/api/v1/questions/1911/visibilities \

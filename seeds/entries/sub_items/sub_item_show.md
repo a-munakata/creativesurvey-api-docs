@@ -10,13 +10,13 @@ method: show
 
 ## 回答項目の補助項目を取得します。
 
-sub_item_id _(必須)_:
+`GET https://creativesurvey.com/api/v1/sub_items/:sub_item_id`
+
+id _(必須)_:
 : __integer__
 : 取得する回答補助項目のid
 
 ~~~
-定義
-GET https://creativesurvey.com/api/v1/sub_items/:sub_item_id
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/sub_items/2865 \

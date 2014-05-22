@@ -10,13 +10,13 @@ method: delete
 
 ## 表示ターゲットを削除します。
 
-visibility_target_id _(必須)_:
+`DELETE https://creativesurvey.com/api/v1/visibility_targets/:visibility_target_id`
+
+id _(必須)_:
 : __integer__
-: 取得する表示ターゲットのid
+: 削除する表示ターゲットのid
 
 ~~~
-定義
-DELETE https://creativesurvey.com/api/v1/visibility_targets/:visibility_target_id
 
 リクエスト例
 $ curl -X DELETE https://creativesurvey.com/api/v1/visibility_targets/82 \

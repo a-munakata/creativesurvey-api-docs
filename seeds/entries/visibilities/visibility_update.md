@@ -10,7 +10,9 @@ method: update
 
 ## 表示ロジックを更新します。
 
-visibility_id _(必須)_:
+`GET https://creativesurvey.com/api/v1/visibilities/:visibility_id`
+
+id _(必須)_:
 : __integer__
 : 取得する分岐設定を含む質問のid
 
@@ -19,8 +21,6 @@ order_index:
 : 表示ロジックの順序を0から始まる整数で指定します。
 
 ~~~
-定義
-GET https://creativesurvey.com/api/v1/visibilities/:visibility_id
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/visibilities/66 \

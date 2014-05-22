@@ -10,13 +10,13 @@ method: index
 
 ## アンケートに使用されている画像の一覧を表示します。
 
-survey_id _(必須)_:
+`GET https://creativesurvey.com/api/v1/surveys/:survey_id/creatives`
+
+id _(必須)_:
 : __integer__
 : 対象となるアンケートid
 
 ~~~
-定義
-GET https://creativesurvey.com/api/v1/surveys/:survey_id/creatives
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/surveys/528/creatives \

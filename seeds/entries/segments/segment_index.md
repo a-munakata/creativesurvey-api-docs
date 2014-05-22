@@ -10,13 +10,13 @@ method: index
 
 ## セグメント設定一覧を取得します。セグメントを設定すると、集計結果をセグメント条件によって分けることが出来ます。
 
-survey_id _(必須)_:
+`GET https://creativesurvey.com/api/v1/surveys/:survey_id/segments`
+
+id _(必須)_:
 : __integer__
 : 対象のセグメントを持つアンケートのid
 
 ~~~
-定義
-GET https://creativesurvey.com/api/v1/surveys/:survey_id/segments
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/surveys/520/segments \

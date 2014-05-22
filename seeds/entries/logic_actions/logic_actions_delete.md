@@ -10,13 +10,13 @@ method: delete
 
 ## 分岐アクションを削除します。
 
-logic_action_id _(必須)_:
+`DELETE https://creativesurvey.com/api/v1/logic_actions/:logic_action_id`
+
+id _(必須)_:
 : __integer__
 : 削除する分岐アクションのid
 
 ~~~
-定義
-DELETE https://creativesurvey.com/api/v1/logic_actions/:logic_action_id
 
 リクエスト例
 $ curl -X DELETE https://creativesurvey.com/api/v1/logic_actions/143 \

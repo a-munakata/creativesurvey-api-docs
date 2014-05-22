@@ -10,13 +10,13 @@ method: show
 
 ## 公開設定を個別に取得します。
 
-collector_id _(必須)_:
+`GET https://creativesurvey.com/api/v1/collectors/:collector_id`
+
+id _(必須)_:
 : __integer__
 : 対象となる公開設定のid
  
 ~~~
-定義
-GET https://creativesurvey.com/api/v1/collectors/:collector_id
 
 リクエスト例
 $ curl -X GET \

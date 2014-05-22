@@ -10,13 +10,13 @@ method: delete
 
 ## セグメント設定を削除します。
 
-segment_id _(必須)_:
+`DELETE https://creativesurvey.com/api/v1/segments/:segment_id`
+
+id _(必須)_:
 : __integer__
 : セグメントのid
 
 ~~~
-定義
-DELETE https://creativesurvey.com/api/v1/segments/:segment_id
 
 リクエスト例
 $ curl -X DELETE https://creativesurvey.com/api/v1/segments/131 \

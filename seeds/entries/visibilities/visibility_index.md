@@ -10,13 +10,13 @@ method: index
 
 ## 表示ロジック一覧を取得します。
 
-question_id _(必須)_:
+`GET https://creativesurvey.com/api/v1/questions/:question_id/visibilities`
+
+id _(必須)_:
 : __integer__
 : 取得する分岐設定を含む質問のid
 
 ~~~
-定義
-GET https://creativesurvey.com/api/v1/questions/:question_id/visibilities
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/questions/1911/visibilities \

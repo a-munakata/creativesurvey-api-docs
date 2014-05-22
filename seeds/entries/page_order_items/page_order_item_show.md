@@ -10,13 +10,13 @@ method: show
 
 ## アンケート内の質問順序を個別で取得します。
 
-page_order_item_id _(必須)_:
+`GET https://creativesurvey.com/api/v1/page_order_items/:page_order_item_id`
+
+id _(必須)_:
 : __integer__
 : 取得したい質問順序のid
 
 ~~~
-定義
-GET https://creativesurvey.com/api/v1/page_order_items/:page_order_item_id
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/page_order_items/1798 \

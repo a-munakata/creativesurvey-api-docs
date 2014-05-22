@@ -10,13 +10,13 @@ method: index
 
 ## セグメントのフィルターを一覧で取得します。
 
-segment_id _(必須)_:
+`GET https://creativesurvey.com/api/v1/segments/:segment_id/segment_filters`
+
+id _(必須)_:
 : __integer__
 : セグメントのid
 
 ~~~
-定義
-GET https://creativesurvey.com/api/v1/segments/:segment_id/segment_filters
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/segments/131/segment_filters \

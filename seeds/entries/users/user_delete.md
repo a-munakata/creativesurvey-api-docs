@@ -10,13 +10,13 @@ method: delete
 
 ## 認証されたユーザーのauth_tokenを失効させます。
 
+`DELETE https://creativesurvey.com/api/v1/users/sign_out`
+
 email _(必須)_:
 : __string__ 
 : 登録しているユーザーのメールアドレス
 
 ~~~
-定義
-DELETE https://creativesurvey.com/api/v1/users/sign_out
 
 リクエスト例
 $ curl -X DELETE https://creativesurvey.com/api/v1/users/sign_out \

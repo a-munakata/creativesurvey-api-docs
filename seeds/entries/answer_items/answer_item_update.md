@@ -10,9 +10,11 @@ method: update
 
 ## アンケートの回答項目を更新します。
 
-answer_item_id _(必須)_:
+`PUT https://creativesurvey.com/api/v1/answer_items/:answer_item_id`
+
+id _(必須)_:
 : __integer__
-: 取得する回答項目のid
+: 更新する回答項目のid
 
 answer_type _(必須)_:
 : __integer__ _(デフォルト: 1)_
@@ -68,8 +70,6 @@ val:
 : rangeタイプの質問の初期値
 
 ~~~
-定義
-PUT https://creativesurvey.com/api/v1/answer_items/:answer_item_id
 
 リクエスト例
 $ curl -X PUT https://creativesurvey.com/api/v1/answer_items/4321 \

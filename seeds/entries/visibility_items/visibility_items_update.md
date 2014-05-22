@@ -10,7 +10,9 @@ method: update
 
 ## 表示アイテムを更新します。
 
-visibility_item_id _(必須)_:
+`PUT https://creativesurvey.com/api/v1/visibility_items/:visibility_item_id`
+
+id _(必須)_:
 : __integer__
 : 更新する表示アイテムのid
 
@@ -36,8 +38,6 @@ sub_item_id:
 : 条件に指定する回答補助項目のid
 
 ~~~
-定義
-PUT https://creativesurvey.com/api/v1/visibility_items/:visibility_item_id
 
 リクエスト例
 $ curl -X PUT https://creativesurvey.com/api/v1/visibility_items/102 \

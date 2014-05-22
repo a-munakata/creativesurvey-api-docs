@@ -10,9 +10,11 @@ method: update
 
 ## 分岐アイテムを更新します。
 
-logic_item_id _(必須)_:
+`PUT https://creativesurvey.com/api/v1/logic_items/:logic_item_id`
+
+id _(必須)_:
 : __integer__
-: 取得する分岐アイテムのid
+: 更新する分岐アイテムのid
 
 condition:
 : __string__ _(デフォルト: null)_
@@ -35,8 +37,6 @@ sub_item_id:
 : 分岐設定の条件対象となる回答補助項目のid
 
 ~~~
-定義
-PUT https://creativesurvey.com/api/v1/logic_items/:logic_item_id
 
 リクエスト例
 $ curl -X PUT https://creativesurvey.com/api/v1/logic_items/98 \

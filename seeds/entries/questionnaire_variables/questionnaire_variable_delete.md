@@ -10,13 +10,13 @@ method: delete
 
 ## アンケートの置き換え変数設定を削除します。
 
-questionnaire_variable_id:
+`DELETE https://creativesurvey.com/api/v1/questionnaire_variables/:questionnaire_variable_id`
+
+id _(必須)_:
 : __integer__
 : 削除する置き換え変数設定のid
 
 ~~~
-定義
-DELETE https://creativesurvey.com/api/v1/questionnaire_variables/:questionnaire_variable_id
 
 リクエスト例
 $ curl -X DELETE https://creativesurvey.com/api/v1/questionnaire_variables/100 \

@@ -10,13 +10,13 @@ method: show
 
 ## 表示アイテムを個別に取得します。
 
-visibility_item_id _(必須)_:
+`GET https://creativesurvey.com/api/v1/visibility_items/:visibility_item_id`
+
+id _(必須)_:
 : __integer__
 : 取得する表示アイテムのid
 
 ~~~
-定義
-GET https://creativesurvey.com/api/v1/visibility_items/:visibility_item_id
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/visibility_items/102 \

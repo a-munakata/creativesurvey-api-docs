@@ -11,13 +11,13 @@ parent_klass: question
 
 ## 質問に使用されている画像の関連を取得します。
 
-question_id _(必須)_:
+`GET https://creativesurvey.com/api/v1/questions/:question_id/creative_chains`
+
+id _(必須)_:
 : __integer__
 : 対象となる質問id
 
 ~~~
-定義
-GET https://creativesurvey.com/api/v1/questions/:question_id/creative_chains
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/questions/1884/creative_chains \

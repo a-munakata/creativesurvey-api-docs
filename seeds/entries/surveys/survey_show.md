@@ -10,13 +10,13 @@ method: show
 
 ## アンケートを個別に取得します。
 
-survey_id _(必須)_:
+`GET https://creativesurvey.com/api/v1/surveys/:survey_id`
+
+id _(必須)_:
 : __integer__
 : 取得するアンケートのid
 
 ~~~
-定義
-GET https://creativesurvey.com/api/v1/surveys/:survey_id
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/surveys/532 \

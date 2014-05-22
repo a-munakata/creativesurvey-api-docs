@@ -10,13 +10,13 @@ method: index
 
 ## アンケートに答えた回答者の一覧を取得します。
 
-survey_id _(必須)_:
+`GET https://creativesurvey.com/api/v1/surveys/:survey_id/panels`
+
+id _(必須)_:
 : __integer__
 : 回答者を取得したいアンケートのid
 
 ~~~
-定義
-GET https://creativesurvey.com/api/v1/surveys/:survey_id/panels
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/surveys/551/panels \

@@ -10,13 +10,13 @@ method: index
 
 ## 公開設定の一覧を取得します。
 
-survey_id _(必須)_:
+`GET https://creativesurvey.com/api/v1/surveys/:survey_id/collectors`
+
+id _(必須)_:
 : __integer__
 : 対象となるアンケートのid
  
 ~~~
-定義
-GET https://creativesurvey.com/api/v1/surveys/:survey_id/collectors
 
 リクエスト例
 $ curl -X GET \

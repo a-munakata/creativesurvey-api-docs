@@ -10,9 +10,11 @@ method: create
 
 ## 表示アイテムを作成します。
 
+`POST https://creativesurvey.com/api/v1/visibilities/:visibility_id/visibility_items`
+
 visibility_id _(必須)_:
 : __integer__
-: 取得する表示アイテムを含む表示ロジックのid
+: 作成する表示アイテムを含む表示ロジックのid
 
 question_id:
 : __integer__ _(デフォルト: null)_
@@ -36,8 +38,6 @@ sub_item_id:
 : 条件に指定する回答補助項目のid
 
 ~~~
-定義
-POST https://creativesurvey.com/api/v1/visibilities/:visibility_id/visibility_items
 
 リクエスト例
 $ curl -X POST https://creativesurvey.com/api/v1/visibilities/71/visibility_items \
