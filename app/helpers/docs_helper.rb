@@ -26,4 +26,12 @@ module DocsHelper
   def roles
     categories_with_roles.values.uniq.compact
   end
+
+  def application_css
+    File.read("./public/source/stylesheets/application.css").html_safe
+  end
+
+  def application_js
+    File.read("./public/source/javascripts/application.js").html_safe
+  end
 end
