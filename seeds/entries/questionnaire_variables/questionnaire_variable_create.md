@@ -58,7 +58,7 @@ is_separate:
 
 リクエスト例
 $ curl -X POST https://creativesurvey.com/api/v1/questionnaires/510/questionnaire_variables \
--u "auth_token=YourAuthToken": \
+-d "auth_token=YourAuthToken" \
 -d "questionnaire_variable[target]=color" \
 -d "questionnaire_variable[result_id]=1831" \
 -d "questionnaire_variable[result_type]=1"

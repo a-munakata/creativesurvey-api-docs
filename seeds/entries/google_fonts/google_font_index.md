@@ -16,8 +16,7 @@ method: index
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/google_fonts \
--u "auth_token=YourAuthToken":
-
+-d "auth_token=YourAuthToken"
 レスポンス例
 [
   {

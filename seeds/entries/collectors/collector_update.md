@@ -93,7 +93,7 @@ request_billboard:
 リクエスト例
 $ curl -X PUT \
 https://creativesurvey.com/api/v1/collectors/547 \
--u "auth_token=YourAuthToken": \
+-d "auth_token=YourAuthToken" \
 -d "collector[name]=公開設定3" \
 -d "collector[is_password]=true" \
 -d "collector[password]=sample_pass" \

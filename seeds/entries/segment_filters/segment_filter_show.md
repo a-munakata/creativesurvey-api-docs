@@ -20,8 +20,7 @@ id _(必須)_:
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/segment_filters/22 \
--u "auth_token=YourAuthToken":
-
+-d "auth_token=YourAuthToken"
 レスポンス例
 {
   "segment_id": 131,

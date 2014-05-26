@@ -21,8 +21,7 @@ id _(必須)_:
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/sub_items/287/creative_chains \
--u "auth_token=YourAuthToken":
-
+-d "auth_token=YourAuthToken"
 レスポンス例
 {
   "id": 907,

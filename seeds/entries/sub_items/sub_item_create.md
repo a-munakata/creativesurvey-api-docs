@@ -41,7 +41,7 @@ min_value:
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/questions/1900/sub_items \
--u "auth_token=YourAuthToken": \
+-d "auth_token=YourAuthToken" \
 -d "sub_item[placeholder]=insert text here"
 
 レスポンス例

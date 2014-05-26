@@ -29,7 +29,7 @@ question_id:
 
 リクエスト例
 $ curl -X POST https://creativesurvey.com/api/v1/segments/120/segment_filters \
--u "auth_token=YourAuthToken": \
+-d "auth_token=YourAuthToken" \
 -d "segment_filter[question_id]=1866" \
 -d "segment_filter[value]=4386"
 

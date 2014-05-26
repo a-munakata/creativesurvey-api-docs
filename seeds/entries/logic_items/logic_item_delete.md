@@ -20,8 +20,7 @@ logic_item_id _(必須)_:
 
 リクエスト例
 $ curl -X DELETE https://creativesurvey.com/api/v1/logic_items/98 \
--u "auth_token=YourAuthToken":
-
+-d "auth_token=YourAuthToken"
 レスポンス例
 {
   "logic_id": 139,

@@ -28,7 +28,7 @@ question_id:
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/logics/:id/logic_items \
--u "auth_token=YourAuthToken": \
+-d "auth_token=YourAuthToken" \
 -d "logic_action[message]=New Message" \
 -d "logic_action[question_id]=1878"
 

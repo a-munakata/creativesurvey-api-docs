@@ -73,7 +73,7 @@ val:
 
 リクエスト例
 $ curl -X POST https://creativesurvey.com/api/v1/questions/1829/answer_items \
--u "auth_token=YourAuthToken": \
+-d "auth_token=YourAuthToken" \
 -d "answer_item[answer_type]=5" \
 -d "answer_item[sentence]=Please enter your address" \
 -d "answer_item[placeholder]=Address" \

@@ -20,8 +20,7 @@ id _(必須)_:
 
 リクエスト例
 $ curl -X DELTE https://creativesurvey.com/api/v1/randomizers/40 \
--u "auth_token=YourAuthToken":
-
+-d "auth_token=YourAuthToken"
 レスポンス例
 {
   "questionnaire_id": 508,

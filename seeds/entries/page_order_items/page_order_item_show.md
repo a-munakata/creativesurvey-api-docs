@@ -20,8 +20,7 @@ id _(必須)_:
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/page_order_items/1798 \
--u "auth_token=YourAuthToken":
-
+-d "auth_token=YourAuthToken"
 レスポンス例
 {
   "questionnaire_id": 507,

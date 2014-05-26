@@ -29,7 +29,7 @@ is_valid:
 
 リクエスト例
 $ curl -X PUT https://creativesurvey.com/api/v1/logics/138 \
--u "auth_token=YourAuthToken": \
+-d "auth_token=YourAuthToken" \
 -d "logic[order_index]=3"
 
 

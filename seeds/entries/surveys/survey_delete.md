@@ -20,8 +20,7 @@ id _(必須)_:
 
 リクエスト例
 $ curl -X DELETE http://creativesurvey.com/api/v1/surveys/532 \
--u "auth_token=YourAuthToken":
-
+-d "auth_token=YourAuthToken"
 レスポンス例
 {
   "id": 532,

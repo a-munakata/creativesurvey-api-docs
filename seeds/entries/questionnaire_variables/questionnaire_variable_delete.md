@@ -20,8 +20,7 @@ id _(必須)_:
 
 リクエスト例
 $ curl -X DELETE https://creativesurvey.com/api/v1/questionnaire_variables/100 \
--u "auth_token=YourAuthToken":
-
+-d "auth_token=YourAuthToken"
 レスポンス例
 {
   "updated_at": "2014-04-22T18:42:34+09:00",

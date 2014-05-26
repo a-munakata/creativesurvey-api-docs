@@ -50,7 +50,7 @@ is_uncompleted:
 
 リクエスト例
 $ curl -X POST https://creativesurvey.com/api/v1/surveys/520/segments \
--u "auth_token=YourAuthToken": \
+-d "auth_token=YourAuthToken" \
 -d "segment[name]=40代女性" \
 -d "segment[disallow_duplicate_ip]=true" \
 -d "segment[due_start]=20140427" \

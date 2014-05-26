@@ -49,7 +49,7 @@ is_uncompleted:
 
 リクエスト例
 $ curl -X PUT https://creativesurvey.com/api/v1/segments/131 \
--u "auth_token=YourAuthToken": \
+-d "auth_token=YourAuthToken" \
 -d "segment[name]=30代男性"
 
 レスポンス例

@@ -49,7 +49,7 @@ active_segment_id:
 
 リクエスト例
 $ curl -X PUT https://creativesurvey.com/api/v1/surveys/508 \
--u "auth_token=YourAuthToken": \
+-d "auth_token=YourAuthToken" \
 -d "survey[name]=sample_survey2" \
 -d "survey[tag_color]=green"
 

@@ -25,8 +25,7 @@ order_index:
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/visibilities/66 \
 -d "visibility[order_index]=3" \
--u "auth_token=YourAuthToken":
-
+-d "auth_token=YourAuthToken"
 レスポンス例
 {
   "question_id": 1911,

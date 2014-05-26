@@ -28,7 +28,7 @@ question_id:
 
 リクエスト例
 $ curl -X PUT https://creativesurvey.com/api/v1/logic_actions/143 \
--u "auth_token=YourAuthToken": \
+-d "auth_token=YourAuthToken" \
 -d "logic_action[message]=Skipped Question"
 
 レスポンス例
