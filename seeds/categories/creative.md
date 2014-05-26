@@ -18,6 +18,5 @@ title: 画像
 
 |リレーション|リソース名|日本語名|
 |:---|:---|:---|
-|belongs_to|[survey](#survey)|アンケート|
-|has_many|[creative_chains](#creative_chain)|画像の関連|
+|1対n|[creative_chains](#creative_chain)|画像の関連|
 

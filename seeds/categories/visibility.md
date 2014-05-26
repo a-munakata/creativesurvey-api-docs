@@ -17,6 +17,6 @@ AND条件を追加、編集する場合は[表示アイテム(visibility_items)]
 
 |リレーション|リソース名|日本語名|
 |:---|:---|:---|
-|belongs_to|[question](#question)|質問|
-|has_many|[visibility_items](#visibility_item)|表示アイテム|
+|n対1|[question](#question)|質問|
+|1対n|[visibility_items](#visibility_item)|表示アイテム|
 ||[visibility_targets](#visibility_target)|表示ターゲット|

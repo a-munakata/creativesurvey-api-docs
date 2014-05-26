@@ -14,4 +14,4 @@ title: テーマの取得
 
 |リレーション|リソース名|日本語名|
 |:---|:---|:---|
-|has_many|[designs](#design)|デザイン|
+|1対n|[designs](#design)|デザイン|

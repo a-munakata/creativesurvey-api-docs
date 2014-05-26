@@ -17,5 +17,4 @@ title: 分岐アクション
 
 |リレーション|リソース名|日本語名|
 |:---|:---|:---|
-|belongs_to|[question](#question)|質問|
-||[logic](#logic)|分岐設定|
+|n対1|[logic](#logic)|分岐設定|

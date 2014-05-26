@@ -15,4 +15,4 @@ title: フィルター設定
 
 |リレーション|リソース名|日本語名|
 |:---|:---|:---|
-|belongs_to|[segment](#segment)|セグメント設定|
+|n対1|[segment](#segment)|セグメント設定|

@@ -19,7 +19,6 @@ title: 分岐設定
 
 |リレーション|リソース名|日本語名|
 |:---|:---|:---|
-|belongs_to|[question](#question)|質問|
-||[answer_item](#answer_item)|質問項目|
-|has_one|[logic_action](#logic_action)|分岐アクション|
-|has_many|[logic_items](#logic_item)|分岐アイテム|
+|n対1|[question](#question)|質問|
+|1対1|[logic_action](#logic_action)|分岐アクション|
+|1対n|[logic_items](#logic_item)|分岐アイテム|

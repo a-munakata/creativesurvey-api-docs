@@ -19,6 +19,4 @@ title: 分岐アイテム
 
 |リレーション|リソース名|日本語名|
 |:---|:---|:---|
-|belongs_to|[answer_item](#answer_item)|回答項目|
-||[question](#question)|質問|
-||[logic](#logic)|分岐設定|
+|n対1|[logic](#logic)|分岐設定|

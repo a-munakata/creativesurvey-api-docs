@@ -449,7 +449,7 @@ table {
     }
   }
 
-  &:first-child{
+  &:first-of-type{
     margin-bottom: 20px;
     td, th {
       &:last-child {
