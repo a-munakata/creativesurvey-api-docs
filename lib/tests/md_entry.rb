@@ -2,54 +2,54 @@
 
 require "preamble"
 
-module DocTests
+module CSDoc
   class MdEntry
     attr_accessor :end_point,
-                  :request,
+                  #:request,
                   :method,
                   :md_response,
                   :curl_response,
                   :auth_token,
                   :email,
-                  :password,
-                  :file,
-                  :file_name,
-                  :header,
-                  :body,
-                  :title,
-                  :category_name,
-                  :errors,
-                  :message
+                  :password
+                  #:file,
+                  #:file_name,
+                  #:header,
+                  #:body,
+                  #:title,
+                  #:category_name,
+                  #:errors,
+                  #:message
 
 
     def initialize(file, options={})
       @options     = options
-      @_file_name  = file
+      #@_file_name  = file
       @_file       = File.read(@_file_name)
       @_auth_token = @options[:auth_token]
       @_email      = @options[:email]
       @_password   = @options[:password]
       @_endpoint   = @options[:endpoint]
-      @_header, @_body = Preamble.load(@_file_name)
+      #@_header, @_body = Preamble.load(@_file_name)
     end
 
     def file;      @_file       end
-    def file_name; @_file_name  end
-    def header;    @_header     end
-    def body;      @_body       end
-    def errors;    @_errors     end
+    #def file_name; @_file_name  end
+    #def header;    @_header     end
+    #def body;      @_body       end
+    #def errors;    @_errors     end
     def auth_token;@_auth_token end
     def email;     @_email      end
     def password;  @_password   end
     def endpoint;  @_endpoint   end
 
-    def title
-      @_header["title"] if @_header.present?
-    end
-
-    def category_name
-      @_header["category_name"].to_sym if @_header.present?
-    end
+    #def title
+    #  @_header["title"] if @_header.present?
+    #end
+    #
+    #def category_name
+    #  @_header["category_name"].to_sym if @_header.present?
+    #end
 
     def method
       @_method = @_file.scan(/\$.*(?=レスポンス例)/m).first.present? && @_file.
@@ -72,8 +72,8 @@ module DocTests
       @raw_response = request
       res ||= JSON.parse(@raw_response)
       res.kind_of?(Array) ? res.first : res
-    rescue
-      @backtrace = @raw_response
+    #rescue
+    #  @backtrace = @raw_response
     end
 
     def md_response
@@ -85,38 +85,38 @@ module DocTests
         JSON.parse(response)
       end
 
-    rescue
-      puts "JSON::ParserError at #{@_file}"
-      @_errors = base_errors(false, "JSON::ParserError")
+    #rescue
+    #  puts "JSON::ParserError at #{@_file}"
+    #  @_errors = base_errors(false, "JSON::ParserError")
     end
 
-    def message(status = "")
-      if status == :success
-        puts "Successed at #{title}"
-        @_errors = base_errors(true, "Success")
-      elsif status == :fail
-        puts "Response Not Found at #{title}."
-        @_errors = base_errors(false, "Resource Not Found.")
-      elsif status == :rescue
-        puts "Rescued at #{title}"
-        @_errors = base_errors(false, "Rescued at #{title}.")
-      else
-        @_errors = base_errors(false, "Something Went Wrong.")
-      end
-
-      @_errors[:backtrace] = @backtrace if @backtrace.present?
-      return @_errors
-    end
-
-    def base_errors(success = nil, message = "")
-      {
-        success: success,
-        method: method,
-        file: file_name,
-        category_name: category_name,
-        title: title,
-        message: message
-      }
-    end
+    #def message(status = "")
+    #  if status == :success
+    #    puts "Successed at #{title}"
+    #    @_errors = base_errors(true, "Success")
+    #  elsif status == :fail
+    #    puts "Response Not Found at #{title}."
+    #    @_errors = base_errors(false, "Resource Not Found.")
+    #  elsif status == :rescue
+    #    puts "Rescued at #{title}"
+    #    @_errors = base_errors(false, "Rescued at #{title}.")
+    #  else
+    #    @_errors = base_errors(false, "Something Went Wrong.")
+    #  end
+    #
+    #  @_errors[:backtrace] = @backtrace if @backtrace.present?
+    #  return @_errors
+    #end
+    #
+    #def base_errors(success = nil, message = "")
+    #  {
+    #    success: success,
+    #    method: method,
+    #    file: file_name,
+    #    category_name: category_name,
+    #    title: title,
+    #    message: message
+    #  }
+    #end
   end
 end
