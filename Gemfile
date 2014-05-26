@@ -37,6 +37,10 @@ gem 'jquery-rails'
 gem 'chosen-rails', '~> 1.0.0'
 gem 'lolcommits'
 
+group :development, :test do
+  gem 'test-unit-rails'
+end
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
