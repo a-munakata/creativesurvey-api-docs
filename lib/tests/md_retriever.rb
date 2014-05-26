@@ -6,19 +6,33 @@ module CSDoc
   class MdTester
     END_POINT = "http://localhost:9292"
 
+    attr_accessor :auth_token,
+                  :email,
+                  :password,
+                  :endpoint
+
+    def initialize(auth_token = nil, email = nil, password = nil, endpoint = nil)
+      @auth_token = auth_token || ENV["CS_AUTH_TOKEN"]
+      @email      = email      || ENV["CS_USER"]
+      @password   = password   || ENV["CS_PASSWORD"]
+      @endpoint   = endpoint   || END_POINT
+    end
+
     def retrieve
       @retrieve_result ||= Dir.glob(File.join(Rails.root, "seeds/entries/**/*.md")).collect { |file|
-        DocTests::MdEntry.new(file, {
-          :auth_token => ENV["DOC_AUTH_TOKEN"],
-          :email => ENV["DOC_USER"],
-          :password => ENV["DOC_PASSWORD"],
-          :endpoint => END_POINT }
+        @doc_entry = DocTests::MdEntry.new(file, {
+          auth_token: @auth_token,
+          email:      @email,
+          password:   @password,
+          endpoint:   @endpoint }
         )
+
+        @doc_entry unless %w(overview error_example).include? @doc_entry.category_name
       }
     end
 
     def assert_all
-      @assert_result ||= retrieve.collect.with_index { |entry, index|
+      @assert_result ||= retrieve.compact.collect.with_index { |entry, index|
         puts "Testing at #{entry.file_name}..."
         begin
           entry.md_response.keys.all?{|response_key| entry.curl_response.keys.include? response_key } ? entry.message(:success) : entry.message(:fail)

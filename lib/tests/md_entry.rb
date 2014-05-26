@@ -30,7 +30,6 @@ module DocTests
       @_email      = @options[:email]
       @_password   = @options[:password]
       @_endpoint   = @options[:endpoint]
-
       @_header, @_body = Preamble.load(@_file_name)
     end
 
@@ -53,7 +52,16 @@ module DocTests
     end
 
     def method
-      @_method = @_file.scan(/\$.*(?=レスポンス例)/m).first.present? && @_file.scan(/\$.*(?=レスポンス例)/m).first.gsub(/https:\/\/creativesurvey\.com/, @_endpoint).gsub(/\n/, "").gsub(/\\/, "").gsub(/^\$\s/, "").gsub(/YourAuthToken/, @_auth_token).gsub(/sample_email/, @_email).gsub(/sample_password/, @_password)
+      @_method = @_file.scan(/\$.*(?=レスポンス例)/m).first.present? && @_file.
+        scan(/\$.*(?=レスポンス例)/m).
+        first.
+        gsub(/https:\/\/creativesurvey\.com/, @_endpoint).
+        gsub(/\n/, "").
+        gsub(/\\/, "").
+        gsub(/^\$\s/, "").
+        gsub(/YourAuthToken/, @_auth_token).
+        gsub(/sample_email/, @_email).
+        gsub(/sample_password/, @_password)
     end
 
     def request
@@ -61,8 +69,11 @@ module DocTests
     end
 
     def curl_response
-      res ||= JSON.parse(request)
+      @raw_response = request
+      res ||= JSON.parse(@raw_response)
       res.kind_of?(Array) ? res.first : res
+    rescue
+      @backtrace = @raw_response
     end
 
     def md_response
@@ -92,6 +103,9 @@ module DocTests
       else
         @_errors = base_errors(false, "Something Went Wrong.")
       end
+
+      @_errors[:backtrace] = @backtrace if @backtrace.present?
+      return @_errors
     end
 
     def base_errors(success = nil, message = "")
