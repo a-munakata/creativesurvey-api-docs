@@ -2,7 +2,7 @@
 
 category_name: survey
 title: アンケートの削除
-method: delete
+action: delete
 
 ---
 

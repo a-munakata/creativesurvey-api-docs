@@ -2,7 +2,7 @@
 
 category_name: logic_item
 title: 分岐アイテムの作成
-method: create
+action: create
 
 ---
 

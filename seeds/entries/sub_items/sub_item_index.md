@@ -2,7 +2,7 @@
 
 category_name: sub_item
 title: 回答補助項目一覧の取得
-method: index
+action: index
 parent_klass: question
 
 ---

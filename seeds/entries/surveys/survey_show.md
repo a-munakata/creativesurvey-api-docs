@@ -2,7 +2,7 @@
 
 category_name: survey
 title: アンケートの取得
-method: show
+action: show
 
 ---
 

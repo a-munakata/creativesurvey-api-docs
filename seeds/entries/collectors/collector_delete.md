@@ -2,7 +2,7 @@
 
 category_name: collector
 title: 公開設定の削除
-method: delete
+action: delete
 
 ---
 

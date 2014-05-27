@@ -2,7 +2,7 @@
 
 category_name: logic_action
 title: 分岐アクションの取得
-method: show
+action: show
 
 ---
 

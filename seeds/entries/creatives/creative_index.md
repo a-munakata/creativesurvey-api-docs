@@ -2,7 +2,7 @@
 
 category_name: creative
 title: 画像一覧の取得
-method: index
+action: index
 
 ---
 

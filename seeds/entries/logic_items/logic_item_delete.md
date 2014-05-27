@@ -2,7 +2,7 @@
 
 category_name: logic_item
 title: 分岐アイテムの削除
-method: delete
+action: delete
 
 ---
 

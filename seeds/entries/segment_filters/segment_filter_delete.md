@@ -2,7 +2,7 @@
 
 category_name: segment_filter
 title: フィルターの削除
-method: delete
+action: delete
 
 ---
 

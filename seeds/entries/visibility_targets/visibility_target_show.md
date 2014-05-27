@@ -2,7 +2,7 @@
 
 category_name: visibility_target
 title: 表示ターゲットの取得
-method: show
+action: show
 
 ---
 

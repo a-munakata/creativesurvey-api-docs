@@ -2,7 +2,7 @@
 
 category_name: question
 title: 質問の更新
-method: update
+action: update
 
 ---
 

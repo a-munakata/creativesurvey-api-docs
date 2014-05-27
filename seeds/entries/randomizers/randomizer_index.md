@@ -2,7 +2,7 @@
 
 category_name: randomizer
 title: ランダム設定一覧の取得
-method: index
+action: index
 
 ---
 

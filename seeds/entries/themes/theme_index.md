@@ -2,7 +2,7 @@
 
 category_name: theme
 title: テーマ一覧の取得
-method: index
+action: index
 
 ---
 

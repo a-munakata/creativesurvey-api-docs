@@ -2,7 +2,7 @@
 
 category_name: question
 title: 質問の取得
-method: show
+action: show
 
 ---
 

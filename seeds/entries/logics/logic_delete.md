@@ -2,7 +2,7 @@
 
 category_name: logic
 title: 分岐設定の削除
-method: delete
+action: delete
 
 ---
 

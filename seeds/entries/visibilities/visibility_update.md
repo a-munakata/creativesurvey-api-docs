@@ -2,7 +2,7 @@
 
 category_name: visibility
 title: 表示ロジックの更新
-method: update
+action: update
 
 ---
 

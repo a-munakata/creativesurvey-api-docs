@@ -2,7 +2,7 @@
 
 category_name: sub_item
 title: 回答補助項目の削除
-method: delete
+action: delete
 
 ---
 

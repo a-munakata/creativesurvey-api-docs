@@ -2,7 +2,7 @@
 
 category_name: sub_item
 title: 回答補助項目の作成
-method: create
+action: create
 parent_klass: question
 
 ---

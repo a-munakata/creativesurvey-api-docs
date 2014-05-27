@@ -2,7 +2,7 @@
 
 category_name: collector
 title: 公開設定の更新
-method: update
+action: update
 
 ---
 

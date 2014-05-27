@@ -2,7 +2,7 @@
 
 category_name: logic_item
 title: 分岐アイテムの更新
-method: update
+action: update
 
 ---
 

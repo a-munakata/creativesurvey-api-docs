@@ -2,7 +2,7 @@
 
 category_name: visibility_item
 title: 表示アイテム一覧の取得
-method: index
+action: index
 
 ---
 

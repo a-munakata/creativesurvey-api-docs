@@ -2,7 +2,7 @@
 
 category_name: visibility_item
 title: 表示アイテムの作成
-method: create
+action: create
 
 ---
 

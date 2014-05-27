@@ -2,7 +2,7 @@
 
 category_name: visibility_target
 title: 表示ターゲットの更新
-method: update
+action: update
 
 ---
 

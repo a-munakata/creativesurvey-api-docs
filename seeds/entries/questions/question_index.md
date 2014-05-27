@@ -2,7 +2,7 @@
 
 category_name: question
 title: 質問一覧の取得
-method: index
+action: index
 
 ---
 

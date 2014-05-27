@@ -2,7 +2,7 @@
 
 category_name: segment_filter
 title: フィルターの作成
-method: create
+action: create
 
 ---
 

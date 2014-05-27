@@ -2,7 +2,7 @@
 
 category_name: overview
 title: このAPIについて
-method: index
+action: index
 
 ---
 

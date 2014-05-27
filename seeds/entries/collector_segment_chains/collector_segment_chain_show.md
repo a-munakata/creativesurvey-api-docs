@@ -2,7 +2,7 @@
 
 category_name: collector_segment_chain
 title: 公開設定とセグメントの関連の取得
-method: show
+action: show
 
 ---
 

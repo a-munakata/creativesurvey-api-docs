@@ -2,7 +2,7 @@
 
 category_name: visibility_item
 title: 表示アイテムの更新
-method: update
+action: update
 
 ---
 

@@ -2,7 +2,7 @@
 
 category_name: segment
 title: セグメント設定の取得
-method: show
+action: show
 
 ---
 

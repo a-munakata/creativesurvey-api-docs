@@ -2,7 +2,7 @@
 
 category_name: page_order_item
 title: 質問順序一覧の取得
-method: index
+action: index
 
 ---
 

@@ -2,7 +2,7 @@
 
 category_name: segment
 title: セグメント設定一覧を取得
-method: index
+action: index
 
 ---
 

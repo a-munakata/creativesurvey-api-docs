@@ -2,7 +2,7 @@
 
 category_name: design
 title: デザインの取得
-method: show
+action: show
 
 ---
 

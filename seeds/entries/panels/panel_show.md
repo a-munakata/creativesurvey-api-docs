@@ -2,7 +2,7 @@
 
 category_name: panel
 title: 回答者の取得
-method: show
+action: show
 
 ---
 

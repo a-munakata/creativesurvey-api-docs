@@ -2,7 +2,7 @@
 
 category_name: question
 title: 質問の作成
-method: create
+action: create
 
 ---
 

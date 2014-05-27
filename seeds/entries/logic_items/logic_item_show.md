@@ -2,7 +2,7 @@
 
 category_name: logic_item
 title: 分岐アイテムの取得
-method: show
+action: show
 
 ---
 

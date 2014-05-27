@@ -2,7 +2,7 @@
 
 category_name: randomizer
 title: ランダム設定の作成
-method: create
+action: create
 
 ---
 

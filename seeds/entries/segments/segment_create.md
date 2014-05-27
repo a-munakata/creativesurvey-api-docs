@@ -2,7 +2,7 @@
 
 category_name: segment
 title: セグメント設定の作成
-method: create
+action: create
 
 ---
 

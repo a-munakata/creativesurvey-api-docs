@@ -2,7 +2,7 @@
 
 category_name: creative
 title: 画像の取得
-method: show
+action: show
 
 ---
 

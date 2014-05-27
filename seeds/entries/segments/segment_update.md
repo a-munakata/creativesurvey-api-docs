@@ -2,7 +2,7 @@
 
 category_name: segment
 title: セグメント設定の更新
-method: update
+action: update
 
 ---
 

@@ -2,7 +2,7 @@
 
 category_name: visibility
 title: 表示ロジック一覧の取得
-method: index
+action: index
 
 ---
 

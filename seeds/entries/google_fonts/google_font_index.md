@@ -2,7 +2,7 @@
 
 category_name: google_font
 title: 欧文フォント一覧の取得
-method: index
+action: index
 
 ---
 

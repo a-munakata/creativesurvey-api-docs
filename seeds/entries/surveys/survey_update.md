@@ -3,7 +3,7 @@
 
 category_name: survey
 title: アンケートの更新
-method: update
+action: update
 
 ---
 

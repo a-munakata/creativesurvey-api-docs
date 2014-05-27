@@ -2,7 +2,7 @@
 
 category_name: logic
 title: 分岐設定一覧の取得
-method: index
+action: index
 
 ---
 

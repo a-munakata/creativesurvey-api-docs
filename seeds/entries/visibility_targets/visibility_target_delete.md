@@ -2,7 +2,7 @@
 
 category_name: visibility_target
 title: 表示ターゲットの削除
-method: delete
+action: delete
 
 ---
 

@@ -2,7 +2,7 @@
 
 category_name: user
 title: ユーザーの認証
-method: create
+action: create
 
 ---
 

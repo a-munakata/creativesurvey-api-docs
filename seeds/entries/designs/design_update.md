@@ -2,7 +2,7 @@
 
 category_name: design
 title: デザインの更新
-method: update
+action: update
 
 ---
 

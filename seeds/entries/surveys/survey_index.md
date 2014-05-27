@@ -2,7 +2,7 @@
 
 category_name: survey
 title: アンケート一覧の取得
-method: index
+action: index
 
 ---
 

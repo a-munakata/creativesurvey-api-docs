@@ -2,7 +2,7 @@
 
 category_name: logic_action
 title: 分岐アクションの作成
-method: create
+action: create
 
 ---
 

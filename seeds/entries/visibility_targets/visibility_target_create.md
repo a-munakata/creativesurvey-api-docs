@@ -2,7 +2,7 @@
 
 category_name: visibility_target
 title: 表示ターゲットの作成
-method: create
+action: create
 
 ---
 

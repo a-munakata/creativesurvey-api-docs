@@ -2,7 +2,7 @@
 
 category_name: questionnaire_variable
 title: 置き換え変数設定の作成
-method: create
+action: create
 
 ---
 

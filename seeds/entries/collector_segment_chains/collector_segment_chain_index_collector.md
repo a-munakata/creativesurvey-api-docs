@@ -2,7 +2,7 @@
 
 category_name: collector_segment_chain
 title: 公開設定とセグメントの関連一覧の取得　(公開設定から)
-method: index
+action: index
 parent_klass: collector
 
 ---

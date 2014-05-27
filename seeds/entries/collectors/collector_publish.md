@@ -2,7 +2,7 @@
 
 category_name: collector
 title: 公開設定の公開
-method: publish
+action: publish
 
 ---
 

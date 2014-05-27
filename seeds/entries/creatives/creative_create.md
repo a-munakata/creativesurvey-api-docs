@@ -2,7 +2,7 @@
 
 category_name: creative
 title: 画像の作成
-method: create
+action: create
 
 ---
 

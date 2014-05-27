@@ -2,7 +2,7 @@
 
 category_name: logic_action
 title: 分岐アクションの削除
-method: delete
+action: delete
 
 ---
 

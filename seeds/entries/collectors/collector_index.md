@@ -2,7 +2,7 @@
 
 category_name: collector
 title: 公開設定一覧の取得
-method: index
+action: index
 
 ---
 

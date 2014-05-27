@@ -2,7 +2,7 @@
 
 category_name: collector_segment_chain
 title: 公開設定とセグメントの関連の作成　(セグメント設定から)
-method: create
+action: create
 parent_klass: segment
 
 ---

@@ -2,7 +2,7 @@
 
 category_name: answer_item
 title: 回答項目の削除
-method: delete
+action: delete
 
 ---
 

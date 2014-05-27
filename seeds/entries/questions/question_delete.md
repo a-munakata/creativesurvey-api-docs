@@ -2,7 +2,7 @@
 
 category_name: question
 title: 質問の削除
-method: delete
+action: delete
 
 ---
 

@@ -2,7 +2,7 @@
 
 category_name: creative_chain
 title: 画像の関連一覧の取得 (回答項目から)
-method: index
+action: index
 parent_klass: answer_item
 
 ---

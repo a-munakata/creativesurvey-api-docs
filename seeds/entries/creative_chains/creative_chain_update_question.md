@@ -2,7 +2,7 @@
 
 category_name: creative_chain
 title: 画像の関連の更新　(質問から)
-method: update
+action: update
 parent_klass: question
 
 ---

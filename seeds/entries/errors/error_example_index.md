@@ -2,7 +2,7 @@
 
 category_name: error_example
 title: ステータスコードとエラーの例
-method: index
+action: index
 
 ---
 

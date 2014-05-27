@@ -2,7 +2,7 @@
 
 category_name: segment
 title: セグメント設定の削除
-method: delete
+action: delete
 
 ---
 

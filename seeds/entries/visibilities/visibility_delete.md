@@ -2,7 +2,7 @@
 
 category_name: visibility
 title: 表示ロジックの削除
-method: delete
+action: delete
 
 ---
 

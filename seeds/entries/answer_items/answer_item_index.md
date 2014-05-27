@@ -2,7 +2,7 @@
 
 category_name: answer_item
 title: 回答項目一覧の取得
-method: index
+action: index
 
 ---
 

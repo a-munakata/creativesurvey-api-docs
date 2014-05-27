@@ -2,7 +2,7 @@
 
 category_name: questionnaire
 title: 質問表の取得
-method: show
+action: show
 
 ---
 

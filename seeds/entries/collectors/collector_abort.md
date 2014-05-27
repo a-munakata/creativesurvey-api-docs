@@ -2,7 +2,7 @@
 
 category_name: collector
 title: 公開設定の公開中止
-method: abort
+action: abort
 
 ---
 

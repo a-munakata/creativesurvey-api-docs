@@ -2,7 +2,7 @@
 
 category_name: page_order_item
 title: 質問順序の更新
-method: update
+action: update
 
 ---
 

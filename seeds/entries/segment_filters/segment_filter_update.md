@@ -2,7 +2,7 @@
 
 category_name: segment_filter
 title: フィルターの更新
-method: update
+action: update
 
 ---
 

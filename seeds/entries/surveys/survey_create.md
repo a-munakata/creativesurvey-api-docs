@@ -2,7 +2,7 @@
 
 category_name: survey
 title: アンケートの作成
-method: create
+action: create
 
 ---
 

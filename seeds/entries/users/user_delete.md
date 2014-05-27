@@ -2,7 +2,7 @@
 
 category_name: user
 title: ユーザー認証の失効
-method: delete
+action: delete
 
 ---
 

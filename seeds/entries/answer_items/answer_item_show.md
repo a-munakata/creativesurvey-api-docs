@@ -2,7 +2,7 @@
 
 category_name: answer_item
 title: 回答項目の取得
-method: show
+action: show
 
 ---
 

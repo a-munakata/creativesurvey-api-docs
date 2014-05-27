@@ -2,7 +2,7 @@
 
 category_name: collector
 title: 公開設定の取得
-method: show
+action: show
 
 ---
 

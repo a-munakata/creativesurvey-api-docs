@@ -2,7 +2,7 @@
 
 category_name: visibility_target
 title: 表示ターゲット一覧の取得
-method: index
+action: index
 
 ---
 

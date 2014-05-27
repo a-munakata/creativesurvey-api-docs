@@ -2,7 +2,7 @@
 
 category_name: egression
 title: 最終画面の変更
-method: update
+action: update
 
 ---
 

@@ -2,7 +2,7 @@
 
 category_name: segment_filter
 title: フィルターの取得
-method: show
+action: show
 
 ---
 

@@ -2,7 +2,7 @@
 
 category_name: visibility
 title: 表示ロジックの取得
-method: show
+action: show
 
 ---
 
