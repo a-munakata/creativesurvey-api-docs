@@ -15,6 +15,7 @@ gem 'preamble'
 
 gem 'google_drive'
 gem 'jquery-ace-rails'
+gem 'httparty'
 
 gem 'underscore-rails'
 
