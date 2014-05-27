@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140417065601) do
+ActiveRecord::Schema.define(:version => 20140527043734) do
 
   create_table "categories", :force => true do |t|
     t.string   "title"
@@ -31,5 +31,11 @@ ActiveRecord::Schema.define(:version => 20140417065601) do
   end
 
   add_index "docs", ["anchor_name"], :name => "index_docs_on_anchor_name", :unique => true
+
+  create_table "entries", :force => true do |t|
+    t.string   "title"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
 end

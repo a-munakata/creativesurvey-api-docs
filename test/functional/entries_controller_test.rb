@@ -1,14 +1,14 @@
 require 'test_helper'
 
-class DocsControllerTest < ActionController::TestCase
+class EntriesControllerTest < ActionController::TestCase
   #setup do
-  #  @doc = docs(:one)
+  #  @doc = Entries(:one)
   #end
   #
   #test "should get index" do
   #  get :index
   #  assert_response :success
-  #  assert_not_nil assigns(:docs)
+  #  assert_not_nil assigns(:Entries)
   #end
   #
   #test "should get new" do
@@ -17,7 +17,7 @@ class DocsControllerTest < ActionController::TestCase
   #end
   #
   #test "should create doc" do
-  #  assert_difference('Doc.count') do
+  #  assert_difference('Entry.count') do
   #    post :create, doc: {  }
   #  end
   #
@@ -40,7 +40,7 @@ class DocsControllerTest < ActionController::TestCase
   #end
   #
   #test "should destroy doc" do
-  #  assert_difference('Doc.count', -1) do
+  #  assert_difference('Entry.count', -1) do
   #    delete :destroy, id: @doc
   #  end
   #

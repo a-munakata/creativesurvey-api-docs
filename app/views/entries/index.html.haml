@@ -6,5 +6,5 @@
   = javascript_include_tag "//yandex.st/highlightjs/8.0/highlight.min.js"
 
 = content_for :body do
-  = link_to "Export HTML", :spawn_docs, remote: true, class: "spawn-button"
+  = link_to "Export HTML", :spawn_entries, remote: true, class: "spawn-button"
   = render partial: "docs_contents"

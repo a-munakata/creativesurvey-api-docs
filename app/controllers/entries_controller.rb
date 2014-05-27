@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-class DocsController < ApplicationController
+class EntriesController < ApplicationController
   def index
     respond_to do |format|
       format.html

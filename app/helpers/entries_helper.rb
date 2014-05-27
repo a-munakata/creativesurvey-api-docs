@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-module DocsHelper
+module EntriesHelper
   def categories
     Dir.glob(File.join(Rails.root, "seeds/categories/**/*.md")).collect { |file|
       Category.new(file)
@@ -11,7 +11,7 @@ module DocsHelper
 
   def docs
     Dir.glob(File.join(Rails.root, "seeds/entries/**/*.md")).collect { |file|
-      Doc.new(file)
+      Entry.new(file)
     }.select{|doc| !doc.is_disabled }.sort{|a, b|
       a.parent_klass_order_index <=> b.parent_klass_order_index
     }.select{|doc| !doc.is_disabled }.sort{|a, b|
