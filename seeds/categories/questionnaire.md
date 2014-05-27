@@ -12,6 +12,7 @@ title: 質問表
 |リレーション|リソース名|日本語名|
 |:---|:---|:---|
 |1対1|[survey](#survey)|アンケート|
+||[questionnaire](#questionnaire)|質問表|
 ||[egression](#egression)|最終画面|
 |1対n|[questionnaire_variables](#questionnaire_variable)|置き換え変数|
 ||[randomizers](#randomizer)|ランダム設定|
