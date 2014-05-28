@@ -23,6 +23,8 @@ $ curl -X GET https://creativesurvey.com/api/v1/sub_items/2865 \
 -d "auth_token=YourAuthToken"
 レスポンス例
 {
+  "created_at": "2014-04-29T23:09:23+09:00",
+  "updated_at": "2014-05-28T12:46:25+09:00",
   "id": 2865,
   "max_value": null,
   "min_value": null,

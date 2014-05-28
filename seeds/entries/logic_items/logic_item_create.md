@@ -48,6 +48,8 @@ $ curl -X POST https://creativesurvey.com/api/v1/logics/139/logic_items \
 
 レスポンス例
 {
+  "created_at": "2014-04-29T23:09:23+09:00",
+  "updated_at": "2014-05-28T12:46:25+09:00",
   "logic_id": 139,
   "id": 105,
   "question_id": 1914,

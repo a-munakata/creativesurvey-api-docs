@@ -35,6 +35,8 @@ $ curl -X POST https://creativesurvey.com/api/v1/segments/120/segment_filters \
 
 レスポンス例
 {
+  "created_at": "2014-04-29T23:09:23+09:00",
+  "updated_at": "2014-05-28T12:46:25+09:00",
   "segment_id": 120,
   "id": 23,
   "value": "4386",

@@ -69,6 +69,8 @@ $ curl -X PUT https://creativesurvey.com/api/v1/questionnaire_variables/103 \
 
 レスポンス例
 {
+  "created_at": "2014-04-29T23:09:23+09:00",
+  "updated_at": "2014-05-28T12:46:25+09:00",
   "questionnaire_id": 510,
   "id": 103,
   "sub_item_id": null,

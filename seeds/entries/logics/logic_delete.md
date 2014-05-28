@@ -23,6 +23,8 @@ $ curl -X DELETE https://creativesurvey.com/api/v1/logics/139 \
 -d "auth_token=YourAuthToken"
 レスポンス例
 {
+  "created_at": "2014-04-29T23:09:23+09:00",
+  "updated_at": "2014-05-28T12:46:25+09:00",
   "question_id": 1876,
   "id": 139,
   "order_index": 3,

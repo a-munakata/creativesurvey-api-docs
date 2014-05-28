@@ -28,6 +28,8 @@ $ curl -X POST https://creativesurvey.com/api/v1/questions/1911/visibilities \
 -d "auth_token=YourAuthToken"
 レスポンス例
 {
+  "created_at": "2014-04-29T23:09:23+09:00",
+  "updated_at": "2014-05-28T12:46:25+09:00",
   "question_id": 1911,
   "id": 70,
   "order_index": 5

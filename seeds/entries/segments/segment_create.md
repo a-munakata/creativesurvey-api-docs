@@ -59,6 +59,8 @@ $ curl -X POST https://creativesurvey.com/api/v1/surveys/520/segments \
 
 レスポンス例
 {
+  "created_at": "2014-04-29T23:09:23+09:00",
+  "updated_at": "2014-05-28T12:46:25+09:00",
   "updated_at": "2014-05-08T19:48:59+09:00",
   "unique_id": null,
   "is_making": null,

@@ -20,6 +20,8 @@ $ curl -X GET https://creativesurvey.com/api/v1/themes \
 レスポンス例
 [
   {
+    "created_at": "2014-04-29T23:09:23+09:00",
+    "updated_at": "2014-05-28T12:46:25+09:00",
     "id": 1,
     "name": "デフォルト・ブルー"
   },

@@ -23,6 +23,8 @@ $ curl -X DELETE https://creativesurvey.com/api/v1/questionnaire_variables/100 \
 -d "auth_token=YourAuthToken"
 レスポンス例
 {
+  "created_at": "2014-04-29T23:09:23+09:00",
+  "updated_at": "2014-05-28T12:46:25+09:00",
   "updated_at": "2014-04-22T18:42:34+09:00",
   "target": "question_result",
   "sub_item_id": null,
