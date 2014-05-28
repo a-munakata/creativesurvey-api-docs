@@ -28,17 +28,17 @@ is_connect:
 ~~~
 
 リクエスト例
-curl -X PUT https://creativesurvey.com/api/v1/page_order_items/1798 \
+$ curl -X PUT https://creativesurvey.com/api/v1/page_order_items/1851 \
 -d "auth_token=YourAuthToken" \
--d "page_order_item[order_index]=3" \
+-d "page_order_item[order_index]=10" \
 -d "page_order_item[is_connect]=true"
 
 レスポンス例
 {
-  "questionnaire_id": 507,
-  "id": 1789,
+  "id": 1851,
   "is_connect": true,
-  "order_index": 3
+  "order_index": 10,
+  "question_id": 1883
 }
 
 ~~~

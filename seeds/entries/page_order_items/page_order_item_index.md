@@ -19,15 +19,17 @@ id _(必須)_:
 ~~~
 
 リクエスト例
-$ curl -X GET https://creativesurvey.com/api/v1/questionnaires/508/page_order_items \
+$ curl -X GET https://creativesurvey.com/api/v1/questionnaires/518/page_order_items \
 -d "auth_token=YourAuthToken"
+
 レスポンス例
 [
   {
-    "questionnaire_id": 508,
-    "id": 1796,
-    "is_connect": null,
-    "order_index": null
+    "questionnaire_id": 518,
+    "id": 1847,
+    "is_connect": false,
+    "order_index": 0,
+    "question_id": 1879
   },
   {...},
   {...}
