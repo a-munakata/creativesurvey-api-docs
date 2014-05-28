@@ -17,7 +17,6 @@ title: アンケート
 |:---|:---|:---|
 |1対1|[design](#design)|デザイン|
 ||[questionnaire](#questionnaire)|質問表|
-|1対n|[questions](#question)|質問|
-||[segment](#segment)|セグメント設定|
+|1対n|[segments](#segment)|セグメント設定|
 ||[collectors](#collector)|公開設定|
-||[creatives](#creative)|画像|
+||[panels](#panel)|回答者|

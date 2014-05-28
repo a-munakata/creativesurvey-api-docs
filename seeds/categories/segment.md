@@ -20,3 +20,4 @@ title: セグメント設定
 |:---|:---|:---|
 |n対1|[survey](#survey)|アンケート|
 |1対n|[segment_filters](#segment_filter)|フィルター設定|
+||[collector_segment_chains](#collector_segment_chain)|公開設定とセグメントの関連|
