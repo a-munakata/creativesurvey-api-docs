@@ -53,10 +53,7 @@ jQuery ->
 
     $.waypoints("refresh")
 
-  $(".code-editor").ace({ theme: 'twilight', lang: 'ruby', height: "200", width: "100%" })
-
   set_entry_height()
-
 
   $(".spawn-button").on "ajax:complete", (e)->
     alert("HTMLが生成されました。")
