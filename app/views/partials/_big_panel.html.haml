@@ -21,9 +21,9 @@
                   = link_to category.title, "##{ category.name }"
 
                 %ul
-                  - docs.select{|doc| doc.category_name == category.name }.each do |doc|
-                    %li.sub-title{ "data-entry" => doc.base_name }
-                      = link_to doc.title, "##{ doc.base_name }"
+                  - entries.select{|entry| entry.category_name == category.name }.each do |entry|
+                    %li.sub-title{ "data-entry" => entry.base_name }
+                      = link_to entry.title, "##{ entry.base_name }"
   .notify-border
   .handle
     View Full Contents

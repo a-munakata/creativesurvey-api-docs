@@ -9,7 +9,7 @@ module EntriesHelper
     }
   end
 
-  def docs
+  def entries
     Dir.glob(File.join(Rails.root, "seeds/entries/**/*.md")).collect { |file|
       Entry.new(file)
     }.select{|doc| !doc.is_disabled }.sort{|a, b|

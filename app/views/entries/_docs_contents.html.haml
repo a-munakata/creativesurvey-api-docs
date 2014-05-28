@@ -11,7 +11,7 @@
       .description
         = markdown category.body
 
-      - docs.select{|doc| doc.category_name == category.name }.each do |doc|
-        .document-block{ id: doc.base_name, class: "entry", "data-entry" => doc.base_name, "data-category" => category.name }
+      - entries.select{|entry| entry.category_name == category.name }.each do |entry|
+        .document-block{ id: entry.base_name, class: "entry", "data-entry" => entry.base_name, "data-category" => category.name }
           .inner
-            = markdown doc.body
+            = markdown entry.body
