@@ -1,8 +1,11 @@
 = content_for :head do
-  %style
-    = application_css
-  %script
-    = application_js
+  -#%style
+  -#  = application_css
+  -#%script
+  -#  = application_js
+
+  %link{ href: "./stylesheets/application.css", rel: "stylesheet", type: "text/css", media: "screen" }
+  %script{ src: "./javascripts/application.js", type: "text/javascript" }
 
 = content_for :body do
   = render partial: "docs_contents"
