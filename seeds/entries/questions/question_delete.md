@@ -21,6 +21,7 @@ id _(必須)_:
 リクエスト例
 $ curl -X DELETE https://creativesurvey.com/api/v1/questions/1906 \
 -d "auth_token=YourAuthToken"
+
 レスポンス例
 {  
   "questionnaire_id": 511,

@@ -47,7 +47,6 @@ $ curl -X PUT https://creativesurvey.com/api/v1/randomizers/40 \
 -d "randomizer[step_num]=2" \
 -d "randomizer[end_index]=4"
 
-
 レスポンス例
 {
   "created_at": "2014-04-29T23:09:23+09:00",

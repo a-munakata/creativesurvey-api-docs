@@ -21,6 +21,7 @@ id _(必須)_:
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/panels/3810/answers \
 -d "auth_token=YourAuthToken"
+
 レスポンス例
 [
   {

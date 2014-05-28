@@ -40,7 +40,6 @@ $ curl -X PUT https://creativesurvey.com/api/v1/sub_items/2865 \
 -d "sub_item[order_index]=3" \
 -d "sub_item[sentence]=new_text"
 
-
 レスポンス例
 {
   "created_at": "2014-04-29T23:09:23+09:00",

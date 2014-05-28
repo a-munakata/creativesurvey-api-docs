@@ -22,6 +22,7 @@ id _(必須)_:
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/segments/116/collector_segment_chains \
 -d "auth_token=YourAuthToken"
+
 レスポンス例
 [
   {

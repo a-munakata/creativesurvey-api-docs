@@ -32,7 +32,6 @@ $ curl -X PUT https://creativesurvey.com/api/v1/logics/138 \
 -d "auth_token=YourAuthToken" \
 -d "logic[order_index]=3"
 
-
 レスポンス例
 {
   "created_at": "2014-04-29T23:09:23+09:00",

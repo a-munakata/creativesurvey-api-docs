@@ -17,6 +17,7 @@ action: index
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/themes \
 -d "auth_token=YourAuthToken"
+
 レスポンス例
 [
   {

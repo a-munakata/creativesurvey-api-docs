@@ -31,6 +31,7 @@ is_valid:
 $ curl -X POST https://creativesurvey.com/api/v1/questions/1876/logics \
 -d "logic[order_index]=3" \
 -d "auth_token=YourAuthToken"
+
 レスポンス例
 {
   "created_at": "2014-04-29T23:09:23+09:00",

@@ -66,7 +66,6 @@ $ curl -X PUT https://creativesurvey.com/api/v1/questionnaire_variables/103 \
 -d "questionnaire_variable[target]=question_result" \
 -d "questionnaire_variable[result_value]=hoge"
 
-
 レスポンス例
 {
   "created_at": "2014-04-29T23:09:23+09:00",
