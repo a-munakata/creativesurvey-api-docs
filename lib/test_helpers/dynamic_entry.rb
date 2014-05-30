@@ -7,11 +7,12 @@ module TestHelpers
   class DynamicEntry < Entry
     include HTTParty
 
+    class ResponseEmpty < Exception; end
+    class RequestEmpty < Exception; end
+
     attr_accessor :auth_token,
                   :default_params,
-                  :end_point,
-                  :md_response,
-                  :curl_response
+                  :end_point
 
     def self.api_version
       "V1"
@@ -31,27 +32,34 @@ module TestHelpers
       super
     end
 
-    def call(method, action, params={})
-      response = self.class.send( method, "#{@end_point}#{action}", (@default_params||{}).deep_merge(params) )
+    def call(method, path, params={})
+      response = self.class.send( method, "#{@end_point}#{path}", (@default_params||{}).deep_merge(params) )
 
       case response.code
         when 200
           response
         else
-          raise response.message
+          raise response.parsed_response
       end
     end
 
-    def request
-      call(method, request_path.gsub(/:id/, "1906"), default_params)
+    def request_path
+      @_body.match(/(?<=`).*(?=`)/).to_s.gsub(/.*\/api\/.*?\/.*?/,"/")
+    end
+
+    def request(params={})
+      @_call ||= call(method, request_path, (@default_params||{}).deep_merge(params) )
     end
 
     def response
-      request.parsed_response
+      raise ResponseEmpty if request.parsed_response.empty?
+      request.kind_of?(Array) ? request.parsed_response.first : request.parsed_response
+    rescue ResponseEmpty => e
+      e.message
     end
 
     def get_auth_token(email, password)
-      response = call(:post, "/users/sign_in", body: {user_login: { email: email, password: password } })
+      response = call(:post, "/users/sign_in", body: { user_login: { email: email, password: password } })
       response["auth_token"]
     end
   end
