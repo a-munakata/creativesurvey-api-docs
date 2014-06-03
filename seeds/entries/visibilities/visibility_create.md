@@ -2,7 +2,7 @@
 
 category_name: visibility
 title: 表示ロジックの作成
-action: index
+action: create
 
 ---
 
