@@ -44,7 +44,7 @@ class Entry
 
   def parent_resource_name
     splitted_path = @_body.match(/(?<=`).*(?=`)/).to_s.gsub(/.*\/api\/.*?\/.*?/,"/").split("/").select{|a| a.present? }
-    splitted_path.length > 2 ? splitted_path.first : nil
+    splitted_path.length > 1 ? splitted_path.first : nil
   end
 
   def resource_name

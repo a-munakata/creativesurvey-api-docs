@@ -12,7 +12,8 @@ module TestHelpers
 
     attr_accessor :auth_token,
                   :default_params,
-                  :end_point
+                  :end_point,
+                  :request_path
 
     def self.api_version
       "V1"
@@ -33,30 +34,37 @@ module TestHelpers
     end
 
     def call(method, path, params={})
-      response = self.class.send( method, "#{@end_point}#{path}", (@default_params||{}).deep_merge(params) )
+      self.class.send( method, "#{@end_point}#{path}", (@default_params||{}).deep_merge(params) )
+      #a.first.class.post("http://localhost:9292/api/v1/surveys/606/collectors", {:body=>{:auth_token=>"sxHNTa6w2hNxfzq7dHQo"}}).parsed_response
 
-      case response.code
-        when 200
-          response
-        else
-          raise response.parsed_response
-      end
+
+#      case response.code
+#        when 200
+#          response
+#        else
+#    raise response
+#      end
     end
 
-    def request_path
-      @_body.match(/(?<=`).*(?=`)/).to_s.gsub(/.*\/api\/.*?\/.*?/,"/")
+    def request_path(params={})
+      base_path = @_body.match(/(?<=`).*(?=`)/).to_s.gsub(/.*\/api\/.*?\/.*?/,"/")
+      @request_path = params[:parent_resource_id].present? ? base_path.gsub(/:id/, params[:parent_resource_id]) : base_path
     end
 
-    def request(params={})
-      @_call ||= call(method, request_path, (@default_params||{}).deep_merge(params) )
-    end
+    #def request(params={})
+    #  @_call ||= call(
+    #    method,
+    #    request_path( { parent_resource_id: params.delete(:parent_resource_id) } ),
+    #    ( @default_params || {} ).deep_merge(params)
+    #  )
+    #end
 
-    def response
-      raise ResponseEmpty if request.parsed_response.empty?
-      request.kind_of?(Array) ? request.parsed_response.first : request.parsed_response
-    rescue ResponseEmpty => e
-      e.message
-    end
+    #def response
+    #  raise ResponseEmpty if request.parsed_response.empty#?
+    #  request.kind_of?(Array) ? request.parsed_response.first : request.parsed_respons#e
+    #rescue ResponseEmpty => #e
+    #  e.message
+    #end
 
     def get_auth_token(email, password)
       response = call(:post, "/users/sign_in", body: { user_login: { email: email, password: password } })
