@@ -1,7 +1,6 @@
 .control
-  = form_tag nil do
+  %form
     %select.dropdown
-
       - %w(curl ruby).each do |key, value|
         %option{ :value => value }
           = key
