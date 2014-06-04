@@ -1,13 +1,13 @@
 ---
 
 category_name: creative_chain
-title: 画像の関連の更新　(回答補助項目から)
+title: 画像の関連の更新(回答補助項目から)
 action: update
 parent_klass: sub_item
 
 ---
 
-# 画像の関連の更新　(回答補助項目から)
+# 画像の関連の更新(回答補助項目から)
 
 ## 回答補助項目に使用されている画像の関連を更新します。
 
