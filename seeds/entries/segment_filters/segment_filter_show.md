@@ -10,7 +10,7 @@ action: show
 
 ## セグメントのフィルターを取得します。
 
-`GET https://creativesurvey.com/api/v1/segment_filters/segment_filter_id`
+`GET https://creativesurvey.com/api/v1/segment_filters/:id`
 
 id _(必須)_:
 : __integer__

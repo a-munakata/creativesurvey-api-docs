@@ -10,7 +10,7 @@ action: update
 
 ## セグメントのフィルターを更新します。
 
-`PUT https://creativesurvey.com/api/v1/segment_filters/segment_filter_id`
+`PUT https://creativesurvey.com/api/v1/segment_filters/:id`
 
 id _(必須)_:
 : __integer__
