@@ -1,9 +1,9 @@
 # encoding: utf-8
 
-require "test_helpers/dynamic_entry"
+require 'test/helpers/entries_wrapper'
 
 module TestHelpers
-  class MdTester
+  class EntriesWrapper
     attr_accessor :end_point,
                   :entries,
                   :safe_resources
@@ -14,8 +14,7 @@ module TestHelpers
       @creatable_entries = @entries.select{|a| a.action == "create" }
       @safe_resources    = {}
 
-      self.create_survey
-      self.create_questionnaire
+      self.setup_resources
     end
 
     def retrieve(target=nil)
@@ -34,6 +33,9 @@ module TestHelpers
     end
 
     def setup_resources
+      self.create_survey
+      self.create_questionnaire
+
       puts "started setup resources..."
       @tmp_result = {}
       @creatable_entries.each{ |e|
@@ -46,11 +48,19 @@ module TestHelpers
         @safe_resources.each do |safe_resource, safe_id|
 
           @tmp_result[safe_resource.to_s.pluralize].present? && @tmp_result[safe_resource.to_s.pluralize].each do |entry|
-            response = entry.call( entry.method, entry.request_path(parent_resource_id: safe_id.to_s), entry.default_params )
-            instance_variable_set "@#{entry.resource_name.to_s}_id", response["id"].present? ? response["id"] : response.parsed_response
+            begin
+              entry.parent_resource_id = safe_id.to_s
 
-            tmp_resources[entry.resource_name] = instance_variable_get("@#{entry.resource_name.to_s}_id".to_sym)
+              response = entry.call( entry.method, entry.request_path(parent_resource_id: safe_id.to_s), entry.default_params )
+              instance_variable_set "@#{entry.resource_name.to_s}_id", response["id"].present? ? response["id"] : response.parsed_response
 
+              tmp_resources[entry.resource_name] = instance_variable_get("@#{entry.resource_name.to_s}_id".to_sym)
+            rescue => e
+              tmp_resources[entry.resource_name] = instance_variable_get("@#{entry.resource_name.to_s}_id".to_sym)
+              puts "setup failed"
+              puts e.message
+              puts e.backtrace
+            end
           end
 
           @tmp_result.delete(safe_resource.to_s.pluralize)

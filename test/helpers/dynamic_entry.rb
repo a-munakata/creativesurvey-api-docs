@@ -13,7 +13,8 @@ module TestHelpers
     attr_accessor :auth_token,
                   :default_params,
                   :end_point,
-                  :request_path
+                  :request_path,
+                  :parent_resource_id
 
     def self.api_version
       "V1"
@@ -30,16 +31,16 @@ module TestHelpers
       @password        = default_params.delete(:password)  || ENV["CS_PASSWORD"]
       @auth_token      = self.get_auth_token(@email, @password)
       @default_params  = default_params
-      @default_params  = @default_params.deep_merge( body: { :auth_token => @auth_token } )
+      @default_params.deep_merge!( body: { :auth_token => @auth_token } )
 
       set_params
     end
 
     def set_params
       if required_params?("name")
-        @default_params.deep_merge({ body: { resource_name => { name: "new_#{resource_name.to_sym}" }} })
+        @default_params.deep_merge!({ body: { resource_name => { name: "new_#{resource_name.to_sym}" }} })
       elsif required_params?("step_num")
-        @default_params.deep_merge({ body: { resource_name => { step_num: 5 }} }
+        @default_params.deep_merge!({ body: { resource_name => { step_num: 5 }} }
         )
       end
     end
@@ -58,7 +59,7 @@ module TestHelpers
       response["auth_token"]
     end
 
-  private
+  #private
 
     def required_params?(param)
       @_body.present? && @_body.scan(/.*必須.*/).any?{|w| w.match(param) }
