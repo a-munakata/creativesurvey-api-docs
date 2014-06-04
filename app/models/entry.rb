@@ -84,4 +84,5 @@ class Entry
       :segment
     ]
   end
+
 end
