@@ -79,6 +79,9 @@ module TestHelpers
         entry.required_id = @safe_resources[
           entry.parent_resource_name.try(:singularize).try(:to_sym)
         ].try(:to_s)
+
+        entry.required_id = @survey_id.to_s                      if entry.resource_name == :egression
+        entry.required_id = entry.candidate_parent_id.try(:to_s) if entry.required_id.nil?
       end
     end
 
@@ -86,7 +89,7 @@ module TestHelpers
       @survey            = @creatable_entries.find{|entry| entry.is_survey? }
       @options           = { body: { survey: { name: "Docs Test at #{Date.today.strftime("%y%m%d")}" } } }
       @survey_id         = @survey.call( @survey.method, "#{@survey.request_path}", @options )["id"]
-      @safe_resources[:survey]        = @survey_id
+      @safe_resources[:survey] = @survey_id
       @creatable_entries.delete_if{ |e| e.resource_name == :survey }
     end
 

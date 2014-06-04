@@ -15,7 +15,9 @@ module TestHelpers
                   :joined_params,
                   :end_point,
                   :request_path,
-                  :required_id
+                  :required_id,
+                  :additional_params,
+                  :candidate_parent_id
 
     def self.api_version
       "V1"
@@ -43,7 +45,7 @@ module TestHelpers
       if required_params?("name")
         @default_params.deep_merge!({ body: { resource_name => { name: "new_#{resource_name.to_sym}" }} })
       elsif required_params?("step_num")
-        @default_params.deep_merge!({ body: { resource_name => { step_num: 5 }} }
+        @default_params.deep_merge!({ body: { resource_name => { step_num: 1 }} }
         )
       end
     end
@@ -54,9 +56,7 @@ module TestHelpers
 
     def request_path(params={})
       base_path     = @_body.match(/(?<=`).*(?=`)/).to_s.gsub(/.*\/api\/.*?\/.*?/,"/")
-      required_id   = @required_id
-
-      @request_path = required_id.present? ? base_path.gsub(/:id/, required_id ) : base_path
+      @request_path = @required_id.present? ? base_path.gsub(/:id/, @required_id ) : base_path
     end
 
     def get_auth_token(email, password)
@@ -74,6 +74,18 @@ module TestHelpers
 
     def is_survey?
       resource_name == :survey
+    end
+
+    def candidate_parent_id
+      # TODO: environmentによって値が変更されなければならない / 削除されてはならない
+      id_set = {
+        panel: 3810,
+        font: 1,
+        design: 1,
+        page_order_item: 13
+      }
+
+      id_set[parent_resource_name.try(:singularize).try(:to_sym)]
     end
   end
 end
