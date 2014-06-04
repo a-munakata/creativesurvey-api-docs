@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-require 'test/helpers/entries_wrapper'
+require 'test/helpers/dynamic_entry'
 
 module TestHelpers
   class EntriesWrapper
@@ -25,10 +25,10 @@ module TestHelpers
         @entry = TestHelpers::DynamicEntry.new(
           file, { email: ENV["CS_USER"], password: ENV["CS_PASSWORD"], end_point: @end_point }
         )
-      }.sort  { |a, b| a.parent_klass_order_index <=> b.parent_klass_order_index
-      }.sort  { |a, b| a.order_index <=> b.order_index
       }.select{ |a|
         !%w(user overview error_example).include? a.resource_name.to_s
+      }.sort  { |a, b| a.parent_klass_order_index <=> b.parent_klass_order_index
+      }.sort  { |a, b| a.order_index <=> b.order_index
       }
     end
 
@@ -45,21 +45,22 @@ module TestHelpers
 
       while @tmp_result.length > 0
         tmp_resources = {}
+
         @safe_resources.each do |safe_resource, safe_id|
-
-          @tmp_result[safe_resource.to_s.pluralize].present? && @tmp_result[safe_resource.to_s.pluralize].each do |entry|
+          entries = @tmp_result[safe_resource.to_s.pluralize]
+          entries.present? && entries.each do |entry|
             begin
-              entry.parent_resource_id = safe_id.to_s
+              entry.required_id        = safe_id.to_s
 
-              response = entry.call( entry.method, entry.request_path(parent_resource_id: safe_id.to_s), entry.default_params )
-              instance_variable_set "@#{entry.resource_name.to_s}_id", response["id"].present? ? response["id"] : response.parsed_response
+              response   = entry.call
+              created_id = response["id"].present? ? response["id"] : response.parsed_response
 
-              tmp_resources[entry.resource_name] = instance_variable_get("@#{entry.resource_name.to_s}_id".to_sym)
+              tmp_resources[entry.resource_name] = created_id
             rescue => e
-              tmp_resources[entry.resource_name] = instance_variable_get("@#{entry.resource_name.to_s}_id".to_sym)
               puts "setup failed"
               puts e.message
               puts e.backtrace
+              tmp_resources[entry.resource_name] = created_id
             end
           end
 
