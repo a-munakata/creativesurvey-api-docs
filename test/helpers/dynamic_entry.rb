@@ -12,6 +12,7 @@ module TestHelpers
 
     attr_accessor :auth_token,
                   :default_params,
+                  :joined_params,
                   :end_point,
                   :request_path,
                   :required_id
@@ -35,6 +36,7 @@ module TestHelpers
       @default_params.deep_merge!( body: { :auth_token => @auth_token } )
 
       set_params
+      @joined_params   = @default_params[:body].collect{|k,v| v.kind_of?(Hash) ? v.collect{|kk, vv| "#{k}[#{kk}]=#{vv}"  } : "#{k}=#{v}"  }.join("&")
     end
 
     def set_params
@@ -64,6 +66,14 @@ module TestHelpers
 
     def required_params?(param)
       @_body.present? && @_body.scan(/.*必須.*/).any?{|w| w.match(param) }
+    end
+
+    def is_questionnaire?
+      action == "index" && resource_name == :questionnaire
+    end
+
+    def is_survey?
+      resource_name == :survey
     end
   end
 end

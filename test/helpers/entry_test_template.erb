@@ -1,0 +1,16 @@
+# encoding: utf-8
+
+require 'test_helper'
+<% require 'test/helpers/entries_wrapper' %>
+
+class EntryTest < ActiveSupport::TestCase
+<% wrapper = TestHelpers::EntriesWrapper.new %>
+<% wrapper.entries.each{|e| %>
+  <%= "data(\"#{e.title}\", [\"200\", `curl -X #{e.method.to_s.upcase} #{e.end_point}#{e.request_path} -d \"#{e.joined_params}\" -w \"%{http_code}\"`])"  %>
+<% } %>
+
+  def test_survey_response_code(data)
+    expected, response = data
+    assert_equal expected, response.match(/[0-9]{3}$/).to_s, "#{response}"
+  end
+end

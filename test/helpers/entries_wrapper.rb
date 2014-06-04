@@ -6,35 +6,36 @@ module TestHelpers
   class EntriesWrapper
     attr_accessor :end_point,
                   :entries,
-                  :safe_resources
+                  :safe_resources,
+                  :creatable_entries,
+                  :uncreatable_entries
 
     def initialize(end_point=nil)
-      @end_point         ||= (end_point || "http://localhost:9292/api/v1")
-      @entries           = retrieve
-      @creatable_entries = @entries.select{|a| a.action == "create" }
-      @safe_resources    = {}
+      @files = retrieve_files
 
-      self.setup_resources
+      @end_point          ||= (end_point || "http://localhost:9292/api/v1")
+      @entries             = retrieve
+      @creatable_entries   = @entries.select{|a| a.action == "create" }
+      @uncreatable_entries = @entries.select{|e| !@creatable_entries.collect{|c| c.title }.include? e.title }
+      @safe_resources      = {}
+
+      setup_resources
     end
 
-    def retrieve(target=nil)
+    def retrieve
       puts "started retrieving data..."
-      target_dir = target.nil? ? "**" : target
 
-      @retrieve_result ||= Dir.glob(File.join(Rails.root, "seeds/entries/#{target_dir}/*.md")).collect { |file|
-        @entry = TestHelpers::DynamicEntry.new(
-          file, { email: ENV["CS_USER"], password: ENV["CS_PASSWORD"], end_point: @end_point }
-        )
-      }.select{ |a|
-        !%w(user overview error_example).include? a.resource_name.to_s
+      @retrieved_result ||= @files.collect { |file|
+        TestHelpers::DynamicEntry.new( file, { end_point: @end_point } )
       }.sort  { |a, b| a.parent_klass_order_index <=> b.parent_klass_order_index
-      }.sort  { |a, b| a.order_index <=> b.order_index
-      }
+      }.sort  { |a, b| a.order_index <=> b.order_index }
     end
+
+    private
 
     def setup_resources
-      self.create_survey
-      self.create_questionnaire
+      create_survey
+      create_questionnaire
 
       puts "started setup resources..."
       @tmp_result = {}
@@ -47,10 +48,11 @@ module TestHelpers
         tmp_resources = {}
 
         @safe_resources.each do |safe_resource, safe_id|
+
           entries = @tmp_result[safe_resource.to_s.pluralize]
           entries.present? && entries.each do |entry|
             begin
-              entry.required_id        = safe_id.to_s
+              entry.required_id = safe_id.to_s
 
               response   = entry.call
               created_id = response["id"].present? ? response["id"] : response.parsed_response
@@ -66,15 +68,22 @@ module TestHelpers
 
           @tmp_result.delete(safe_resource.to_s.pluralize)
         end
-
         @safe_resources.merge!(tmp_resources)
-
       end
 
+      set_ids
+    end
+
+    def set_ids
+      @uncreatable_entries.each do |entry|
+        entry.required_id = @safe_resources[
+          entry.parent_resource_name.try(:singularize).try(:to_sym)
+        ].try(:to_s)
+      end
     end
 
     def create_survey
-      @survey            = @creatable_entries.find{|e| e.resource_name == :survey }
+      @survey            = @creatable_entries.find{|entry| entry.is_survey? }
       @options           = { body: { survey: { name: "Docs Test at #{Date.today.strftime("%y%m%d")}" } } }
       @survey_id         = @survey.call( @survey.method, "#{@survey.request_path}", @options )["id"]
       @safe_resources[:survey]        = @survey_id
@@ -82,11 +91,16 @@ module TestHelpers
     end
 
     def create_questionnaire
-      @questionnaire     = @entries.find{ |a| a.action == "index" && a.resource_name == "questionnaire".to_sym}
+      @questionnaire     = @entries.find{ |entry| entry.is_questionnaire? }
       @questionnaire_id  = @survey.call( :get, "/surveys/#{@survey_id}/questionnaires", @questionnaire.default_params ).first["id"]
       @safe_resources[:questionnaire] = @questionnaire_id
       @creatable_entries.delete_if{ |e| e.resource_name == :questionnaire }
     end
 
+    def retrieve_files
+      Dir.glob(File.join(Rails.root, "seeds/entries/**/*.md")).select { |file|
+        !File.basename(file).match(/user|overview|error_example/)
+      }
+    end
   end
 end
