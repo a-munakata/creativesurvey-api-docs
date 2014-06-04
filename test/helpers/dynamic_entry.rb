@@ -9,6 +9,7 @@ module TestHelpers
 
     class ResponseEmpty < Exception; end
     class RequestEmpty < Exception; end
+    class UnCreatableResourceError < Exception; end
 
     attr_accessor :auth_token,
                   :default_params,
@@ -54,6 +55,15 @@ module TestHelpers
       self.class.send( method, "#{@end_point}#{path}", (@default_params||{}).deep_merge(params) )
     end
 
+    #def create
+    #  raise UnCreatableResourceError, "このエントリは作成出来ません。" if method != :create
+    #  if parent_resource_name == resource_name
+    #    call
+    #  else
+    #
+    #  end
+    #end
+
     def request_path(params={})
       base_path     = @_body.match(/(?<=`).*(?=`)/).to_s.gsub(/.*\/api\/.*?\/.*?/,"/")
       @request_path = @required_id.present? ? base_path.gsub(/:id/, @required_id ) : base_path
@@ -85,7 +95,7 @@ module TestHelpers
         page_order_item: 13
       }
 
-      id_set[parent_resource_name.try(:singularize).try(:to_sym)]
+      id_set[parent_resource_name]
     end
   end
 end

@@ -40,8 +40,8 @@ module TestHelpers
       puts "started setup resources..."
       @tmp_result = {}
       @creatable_entries.each{ |e|
-        @tmp_result[e.parent_resource_name || "surveys"] ||= []
-        @tmp_result[e.parent_resource_name || "surveys"] << e
+        @tmp_result[e.parent_resource_name || :survey] ||= []
+        @tmp_result[e.parent_resource_name || :survey] << e
       }
 
       while @tmp_result.length > 0
@@ -49,7 +49,7 @@ module TestHelpers
 
         @safe_resources.each do |safe_resource, safe_id|
 
-          entries = @tmp_result[safe_resource.to_s.pluralize]
+          entries = @tmp_result[safe_resource]
           entries.present? && entries.each do |entry|
             begin
               entry.required_id = safe_id.to_s
@@ -66,7 +66,7 @@ module TestHelpers
             end
           end
 
-          @tmp_result.delete(safe_resource.to_s.pluralize)
+          @tmp_result.delete(safe_resource)
         end
         @safe_resources.merge!(tmp_resources)
       end
@@ -77,7 +77,7 @@ module TestHelpers
     def set_ids
       @uncreatable_entries.each do |entry|
         entry.required_id = @safe_resources[
-          entry.parent_resource_name.try(:singularize).try(:to_sym)
+          entry.parent_resource_name
         ].try(:to_s)
 
         entry.required_id = @survey_id.to_s                      if entry.resource_name == :egression
