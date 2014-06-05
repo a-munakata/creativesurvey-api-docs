@@ -87,8 +87,7 @@ module TestHelpers
 
     def create_survey
       @survey            = @creatable_entries.find{|entry| entry.is_survey? }
-      @options           = { body: { survey: { name: "Docs Test at #{Date.today.strftime("%y%m%d")}" } } }
-      @survey_id         = @survey.call( @survey.method, "#{@survey.request_path}", @options )["id"]
+      @survey_id         = @survey.call["id"]
       @safe_resources[:survey] = @survey_id
       @creatable_entries.delete_if{ |e| e.resource_name == :survey }
     end
