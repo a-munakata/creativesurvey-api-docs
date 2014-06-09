@@ -53,7 +53,7 @@ module TestHelpers
       return if parent_resource_name.nil?
 
       parent_file = Dir.glob(File.join(Rails.root, "seeds/entries/**/*.md")).find{ |file|
-        reg = "#{parent_resource_name.to_s}_#{action.to_s}"
+        reg = "#{parent_resource_name.to_s}_index"
         file.match(reg)
       }
 
@@ -95,7 +95,7 @@ module TestHelpers
         result.merge!({ resource.resource_name => @tmp_id })
       end
 
-      puts "created #{result}"
+      puts "created #{result}" if result.present?
       @parent_id = safe_id_set[parent_resource_name] if safe_id_set.include? parent_resource_name
       create_self
       @parent_id
@@ -127,15 +127,18 @@ module TestHelpers
     def request_path(params={})
       create_ancestors
       base_path     = @_body.match(/(?<=`).*(?=`)/).to_s.gsub(/.*\/api\/.*?\/.*?/,"/")
-      puts "request at #{resource_name}##{action}"
-
-      @required_id  = @candidate_parent_id if @required_id.nil?
-      @required_id  = @parent_id           if @parent_id.present?
+      @required_id  = candidate_parent_id if @required_id.nil?
+      @required_id  = @parent_id           if @parent_id.present? && !is_creative_chain?
       @request_path = @required_id.present? ? base_path.gsub(/:id/, @required_id.to_s ) : base_path
     end
 
     def candidate_parent_id
-      @candidate_parent_id ||= safe_id_set[parent_resource_name]
+      resource = (is_creative_chain? ? resource_name : parent_resource_name)
+      @candidate_parent_id ||= safe_id_set[resource]
+    end
+
+    def is_creative_chain?
+      resource_name == :creative_chain
     end
 
     def safe_id_set
@@ -148,7 +151,8 @@ module TestHelpers
         design: 1,
         questionnaire: 1,
         page_order_item: 13,
-        egression: 1
+        egression: 1,
+        creative_chain: 9650
       }
     end
 
