@@ -8,10 +8,8 @@ module TestHelpers
   class DynamicEntry < Entry
     include HTTParty
 
-    class ResponseEmpty < Exception; end
-    class RequestEmpty < Exception; end
     class UnCreatableResourceError < Exception; end
-    class NoParentIdGivenError < Exception; end
+    class NoParentIdGivenError     < Exception; end
 
     attr_accessor :auth_token,
                   :default_params,
@@ -22,7 +20,8 @@ module TestHelpers
                   :additional_params,
                   :candidate_parent_id,
                   :parent_id,
-                  :tmp_id
+                  :tmp_id,
+                  :created_resources
 
     def self.api_version
       "v1"
@@ -46,6 +45,9 @@ module TestHelpers
     end
 
     def call(method=self.method, path=self.request_path, params=@default_params)
+      if resource_name == :randomizer && method == :put
+        reset_resource("randomizer")
+      end
       self.class.send( method, "#{@end_point}#{path}", (@default_params||{}).deep_merge(params) )
     end
 
@@ -75,7 +77,7 @@ module TestHelpers
     end
 
     def create_ancestors
-      result = {}
+      @created_resources ||= {}
       tree   = family_tree
 
       while tree.length > 0
@@ -92,10 +94,10 @@ module TestHelpers
 
         @parent_id = @tmp_id
 
-        result.merge!({ resource.resource_name => @tmp_id })
+        @created_resources.merge!({ resource.resource_name => @tmp_id })
       end
 
-      puts "created #{result}" if result.present?
+      puts "created #{@created_resources}" if @created_resources.present?
       @parent_id = safe_id_set[parent_resource_name] if safe_id_set.include? parent_resource_name
       create_self
       @parent_id
@@ -127,7 +129,7 @@ module TestHelpers
     def request_path(params={})
       create_ancestors
       base_path     = @_body.match(/(?<=`).*(?=`)/).to_s.gsub(/.*\/api\/.*?\/.*?/,"/")
-      @required_id  = candidate_parent_id if @required_id.nil?
+      @required_id  = candidate_parent_id  if @required_id.nil?
       @required_id  = @parent_id           if @parent_id.present? && !is_creative_chain?
       @request_path = @required_id.present? ? base_path.gsub(/:id/, @required_id.to_s ) : base_path
     end
@@ -138,7 +140,7 @@ module TestHelpers
     end
 
     def is_creative_chain?
-      resource_name == :creative_chain
+      method == :put && resource_name == :creative_chain
     end
 
     def safe_id_set
@@ -157,8 +159,12 @@ module TestHelpers
     end
 
     def reset_resource(resource)
-      entry = TestHelpers::DynamicEntry.new("/Volumes/data/workspace/CreativeSUrvey/2.0_TONARI_ALL/REPOS/a-munakata/docs/seeds/entries/#{resource.pluralize}/#{resource}_index.md")
-      @ids = entry.call.parsed_response.collect{|obj| obj["id"] }
+      entry = TestHelpers::DynamicEntry.new(File.join(Rails.root, "/seeds/entries/#{resource.pluralize}", "#{resource}_index.md"))
+      @ids = entry.class.
+        send( entry.method, "#{entry.end_point}#{entry.request_path}", (entry.default_params||{}) ).
+        parsed_response.
+        collect{|obj| obj["id"] }
+      @ids.delete(required_id)
       @ids.each{ |id| call(:delete, "/#{resource.pluralize}/#{id}") }
     end
 
@@ -166,16 +172,26 @@ module TestHelpers
 
     def set_params
       if required_params?("name")
-        @default_params.deep_merge!({ body: { resource_name => { name: "new_#{resource_name.to_sym}" }} })
+        @default_params.deep_merge!({ body: { resource_name => {
+          name: "new_#{resource_name.to_sym}"
+        }} })
       elsif required_params?("step_num")
         @default_params.deep_merge!({ body: { resource_name => {
           step_num: 1,
           start_index: 0,
           end_index: 1
-        }} })
+        }} }) if method == :put
+
+        @default_params.deep_merge!({ body: { resource_name => {
+          step_num: 1,
+          start_index: 1,
+          end_index: 2
+        }} }) if method == :create
       end
 
-      @joined_params = @default_params[:body].collect{ |k,v| v.kind_of?(Hash) ? v.collect{|kk, vv| "#{k}[#{kk}]=#{vv}"  } : "#{k}=#{v}"  }.join("&")
+      @joined_params = @default_params[:body].collect{ |k,v|
+        v.kind_of?(Hash) ? v.collect{|kk, vv| "#{k}[#{kk}]=#{vv}"  } : "#{k}=#{v}"
+      }.join("&")
     end
 
     def get_auth_token(email, password)
