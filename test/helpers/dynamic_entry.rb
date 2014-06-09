@@ -168,31 +168,41 @@ module TestHelpers
       @ids.each{ |id| call(:delete, "/#{resource.pluralize}/#{id}") }
     end
 
+    def avoid_randomizer_error
+      resource = "question"
+      2.times {create_question}
+      entry = TestHelpers::DynamicEntry.new(File.join(Rails.root, "/seeds/entries/#{resource.pluralize}", "#{resource}_index.md"))
+
+      @questions_count = entry.class.
+        send( entry.method, "#{entry.end_point}/questionnaires/1/#{resource.pluralize}", (entry.default_params||{}) ).
+        parsed_response.
+        count
+    end
+
     private
 
     def set_params
+      @default_params ||= { body: {}}
       if required_params?("name")
         @default_params.deep_merge!({ body: { resource_name => {
           name: "new_#{resource_name.to_sym}"
         }} })
       elsif required_params?("step_num")
-        @default_params.deep_merge!({ body: { resource_name => {
-          step_num: 1,
-          start_index: 0,
-          end_index: 1
-        }} }) if method == :put
+        @questions_count = 1   if method != :put
+        avoid_randomizer_error if method == :put
 
         @default_params.deep_merge!({ body: { resource_name => {
           step_num: 1,
-          start_index: 1,
-          end_index: 2
-        }} }) if method == :create
+          start_index: @questions_count - 1,
+          end_index: @questions_count
+        }} })
       end
 
       @joined_params = @default_params[:body].collect{ |k,v|
         v.kind_of?(Hash) ? v.collect{|kk, vv| "#{k}[#{kk}]=#{vv}"  } : "#{k}=#{v}"
       }.join("&")
     end
+
 
     def get_auth_token(email, password)
       response = call(:post, "/users/sign_in", body: { user_login: { email: email, password: password } })
