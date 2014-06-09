@@ -20,6 +20,7 @@ class Entry
   def initialize(doc_file, options=nil)
     @_header, @_body = Preamble.load(doc_file)
     @_base_name      = File.basename(doc_file, ".md")
+    @_file_name      = doc_file
   end
 
   def header;       @_header                 end
@@ -49,6 +50,10 @@ class Entry
 
   def resource_name
     @_header["category_name"].to_sym
+  end
+
+  def file_name
+    @_file_name
   end
 
   def static_response

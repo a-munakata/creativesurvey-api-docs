@@ -20,14 +20,15 @@ module TestHelpers
                   :request_path,
                   :required_id,
                   :additional_params,
-                  :candidate_parent_id
+                  :candidate_parent_id,
+                  :parent_id,
+                  :tmp_id
 
     def self.api_version
-      "V1"
+      "v1"
     end
 
     def self.end_point
-      #"http://creativesurvey.com/api/#{self.api_version}"
       "http://localhost:9292/api/#{self.api_version}"
     end
 
@@ -37,22 +38,11 @@ module TestHelpers
       @email           = default_params.delete(:email)     || ENV["CS_USER"]
       @password        = default_params.delete(:password)  || ENV["CS_PASSWORD"]
       @required_id     = default_params.delete(:required_id)
-      @auth_token      = self.get_auth_token(@email, @password)
+      @auth_token      = get_auth_token(@email, @password)
       @default_params  = default_params
-      @default_params.deep_merge!( body: { :auth_token => @auth_token } )
+      @default_params.deep_merge!( body: { :auth_token =>  @auth_token } )
 
       set_params
-    end
-
-    def set_params
-      if required_params?("name")
-        @default_params.deep_merge!({ body: { resource_name => { name: "new_#{resource_name.to_sym}" }} })
-      elsif required_params?("step_num")
-        @default_params.deep_merge!({ body: { resource_name => { step_num: 1 }} }
-        )
-      end
-
-      @joined_params = @default_params[:body].collect{ |k,v| v.kind_of?(Hash) ? v.collect{|kk, vv| "#{k}[#{kk}]=#{vv}"  } : "#{k}=#{v}"  }.join("&")
     end
 
     def call(method=self.method, path=self.request_path, params=@default_params)
@@ -68,10 +58,7 @@ module TestHelpers
       }
 
       return if parent_file.nil?
-      parent_entry            = DynamicEntry.new(parent_file)
-      parent_entry.auth_token = get_auth_token(@email, @password)
-      parent_entry.required_id= parent_entry.candidate_parent_id if parent_entry.candidate_parent_id.present?
-      parent_entry.joined_params   = set_params
+      parent_entry = DynamicEntry.new(parent_file)
       parent_entry.try(:resource_name) == parent_resource_name ? parent_entry : nil
     end
 
@@ -89,38 +76,94 @@ module TestHelpers
     end
 
     def create_ancestors
-      new_resources = []
-      tree          = family_tree
+      result = {}
+      tree   = family_tree
 
       while tree.length > 0
-        current_generation = tree.pop
+        resource = tree.pop
+        @tmp_id = create_survey["id"] if resource.parent_resource_name == :survey
+        @tmp_id = safe_id_set[resource.parent_resource_name] if resource.safe_id_set.include? resource.parent_resource_name
 
-        if current_generation.candidate_parent_id.present?
-          current_generation.required_id = current_generation.candidate_parent_id.to_s
+        if safe_id_set.keys.include? resource.resource_name
+          @tmp_id = safe_id_set[resource.resource_name]
         else
-          raise NoParentIdGivenError, "親リソースのidがありません : #{current_generation.resource_name}" unless instance_variable_get("@#{parent_resource_name.to_s}").present?
-          current_generation.required_id = instance_variable_get("@#{parent_resource_name.to_s}").to_s
+          created_resource = resource.send("create_" + "#{resource.resource_name}", @tmp_id.to_s)
+          @tmp_id = created_resource["id"]
         end
 
-        new_resource = current_generation.call
-        instance_variable_set("@#{current_generation.resource_name.to_s}", new_resource["id"].to_s)
+        @parent_id = @tmp_id
 
-        new_resources << new_resource
+        result.merge!({ resource.resource_name => @tmp_id })
       end
 
-      puts "#{family_tree.collect{|e| e.resource_name }.join(",") } has created."
-      new_resources
+      puts "created #{result}"
+      @parent_id = safe_id_set[parent_resource_name] if safe_id_set.include? parent_resource_name
+      create_self
+      @parent_id
     end
 
-    #def create
-    #  raise UnCreatableResourceError, "このエントリは作成出来ません。" if method != :post
-    #  call
-    #end
+    def create_self
+      if resource_name == parent_resource_name
+        @tmp_id = send("create_" + "#{resource_name}", @tmp_id.to_s)["id"] if candidate_parent_id.nil?
+        @tmp_id = candidate_parent_id if candidate_parent_id.present?
+        return @parent_id = @tmp_id
+      end
+    end
+
+    Dir.glob(File.join(Rails.root, "seeds/entries/**/*.md")).select{|file|
+      !File.basename(file).match(/user|overview|error_example/) && File.basename(file).match(/create/)
+    }.collect{|file| Entry.new(file).resource_name.to_s }.each do |resource_name|
+      class_eval <<-EOF
+        def create_#{resource_name}(required_id=nil)
+          dynamic_entry = TestHelpers::DynamicEntry.new(Dir.glob(File.join(Rails.root, "seeds/entries/**/*.md")).select { |file|
+            File.basename(file).match(/create/)
+          }.collect{|file| Entry.new(file) }.find{|a| a.resource_name == "#{resource_name}".to_sym}.file_name)
+
+          dynamic_entry.required_id = required_id
+          dynamic_entry.call
+        end
+      EOF
+    end
 
     def request_path(params={})
+      create_ancestors
       base_path     = @_body.match(/(?<=`).*(?=`)/).to_s.gsub(/.*\/api\/.*?\/.*?/,"/")
+      puts "request at #{resource_name}##{action}"
+
       @required_id  = @candidate_parent_id if @required_id.nil?
+      @required_id  = @parent_id           if @parent_id.present?
       @request_path = @required_id.present? ? base_path.gsub(/:id/, @required_id.to_s ) : base_path
+    end
+
+    def candidate_parent_id
+      @candidate_parent_id ||= safe_id_set[parent_resource_name]
+    end
+
+    def safe_id_set
+      # CREATEできないリソースのidを確保するためのものです。
+      # TODO: environmentによって値が変更されなければならない / リソースが削除されてはならない
+
+      {
+        panel: 3810,
+        font: 1,
+        design: 1,
+        questionnaire: 1,
+        page_order_item: 13,
+        egression: 1
+      }
+    end
+
+    private
+
+    def set_params
+      if required_params?("name")
+        @default_params.deep_merge!({ body: { resource_name => { name: "new_#{resource_name.to_sym}" }} })
+      elsif required_params?("step_num")
+        @default_params.deep_merge!({ body: { resource_name => { step_num: 1 }} }
+        )
+      end
+
+      @joined_params = @default_params[:body].collect{ |k,v| v.kind_of?(Hash) ? v.collect{|kk, vv| "#{k}[#{kk}]=#{vv}"  } : "#{k}=#{v}"  }.join("&")
     end
 
     def get_auth_token(email, password)
@@ -130,29 +173,6 @@ module TestHelpers
 
     def required_params?(param)
       @_body.present? && @_body.scan(/.*必須.*/).any?{|w| w.match(param) }
-    end
-
-    def is_questionnaire?
-      action == "index" && resource_name == :questionnaire
-    end
-
-    def is_survey?
-      resource_name == :survey
-    end
-
-    def candidate_parent_id
-      # CREATEできないリソースのidを確保するためのものです。
-      # TODO: environmentによって値が変更されなければならない / リソースが削除されてはならない
-
-      id_set = {
-        panel: 3810,
-        font: 1,
-        design: 1,
-        questionnaire: 1,
-        page_order_item: 13
-      }
-
-      @candidate_parent_id = id_set[parent_resource_name]
     end
   end
 end
