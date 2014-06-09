@@ -68,7 +68,6 @@ module TestHelpers
 
       while target.present?
         return [] if resource_name == parent_resource_name
-        puts "#{target.resource_name}......................"
         tree << target
         target = target.parent
       end
@@ -153,14 +152,23 @@ module TestHelpers
       }
     end
 
+    def reset_resource(resource)
+      entry = TestHelpers::DynamicEntry.new("/Volumes/data/workspace/CreativeSUrvey/2.0_TONARI_ALL/REPOS/a-munakata/docs/seeds/entries/#{resource.pluralize}/#{resource}_index.md")
+      @ids = entry.call.parsed_response.collect{|obj| obj["id"] }
+      @ids.each{ |id| call(:delete, "/#{resource.pluralize}/#{id}") }
+    end
+
     private
 
     def set_params
       if required_params?("name")
         @default_params.deep_merge!({ body: { resource_name => { name: "new_#{resource_name.to_sym}" }} })
       elsif required_params?("step_num")
-        @default_params.deep_merge!({ body: { resource_name => { step_num: 1 }} }
-        )
+        @default_params.deep_merge!({ body: { resource_name => {
+          step_num: 1,
+          start_index: 0,
+          end_index: 1
+        }} })
       end
 
       @joined_params = @default_params[:body].collect{ |k,v| v.kind_of?(Hash) ? v.collect{|kk, vv| "#{k}[#{kk}]=#{vv}"  } : "#{k}=#{v}"  }.join("&")
