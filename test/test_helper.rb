@@ -1,6 +1,6 @@
 ENV["RAILS_ENV"] = "test"
 require File.expand_path('../../config/environment', __FILE__)
-#require 'rails/test_help'
+require 'rails/test_help'
 require 'test/unit/rails/test_help'
 
 class ActiveSupport::TestCase
@@ -11,4 +11,10 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all test_helpers here...
+
+  def get_entries
+    TestHelpers::MdTester.new.retrieve.select{|a|
+      !%w(user overview error_example).include? a.resource_name.to_s
+    }
+  end
 end

@@ -3,6 +3,7 @@
 category_name: panel
 title: 回答者一覧の取得
 action: index
+parent_klass: survey
 
 ---
 

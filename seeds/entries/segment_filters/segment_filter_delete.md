@@ -10,7 +10,7 @@ action: delete
 
 ## セグメントのフィルターを削除します。
 
-`DELETE https://creativesurvey.com/api/v1/segment_filters/segment_filter_id`
+`DELETE https://creativesurvey.com/api/v1/segment_filters/:id`
 
 id _(必須)_:
 : __integer__

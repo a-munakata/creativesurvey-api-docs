@@ -1,13 +1,13 @@
 ---
 
 category_name: creative_chain
-title: 画像の関連一覧の取得 (回答項目から)
+title: 画像の関連一覧の取得(回答項目から)
 action: index
 parent_klass: answer_item
 
 ---
 
-# 画像の関連一覧の取得 (回答項目から)
+# 画像の関連一覧の取得(回答項目から)
 
 ## 回答項目に使用されている画像の関連を取得します。
 

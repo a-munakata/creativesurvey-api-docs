@@ -1,18 +1,17 @@
+# encoding: utf-8
+
 require 'test_helper'
-require 'test_helpers/dynamic_entry'
+require 'test/helpers/dynamic_entry'
+require 'test/helpers/entries_wrapper'
 
 class EntryTest < ActiveSupport::TestCase
-  def setup
-    @entry = TestHelpers::DynamicEntry.new(
-      "/Volumes/data/workspace/CreativeSurvey/2.0_TONARI_ALL/REPOS/a-munakata/docs/seeds/entries/answer_items/answer_item_create.md",
-      { email:     "a.munakata@4digit.jp",
-        password:  "fourdigit",
-        end_point: "http://localhost:9292/api/v1"
-      }
-    )
-  end
-
-  def test_attributes_existence
-    assert @entry.response.keys.all?{|param| @entry.static_response.keys.include? param }
-  end
+  #TestHelpers::EntriesWrapper.new.entries.each_with_index{ |entry|
+  #  parent_klass = entry.parent_klass.present? ? entry.parent_klass : ""
+  #
+  #  define_method("test_response_code_in_#{entry.action}_#{entry.resource_name.to_s}#{parent_klass}") do
+  #    response = entry.call
+  #    message  = "invalid status code at #{entry.title}\nreturned #{response.code}\n#{response.parsed_response}"
+  #    assert response.code == 200, message
+  #  end
+  #}
 end
