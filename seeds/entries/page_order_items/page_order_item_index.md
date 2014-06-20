@@ -14,7 +14,7 @@ action: index
 
 id _(必須)_:
 : __integer__
-: 対象の質問表id
+: 対象の質問票id
 
 ~~~
 

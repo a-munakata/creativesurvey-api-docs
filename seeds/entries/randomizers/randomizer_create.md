@@ -14,7 +14,7 @@ action: create
 
 id _(必須)_:
 : __integer__
-: ランダム設定を指定する質問表のid
+: ランダム設定を指定する質問票のid
 
 step_num _(必須)_:
 : __integer__

@@ -14,7 +14,7 @@ action: create
 
 id _(必須)_:
 : __integer__
-: 質問を作成する質問表のid
+: 質問を作成する質問票のid
 
 question_type _(必須)_:
 : __integer__ _(デフォルト: 1)_

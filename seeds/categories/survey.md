@@ -16,7 +16,7 @@ title: アンケート
 |リレーション|リソース名|日本語名|
 |:---|:---|:---|
 |1対1|[design](#design)|デザイン|
-||[questionnaire](#questionnaire)|質問表|
+||[questionnaire](#questionnaire)|質問票|
 |1対n|[segments](#segment)|セグメント設定|
 ||[collectors](#collector)|公開設定|
 ||[panels](#panel)|回答者|

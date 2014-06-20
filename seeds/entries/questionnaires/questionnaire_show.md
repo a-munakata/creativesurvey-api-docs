@@ -1,20 +1,20 @@
 ---
 
 category_name: questionnaire
-title: 質問表の取得
+title: 質問票の取得
 action: show
 
 ---
 
-# 質問表の取得
+# 質問票の取得
 
-## 質問表を取得します。
+## 質問票を取得します。
 
 `GET https://creativesurvey.com/api/v1/questionnaires/:id`
 
 id _(必須)_:
 : __integer__
-: 取得する質問表のid
+: 取得する質問票のid
 
 ~~~
 

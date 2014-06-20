@@ -1,14 +1,14 @@
 ---
 
 category_name: questionnaire
-title: 質問表一覧の取得
+title: 質問票一覧の取得
 action: index
 
 ---
 
-# 質問表一覧の取得
+# 質問票一覧の取得
 
-## 質問表を一覧で取得します。
+## 質問票を一覧で取得します。
 
 `GET https://creativesurvey.com/api/v1/surveys/:id/questionnaires`
 

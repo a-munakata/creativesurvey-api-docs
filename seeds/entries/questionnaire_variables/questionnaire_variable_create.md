@@ -14,7 +14,7 @@ action: create
 
 id _(必須)_:
 : __integer__
-: 置き換え変数設定を取得したい質問表のid
+: 置き換え変数設定を取得したい質問票のid
 
 result_type _(必須)_:
 : __integer__ _(デフォルト: null)_

@@ -13,4 +13,4 @@ title: 質問順序
 |リレーション|リソース名|日本語名|
 |:---|:---|:---|
 |1対1|[question](#question)|質問|
-|n対1|[questionnaire](#questionnaire)|質問表|
+|n対1|[questionnaire](#questionnaire)|質問票|

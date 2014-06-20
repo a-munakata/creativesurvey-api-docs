@@ -1,13 +1,14 @@
 ---
 
 name: questionnaire
-title: 質問表
+title: 質問票
 
 ---
 
 |メソッド|概要|
 |:---|:---|
 |show|[GET /api/v1/questionnaires/:id](#questionnaire_show)|
+|index|[GET /api/v1/surveys/:id/questionnaires](#questionnaire_index)|
 
 |リレーション|リソース名|日本語名|
 |:---|:---|:---|

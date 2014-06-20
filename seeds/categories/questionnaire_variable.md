@@ -16,4 +16,4 @@ title: 置き換え変数設定
 
 |リレーション|リソース名|日本語名|
 |:---|:---|:---|
-|n対1|[questionnaire](#questionnaire)|質問表|
+|n対1|[questionnaire](#questionnaire)|質問票|

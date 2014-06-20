@@ -12,5 +12,5 @@ title: 最終画面
 
 |リレーション|リソース名|日本語名|
 |:---|:---|:---|
-|1対1|[questionnaire](#questionnaire)|質問表|
+|1対1|[questionnaire](#questionnaire)|質問票|
 ||[creative_chain](#creative_chain)|画像の関連|
