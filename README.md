@@ -1,7 +1,6 @@
 # CREATIVE SURVEY API DOCUMENTATION
 
-All sources of documentation are maintained with Markdown files.
-You can easily write documentation, and export data.
+ドキュメンテーションに関わるソースはマークダウンのファイルで管理されています。
 
 ## Setting
 
@@ -9,16 +8,30 @@ You can easily write documentation, and export data.
 $ bundle install
 ```
 
-## Exporting HTML file
+## 静的ファイルの生成
 
-Just push the Exporting button on UI.
+このアプリケーションを起動し、ルートにアクセスします。
+Export HTMLと言うボタンをクリックすると、`public/source`以下に静的ファイルが生成されます。
 
 
-## After changing assets
+## assetsの変更
+javascript, stylesheetの変更を行った場合、下記のコマンドでsource以下のファイルがアップデートされます。
+ファイルはそれぞれ以下に生成されます。
 
-This command will precompile assets and export them into public/source/javascripts and public/source/stylesheets dirs.
+- public/source/javascripts
+- public/source/stylesheets
+
 
 ```
 $ bundle exec rake assets:update
+```
+
+
+## Test
+
+下記コマンドでテストファイルを出力します。
+
+```
+$ bundle exec rake test:export
 ```
 
