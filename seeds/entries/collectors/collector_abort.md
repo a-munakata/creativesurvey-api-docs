@@ -25,6 +25,7 @@ https://creativesurvey.com/api/v1/collectors/547/abort \
 
 レスポンス例
 {
+  "url": "",
   "created_at": "2014-04-29T23:09:23+09:00",
   "updated_at": "2014-05-28T12:46:25+09:00",
   "survey_id": 520,

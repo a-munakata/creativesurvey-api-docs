@@ -5,6 +5,8 @@ title: 公開設定
 
 ---
 
+アンケートの公開URLは公開設定(collector)の[urlパラメータより取得](#collector_index)する事が出来ます。
+
 |メソッド|概要|
 |:---|:---|
 |index|[GET /api/v1/surveys/:id/collectors](#collector_index)|
