@@ -35,7 +35,7 @@ attachable_id:
 
 リクエスト例
 $ curl -X PUT https://creativesurvey.com/api/v1/questions/creative_chains/9650 \
--d "auth_token=YourAuthToken" \
+-d "auth_token=sample_auth_token" \
 -d "creative_chain[attachable_id]=1918" \
 -d "creative_chain[creative_id]=3"
 

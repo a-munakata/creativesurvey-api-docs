@@ -21,7 +21,7 @@ offset:
 
 リクエスト例
 $ curl -X GET https://creativesurvey.com/api/v1/surveys \
--d "auth_token=YourAuthToken" \
+-d "auth_token=sample_auth_token" \
 -d "offset=10"
 
 レスポンス例

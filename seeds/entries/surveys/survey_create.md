@@ -44,7 +44,7 @@ active_segment_id:
 
 リクエスト例
 $ curl -X POST https://creativesurvey.com/api/v1/surveys \
--d "auth_token=YourAuthToken" \
+-d "auth_token=sample_auth_token" \
 -d "survey[name]=sample_survey" \
 -d "survey[tag_color]=red"
 

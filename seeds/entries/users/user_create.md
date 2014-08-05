@@ -31,7 +31,7 @@ $ curl -X POST https://creativesurvey.com/api/v1/users/sign_in \
 レスポンス例
 {
   "success":true,
-  "auth_token":"YourAuthToken",
+  "auth_token":"sample_auth_token",
   "email":"sample_email"
 }
 

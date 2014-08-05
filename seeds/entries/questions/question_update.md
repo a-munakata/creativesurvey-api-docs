@@ -131,7 +131,7 @@ fix_last_row:
 
 リクエスト例
 $ curl -X PUT https://creativesurvey.com/api/v1/questions/1906 \
--d "auth_token=YourAuthToken" \
+-d "auth_token=sample_auth_token" \
 -d "question[rendered_sentence]=MySurvey2" \
 -d "question[is_timer]=false" \
 -d "question[is_shuffle]=true"

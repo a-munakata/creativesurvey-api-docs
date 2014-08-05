@@ -93,7 +93,7 @@ request_billboard:
 リクエスト例
 $ curl -X PUT \
 https://creativesurvey.com/api/v1/collectors/547 \
--d "auth_token=YourAuthToken" \
+-d "auth_token=sample_auth_token" \
 -d "collector[name]=公開設定3" \
 -d "collector[is_password]=true" \
 -d "collector[password]=sample_pass" \
@@ -102,7 +102,7 @@ https://creativesurvey.com/api/v1/collectors/547 \
 
 レスポンス例
 {
-  "url": "https://creativesurvey.com/reply/unique_id",
+  "url": "https://creativesurvey.com/reply/:sample_unique_id",
   "created_at": "2014-04-29T23:09:23+09:00",
   "updated_at": "2014-05-28T12:46:25+09:00",
   "survey_id": 520,

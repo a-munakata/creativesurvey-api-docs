@@ -21,7 +21,7 @@ id _(必須)_:
 リクエスト例
 $ curl -X POST \
 https://creativesurvey.com/api/v1/collectors/547/abort \
--d "auth_token=YourAuthToken"
+-d "auth_token=sample_auth_token"
 
 レスポンス例
 {

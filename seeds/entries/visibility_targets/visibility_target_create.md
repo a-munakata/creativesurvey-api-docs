@@ -24,7 +24,7 @@ answer_item_id:
 
 リクエスト例
 $ curl -X POST https://creativesurvey.com/api/v1/visibilities/71/visibility_targets \
--d "auth_token=YourAuthToken" \
+-d "auth_token=sample_auth_token" \
 -d "visibility_target[answer_item_id]=4491"
 
 レスポンス例

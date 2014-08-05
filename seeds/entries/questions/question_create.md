@@ -130,7 +130,7 @@ fix_last_row:
 
 リクエスト例
 $ curl -X POST https://creativesurvey.com/api/v1/questionnaires/511/questions \
--d "auth_token=YourAuthToken" \
+-d "auth_token=sample_auth_token" \
 -d "question[rendered_sentence]=MySurvey" \
 -d "question[is_timer]=false" \
 -d "question[is_shuffle]=false"

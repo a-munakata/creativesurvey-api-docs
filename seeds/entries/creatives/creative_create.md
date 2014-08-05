@@ -31,7 +31,7 @@ trimming:
 
 リクエスト例
 $ curl -X POST https://creativesurvey.com/api/v1/surveys/548/creatives \
--F "auth_token=YourAuthToken" \
+-F "auth_token=sample_auth_token" \
 -F "creative[image]=@/Users/4dusers/Desktop/grid.gif"
 
 レスポンス例

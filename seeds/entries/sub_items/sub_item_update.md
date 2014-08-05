@@ -36,7 +36,7 @@ max_value:
 
 リクエスト例
 $ curl -X PUT https://creativesurvey.com/api/v1/sub_items/2865 \
--d "auth_token=YourAuthToken" \
+-d "auth_token=sample_auth_token" \
 -d "sub_item[order_index]=3" \
 -d "sub_item[sentence]=new_text"
 

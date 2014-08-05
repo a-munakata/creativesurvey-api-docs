@@ -62,7 +62,7 @@ is_separate:
 
 リクエスト例
 $ curl -X PUT https://creativesurvey.com/api/v1/questionnaire_variables/103 \
--d "auth_token=YourAuthToken" \
+-d "auth_token=sample_auth_token" \
 -d "questionnaire_variable[target]=question_result" \
 -d "questionnaire_variable[result_value]=hoge"
 

@@ -30,7 +30,7 @@ is_valid:
 リクエスト例
 $ curl -X POST https://creativesurvey.com/api/v1/questions/1876/logics \
 -d "logic[order_index]=3" \
--d "auth_token=YourAuthToken"
+-d "auth_token=sample_auth_token"
 
 レスポンス例
 {

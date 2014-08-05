@@ -31,7 +31,7 @@ trimming:
 
 リクエスト例
 $ curl -X PUT https://creativesurvey.com/api/v1/creatives/638 \
--d "auth_token=YourAuthToken" \
+-d "auth_token=sample_auth_token" \
 -d "creative[trimming]=fit"
 
 レスポンス例

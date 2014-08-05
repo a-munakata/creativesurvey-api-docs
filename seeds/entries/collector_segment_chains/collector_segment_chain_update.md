@@ -20,7 +20,7 @@ id _(必須)_:
 
 リクエスト例
 $ curl -X PUT https://creativesurvey.com/api/v1/collector_segment_chains/8 \
--d "auth_token=YourAuthToken" \
+-d "auth_token=sample_auth_token" \
 -d "collector_segment_chain[segment_id]=130"
 
 レスポンス例

@@ -93,7 +93,7 @@ request_billboard:
 リクエスト例
 $ curl -X POST \
 https://creativesurvey.com/api/v1/surveys/520/collectors \
--F "auth_token=YourAuthToken" \
+-F "auth_token=sample_auth_token" \
 -F "collector[og_image]=@/Users/4dusers/Desktop/grid.gif" \
 -F "collector[og_title]=creativesurvey" \
 -F "collector[og_description]=sample" \
@@ -102,7 +102,7 @@ https://creativesurvey.com/api/v1/surveys/520/collectors \
 
 レスポンス例
 {
-  "url": "https://creativesurvey.com/reply/unique_id",
+  "url": "https://creativesurvey.com/reply/:sample_unique_id",
   "created_at": "2014-04-29T23:09:23+09:00",
   "updated_at": "2014-05-28T12:46:25+09:00",
   "survey_id": 520,

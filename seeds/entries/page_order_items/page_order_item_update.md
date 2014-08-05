@@ -29,7 +29,7 @@ is_connect:
 
 リクエスト例
 $ curl -X PUT https://creativesurvey.com/api/v1/page_order_items/1851 \
--d "auth_token=YourAuthToken" \
+-d "auth_token=sample_auth_token" \
 -d "page_order_item[order_index]=10" \
 -d "page_order_item[is_connect]=true"
 

@@ -21,12 +21,12 @@ id _(必須)_:
 リクエスト例
 $ curl -X GET \
 https://creativesurvey.com/api/v1/surveys/520/collectors \
--d "auth_token=YourAuthToken"
+-d "auth_token=sample_auth_token"
 
 レスポンス例
 [
   {
-    "url": "https://creativesurvey.com/reply/unique_id",
+    "url": "https://creativesurvey.com/reply/:sample_unique_id",
     "created_at": "2014-04-29T23:09:23+09:00",
     "updated_at": "2014-05-28T12:46:25+09:00",
     "survey_id": 520,
