@@ -48,15 +48,16 @@ $ curl -X PUT https://creativesurvey.com/api/v1/visibility_items/102 \
 
 レスポンス例
 {
-  "created_at": "2014-04-29T23:09:23+09:00",
-  "updated_at": "2014-05-28T12:46:25+09:00",
-  "visibility_id": 71,
-  "id": 102,
-  "question_id": 1916,
-  "order_index": 3,
+  "answer_item_id": 9681,
   "condition": "!=",
+  "created_at": "2014-10-31T19:31:37+09:00",
+  "id": 401,
+  "inbox_id": 6,
+  "order_index": 3,
+  "question_id": 1916,
   "sub_item_id": null,
-  "answer_item_id": 4493
+  "updated_at": "2014-10-31T19:48:58+09:00",
+  "visibility_id": 576
 }
 
 ~~~

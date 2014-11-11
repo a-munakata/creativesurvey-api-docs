@@ -19,20 +19,21 @@ id _(必須)_:
 ~~~
 
 リクエスト例
-$ curl -X GET https://creativesurvey.com/api/v1/visibility_items/102 \
+$ curl -X GET https://creativesurvey.com/api/v1/visibility_items/401 \
 -d "auth_token=sample_auth_token"
 
 レスポンス例
 {
-  "created_at": "2014-04-29T23:09:23+09:00",
-  "updated_at": "2014-05-28T12:46:25+09:00",
-  "visibility_id": 71,
-  "id": 102,
-  "question_id": 1915,
-  "order_index": 0,
+  "answer_item_id": 9681,
   "condition": "==",
+  "created_at": "2014-10-31T19:31:37+09:00",
+  "id": 401,
+  "inbox_id": 6,
+  "order_index": null,
+  "question_id": 5188,
   "sub_item_id": null,
-  "answer_item_id": 4493
+  "updated_at": "2014-10-31T19:31:52+09:00",
+  "visibility_id": 576
 }
 
 ~~~
