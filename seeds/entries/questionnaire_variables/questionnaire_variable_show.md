@@ -19,24 +19,25 @@ id _(必須)_:
 ~~~
 
 リクエスト例
-$ curl -X GET https://creativesurvey.com/api/v1/questionnaire_variables/103 \
+$ curl -X GET https://creativesurvey.com/api/v1/questionnaire_variables/602 \
 -d "auth_token=sample_auth_token"
 
 レスポンス例
 {
-  "created_at": "2014-04-29T23:09:23+09:00",
-  "updated_at": "2014-05-28T12:46:25+09:00",
-  "questionnaire_id": 510,
-  "id": 103,
-  "sub_item_id": null,
+  "answer_item_id": null,
+  "created_at": "2014-11-05T16:42:30+09:00",
+  "id": 602,
+  "inbox_id": 6,
+  "is_separate": null,
+  "order_index": 1,
+  "questionnaire_id": 7749,
+  "result_id": 5428,
   "result_type": "1",
   "result_value": "",
-  "result_id": 1831,
-  "target": "color",
-  "order_index": 1,
-  "is_separate": false,
-  "separator": "",
-  "answer_item_id": null
+  "separator": null,
+  "sub_item_id": null,
+  "target": "result",
+  "updated_at": "2014-11-05T16:42:50+09:00"
 }
 
 ~~~

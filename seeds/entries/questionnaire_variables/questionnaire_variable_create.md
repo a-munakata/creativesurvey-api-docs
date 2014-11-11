@@ -10,7 +10,7 @@ action: create
 
 ## アンケートの置き換え変数設定を作成します。
 
-`POST https://creativesurvey.com/api/v1/questionnaires/:id/questionnaire_variables`
+`POST https://creativesurvey.com/api/v1/surveys/:id/questionnaire/questionnaire_variables`
 
 id _(必須)_:
 : __integer__
@@ -57,27 +57,28 @@ is_separate:
 ~~~
 
 リクエスト例
-$ curl -X POST https://creativesurvey.com/api/v1/questionnaires/510/questionnaire_variables \
+$ curl -X POST https://creativesurvey.com/api/v1/surveys/7763/questionnaire/questionnaire_variables \
 -d "auth_token=sample_auth_token" \
--d "questionnaire_variable[target]=color" \
--d "questionnaire_variable[result_id]=1831" \
--d "questionnaire_variable[result_type]=1"
+-d "questionnaire_variable[target]=result" \
+-d "questionnaire_variable[result_value]=fuga" \
+-d "questionnaire_variable[result_type]=2"
 
 レスポンス例
 {
-  "created_at": "2014-04-29T23:09:23+09:00",
-  "updated_at": "2014-05-28T12:46:25+09:00",
-  "questionnaire_id": 510,
-  "id": 110,
-  "sub_item_id": null,
-  "result_type": "1",
-  "result_value": null,
-  "result_id": 1831,
-  "target": "color",
-  "order_index": null,
+  "answer_item_id": null,
+  "created_at": "2014-11-05T16:53:41+09:00",
+  "id": 603,
+  "inbox_id": 6,
   "is_separate": null,
+  "order_index": null,
+  "questionnaire_id": 7749,
+  "result_id": null,
+  "result_type": "2",
+  "result_value": "fuga",
   "separator": null,
-  "answer_item_id": null
+  "sub_item_id": null,
+  "target": "result",
+  "updated_at": "2014-11-05T16:53:41+09:00"
 }
 
 ~~~

@@ -19,27 +19,25 @@ id _(必須)_:
 ~~~
 
 リクエスト例
-$ curl -X DELETE https://creativesurvey.com/api/v1/questionnaire_variables/100 \
+$ curl -X DELETE https://creativesurvey.com/api/v1/questionnaire_variables/602 \
 -d "auth_token=sample_auth_token"
 
 レスポンス例
 {
-  "created_at": "2014-04-29T23:09:23+09:00",
-  "updated_at": "2014-05-28T12:46:25+09:00",
-  "updated_at": "2014-04-22T18:42:34+09:00",
-  "target": "question_result",
-  "sub_item_id": null,
-  "separator": "",
-  "result_value": "hoge",
-  "result_type": "2",
   "answer_item_id": null,
-  "created_at": "2014-04-22T17:55:16+09:00",
-  "id": 100,
+  "created_at": "2014-11-05T16:42:30+09:00",
+  "id": 602,
   "inbox_id": 6,
-  "is_separate": false,
-  "order_index": 0,
-  "questionnaire_id": 510,
-  "result_id": 1829
+  "is_separate": null,
+  "order_index": 1,
+  "questionnaire_id": 7749,
+  "result_id": 5428,
+  "result_type": "1",
+  "result_value": "",
+  "separator": null,
+  "sub_item_id": null,
+  "target": "result",
+  "updated_at": "2014-11-05T16:42:50+09:00"
 }
 
 ~~~
