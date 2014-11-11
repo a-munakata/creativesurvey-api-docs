@@ -24,11 +24,36 @@ $ curl -X GET https://creativesurvey.com/api/v1/visibilities/66 \
 
 レスポンス例
 {
-  "created_at": "2014-04-29T23:09:23+09:00",
-  "updated_at": "2014-05-28T12:46:25+09:00",
-  "question_id": 1911,
-  "id": 66,
-  "order_index": 4
+  "created_at": "2014-10-31T19:31:36+09:00",
+  "id": 576,
+  "inbox_id": 6,
+  "order_index": 0,
+  "question_id": 5189,
+  "updated_at": "2014-10-31T19:31:53+09:00",
+  "visibility_items": [
+    {
+      "answer_item_id": 9681,
+      "condition": "==",
+      "created_at": "2014-10-31T19:31:37+09:00",
+      "id": 401,
+      "inbox_id": 6,
+      "order_index": null,
+      "question_id": 5188,
+      "sub_item_id": null,
+      "updated_at": "2014-10-31T19:31:52+09:00",
+      "visibility_id": 576
+    }
+  ],
+  "visibility_targets": [
+    {
+      "answer_item_id": 9682,
+      "created_at": "2014-10-31T19:31:36+09:00",
+      "id": 861,
+      "inbox_id": 6,
+      "updated_at": "2014-10-31T19:31:53+09:00",
+      "visibility_id": 576
+    }
+  ]
 }
 
 ~~~

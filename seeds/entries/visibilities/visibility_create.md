@@ -23,17 +23,29 @@ order_index:
 ~~~
 
 リクエスト例
-$ curl -X POST https://creativesurvey.com/api/v1/questions/1911/visibilities \
+$ curl -X POST https://creativesurvey.com/api/v1/questions/5189/visibilities \
 -d "visibility[order_index]=5" \
 -d "auth_token=sample_auth_token"
 
 レスポンス例
 {
-  "created_at": "2014-04-29T23:09:23+09:00",
-  "updated_at": "2014-05-28T12:46:25+09:00",
-  "question_id": 1911,
-  "id": 70,
-  "order_index": 5
+  "created_at": "2014-10-31T19:41:20+09:00",
+  "id": 577,
+  "inbox_id": 6,
+  "order_index": 5,
+  "question_id": 5189,
+  "updated_at": "2014-10-31T19:41:20+09:00",
+  "visibility_items": [],
+  "visibility_targets": [
+    {
+      "answer_item_id": null,
+      "created_at": "2014-10-31T19:41:20+09:00",
+      "id": 862,
+      "inbox_id": 6,
+      "updated_at": "2014-10-31T19:41:20+09:00",
+      "visibility_id": 577
+    }
+  ]
 }
 
 ~~~
