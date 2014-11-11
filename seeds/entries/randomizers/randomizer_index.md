@@ -10,7 +10,7 @@ action: index
 
 ## アンケートに指定されたランダム設定の一覧を取得します。
 
-`GET https://creativesurvey.com/api/v1/questionnaires/:id/randomizers`
+`GET https://creativesurvey.com/api/v1/surveys/:id/questionnaire/randomizers`
 
 id _(必須)_:
 : __integer__
@@ -19,21 +19,22 @@ id _(必須)_:
 ~~~
 
 リクエスト例
-$ curl -X GET https://creativesurvey.com/api/v1/questionnaires/508/randomizers \
+$ curl -X GET https://creativesurvey.com/api/v1/surveys/7711/questionnaire/randomizers \
 -d "auth_token=sample_auth_token"
 
 レスポンス例
 [
   {
-    "created_at": "2014-04-29T23:09:23+09:00",
-    "updated_at": "2014-05-28T12:46:25+09:00",
-    "questionnaire_id": 508,
-    "id": 40,
-    "order_index": 0,
-    "step_num": 1,
-    "start_index": 0,
+    "created_at": "2014-10-31T17:08:43+09:00",
+    "end_index": 3,
+    "id": 481,
+    "inbox_id": 6,
     "is_valid": true,
-    "end_index": 3
+    "order_index": 0,
+    "questionnaire_id": 7698,
+    "start_index": 0,
+    "step_num": 1,
+    "updated_at": "2014-10-31T17:08:43+09:00"
   },
   {...},
   {...}
