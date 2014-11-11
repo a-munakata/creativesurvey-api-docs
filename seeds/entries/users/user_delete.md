@@ -29,8 +29,7 @@ $ curl -X DELETE https://creativesurvey.com/api/v1/users/sign_out \
 
 エラー例
 {
-  "success":false,
-  "message":"Error with your login or password"
+  "success":false
 }
 ~~~
 
