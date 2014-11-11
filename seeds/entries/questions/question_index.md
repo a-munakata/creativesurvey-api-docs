@@ -10,7 +10,7 @@ action: index
 
 ## アンケートの質問一覧を取得します。
 
-`GET https://creativesurvey.com/api/v1/questionnaires/:id/questions`
+`GET https://creativesurvey.com/api/v1/surveys/:id/questionnaires/questions`
 
 id _(必須)_:
 : __integer__
@@ -19,40 +19,60 @@ id _(必須)_:
 ~~~
 
 リクエスト例
-$ curl -X GET https://creativesurvey.com/api/v1/questionnaires/508/questions \
+$ curl -X GET https://creativesurvey.com/api/v1/surveys/7711/questionnaires/questions \
 -d "auth_token=sample_auth_token"
 
 レスポンス例
 [
   {
-    "created_at": "2014-04-29T23:09:23+09:00",
-    "updated_at": "2014-05-28T12:46:25+09:00",
-    "questionnaire_id": 508,
-    "id": 1824,
-    "in_random_range": false,
-    "is_logic": null,
-    "timer_destination_id": null,
-    "timer_value": 5,
-    "is_timer": false,
-    "is_expand": false,
-    "is_required": false,
-    "fix_last_col": null,
-    "launcher_string": "",
-    "placeholder": "",
-    "description": "",
-    "rendered_sentence": "質問1",
-    "sentence": "",
     "answer_type": 2,
-    "question_type": 1,
-    "order_index": 1,
+    "col_width": null,
+    "created_at": "2014-10-24T13:14:40+09:00",
+    "description": null,
+    "fix_last": null,
+    "fix_last_col": null,
+    "fix_last_row": null,
+    "id": 5188,
+    "in_random_range": null,
+    "inbox_id": 6,
+    "is_back": null,
+    "is_check_and_go": null,
+    "is_comment_required": null,
+    "is_connect": null,
+    "is_description": null,
+    "is_expand": false,
+    "is_image": null,
+    "is_impression": null,
+    "is_invert_matrix": null,
+    "is_logic": null,
+    "is_powered": false,
     "is_range": false,
+    "is_redirect": null,
+    "is_required": null,
+    "is_reset": null,
+    "is_screen_out": null,
+    "is_shuffle": false,
+    "is_shuffle_col": null,
+    "is_shuffle_row": null,
+    "is_single_select": true,
+    "is_sns": null,
+    "is_timer": null,
+    "launcher_string": "",
+    "order_index": 0,
+    "placeholder": "",
+    "question_type": 1,
+    "questionnaire_id": 7698,
     "range_max": 1,
     "range_min": null,
-    "is_shuffle": false,
-    "is_shuffle_row": null,
-    "is_shuffle_col": null,
-    "fix_last": false,
-    "fix_last_row": null
+    "redirect_url": null,
+    "rendered_sentence": "helloooo",
+    "sentence": "",
+    "timer_destination_id": null,
+    "timer_value": 5,
+    "updated_at": "2014-10-24T13:15:22+09:00",
+    "answer_type_name": "テキスト選択",
+    "any_logic": false,
+    "any_visibility": false
   },
   {...},
   {...}
