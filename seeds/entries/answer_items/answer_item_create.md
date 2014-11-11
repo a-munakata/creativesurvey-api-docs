@@ -72,7 +72,7 @@ val:
 ~~~
 
 リクエスト例
-$ curl -X POST https://creativesurvey.com/api/v1/questions/1829/answer_items \
+$ curl -X POST https://creativesurvey.com/api/v1/questions/5422/answer_items \
 -d "auth_token=sample_auth_token" \
 -d "answer_item[answer_type]=5" \
 -d "answer_item[sentence]=Please enter your address" \
@@ -82,23 +82,35 @@ $ curl -X POST https://creativesurvey.com/api/v1/questions/1829/answer_items \
 
 レスポンス例
 {
-  "created_at": "2014-04-29T23:09:23+09:00",
-  "updated_at": "2014-05-28T12:46:25+09:00",
-  "question_id": 1829,
-  "id": 4321,
+  "answer_type": 5,
+  "created_at": "2014-11-05T16:23:53+09:00",
+  "id": 10139,
+  "inbox_id": 6,
+  "is_impression": true,
+  "is_multiline": false,
+  "is_reject": null,
+  "is_required": true,
   "max_value": null,
   "min_value": null,
-  "is_reject": null,
+  "order_index": null,
+  "placeholder": "Address",
+  "question_id": 5422,
+  "sentence": "Please enter your address",
+  "updated_at": "2014-11-05T16:23:53+09:00",
+  "val": 0.5,
   "validation_pattern": "\\d{3}-?\\d{4}",
   "validation_type": null,
-  "sentence": "Please enter your email",
-  "placeholder": "Address",
-  "order_index": 0,
-  "answer_type": 5,
-  "val": 0.5,
-  "is_multiline": false,
-  "is_impression": true,
-  "is_required": true
+  "name": "Please enter your address",
+  "creative_chain": {
+    "attachable_id": 10139,
+    "attachable_type": "AnswerItem",
+    "created_at": "2014-11-05T16:23:53+09:00",
+    "creative_id": null,
+    "id": 32083,
+    "inbox_id": 6,
+    "updated_at": "2014-11-05T16:23:53+09:00"
+  },
+  "sub_items": []
 }
 
 ~~~

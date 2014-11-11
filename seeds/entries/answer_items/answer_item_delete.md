@@ -19,28 +19,40 @@ id _(必須)_:
 ~~~
 
 リクエスト例
-$ curl -X DELETE https://creativesurvey.com/api/v1/answer_items/4321 \
+$ curl -X DELETE https://creativesurvey.com/api/v1/answer_items/10124 \
 -d "auth_token=sample_auth_token"
 
 レスポンス例
 {
-  "created_at": "2014-04-29T23:09:23+09:00",
-  "updated_at": "2014-05-28T12:46:25+09:00",
-  "question_id": 1829,
-  "id": 4321,
+  "answer_type": 11,
+  "created_at": "2014-11-05T15:15:22+09:00",
+  "id": 10124,
+  "inbox_id": 6,
+  "is_impression": true,
+  "is_multiline": false,
+  "is_reject": null,
+  "is_required": false,
   "max_value": null,
   "min_value": null,
-  "is_reject": null,
-  "validation_pattern": "^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$",
-  "validation_type": null,
-  "sentence": "Please enter your email",
-  "placeholder": "Email",
   "order_index": 0,
-  "answer_type": 5,
+  "placeholder": "",
+  "question_id": 5421,
+  "sentence": "〜19歳",
+  "updated_at": "2014-11-05T15:16:00+09:00",
   "val": 0.5,
-  "is_multiline": false,
-  "is_impression": true,
-  "is_required": true
+  "validation_pattern": "",
+  "validation_type": null,
+  "name": "〜19歳",
+  "creative_chain": {
+    "attachable_id": 10124,
+    "attachable_type": "AnswerItem",
+    "created_at": "2014-11-05T15:15:22+09:00",
+    "creative_id": null,
+    "id": 32054,
+    "inbox_id": 6,
+    "updated_at": "2014-11-05T15:15:22+09:00"
+  },
+  "sub_items": []
 }
 
 ~~~

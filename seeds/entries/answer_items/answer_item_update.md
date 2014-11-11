@@ -72,7 +72,7 @@ val:
 ~~~
 
 リクエスト例
-$ curl -X PUT https://creativesurvey.com/api/v1/answer_items/4321 \
+$ curl -X PUT https://creativesurvey.com/api/v1/answer_items/10134 \
 -d "auth_token=sample_auth_token" \
 -d "answer_item[answer_type]=5" \
 -d "answer_item[sentence]=Please enter your email" \
@@ -82,25 +82,36 @@ $ curl -X PUT https://creativesurvey.com/api/v1/answer_items/4321 \
 
 レスポンス例
 {
-  "created_at": "2014-04-29T23:09:23+09:00",
-  "updated_at": "2014-05-28T12:46:25+09:00",
-  "question_id": 1829,
-  "id": 4321,
+  "answer_type": 5,
+  "created_at": "2014-11-05T16:16:41+09:00",
+  "id": 10134,
+  "inbox_id": 6,
+  "is_impression": true,
+  "is_multiline": false,
+  "is_reject": null,
+  "is_required": true,
   "max_value": null,
   "min_value": null,
-  "is_reject": null,
-  "validation_pattern": "^([a-zA-Z0-9_\\.\\-])+\\@(([a-zA-Z0-9\\-])+\\.)+([a-zA-Z0-9]{2,4})+$",
-  "validation_type": null,
-  "sentence": "Please enter your email",
+  "order_index": null,
   "placeholder": "Email",
-  "order_index": 0,
-  "answer_type": 5,
+  "question_id": 5422,
+  "sentence": "Please enter your email",
+  "updated_at": "2014-11-05T16:18:21+09:00",
   "val": 0.5,
-  "is_multiline": false,
-  "is_impression": true,
-  "is_required": true
+  "validation_pattern": "^([a-zA-Z0-9_\\.\\-]) \\@(([a-zA-Z0-9\\-]) \\.) ([a-zA-Z0-9]{2,4}) $",
+  "validation_type": null,
+  "name": "Please enter your email",
+  "creative_chain": {
+    "attachable_id": 10134,
+    "attachable_type": "AnswerItem",
+    "created_at": "2014-11-05T16:16:41+09:00",
+    "creative_id": null,
+    "id": 32078,
+    "inbox_id": 6,
+    "updated_at": "2014-11-05T16:16:41+09:00"
+  },
+  "sub_items": []
 }
-
 ~~~
 
 ~~~
