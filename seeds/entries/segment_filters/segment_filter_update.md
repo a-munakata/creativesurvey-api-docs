@@ -30,17 +30,18 @@ question_id:
 リクエスト例
 $ curl -X PUT https://creativesurvey.com/api/v1/segment_filters/22 \
 -d "auth_token=sample_auth_token" \
--d "segment_filter[question_id]=1866" \
--d "segment_filter[value]=4386"
+-d "segment_filter[question_id]=5188" \
+-d "segment_filter[value]=9680"
 
 レスポンス例
 {
-  "created_at": "2014-04-29T23:09:23+09:00",
-  "updated_at": "2014-05-28T12:46:25+09:00",
-  "segment_id": 131,
-  "id": 22,
-  "value": "4386",
-  "question_id": 1866
+  "created_at": "2014-10-31T16:55:16+09:00",
+  "id": 337,
+  "inbox_id": 6,
+  "question_id": 5188,
+  "segment_id": 775,
+  "updated_at": "2014-10-31T17:01:24+09:00",
+  "value": "9680"
 }
 
 ~~~

@@ -28,19 +28,20 @@ question_id:
 ~~~
 
 リクエスト例
-$ curl -X POST https://creativesurvey.com/api/v1/segments/120/segment_filters \
+$ curl -X POST https://creativesurvey.com/api/v1/segments/340/segment_filters \
 -d "auth_token=sample_auth_token" \
--d "segment_filter[question_id]=1866" \
--d "segment_filter[value]=4386"
+-d "segment_filter[question_id]=5188" \
+-d "segment_filter[value]=9680"
 
 レスポンス例
 {
-  "created_at": "2014-04-29T23:09:23+09:00",
-  "updated_at": "2014-05-28T12:46:25+09:00",
-  "segment_id": 120,
-  "id": 23,
-  "value": "4386",
-  "question_id": 1866
+  "created_at": "2014-10-31T17:05:12+09:00",
+  "id": 340,
+  "inbox_id": 6,
+  "question_id": 5188,
+  "segment_id": 775,
+  "updated_at": "2014-10-31T17:05:12+09:00",
+  "value": "9680"
 }
 
 ~~~
