@@ -28,20 +28,34 @@ is_valid:
 ~~~
 
 リクエスト例
-$ curl -X POST https://creativesurvey.com/api/v1/questions/1876/logics \
+$ curl -X POST https://creativesurvey.com/api/v1/questions/5428/logics \
 -d "logic[order_index]=3" \
 -d "auth_token=sample_auth_token"
 
 レスポンス例
 {
-  "created_at": "2014-04-29T23:09:23+09:00",
-  "updated_at": "2014-05-28T12:46:25+09:00",
-  "question_id": 1876,
-  "id": 139,
-  "order_index": 3,
-  "is_valid": true,
+  "answer_id": null,
+  "answer_item_id": null,
+  "created_at": "2014-11-05T17:25:52+09:00",
   "destination_id": null,
-  "answer_item_id": null
+  "destination_index": null,
+  "id": 751,
+  "inbox_id": 6,
+  "is_valid": true,
+  "order_index": 3,
+  "question_id": 5428,
+  "updated_at": "2014-11-05T17:25:52+09:00",
+  "logic_action": {
+    "action_type": null,
+    "created_at": "2014-11-05T17:25:52+09:00",
+    "id": 753,
+    "inbox_id": 6,
+    "logic_id": 751,
+    "message": null,
+    "question_id": null,
+    "updated_at": "2014-11-05T17:25:52+09:00"
+  },
+  "logic_items": []
 }
 
 ~~~
