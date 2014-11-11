@@ -19,22 +19,43 @@ id _(必須)_:
 ~~~
 
 リクエスト例
-$ curl -X GET https://creativesurvey.com/api/v1/surveys/528/creatives \
+$ curl -X GET https://creativesurvey.com/api/v1/surveys/7792/creatives \
 -d "auth_token=sample_auth_token"
 
 レスポンス例
 [
   {
-    "created_at": "2014-04-29T23:09:23+09:00",
-    "updated_at": "2014-05-28T12:46:25+09:00",
-    "survey_id": 528,
-    "id": 638,
-    "priority": 1000,
-    "original_remote_url": null,
-    "trimming": "fit",
     "height": 400,
+    "id": 1676,
+    "trimming": "thumb",
     "width": 400,
-    "image": null
+    "refs": {
+      "image": {
+        "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/1676/doctocat-brown.jpg",
+        "filename": "doctocat-brown.jpg",
+        "s_fit": {
+          "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/1676/s_fit_doctocat-brown.jpg"
+        },
+        "s_pad": {
+          "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/1676/s_pad_doctocat-brown.jpg"
+        },
+        "s_thumb": {
+          "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/1676/s_thumb_doctocat-brown.jpg"
+        },
+        "l_fit": {
+          "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/1676/l_fit_doctocat-brown.jpg"
+        },
+        "l_pad": {
+          "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/1676/l_pad_doctocat-brown.jpg"
+        },
+        "l_thumb": {
+          "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/1676/l_thumb_doctocat-brown.jpg"
+        },
+        "blur": {
+          "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/1676/blur_doctocat-brown.jpg"
+        }
+      }
+    }
   },
   {...},
   {...}

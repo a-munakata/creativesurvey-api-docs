@@ -16,7 +16,7 @@ id _(必須)_:
 : __integer__
 : 対象となるアンケートのid
 
-image _(必須)_:
+file _(必須)_:
 : __string__ _(デフォルト: null)_
 : アップロードする画像のパス。 @を付けて指定します。
 
@@ -32,20 +32,41 @@ trimming:
 リクエスト例
 $ curl -X POST https://creativesurvey.com/api/v1/surveys/548/creatives \
 -F "auth_token=sample_auth_token" \
--F "creative[image]=@/Users/4dusers/Desktop/grid.gif"
+-F "file=@/Users/4dusers/Desktop/sample.jpeg"
 
 レスポンス例
 {
-  "created_at": "2014-04-29T23:09:23+09:00",
-  "updated_at": "2014-05-28T12:46:25+09:00",
-  "survey_id": 548,
-  "id": 644,
-  "priority": 1000,
-  "original_remote_url": null,
+  "height": 400,
+  "id": 1679,
   "trimming": "thumb",
-  "height": 300,
-  "width": 300,
-  "image": "grid.gif"
+  "width": 400,
+  "refs": {
+    "image": {
+      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/1679/sample.jpeg",
+      "filename": "sample.jpeg",
+      "s_fit": {
+        "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/1679/s_fit_sample.jpeg"
+      },
+      "s_pad": {
+        "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/1679/s_pad_sample.jpeg"
+      },
+      "s_thumb": {
+        "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/1679/s_thumb_sample.jpeg"
+      },
+      "l_fit": {
+        "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/1679/l_fit_sample.jpeg"
+      },
+      "l_pad": {
+        "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/1679/l_pad_sample.jpeg"
+      },
+      "l_thumb": {
+        "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/1679/l_thumb_sample.jpeg"
+      },
+      "blur": {
+        "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/creative/image/1679/blur_sample.jpeg"
+      }
+    }
+  }
 }
 
 ~~~
