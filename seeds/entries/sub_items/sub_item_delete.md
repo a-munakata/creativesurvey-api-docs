@@ -19,20 +19,33 @@ id _(必須)_:
 ~~~
 
 リクエスト例
-$ curl -X DELETE https://creativesurvey.com/api/v1/sub_items/2865 \
+$ curl -X DELETE https://creativesurvey.com/api/v1/sub_items/8805 \
 -d "auth_token=sample_auth_token"
 
 レスポンス例
 {
-  "created_at": "2014-04-29T23:09:23+09:00",
-  "updated_at": "2014-05-28T12:46:25+09:00",
-  "id": 2865,
+  "answer_type": 11,
+  "attachable_id": 5421,
+  "attachable_type": "Question",
+  "created_at": "2014-11-05T15:15:57+09:00",
+  "id": 8805,
+  "inbox_id": 6,
   "max_value": null,
   "min_value": null,
-  "order_index": 3,
-  "answer_type": 19,
-  "placeholder": "insert text here",
-  "sentence": ""
+  "order_index": 10,
+  "placeholder": "",
+  "sentence": "埼玉県",
+  "updated_at": "2014-11-05T15:16:01+09:00",
+  "name": "埼玉県",
+  "creative_chain": {
+    "attachable_id": 8805,
+    "attachable_type": "SubItem",
+    "created_at": "2014-11-05T15:15:57+09:00",
+    "creative_id": null,
+    "id": 32073,
+    "inbox_id": 6,
+    "updated_at": "2014-11-05T15:15:57+09:00"
+  }
 }
 
 ~~~

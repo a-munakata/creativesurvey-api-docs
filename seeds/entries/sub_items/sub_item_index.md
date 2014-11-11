@@ -20,21 +20,25 @@ id _(必須)_:
 ~~~
 
 リクエスト例
-$ curl -X GET https://creativesurvey.com/api/v1/questions/1900/sub_items \
+$ curl -X GET https://creativesurvey.com/api/v1/questions/5421/sub_items \
 -d "auth_token=sample_auth_token"
 
 レスポンス例
 [
   {
-    "created_at": "2014-04-29T23:09:23+09:00",
-    "updated_at": "2014-05-28T12:46:25+09:00",
-    "id": 2820,
+    "answer_type": 11,
+    "attachable_id": 5421,
+    "attachable_type": "Question",
+    "created_at": "2014-11-05T15:15:22+09:00",
+    "id": 8795,
+    "inbox_id": 6,
     "max_value": null,
     "min_value": null,
-    "order_index": 1,
-    "answer_type": 9,
+    "order_index": 0,
     "placeholder": "",
-    "sentence": ""
+    "sentence": "北海道",
+    "updated_at": "2014-11-05T15:16:00+09:00",
+    "name": "北海道"
   },
   {...},
   {...}
