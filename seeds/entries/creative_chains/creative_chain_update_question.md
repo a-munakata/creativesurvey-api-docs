@@ -11,7 +11,7 @@ parent_klass: question
 
 ## 質問に使用されている画像の関連を更新します。
 
-`PUT https://creativesurvey.com/api/v1/questions/creative_chains/:id`
+`PUT https://creativesurvey.com/api/v1/questions/:id/creative_chain`
 
 id _(必須)_:
 : __integer__
@@ -34,19 +34,20 @@ attachable_id:
 ~~~
 
 リクエスト例
-$ curl -X PUT https://creativesurvey.com/api/v1/questions/creative_chains/9650 \
+$ curl -X PUT https://creativesurvey.com/api/v1/questions/5723/creative_chain \
 -d "auth_token=sample_auth_token" \
--d "creative_chain[attachable_id]=1918" \
--d "creative_chain[creative_id]=3"
+-d "creative_chain[attachable_id]=5721" \
+-d "creative_chain[creative_id]=1826"
 
 レスポンス例
 {
-  "created_at": "2014-04-29T23:09:23+09:00",
-  "updated_at": "2014-05-28T12:46:25+09:00",
-  "id": 9650,
-  "creative_id": 3,
+  "attachable_id": 5721,
   "attachable_type": "Question",
-  "attachable_id": 1918
+  "created_at": "2014-11-17T17:09:48+09:00",
+  "creative_id": 1826,
+  "id": 33264,
+  "inbox_id": 6,
+  "updated_at": "2014-11-17T19:22:40+09:00"
 }
 
 ~~~
