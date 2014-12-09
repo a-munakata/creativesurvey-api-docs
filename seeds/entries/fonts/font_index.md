@@ -8,7 +8,7 @@ action: index
 
 # 和文フォント一覧の取得
 
-## アンケートに使用出来る和文フォント一覧を取得します。
+## アンケートに使用することが出来る和文フォント一覧を取得します。
 
 `GET https://creativesurvey.com/api/v1/fonts`
 
@@ -21,12 +21,30 @@ $ curl -X GET https://creativesurvey.com/api/v1/fonts \
 レスポンス例
 [
   {
-    "created_at": "2014-04-29T23:09:23+09:00",
-    "updated_at": "2014-05-28T12:46:25+09:00",
-    "id": 105,
-    "english_name": "TsukuAMDMinStd-E",
-    "name": "筑紫A見出ミン Std E ",
-    "image": "TsukuAMDMinStd-E.png"
+    "created_at": "2013-10-01T18:51:25+09:00",
+    "english_name": "UD Shin Go Bold",
+    "font_category_id": null,
+    "font_size": 14,
+    "id": 6,
+    "image": {
+      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/font/image/6/UD-Shin-Go-Bold.png",
+      "s_thumb": {
+        "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/font/image/6/s_thumb_UD-Shin-Go-Bold.png"
+      }
+    },
+    "list_image": {
+      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/font/list_image/6/UD-Shin-Go-Bold.png"
+    },
+    "list_on_image": {
+      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/font/list_on_image/6/UD-Shin-Go-Bold_on.png"
+    },
+    "name": "UD新ゴ B",
+    "order_index": 1,
+    "source": " 'UD新ゴ B',' UD Shin Go Bold', sans-serif",
+    "thumb_image": {
+      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/font/thumb_image/6/UD-Shin-Go-Bold.png"
+    },
+    "updated_at": "2014-10-21T01:06:29+09:00"
   },
   {...},
   {...}
