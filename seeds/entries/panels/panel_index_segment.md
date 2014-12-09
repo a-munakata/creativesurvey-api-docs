@@ -26,29 +26,42 @@ $ curl -X GET https://creativesurvey.com/api/v1/segments/132/panels \
 レスポンス例
 [
   {
-    "created_at": "2014-04-29T23:09:23+09:00",
-    "updated_at": "2014-05-28T12:46:25+09:00",
-    "id": 3810,
-    "os_browser": "Macintosh : Chrome",
-    "browser_version": "34.0.1847.137",
     "browser": "Chrome",
-    "resolution": "1280x1024",
-    "current_question_id": null,
-    "is_valid": true,
+    "browser_version": "38.0.2125.122",
+    "collector_id": 8722,
+    "color": "24",
+    "complete_at": "2014-11-17T16:42:22+09:00",
+    "created_at": "2014-11-17T16:42:09+09:00",
     "current_index": 1,
+    "current_question_id": null,
+    "custom_key": "6cb73caa79ebb41923ccf89244aa51d33db29251",
+    "id": 8551,
+    "ip_address": "192.168.56.1",
+    "is_complete": true,
+    "is_invalid": false,
+    "is_mobile": false,
+    "is_preview": null,
+    "is_screen_out": false,
+    "is_valid": true,
+    "message": null,
     "order": [
       [
-        1920
+        5720,
+        5722
+      ],
+      [
+        5721
       ]
     ],
-    "color": "24",
+    "os_browser": "Macintosh : Chrome",
     "platform": "Macintosh",
-    "is_mobile": false,
-    "ip_address": "127.0.0.1",
     "query_string": null,
-    "custom_key": "1e9addc6442a4bdf5dc3401185f3914e8d0b4b22",
-    "is_screen_out": false,
-    "message": null
+    "reply_time": 13,
+    "resolution": "1280x1024",
+    "start_at": "2014-11-17T16:42:09+09:00",
+    "survey_id": 7849,
+    "updated_at": "2014-11-17T16:42:30+09:00",
+    "uuid": null
   },
   {...},
   {...}

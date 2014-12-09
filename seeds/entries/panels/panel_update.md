@@ -2,7 +2,7 @@
 
 category_name: panel
 title: 回答者の取得
-action: show
+action: update
 
 ---
 
@@ -19,7 +19,7 @@ id _(必須)_:
 ~~~
 
 リクエスト例
-$ curl -X GET https://creativesurvey.com/api/v1/collectors/8632/reply/panels \
+$ curl -X PUT https://creativesurvey.com/api/v1/collectors/8632/reply/panels \
 -d "auth_token=sample_auth_token"
 
 レスポンス例
