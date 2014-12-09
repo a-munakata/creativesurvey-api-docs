@@ -19,21 +19,22 @@ id _(必須)_:
 ~~~
 
 リクエスト例
-$ curl -X GET https://creativesurvey.com/api/v1/logics/139/logic_items \
+$ curl -X GET https://creativesurvey.com/api/v1/logics/766/logic_items \
 -d "auth_token=sample_auth_token"
 
 レスポンス例
 [
   {
-    "created_at": "2014-04-29T23:09:23+09:00",
-    "updated_at": "2014-05-28T12:46:25+09:00",
-    "logic_id": 139,
-    "id": 98,
-    "question_id": 1875,
-    "order_index": 0,
+    "answer_item_id": 10668,
     "condition": "==",
+    "created_at": "2014-11-17T14:20:14+09:00",
+    "id": 615,
+    "inbox_id": 6,
+    "logic_id": 766,
+    "order_index": 0,
+    "question_id": 5722,
     "sub_item_id": null,
-    "answer_item_id": 4409
+    "updated_at": "2014-11-17T14:20:24+09:00"
   },
   {...},
   {...}
