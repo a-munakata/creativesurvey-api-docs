@@ -19,18 +19,18 @@ id _(必須)_:
 ~~~
 
 リクエスト例
-$ curl -X DELETE https://creativesurvey.com/api/v1/visibility_targets/82 \
+$ curl -X DELETE https://creativesurvey.com/api/v1/visibility_targets/864 \
 -d "auth_token=sample_auth_token"
 
 レスポンス例
 {
-  "created_at": "2014-04-29T23:09:23+09:00",
-  "updated_at": "2014-05-28T12:46:25+09:00",
-  "visibility_id": 71,
-  "id": 82,
-  "answer_item_id": 4494
+  "answer_item_id": 5188,
+  "created_at": "2014-10-31T20:07:52+09:00",
+  "id": 864,
+  "inbox_id": 6,
+  "updated_at": "2014-10-31T20:07:52+09:00",
+  "visibility_id": 576
 }
-
 ~~~
 
 ~~~

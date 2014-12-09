@@ -43,20 +43,20 @@ $ curl -X POST https://creativesurvey.com/api/v1/logics/139/logic_items \
 -d "auth_token=sample_auth_token" \
 -d "logic_item[condition]===" \
 -d "logic_item[question_id]=1914" \
--d "logic_item[answer_item_id]=4487" \
--d "logic_item[sub_item_id]=2868"
+-d "logic_item[answer_item_id]=4487"
 
 レスポンス例
 {
-  "created_at": "2014-04-29T23:09:23+09:00",
-  "updated_at": "2014-05-28T12:46:25+09:00",
-  "logic_id": 139,
-  "id": 105,
-  "question_id": 1914,
-  "order_index": null,
+  "answer_item_id": 10668,
   "condition": "==",
-  "sub_item_id": 2868,
-  "answer_item_id": 4487
+  "created_at": "2014-11-17T14:30:35+09:00",
+  "id": 617,
+  "inbox_id": 6,
+  "logic_id": 766,
+  "order_index": null,
+  "question_id": 5722,
+  "sub_item_id": null,
+  "updated_at": "2014-11-17T14:30:35+09:00"
 }
 
 ~~~

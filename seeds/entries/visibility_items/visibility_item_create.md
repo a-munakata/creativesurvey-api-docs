@@ -40,24 +40,25 @@ sub_item_id:
 ~~~
 
 リクエスト例
-$ curl -X POST https://creativesurvey.com/api/v1/visibilities/71/visibility_items \
+$ curl -X POST https://creativesurvey.com/api/v1/visibilities/576/visibility_items \
 -d "auth_token=sample_auth_token" \
--d "visibility_item[question_id]=1916" \
+-d "visibility_item[question_id]=5188" \
 -d "visibility_item[order_index]=3" \
 -d "visibility_item[condition]=!=" \
--d "visibility_item[answer_item_id]=4493"
+-d "visibility_item[answer_item_id]=9681"
 
 レスポンス例
 {
-  "created_at": "2014-04-29T23:09:23+09:00",
-  "updated_at": "2014-05-28T12:46:25+09:00",
-  "visibility_id": 71,
-  "id": 103,
-  "question_id": 1916,
-  "order_index": 3,
+  "answer_item_id": 9681,
   "condition": "!=",
+  "created_at": "2014-10-31T19:57:16+09:00",
+  "id": 402,
+  "inbox_id": 6,
+  "order_index": 3,
+  "question_id": 5188,
   "sub_item_id": null,
-  "answer_item_id": 4493
+  "updated_at": "2014-10-31T19:57:16+09:00",
+  "visibility_id": 576
 }
 
 ~~~

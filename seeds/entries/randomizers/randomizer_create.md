@@ -10,7 +10,7 @@ action: create
 
 ## 新しいランダム設定を作成します。
 
-`POST https://creativesurvey.com/api/v1/questionnaires/:id/randomizers`
+`POST https://creativesurvey.com/api/v1/surveys/:id/questionnaire/randomizers`
 
 id _(必須)_:
 : __integer__
@@ -31,10 +31,6 @@ end_index:
 : 何問目までランダムを設定するか指定します。
 : indexは0から始まる整数です。
 
-is_valid:
-: __boolean__ _(デフォルト: true)_
-: 有効かどうか
-
 order_index:
 : __integer__ _(デフォルト: 0)_
 : ランダマイズ設定の順序を0から始まる整数で指定します。
@@ -42,7 +38,7 @@ order_index:
 ~~~
 
 リクエスト例
-$ curl -X POST https://creativesurvey.com/api/v1/questionnaires/508/randomizers \
+$ curl -X POST https://creativesurvey.com/api/v1/surveys/7711/questionnaire/randomizers \
 -d "auth_token=sample_auth_token" \
 -d "randomizer[step_num]=1" \
 -d "randomizer[start_index]=0" \
@@ -50,15 +46,16 @@ $ curl -X POST https://creativesurvey.com/api/v1/questionnaires/508/randomizers 
 
 レスポンス例
 {
-  "created_at": "2014-04-29T23:09:23+09:00",
-  "updated_at": "2014-05-28T12:46:25+09:00",
-  "questionnaire_id": 508,
-  "id": 40,
-  "order_index": 0,
-  "step_num": 1,
-  "start_index": 0,
+  "created_at": "2014-10-31T17:08:47+09:00",
+  "end_index": 3,
+  "id": 482,
+  "inbox_id": 6,
   "is_valid": true,
-  "end_index": 3
+  "order_index": 0,
+  "questionnaire_id": 7698,
+  "start_index": 0,
+  "step_num": 1,
+  "updated_at": "2014-10-31T17:08:47+09:00"
 }
 
 ~~~

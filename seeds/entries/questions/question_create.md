@@ -10,7 +10,7 @@ action: create
 
 ## 質問を作成します。
 
-`POST https://creativesurvey.com/api/v1/questionnaires/:id/questions`
+`POST https://creativesurvey.com/api/v1/surveys/:id/questionnaire/questions`
 
 id _(必須)_:
 : __integer__
@@ -41,6 +41,10 @@ answer_type _(必須)_:
 : 18: サバイバル
 : 19: サバイバル画像
 : 20: マルチクリッツ
+: 21: プルダウン
+: 22: 最終タイプ
+: 23: スケールタイプ
+: 24: アップロードタイプ
 
 rendered_sentence:
 : __string__ _(デフォルト: "")_
@@ -126,10 +130,80 @@ fix_last_row:
 : __boolean__ _(デフォルト: null)_
 : 列項目をランダムにした際に列末尾を固定します。
 
+is_powered:
+: __boolean__ _(デフォルト: true)_
+: 最終ステップの、Powered by CREATIVE SURVEYの表記を表示するかしないか
+
+is_sns:
+: __boolean__ _(デフォルト: false)_
+: 最終ステップの、ソーシャルボックスを表示するかしないか
+
+is_reset:
+: __boolean__ _(デフォルト: false)_
+: 最終ステップの、はじめに戻るボタンを表示するかしないか
+
+is_impression:
+: __boolean__ _(デフォルト: true)_
+: エリアマッピングの良い・悪いボタンを表示するかしないか
+
+is_comment_required:
+: __boolean__ _(デフォルト: null)_
+: エリアマッピングのコメントを必須にするかどうか
+
+is_image:
+: __boolean__ _(デフォルト: null)_
+: タイトル画像を設定するかどうか
+
+is_description:
+: __boolean__ _(デフォルト: null)_
+: 説明や注意書きを入力するためのテキストエリアを設定するかどうか
+
+is_range:
+: __boolean__ _(デフォルト: null)_
+: 回答数の最小値・最大値の設定を有効にするかどうか
+
+is_invert_matrix:
+: __boolean__ _(デフォルト: null)_
+: マトリクスタイプの行と列を入れ替えるかどうか
+
+is_single_select:
+: __boolean__ _(デフォルト: null)_
+: 単一選択かどうか
+
+is_back:
+: __boolean__ _(デフォルト: null)_
+: 戻るボタンを有効にするかどうか
+
+is_check_and_go:
+: __boolean__ _(デフォルト: null)_
+: 単一選択で回答した際に回答を終了する設定を有効にするかどうか
+
+is_redirect:
+: __boolean__ _(デフォルト: null)_
+: 最終ステップのリダイレクト設定を有効にするかどうか
+
+redirect_url:
+: __string__ _(デフォルト: null)_
+: リダイレクト先のURL
+: is_redirectがtrueの際に、このURLにリダイレクトされます。
+
+is_screen_out:
+: __boolean__ _(デフォルト: null)_
+: trueにすると、該当の質問に到達した際に、スクリーンアウトとなります。
+
+is_connect:
+: __boolean__ _(デフォルト: null)_
+: ページを繋げる設定を有効にするかどうか
+: trueを指定すると、次の質問と同一ページに質問が表示されます。
+
+col_width:
+: __integer__ _(デフォルト: null)_
+: マトリクスタイプの行項目の横幅を指定します。
+
 ~~~
 
 リクエスト例
-$ curl -X POST https://creativesurvey.com/api/v1/questionnaires/511/questions \
+$ curl -X POST https://creativesurvey.com/api/v1/surveys/7711/questionnaire/questions \
 -d "auth_token=sample_auth_token" \
 -d "question[rendered_sentence]=MySurvey" \
 -d "question[is_timer]=false" \
@@ -137,34 +211,143 @@ $ curl -X POST https://creativesurvey.com/api/v1/questionnaires/511/questions \
 
 レスポンス例
 {
-  "created_at": "2014-04-29T23:09:23+09:00",
-  "updated_at": "2014-05-28T12:46:25+09:00",
-  "questionnaire_id": 511,
-  "id": 1906,
-  "in_random_range": false,
-  "is_logic": null,
-  "timer_destination_id": null,
-  "timer_value": 5,
-  "is_timer": false,
-  "is_expand": false,
-  "is_required": null,
-  "fix_last_col": null,
-  "launcher_string": "",
-  "placeholder": "",
-  "description": null,
-  "rendered_sentence": "MySurvey",
-  "sentence": "",
   "answer_type": 1,
-  "question_type": 1,
-  "order_index": 0,
+  "col_width": null,
+  "created_at": "2014-10-31T19:04:14+09:00",
+  "description": null,
+  "fix_last": null,
+  "fix_last_col": null,
+  "fix_last_row": null,
+  "id": 5332,
+  "in_random_range": null,
+  "inbox_id": 6,
+  "is_back": null,
+  "is_check_and_go": null,
+  "is_comment_required": null,
+  "is_connect": null,
+  "is_description": null,
+  "is_expand": false,
+  "is_image": null,
+  "is_impression": true,
+  "is_invert_matrix": null,
+  "is_logic": null,
+  "is_powered": false,
   "is_range": false,
+  "is_redirect": null,
+  "is_required": null,
+  "is_reset": null,
+  "is_screen_out": null,
+  "is_shuffle": false,
+  "is_shuffle_col": null,
+  "is_shuffle_row": null,
+  "is_single_select": true,
+  "is_sns": null,
+  "is_timer": false,
+  "launcher_string": "",
+  "order_index": 0,
+  "placeholder": "",
+  "question_type": 1,
+  "questionnaire_id": 7698,
   "range_max": 1,
   "range_min": null,
-  "is_shuffle": false,
-  "is_shuffle_row": null,
-  "is_shuffle_col": null,
-  "fix_last": null,
-  "fix_last_row": null
+  "redirect_url": null,
+  "rendered_sentence": "MySurvey",
+  "sentence": "",
+  "timer_destination_id": null,
+  "timer_value": 5,
+  "updated_at": "2014-10-31T19:04:14+09:00",
+  "answer_type_name": "単一テキスト選択",
+  "any_logic": false,
+  "any_visibility": false,
+  "answer_items": [
+    {
+      "answer_type": 1,
+      "created_at": "2014-10-31T19:04:14+09:00",
+      "id": 9926,
+      "inbox_id": 6,
+      "is_impression": true,
+      "is_multiline": false,
+      "is_reject": null,
+      "is_required": false,
+      "max_value": null,
+      "min_value": null,
+      "order_index": null,
+      "placeholder": "",
+      "question_id": 5332,
+      "sentence": "",
+      "updated_at": "2014-10-31T19:04:14+09:00",
+      "val": 0.5,
+      "validation_pattern": "",
+      "validation_type": null,
+      "sub_items": [],
+      "creative_chain": {
+        "attachable_id": 9926,
+        "attachable_type": "AnswerItem",
+        "created_at": "2014-10-31T19:04:14+09:00",
+        "creative_id": null,
+        "id": 31651,
+        "inbox_id": 6,
+        "updated_at": "2014-10-31T19:04:14+09:00"
+      }
+    }
+  ],
+  "sub_items": [
+    {
+      "answer_type": 1,
+      "attachable_id": 5332,
+      "attachable_type": "Question",
+      "created_at": "2014-10-31T19:04:14+09:00",
+      "id": 8681,
+      "inbox_id": 6,
+      "max_value": null,
+      "min_value": null,
+      "order_index": 0,
+      "placeholder": "",
+      "sentence": "",
+      "updated_at": "2014-10-31T19:04:14+09:00",
+      "creative_chain": {
+        "attachable_id": 8681,
+        "attachable_type": "SubItem",
+        "created_at": "2014-10-31T19:04:14+09:00",
+        "creative_id": null,
+        "id": 31652,
+        "inbox_id": 6,
+        "updated_at": "2014-10-31T19:04:14+09:00"
+      }
+    },
+    {
+      "answer_type": 1,
+      "attachable_id": 5332,
+      "attachable_type": "Question",
+      "created_at": "2014-10-31T19:04:14+09:00",
+      "id": 8682,
+      "inbox_id": 6,
+      "max_value": null,
+      "min_value": null,
+      "order_index": 0,
+      "placeholder": "",
+      "sentence": "",
+      "updated_at": "2014-10-31T19:04:14+09:00",
+      "creative_chain": {
+        "attachable_id": 8682,
+        "attachable_type": "SubItem",
+        "created_at": "2014-10-31T19:04:14+09:00",
+        "creative_id": null,
+        "id": 31653,
+        "inbox_id": 6,
+        "updated_at": "2014-10-31T19:04:14+09:00"
+      }
+    }
+  ],
+  "creative_chain": {
+    "attachable_id": 5332,
+    "attachable_type": "Question",
+    "created_at": "2014-10-31T19:04:14+09:00",
+    "creative_id": null,
+    "id": 31654,
+    "inbox_id": 6,
+    "updated_at": "2014-10-31T19:04:14+09:00"
+  }
 }
 
 

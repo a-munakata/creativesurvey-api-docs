@@ -76,7 +76,23 @@ class Entry
       :index,
       :update,
       :show,
-      :delete
+      :delete,
+
+      :subscribe,
+      :unsubscribe,
+      :update_card,
+      :destroy_card,
+      :share_account,
+      :connect_account,
+      :disconnect_account,
+      :remove_invitation,
+      :share_account_sample,
+
+      :avatar,
+      :colors,
+      :upsell,
+      :mailchimp,
+      :update_mailchimp
     ]
   end
 

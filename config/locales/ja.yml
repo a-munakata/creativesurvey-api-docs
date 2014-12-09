@@ -11,3 +11,5 @@ ja:
     title: "公開設定"
   result:
     title: "集計結果"
+  account:
+    title: "アカウント設定"

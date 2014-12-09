@@ -45,6 +45,13 @@ class Category
       :user => :basic,
       :error_example => :basic,
 
+      # account
+      :account => :account,
+      :plan => :account,
+      :inbox => :account,
+      :invoice => :account,
+      :mailchimp => :account,
+
       # create
       :survey => :create,
       :questionnaire => :create,

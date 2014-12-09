@@ -19,20 +19,47 @@ id _(必須)_:
 ~~~
 
 リクエスト例
-$ curl -X GET https://creativesurvey.com/api/v1/questions/1825/logics \
+$ curl -X GET https://creativesurvey.com/api/v1/questions/7428/logics \
 -d "auth_token=sample_auth_token"
 
 レスポンス例
 [
   {
-    "created_at": "2014-04-29T23:09:23+09:00",
-    "updated_at": "2014-05-28T12:46:25+09:00",
-    "question_id": 1825,
-    "id": 138,
-    "order_index": 0,
-    "is_valid": true,
+    "answer_id": null,
+    "answer_item_id": null,
+    "created_at": "2014-11-05T17:13:29+09:00",
     "destination_id": null,
-    "answer_item_id": null
+    "destination_index": null,
+    "id": 749,
+    "inbox_id": 6,
+    "is_valid": true,
+    "order_index": 0,
+    "question_id": 5428,
+    "updated_at": "2014-11-05T17:13:29+09:00",
+    "logic_action": {
+      "action_type": null,
+      "created_at": "2014-11-05T17:13:30+09:00",
+      "id": 751,
+      "inbox_id": 6,
+      "logic_id": 749,
+      "message": "A",
+      "question_id": 5426,
+      "updated_at": "2014-11-05T17:13:53+09:00"
+    },
+    "logic_items": [
+      {
+        "answer_item_id": 10146,
+        "condition": "==",
+        "created_at": "2014-11-05T17:13:31+09:00",
+        "id": 603,
+        "inbox_id": 6,
+        "logic_id": 749,
+        "order_index": 0,
+        "question_id": 5428,
+        "sub_item_id": null,
+        "updated_at": "2014-11-05T17:13:53+09:00"
+      }
+    ]
   },
   {...},
   {...}

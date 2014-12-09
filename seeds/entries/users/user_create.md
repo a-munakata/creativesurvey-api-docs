@@ -31,8 +31,7 @@ $ curl -X POST https://creativesurvey.com/api/v1/users/sign_in \
 レスポンス例
 {
   "success":true,
-  "auth_token":"sample_auth_token",
-  "email":"sample_email"
+  "auth_token":"sample_auth_token"
 }
 
 エラー例
@@ -40,7 +39,6 @@ $ curl -X POST https://creativesurvey.com/api/v1/users/sign_in \
   "success":false,
   "message":"Error with your login or password"
 }
-
 ~~~
 
 
