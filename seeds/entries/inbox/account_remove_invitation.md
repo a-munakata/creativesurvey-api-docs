@@ -1,86 +1,104 @@
 ---
 
-category_name: account
-title: ボックスへの招待を許可する
-action: connect_account
+category_name: inbox
+title: ボックス共有の招待を取り消す
+action: disconnect_account
 
 ---
 
-# ボックスへの招待を許可する
+# ボックス共有の招待を取り消す
 
-## ボックスへの招待を許可します。許可を行うと、招待されたボックスが共有されます。
+## ボックス共有の招待を取り消します。招待を取り消すと、招待を送られたユーザーはボックス共有を許可することが出来なくなります。
 
-`PUT https://creativesurvey.com/api/v1/account/share`
 
-token _(必須)_:
+`DELETE https://creativesurvey.com/api/v1/account/invitation`
+
+email _(必須)_:
 : __string__
-: 招待tokenを入力します。
+: 招待メールの送り先メールアドレスを招待します。
 
 ~~~
 
 リクエスト例
-$ curl -X PUT https://creativesurvey.com/api/v1/account/share \
--d "token=sample_token" \
+$ curl -X DELETE https://creativesurvey.com/api/v1/account/invitation \
+-d "email=sample@4digit.jp" \
 -d "auth_token=sample_auth_token"
 
 
 レスポンス例
 {
-  "name": "a.munakata+check@4digit.jp",
-  "email": "a.munakata+check@4digit.jp",
-  "role": "White",
-  "box_role": "White",
-  "share_limit": 0,
+  "name": "a.munakata",
+  "email": "a.munakata@4digit.jp",
+  "role": "Ultramarine",
+  "box_role": "Ultramarine",
+  "share_limit": 9,
   "accounts": [
     {
       "id": 6,
       "name": "a.munakata",
       "email": "a.munakata@4digit.jp",
-      "current": false
-    },
-    {
-      "id": 144,
-      "name": "a.munakata+check@4digit.jp",
-      "email": "a.munakata+check@4digit.jp",
       "current": true
     }
   ],
   "shares": [
     {
-      "name": "a.munakata+check@4digit.jp",
-      "email": "a.munakata+check@4digit.jp",
+      "name": "a.munakata",
+      "email": "a.munakata@4digit.jp",
       "current": true
     }
   ],
-  "share_invitations": [],
-  "avatar": {
-    "image": {
-      "fit": {
-        "url": "/assets/ng/common/anonymous.png"
-      }
+  "share_invitations": [
+    {
+      "id": 32,
+      "email": "a.munakata+helloooo@4digit.jp"
+    },
+    {
+      "id": 39,
+      "email": "a.munakata+connect@4digit.jp"
+    },
+    {
+      "id": 40,
+      "email": "a.munakata+sample@4digit.jp"
+    },
+    {
+      "id": 42,
+      "email": "a.munakata+sampleee@4digit.jp"
     }
+  ],
+  "avatar": {
+    "created_at": "2014-08-13T10:42:28+09:00",
+    "id": 2,
+    "image": {
+      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/avatar/image/2/sample.jpeg",
+      "fit": {
+        "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/avatar/image/2/fit_sample.jpeg"
+      }
+    },
+    "level": 0,
+    "updated_at": "2014-10-30T15:15:56+09:00",
+    "user_id": 2
   },
   "color_label": {
-    "apple_color": "#7ba444",
-    "apple_label": null,
+    "apple_color": "red",
+    "apple_label": "important",
     "bright_sun_color": "#e7b727",
     "bright_sun_label": null,
     "carrot_orange_color": "#eaa21a",
     "carrot_orange_label": null,
     "cinnabar_color": "#d24623",
     "cinnabar_label": null,
-    "created_at": "2014-08-12T21:39:33+09:00",
+    "created_at": "2014-08-12T21:39:29+09:00",
     "glacier_color": "#72b1c0",
     "glacier_label": null,
-    "id": 131,
-    "inbox_id": 144,
+    "id": 6,
+    "inbox_id": 6,
     "moody_blue_color": "#747dc0",
     "moody_blue_label": null,
     "novel_color": "#999999",
     "novel_label": null,
     "pale_violet_red_color": "#dc7b9a",
     "pale_violet_red_label": null,
-    "updated_at": "2014-08-12T21:39:33+09:00",
+    "updated_at": "2014-12-09T12:53:21+09:00",
     "colors": [
       "glacier",
       "moody_blue",
@@ -94,18 +112,6 @@ $ curl -X PUT https://creativesurvey.com/api/v1/account/share \
   },
   "notice_count": 0,
   "notifications": [
-    {
-      "action": "connectAccount('60577fda3e72a4776401f34c24e57a5d5b0e3ab0')",
-      "action_name": "承認する",
-      "created_at": "2014-12-09T14:09:50+09:00",
-      "description": "a.munakata@4digit.jpさんからボックスがシェアされました。",
-      "id": 25,
-      "is_unread": false,
-      "notified_at": "2014-12-09T14:09:50+09:00",
-      "updated_at": "2014-12-09T14:11:07+09:00",
-      "url": null,
-      "user_id": 41
-    },
     {
       "action": null,
       "created_at": "2014-12-02T16:19:19+09:00",
@@ -162,11 +168,10 @@ $ curl -X PUT https://creativesurvey.com/api/v1/account/share \
       "is_unread": false
     }
   ],
-  "last_4_digits": null,
+  "last_4_digits": "4444",
   "is_owner": true,
-  "message": "アカウントのシェアが完了しました"
+  "message": "ボックスへの招待が正常に削除されました"
 }
-
 ~~~
 
 

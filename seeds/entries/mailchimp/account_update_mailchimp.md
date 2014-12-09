@@ -1,8 +1,8 @@
 ---
 
-category_name: account
+category_name: mailchimp
 title: メール受信設定
-action: mailchimp
+action: update_mailchimp
 
 ---
 

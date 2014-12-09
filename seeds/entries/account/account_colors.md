@@ -12,10 +12,10 @@ action: colors
 
 `POST https://creativesurvey.com/api/v1/account/colors`
  
-*_color _(任意)_:
+[color]\_color _(任意)_:
 : __string__
 : 色を指定します。
-: *は、下記から色を選択してください。
+: [color]は、下記から色を選択してください。
 : apple
 : bright_sun
 : carrot_orange
@@ -25,10 +25,10 @@ action: colors
 : moody_blue
 : novel
 
-*_label _(任意)_ :
+[color]\_label _(任意)_ :
 : __string__
 : ラベルを指定します。
-: *は、上記の*_colorの色の中から選択することが出来ます。
+: [color]は、上記の色の中から選択することが出来ます。
 
 
 ~~~

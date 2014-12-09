@@ -1,6 +1,6 @@
 ---
 
-category_name: account
+category_name: mailchimp
 title: メール受信設定の取得
 action: mailchimp
 

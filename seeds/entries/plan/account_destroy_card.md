@@ -1,91 +1,76 @@
 ---
 
-category_name: account
-title: ボックスの共有
-action: share_account
+category_name: plan
+title: カード情報の削除
+action: destroy_card
 
 ---
 
-# ボックスの共有
+# カード情報の削除
 
-## ボックスを共有します。
+## カード情報を削除します。プランを購読している際は、まずダウングレードを行ってください。
 
-`POST https://creativesurvey.com/api/v1/account/share`
 
-email _(必須)_:
-: __string__
-: ボックスを共有するアカウントのemailを指定します。
+`DELETE https://creativesurvey.com/api/v1/account/card`
 
 ~~~
 
 リクエスト例
-$ curl -X POST https://creativesurvey.com/api/v1/account/share \
--d "email=invite_sample@4digit.jp" \
+$ curl -X DELETE https://creativesurvey.com/api/v1/account/card \
 -d "auth_token=sample_auth_token"
 
 
 レスポンス例
 {
-  "name": "a.munakata",
-  "email": "a.munakata@4digit.jp",
-  "role": "Ultramarine",
-  "box_role": "Ultramarine",
-  "share_limit": 9,
+  "name": "a.munakata+check@4digit.jp",
+  "email": "a.munakata+check@4digit.jp",
+  "role": "White",
+  "box_role": "White",
+  "share_limit": 0,
   "accounts": [
     {
-      "id": 6,
-      "name": "a.munakata",
-      "email": "a.munakata@4digit.jp",
+      "id": 144,
+      "name": "a.munakata+check@4digit.jp",
+      "email": "a.munakata+check@4digit.jp",
       "current": true
     }
   ],
   "shares": [
     {
-      "name": "a.munakata",
-      "email": "a.munakata@4digit.jp",
+      "name": "a.munakata+check@4digit.jp",
+      "email": "a.munakata+check@4digit.jp",
       "current": true
     }
   ],
-  "share_invitations": [
-    {
-      "id": 42,
-      "email": "invite_sample@4digit.jp"
-    }
-  ],
+  "share_invitations": [],
   "avatar": {
-    "created_at": "2014-08-13T10:42:28+09:00",
-    "id": 2,
     "image": {
-      "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/avatar/image/2/sample.jpeg",
       "fit": {
-        "url": "https://storage-creativesurvey.s3.amazonaws.com/uploads/development/avatar/image/2/fit_sample.jpeg"
+        "url": "/assets/ng/common/anonymous.png"
       }
-    },
-    "level": 0,
-    "updated_at": "2014-10-30T15:15:56+09:00",
-    "user_id": 2
+    }
   },
   "color_label": {
-    "apple_color": "red",
-    "apple_label": "important",
+    "apple_color": "#7ba444",
+    "apple_label": null,
     "bright_sun_color": "#e7b727",
     "bright_sun_label": null,
     "carrot_orange_color": "#eaa21a",
     "carrot_orange_label": null,
     "cinnabar_color": "#d24623",
     "cinnabar_label": null,
-    "created_at": "2014-08-12T21:39:29+09:00",
+    "created_at": "2014-08-12T21:39:33+09:00",
     "glacier_color": "#72b1c0",
     "glacier_label": null,
-    "id": 6,
-    "inbox_id": 6,
+    "id": 131,
+    "inbox_id": 144,
     "moody_blue_color": "#747dc0",
     "moody_blue_label": null,
     "novel_color": "#999999",
     "novel_label": null,
     "pale_violet_red_color": "#dc7b9a",
     "pale_violet_red_label": null,
-    "updated_at": "2014-12-09T12:53:21+09:00",
+    "updated_at": "2014-08-12T21:39:33+09:00",
     "colors": [
       "glacier",
       "moody_blue",
@@ -97,7 +82,7 @@ $ curl -X POST https://creativesurvey.com/api/v1/account/share \
       "novel"
     ]
   },
-  "notice_count": 0,
+  "notice_count": 5,
   "notifications": [
     {
       "action": null,
@@ -108,7 +93,7 @@ $ curl -X POST https://creativesurvey.com/api/v1/account/share \
       "notified_at": "2014-12-02T16:19:19+09:00",
       "updated_at": "2014-12-02T16:19:19+09:00",
       "url": null,
-      "is_unread": false
+      "is_unread": true
     },
     {
       "action": null,
@@ -119,7 +104,7 @@ $ curl -X POST https://creativesurvey.com/api/v1/account/share \
       "notified_at": "2014-10-10T16:07:40+09:00",
       "updated_at": "2014-10-10T16:07:40+09:00",
       "url": null,
-      "is_unread": false
+      "is_unread": true
     },
     {
       "action": null,
@@ -130,7 +115,7 @@ $ curl -X POST https://creativesurvey.com/api/v1/account/share \
       "notified_at": "2014-10-10T16:06:53+09:00",
       "updated_at": "2014-10-10T16:06:53+09:00",
       "url": null,
-      "is_unread": false
+      "is_unread": true
     },
     {
       "action": null,
@@ -141,7 +126,7 @@ $ curl -X POST https://creativesurvey.com/api/v1/account/share \
       "notified_at": "2014-08-25T18:48:44+09:00",
       "updated_at": "2014-08-25T18:48:44+09:00",
       "url": null,
-      "is_unread": false
+      "is_unread": true
     },
     {
       "action": null,
@@ -152,12 +137,11 @@ $ curl -X POST https://creativesurvey.com/api/v1/account/share \
       "notified_at": "2014-08-25T17:56:13+09:00",
       "updated_at": "2014-08-25T17:56:13+09:00",
       "url": null,
-      "is_unread": false
+      "is_unread": true
     }
   ],
-  "last_4_digits": "4444",
-  "is_owner": true,
-  "message": "ボックスのシェアメールが送信されました"
+  "last_4_digits": null,
+  "is_owner": true
 }
 
 ~~~

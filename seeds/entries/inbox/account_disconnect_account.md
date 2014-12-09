@@ -1,26 +1,25 @@
 ---
 
-category_name: account
-title: ボックス共有の招待を取り消す
+category_name: inbox
+title: ボックス共有の解除
 action: disconnect_account
 
 ---
 
-# ボックス共有の招待を取り消す
+# ボックス共有の解除
 
-## ボックス共有の招待を取り消します。招待を取り消すと、招待を送られたユーザーはボックス共有を許可することが出来なくなります。
+## 既に共有しているボックスとの共有設定を解除します。
 
-
-`DELETE https://creativesurvey.com/api/v1/account/invitation`
+`DELETE https://creativesurvey.com/api/v1/account/share`
 
 email _(必須)_:
 : __string__
-: 招待メールの送り先メールアドレスを招待します。
+: 共有されているボックスのメールアドレスを指定します。
 
 ~~~
 
 リクエスト例
-$ curl -X DELETE https://creativesurvey.com/api/v1/account/invitation \
+$ curl -X DELETE https://creativesurvey.com/api/v1/account/share \
 -d "email=sample@4digit.jp" \
 -d "auth_token=sample_auth_token"
 
@@ -48,6 +47,10 @@ $ curl -X DELETE https://creativesurvey.com/api/v1/account/invitation \
     }
   ],
   "share_invitations": [
+    {
+      "id": 31,
+      "email": "a.munakata+hello@4digit.jp"
+    },
     {
       "id": 32,
       "email": "a.munakata+helloooo@4digit.jp"
@@ -170,8 +173,9 @@ $ curl -X DELETE https://creativesurvey.com/api/v1/account/invitation \
   ],
   "last_4_digits": "4444",
   "is_owner": true,
-  "message": "ボックスへの招待が正常に削除されました"
+  "message": "ボックスのシェアが正常に解除されました"
 }
+
 ~~~
 
 

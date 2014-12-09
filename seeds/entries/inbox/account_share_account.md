@@ -1,26 +1,26 @@
 ---
 
-category_name: account
-title: ボックス共有の解除
-action: disconnect_account
+category_name: inbox
+title: ボックスの共有
+action: share_account
 
 ---
 
-# ボックス共有の解除
+# ボックスの共有
 
-## 既に共有しているボックスとの共有設定を解除します。
+## ボックスを共有します。
 
-`DELETE https://creativesurvey.com/api/v1/account/share`
+`POST https://creativesurvey.com/api/v1/account/share`
 
 email _(必須)_:
 : __string__
-: 共有されているボックスのメールアドレスを指定します。
+: ボックスを共有するアカウントのemailを指定します。
 
 ~~~
 
 リクエスト例
-$ curl -X DELETE https://creativesurvey.com/api/v1/account/share \
--d "email=sample@4digit.jp" \
+$ curl -X POST https://creativesurvey.com/api/v1/account/share \
+-d "email=invite_sample@4digit.jp" \
 -d "auth_token=sample_auth_token"
 
 
@@ -48,24 +48,8 @@ $ curl -X DELETE https://creativesurvey.com/api/v1/account/share \
   ],
   "share_invitations": [
     {
-      "id": 31,
-      "email": "a.munakata+hello@4digit.jp"
-    },
-    {
-      "id": 32,
-      "email": "a.munakata+helloooo@4digit.jp"
-    },
-    {
-      "id": 39,
-      "email": "a.munakata+connect@4digit.jp"
-    },
-    {
-      "id": 40,
-      "email": "a.munakata+sample@4digit.jp"
-    },
-    {
       "id": 42,
-      "email": "a.munakata+sampleee@4digit.jp"
+      "email": "invite_sample@4digit.jp"
     }
   ],
   "avatar": {
@@ -173,7 +157,7 @@ $ curl -X DELETE https://creativesurvey.com/api/v1/account/share \
   ],
   "last_4_digits": "4444",
   "is_owner": true,
-  "message": "ボックスのシェアが正常に解除されました"
+  "message": "ボックスのシェアメールが送信されました"
 }
 
 ~~~

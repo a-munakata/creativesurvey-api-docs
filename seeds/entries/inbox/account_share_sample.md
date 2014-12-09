@@ -1,6 +1,6 @@
 ---
 
-category_name: account
+category_name: inbox
 title: ボックス共有メールサンプルの送信
 action: share_sample
 
@@ -16,7 +16,7 @@ action: share_sample
 ~~~
 
 リクエスト例
-$ curl -X DELETE https://creativesurvey.com/api/v1/account/share_sample \
+$ curl -X POST https://creativesurvey.com/api/v1/account/share_sample \
 -d "auth_token=sample_auth_token"
 
 
