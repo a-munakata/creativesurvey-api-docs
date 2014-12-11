@@ -78,6 +78,10 @@ class Entry
       :show,
       :delete,
 
+      :copy,
+      :order,
+      :preview_order,
+
       :subscribe,
       :unsubscribe,
       :update_card,
@@ -92,7 +96,11 @@ class Entry
       :colors,
       :upsell,
       :mailchimp,
-      :update_mailchimp
+      :update_mailchimp,
+
+      :preview_show,
+      :preview_update,
+      :preview_jump
     ]
   end
 
