@@ -10,6 +10,7 @@ title: 和文フォントの取得
 |メソッド|概要|
 |:---|:---|
 |index|[GET /api/v1/fonts](#font_index)|
+|show|[GET /api/v1/fonts/:id](#font_show)|
 
 |リレーション|リソース名|日本語名|
 |:---|:---|:---|

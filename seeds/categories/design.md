@@ -7,8 +7,9 @@ title: デザイン
 
 |メソッド|概要|
 |:---|:---|
-|show|[GET /api/v1/designs/:id](#design_show)|
-|update|[PUT /api/v1/designs/:id](#design_update)|
+|show|[GET /api/v1/surveys/:survey_id/design](#design_show)|
+|style|[GET /api/v1/surveys/:survey_id/design/style](#design_style)|
+|update|[PUT /api/v1/surveys/:survey_id/design](#design_update)|
 
 |リレーション|リソース名|日本語名|
 |:---|:---|:---|

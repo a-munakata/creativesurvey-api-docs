@@ -12,6 +12,8 @@ title: アンケート
 |show|[GET /api/v1/surveys/:id](#survey_show)|
 |update|[PUT /api/v1/surveys/:id](#survey_update)|
 |destroy|[DELETE /api/v1/surveys/:id](#survey_delete)|
+|copy|[POST /api/v1/surveys/:id/copy](#survey_copy)|
+|gift_code|[POST /api/v1/surveys/:gift_code/gift](#survey_gift)|
 
 |リレーション|リソース名|日本語名|
 |:---|:---|:---|

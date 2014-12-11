@@ -11,6 +11,7 @@ title: テーマの取得
 |メソッド|概要|
 |:---|:---|
 |index|[GET /api/v1/themes](#theme_index)|
+|show|[GET /api/v1/themes/:id](#theme_show)|
 
 |リレーション|リソース名|日本語名|
 |:---|:---|:---|
