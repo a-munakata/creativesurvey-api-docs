@@ -75,9 +75,9 @@ https://creativesurvey.com/api/v1/collectors/8632/copy \
   "sync_url": null,
   "unique_id": "32edf12083fe3a6b5c731d76b6917b",
   "updated_at": "2014-10-31T15:24:11+09:00",
-  "url": "https://mosson-book.local/ng/reply/32edf12083fe3a6b5c731d76b6917b",
+  "url": "https://creativesurvey.com/ng/reply/32edf12083fe3a6b5c731d76b6917b",
   "status": "pause",
-  "embed": "<div style=\"position:relative;padding-bottom: 120%;height:0;\"><iframe style=\"position:absolute;top:0px;left:0px;width:100%;height:100%;\" src=\"https://mosson-book.local/ng/reply/32edf12083fe3a6b5c731d76b6917b\"></iframe></div>"
+  "embed": "<div style=\"position:relative;padding-bottom: 120%;height:0;\"><iframe style=\"position:absolute;top:0px;left:0px;width:100%;height:100%;\" src=\"https://creativesurvey.com/ng/reply/32edf12083fe3a6b5c731d76b6917b\"></iframe></div>"
 }
 
 ~~~

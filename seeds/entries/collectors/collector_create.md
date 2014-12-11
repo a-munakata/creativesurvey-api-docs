@@ -190,9 +190,9 @@ https://creativesurvey.com/api/v1/surveys/520/collectors \
   "sync_url": null,
   "unique_id": "196d60d6faa3680847028ef9453f1f",
   "updated_at": "2014-10-31T15:08:52+09:00",
-  "url": "https://mosson-book.local/ng/reply/196d60d6faa3680847028ef9453f1f",
+  "url": "https://creativesurvey.com/ng/reply/196d60d6faa3680847028ef9453f1f",
   "status": "pause",
-  "embed": "<div style=\"position:relative;padding-bottom: 120%;height:0;\"><iframe style=\"position:absolute;top:0px;left:0px;width:100%;height:100%;\" src=\"https://mosson-book.local/ng/reply/196d60d6faa3680847028ef9453f1f\"></iframe></div>"
+  "embed": "<div style=\"position:relative;padding-bottom: 120%;height:0;\"><iframe style=\"position:absolute;top:0px;left:0px;width:100%;height:100%;\" src=\"https://creativesurvey.com/ng/reply/196d60d6faa3680847028ef9453f1f\"></iframe></div>"
 }
 
 必須項目が入力されていない場合
