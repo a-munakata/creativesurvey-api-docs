@@ -3,7 +3,7 @@
 category_name: collector_segment_chain
 title: 公開設定とセグメントの関連の更新(公開設定から)
 parent_klass: collector
-action: show
+action: update
 
 ---
 
@@ -17,14 +17,10 @@ id _(必須)_:
 : __integer__
 : 対象となるコレクターのID
 
-segment_id:
-: __integer__
-: コレクターと紐づける、対象セグメントのID
-
 ~~~
 
 リクエスト例
-$ curl -X GET https://creativesurvey.com/api/v1/collectors/8722/collector_segment_chain \
+$ curl -X PUT https://creativesurvey.com/api/v1/collectors/8722/collector_segment_chain \
 -d "collector_segment_chain[segment_id]=787" \
 -d "auth_token=sample_auth_token"
 
