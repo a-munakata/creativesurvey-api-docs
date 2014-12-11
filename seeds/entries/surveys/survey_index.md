@@ -61,8 +61,8 @@ $ curl -X GET https://creativesurvey.com/api/v1/surveys \
     "updated_at": "2014-09-24T12:46:55+09:00",
     "status": "edit",
     "color": "novel",
-    "result_url": "https://mosson-book.local/public/results/62c174d0e9feb5515a365605ec5b017b3e5c6fd5/summary",
-    "preview_url": "https://mosson-book.local/ng/surveys/7561/public/preview"
+    "result_url": "https://creativesurvey.com/public/results/62c174d0e9feb5515a365605ec5b017b3e5c6fd5/summary",
+    "preview_url": "https://creativesurvey.com/ng/surveys/7561/public/preview"
   },
   {...},
   {...}

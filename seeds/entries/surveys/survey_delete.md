@@ -52,8 +52,8 @@ $ curl -X DELETE http://creativesurvey.com/api/v1/surveys/7751 \
   "updated_at": "2014-10-31T11:43:09+09:00",
   "status": "edit",
   "color": "cinnabar",
-  "result_url": "https://mosson-book.local/public/results/2f67f137146f3c1c2e40f29ec41266a1260746d2/summary",
-  "preview_url": "https://mosson-book.local/ng/surveys/7751/public/preview"
+  "result_url": "https://creativesurvey.com/public/results/2f67f137146f3c1c2e40f29ec41266a1260746d2/summary",
+  "preview_url": "https://creativesurvey.com/ng/surveys/7751/public/preview"
 }
 ~~~
 

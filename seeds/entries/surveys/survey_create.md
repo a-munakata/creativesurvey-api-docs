@@ -94,8 +94,8 @@ $ curl -X POST https://creativesurvey.com/api/v1/surveys \
   "updated_at": "2014-10-31T11:26:45+09:00",
   "status": "edit",
   "color": "cinnabar",
-  "result_url": "https://mosson-book.local/public/results/b34d6660fb606a2a3e053f0f1325a879af60bd5d/summary",
-  "preview_url": "https://mosson-book.local/ng/surveys/7752/public/preview",
+  "result_url": "https://creativesurvey.com/public/results/b34d6660fb606a2a3e053f0f1325a879af60bd5d/summary",
+  "preview_url": "https://creativesurvey.com/ng/surveys/7752/public/preview",
   "collectors": [
     {
       "allow_billboard": false,
@@ -148,7 +148,7 @@ $ curl -X POST https://creativesurvey.com/api/v1/surveys \
       "sync_url": null,
       "unique_id": "c187d86d01bb0b2f4720ef6b6d95e8",
       "updated_at": "2014-10-31T11:26:46+09:00",
-      "url": "https://mosson-book.local/ng/reply/c187d86d01bb0b2f4720ef6b6d95e8",
+      "url": "https://creativesurvey.com/ng/reply/c187d86d01bb0b2f4720ef6b6d95e8",
       "status": "edit"
     }
   ]
