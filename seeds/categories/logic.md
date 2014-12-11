@@ -15,7 +15,7 @@ title: 分岐設定
 |show|[GET /api/v1/logics/:id](#logic_show)|
 |update|[PUT /api/v1/logics/:id](#logic_update)|
 |destroy|[DELETE /api/v1/logics/:id](#logic_delete)|
-
+|import|[PUT /api/v1/questions/:id/logics/import](#logic_import)|
 
 |リレーション|リソース名|日本語名|
 |:---|:---|:---|

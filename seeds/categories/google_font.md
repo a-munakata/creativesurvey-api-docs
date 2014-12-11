@@ -10,6 +10,7 @@ title: 欧文フォントの取得
 |メソッド|概要|
 |:---|:---|
 |index|[GET /api/v1/google_fonts](#google_font_index)|
+|show|[GET /api/v1/google_fonts/:id](#google_font_show)|
 
 |リレーション|リソース名|日本語名|
 |:---|:---|:---|

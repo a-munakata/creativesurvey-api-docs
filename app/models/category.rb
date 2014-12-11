@@ -45,13 +45,6 @@ class Category
       :user => :basic,
       :error_example => :basic,
 
-      # account
-      :account => :account,
-      :plan => :account,
-      :inbox => :account,
-      :invoice => :account,
-      :mailchimp => :account,
-
       # create
       :survey => :create,
       :questionnaire => :create,
@@ -59,15 +52,7 @@ class Category
       :answer_item => :create,
       :sub_item => :create,
       :egression => :create,
-      :randomizer => :create,
       :page_order_item => :create,
-      :logic => :create,
-      :logic_item => :create,
-      :logic_action => :create,
-      :questionnaire_variable => :create,
-      :visibility => :create,
-      :visibility_target => :create,
-      :visibility_item => :create,
 
       # design
       :design => :design,
@@ -76,6 +61,8 @@ class Category
       :google_font => :design,
       :creative => :design,
       :creative_chain => :design,
+      :transition => :design,
+      :custom_css => :design,
 
       # publish
       :collector => :publish,
@@ -85,7 +72,36 @@ class Category
       :panel => :result,
       :answer => :result,
       :segment => :result,
-      :segment_filter => :result
+      :segment_group => :result,
+      :segment_item => :result,
+      :segment_target => :result,
+      :segment_filter => :result,
+      :statistic => :result,
+      :raw_datum => :result,
+
+      # account
+      :account => :account,
+      :plan => :account,
+      :inbox => :account,
+      :receipt => :account,
+      :invoice => :account,
+      :mailchimp => :account,
+      :notification => :account,
+      :invitation => :account,
+
+      #logic
+      :randomizer => :logic,
+      :questionnaire_variable => :logic,
+      :logic => :logic,
+      :logic_item => :logic,
+      :logic_action => :logic,
+      :visibility => :logic,
+      :visibility_item => :logic,
+      :visibility_target => :logic,
+
+      # answer
+      :panel_reply => :answer
+
 
     }
   end

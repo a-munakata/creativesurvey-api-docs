@@ -10,10 +10,8 @@ title: 分岐アクション
 
 |メソッド|概要|
 |:---|:---|
-|create|[POST /api/v1/logics/:id/logic_action](#logic_action_create)|
 |show|[GET /api/v1/logic_action/:id](#logic_action_show)|
 |update|[PUT /api/v1/logic_action/:id](#logic_action_update)|
-|destroy|[DELETE /api/v1/logic_action/:id](#logic_action_delete)|
 
 |リレーション|リソース名|日本語名|
 |:---|:---|:---|

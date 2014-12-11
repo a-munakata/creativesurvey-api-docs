@@ -12,6 +12,7 @@ title: 回答項目
 |show|[GET /api/v1/answer_items/:id](#answer_item_show)|
 |update|[PUT /api/v1/answer_items/:id](#answer_item_update)|
 |destroy|[DELETE /api/v1/answer_items/:id](#answer_item_delete)|
+|bulk|[POST /api/v1/answer_items/:id/bulk](#answer_item_bulk)|
 
 |リレーション|リソース名|日本語名|
 |:---|:---|:---|

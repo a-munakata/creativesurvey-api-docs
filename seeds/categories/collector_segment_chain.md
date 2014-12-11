@@ -12,13 +12,11 @@ collector_segment_chainはsegment_idとcollector_idを持ち、それぞれを�
 
 |メソッド|概要|
 |:---|:---|
-|index|[GET /api/v1/collectors/:id/collector_segment_chains](#collector_segment_chain_index_collector)|
-|create|[POST /api/v1/collectors/:id/collector_segment_chains](#collector_segment_chain_create_collector)|
-|index|[GET /api/v1/segments/:id/collector_segment_chains](#collector_segment_chain_index_segment)|
-|create|[POST /api/v1/segments/:id/collector_segment_chains](#collector_segment_chain_create_segment)|
-|show|[GET /api/v1/collector_segment_chains/:id](#collector_segment_chain_show)|
-|update|[PUT /api/v1/collector_segment_chains/:id](#collector_segment_chain_update)|
-|destroy|[DELETE /api/v1/collector_segment_chains/:id](#collector_segment_chain_delete)|
+|show|[GET /api/v1/collectors/:id/collector_segment_chain](#collector_segment_chain_show_collector)|
+|update|[PUT /api/v1/collectors/:id/collector_segment_chain](#collector_segment_chain_update_collector)|
+|show|[GET /api/v1/segments/:id/collector_segment_chain](#collector_segment_chain_show_segment)|
+|update|[PUT /api/v1/segments/:id/collector_segment_chain](#collector_segment_chain_update_segment)|
+
 
 |リレーション|リソース名|日本語名|
 |:---|:---|:---|

@@ -14,3 +14,5 @@ title: 質問順序
 |:---|:---|:---|
 |1対1|[question](#question)|質問|
 |n対1|[questionnaire](#questionnaire)|質問票|
+
+#### page_order_itemは廃止予定です。今後は[questionnaire#order](#questionnaire_order)を使用してください。

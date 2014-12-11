@@ -1,12 +1,13 @@
 ---
 
-name: panel
-title: 回答者の集計
+name: panel_reply
+title: 回答者
 
 ---
 
 |メソッド|概要|
 |:---|:---|
+|index|[GET https://creativesurvey.com/api/v1/surveys/:id/panels](#panel_index_survey)|
 |index|[GET https://creativesurvey.com/api/v1/segments/:id/panels](#panel_index_segment)|
 |show|[GET https://creativesurvey.com/api/v1/panels/:id](#panel_show)|
   

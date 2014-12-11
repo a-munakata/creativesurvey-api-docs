@@ -12,6 +12,8 @@ title: 質問
 |show|[GET /api/v1/questions/:id](#question_show)|
 |update|[PUT /api/v1/questions/:id](#question_update)|
 |destroy|[DELETE /api/v1/questions/:id](#question_delete)|
+|copy|[DELETE /api/v1/questions/:id/copy](#question_copy)|
+|migrate|[DELETE /api/v1/questions/:id/migrate](#question_migrate)|
 
 |リレーション|リソース名|日本語名|
 |:---|:---|:---|
@@ -22,5 +24,6 @@ title: 質問
 ||[sub_items](#sub_item)|回答補助項目|
 ||[logics](#logic)|分岐設定|
 ||[visibilities](#visibility)|表示ロジック|
+||[answers](#answer)|表示ロジック|
 
 

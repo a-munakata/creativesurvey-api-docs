@@ -16,6 +16,9 @@ title: 公開設定
 |destroy|[DELETE /api/v1/collectors/:id](#collector_delete)|
 |publish|[POST /api/v1/collectors/:id/publish](#collector_publish)|
 |abort|[POST /api/v1/collectors/:id/abort](#collector_abort)|
+|copy|[POST /api/v1/collectors/:id/copy](#collector_copy)|
+|image|[POST /api/v1/collectors/:id/image](#collector_image)|
+|code|[POST /api/v1/collectors/:id/code](#collector_code)|
 
 |リレーション|リソース名|日本語名|
 |:---|:---|:---|

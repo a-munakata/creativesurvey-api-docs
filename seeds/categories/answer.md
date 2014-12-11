@@ -1,7 +1,7 @@
 ---
 
 name: answer
-title: 回答の取得
+title: 回答の集計
 
 ---
 
@@ -15,3 +15,5 @@ title: 回答の取得
 ||[question](#question)|質問|
 ||[answer_item](#answer_item)|回答項目|
 ||[sub_item](#sub_item)|回答補助項目|
+
+#### 回答の集計は廃止予定です。今後は[回答者の集計](#panel)を使用してください.

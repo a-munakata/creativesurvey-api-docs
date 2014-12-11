@@ -12,6 +12,7 @@ title: 回答補助項目
 |show|[GET /api/v1/sub_items/:id](#sub_item_show)|
 |update|[PUT /api/v1/sub_items/:id](#sub_item_update)|
 |destroy|[DELETE /api/v1/sub_items/:id](#sub_item_delete)|
+|bulk|[POST /api/v1/sub_items/:id/bulk](#sub_item_bulk)|
 
 
 |リレーション|リソース名|日本語名|
