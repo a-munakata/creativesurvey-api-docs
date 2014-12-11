@@ -115,11 +115,22 @@
         //> li:first-child:nth-last-child(4), > li:first-child:nth-last-child(4) ~ li { width: 25%; }
         //> li:first-child:nth-last-child(5), > li:first-child:nth-last-child(5) ~ li { width: 20%; }
         //> li:first-child:nth-last-child(6), > li:first-child:nth-last-child(6) ~ li { width: 16.66666%; }
-        > li {
-          float:left;
-          padding-bottom: 30px;
-          width: 20%;
+        > ul {
+          zoom: 1;
+
+          > li {
+            float:left;
+            padding-bottom: 30px;
+            width: 20%;
+          }
+
+          &:after {
+            content: "";
+            display: block;
+            clear: both;
+          }
         }
+
         .role {
           padding-left: 10px;
           border-left: 2px dotted #cccccc;

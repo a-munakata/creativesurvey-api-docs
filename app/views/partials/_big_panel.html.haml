@@ -5,24 +5,26 @@
         %option{ :value => value }
           = key
 
-  %ul.big-panel
-    - roles.each_with_index do |role|
-      %li
-        %h3
-          = t("#{role}.title")
+  .big-panel
+    %ul
+      - roles.each_with_index do |role|
+        %li
+          %h3
+            = t("#{role}.title")
 
-        %ul.role
-          - categories.each_with_index do |category|
+          %ul.role
+            - categories.each_with_index do |category|
 
-            - if role == category.role
-              %li
-                %h3.main-title{ "data-category" => category.name }
-                  = link_to category.title, "##{ category.name }"
+              - if role == category.role
+                %li
+                  %h3.main-title{ "data-category" => category.name }
+                    = link_to category.title, "##{ category.name }"
 
-                %ul
-                  - entries.select{|entry| entry.category_name == category.name }.each do |entry|
-                    %li.sub-title{ "data-entry" => entry.base_name }
-                      = link_to entry.title, "##{ entry.base_name }"
+                  %ul
+                    - entries.select{|entry| entry.category_name == category.name }.each do |entry|
+                      %li.sub-title{ "data-entry" => entry.base_name }
+                        = link_to entry.title, "##{ entry.base_name }"
+
   .notify-border
   .handle
     View Full Contents
