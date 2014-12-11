@@ -8,7 +8,7 @@ action: show
 
 # 欧文フォントの取得
 
-## 欧文フォントを取得します。
+## 欧文フォントを取得します。フォントIDは[こちら](#google_font_index)より選択してください。
 
 `GET https://creativesurvey.com/api/v1/google_fonts/:id`
 

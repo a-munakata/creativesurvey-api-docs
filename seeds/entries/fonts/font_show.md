@@ -8,7 +8,8 @@ action: show
 
 # 和文フォントの取得
 
-## 和文フォントを取得します。
+## 和文フォントを取得します。和文フォントIDは[こちら](#font_index)より選択してください。
+
 
 `GET https://creativesurvey.com/api/v1/fonts/:id`
 

@@ -10,6 +10,7 @@ action: show
 
 ## 最終画面を取得します。
 
+
 `GET https://creativesurvey.com/api/v1/egressions/:id`
 
 id _(必須)_:

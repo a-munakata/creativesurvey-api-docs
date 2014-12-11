@@ -8,7 +8,7 @@ action: show
 
 # トランジションの取得
 
-## トランジションを取得します。
+## トランジションを取得します。トランジションIDは[こちら](#transition_index)より選択してください。
 
 `GET https://creativesurvey.com/api/v1/transitions/:id`
 

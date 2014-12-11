@@ -1,14 +1,14 @@
 ---
 
 category_name: invoice
-title: 請求書の取得
+title: 次回のお支払いの取得
 action: show
 
 ---
 
-# 請求書の取得
+# 次回のお支払いの取得
 
-## 請求書を取得します。
+## 次回のお支払いを取得します。
 
 
 `GET https://creativesurvey.com/api/v1/invoice`
