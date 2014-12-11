@@ -71,6 +71,8 @@ class Entry
   def order
     [
       :create,
+      :copy,
+      :gift,
       :publish,
       :abort,
       :index,
