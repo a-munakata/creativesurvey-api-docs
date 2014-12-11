@@ -11,5 +11,9 @@ ja:
     title: "公開設定"
   result:
     title: "集計結果"
+  answer:
+    title: "回答"
+  logic:
+    title: "ロジック設定"
   account:
     title: "アカウント設定"
