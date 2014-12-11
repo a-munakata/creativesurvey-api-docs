@@ -1,17 +1,16 @@
 ---
 
 category_name: question
-title: 質問の作成
-action: create
+title: 質問の更新
+action: update
 
 ---
 
-# 質問の作成
+# 質問の更新
 
-## 質問を作成します。
+## 質問票に含まれる質問を更新します。
 
-`POST https://creativesurvey.com/api/v1/surveys/:id/questionnaire/questions`
-
+`PUT https://creativesurvey.com/api/v1/questions/:id`
 
 id _(必須)_:
 : __integer__
@@ -205,26 +204,26 @@ col_width:
 ~~~
 
 リクエスト例
-$ curl -X POST https://creativesurvey.com/api/v1/surveys/7711/questionnaire/questions \
--d "auth_token=sample_auth_token" \
--d "question[rendered_sentence]=MySurvey" \
--d "question[is_timer]=false" \
--d "question[is_shuffle]=false"
+$ curl -X PUT https://creativesurvey.com/api/v1/questions/5880 \
+-d "question[order_index]=1" \
+-d "question[is_description]=true" \
+-d "question[description]=hello" \
+-d "auth_token=sample_auth_token"
 
 レスポンス例
 {
-  "answer_type": 1,
+  "answer_type": 13,
   "col_width": null,
-  "created_at": "2014-10-31T19:04:14+09:00",
-  "description": null,
+  "created_at": "2014-12-10T11:09:35+09:00",
+  "description": "hello",
   "fix_last": null,
   "fix_last_col": null,
   "fix_last_row": null,
-  "id": 5332,
+  "id": 5880,
   "in_random_range": null,
   "inbox_id": 6,
   "is_back": null,
-  "is_check_and_go": null,
+  "is_check_and_go": true,
   "is_comment_required": null,
   "is_connect": null,
   "is_description": null,
@@ -244,28 +243,28 @@ $ curl -X POST https://creativesurvey.com/api/v1/surveys/7711/questionnaire/ques
   "is_shuffle_row": null,
   "is_single_select": true,
   "is_sns": null,
-  "is_timer": false,
+  "is_timer": null,
   "launcher_string": "",
-  "order_index": 0,
+  "order_index": 1,
   "placeholder": "",
   "question_type": 1,
-  "questionnaire_id": 7698,
+  "questionnaire_id": 7880,
   "range_max": 1,
   "range_min": null,
   "redirect_url": null,
-  "rendered_sentence": "MySurvey",
+  "rendered_sentence": "5",
   "sentence": "",
   "timer_destination_id": null,
   "timer_value": 5,
-  "updated_at": "2014-10-31T19:04:14+09:00",
-  "answer_type_name": "単一テキスト選択",
+  "updated_at": "2014-12-10T12:38:11+09:00",
+  "answer_type_name": "開始ステップ",
   "any_logic": false,
   "any_visibility": false,
   "answer_items": [
     {
-      "answer_type": 1,
-      "created_at": "2014-10-31T19:04:14+09:00",
-      "id": 9926,
+      "answer_type": 13,
+      "created_at": "2014-12-10T11:09:41+09:00",
+      "id": 10969,
       "inbox_id": 6,
       "is_impression": true,
       "is_multiline": false,
@@ -275,62 +274,35 @@ $ curl -X POST https://creativesurvey.com/api/v1/surveys/7711/questionnaire/ques
       "min_value": null,
       "order_index": null,
       "placeholder": "",
-      "question_id": 5332,
+      "question_id": 5880,
       "sentence": "",
-      "updated_at": "2014-10-31T19:04:14+09:00",
+      "updated_at": "2014-12-10T11:09:41+09:00",
       "val": 0.5,
       "validation_pattern": "",
       "validation_type": null,
       "sub_items": [],
       "creative_chain": {
-        "attachable_id": 9926,
+        "attachable_id": 10969,
         "attachable_type": "AnswerItem",
-        "created_at": "2014-10-31T19:04:14+09:00",
+        "created_at": "2014-12-10T11:09:41+09:00",
         "creative_id": null,
-        "id": 31651,
+        "id": 33858,
         "inbox_id": 6,
-        "updated_at": "2014-10-31T19:04:14+09:00"
+        "updated_at": "2014-12-10T11:09:41+09:00"
       }
     }
   ],
-  "sub_items": [
-    {
-      "answer_type": 1,
-      "attachable_id": 5332,
-      "attachable_type": "Question",
-      "created_at": "2014-10-31T19:04:14+09:00",
-      "id": 8681,
-      "inbox_id": 6,
-      "max_value": null,
-      "min_value": null,
-      "order_index": 0,
-      "placeholder": "",
-      "sentence": "",
-      "updated_at": "2014-10-31T19:04:14+09:00",
-      "creative_chain": {
-        "attachable_id": 8681,
-        "attachable_type": "SubItem",
-        "created_at": "2014-10-31T19:04:14+09:00",
-        "creative_id": null,
-        "id": 31652,
-        "inbox_id": 6,
-        "updated_at": "2014-10-31T19:04:14+09:00"
-      }
-    },
-    {...},
-    {...}
-  ],
+  "sub_items": [],
   "creative_chain": {
-    "attachable_id": 5332,
+    "attachable_id": 5880,
     "attachable_type": "Question",
-    "created_at": "2014-10-31T19:04:14+09:00",
+    "created_at": "2014-12-10T11:09:41+09:00",
     "creative_id": null,
-    "id": 31654,
+    "id": 33859,
     "inbox_id": 6,
-    "updated_at": "2014-10-31T19:04:14+09:00"
+    "updated_at": "2014-12-10T11:09:41+09:00"
   }
 }
-
 
 ~~~
 
