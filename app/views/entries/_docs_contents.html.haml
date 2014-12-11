@@ -15,3 +15,5 @@
         .document-block{ id: entry.base_name, class: "entry", "data-entry" => entry.base_name, "data-category" => category.name }
           .inner
             = markdown entry.body
+            = link_to ">> #{category.title}について", "##{category.name}"
+
