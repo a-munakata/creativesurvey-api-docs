@@ -1,44 +1,44 @@
 ---
 
 category_name: plan
-title: カード情報の削除
-action: destroy_card
+title: プランの解約予約
+action: unsubscribe
 
 ---
 
-# カード情報の削除
+# プランの解約予約
 
-## カード情報を削除します。プランを購読している際は、まずダウングレードを行ってください。
+## プランの解約予約を行います。
 
 
-`DELETE https://creativesurvey.com/api/v1/account/card`
-
+`DELETE https://creativesurvey.com/api/v1/account/unsubscribe`
+ 
 ~~~
 
 リクエスト例
-$ curl -X DELETE https://creativesurvey.com/api/v1/account/card \
+$ curl -X DELETE https://creativesurvey.com/api/v1/account/unsubscribe \
 -d "auth_token=sample_auth_token"
 
 
 レスポンス例
 {
-  "name": "sample@creativesurvey.com",
-  "email": "sample@creativesurvey.com",
-  "role": "White",
-  "box_role": "White",
+  "name": "a.munakata+connect@4digit.jp",
+  "email": "a.munakata+connect@4digit.jp",
+  "role": "Light Blue",
+  "box_role": "Light Blue",
   "share_limit": 0,
   "accounts": [
     {
-      "id": 144,
-      "name": "sample@creativesurvey.com",
-      "email": "sample@creativesurvey.com",
+      "id": 145,
+      "name": "a.munakata+connect@4digit.jp",
+      "email": "a.munakata+connect@4digit.jp",
       "current": true
     }
   ],
   "shares": [
     {
-      "name": "sample@creativesurvey.com",
-      "email": "sample@creativesurvey.com",
+      "name": "a.munakata+connect@4digit.jp",
+      "email": "a.munakata+connect@4digit.jp",
       "current": true
     }
   ],
@@ -62,8 +62,8 @@ $ curl -X DELETE https://creativesurvey.com/api/v1/account/card \
     "created_at": "2014-08-12T21:39:33+09:00",
     "glacier_color": "#72b1c0",
     "glacier_label": null,
-    "id": 131,
-    "inbox_id": 144,
+    "id": 132,
+    "inbox_id": 145,
     "moody_blue_color": "#747dc0",
     "moody_blue_label": null,
     "novel_color": "#999999",
@@ -82,7 +82,7 @@ $ curl -X DELETE https://creativesurvey.com/api/v1/account/card \
       "novel"
     ]
   },
-  "notice_count": 5,
+  "notice_count": 0,
   "notifications": [
     {
       "action": null,
@@ -93,13 +93,14 @@ $ curl -X DELETE https://creativesurvey.com/api/v1/account/card \
       "notified_at": "2014-12-02T16:19:19+09:00",
       "updated_at": "2014-12-02T16:19:19+09:00",
       "url": null,
-      "is_unread": true
+      "is_unread": false
     },
     {...},
     {...}
   ],
-  "last_4_digits": null,
-  "is_owner": true
+  "last_4_digits": "4444",
+  "is_owner": true,
+  "message": "プランの解約が予約されました。"
 }
 
 ~~~
