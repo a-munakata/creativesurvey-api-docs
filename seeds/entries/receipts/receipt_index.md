@@ -56,42 +56,14 @@ $ curl -X GET https://creativesurvey.com/api/v1/receipts \
                 "description": "Unused time on LIGHTBLUE after 14 Oct 2014",
                 "metadata": {}
               },
-              {
-                "id": "sub_4xHWUuDn4aF7L4",
-                "object": "line_item",
-                "type": "subscription",
-                "livemode": false,
-                "amount": 199900,
-                "currency": "usd",
-                "proration": false,
-                "period": {
-                  "start": 1413288935,
-                  "end": 1444824935
-                },
-                "quantity": 1,
-                "plan": {
-                  "interval": "year",
-                  "name": "ULTRAMARINE(Annual)",
-                  "created": 1378728826,
-                  "amount": 199900,
-                  "currency": "usd",
-                  "id": "ultramarine_annual",
-                  "object": "plan",
-                  "livemode": false,
-                  "interval_count": 1,
-                  "trial_period_days": null,
-                  "metadata": {},
-                  "statement_description": null
-                },
-                "description": null,
-                "metadata": {}
-              }
+              {...},
+              {...}
             ],
             "count": 2
           },
           "subtotal": 198020,
           "total": 198020,
-          "customer": "cus_4xHWAADQknyZkV",
+          "customer": "sample_customer_id",
           "object": "invoice",
           "attempted": true,
           "closed": true,
