@@ -45,13 +45,6 @@ class Category
       :user => :basic,
       :error_example => :basic,
 
-      # account
-      :account => :account,
-      :plan => :account,
-      :inbox => :account,
-      :invoice => :account,
-      :mailchimp => :account,
-
       # create
       :survey => :create,
       :questionnaire => :create,
@@ -74,8 +67,10 @@ class Category
       :theme => :design,
       :font => :design,
       :google_font => :design,
+      :transition => :design,
       :creative => :design,
       :creative_chain => :design,
+      :custom_css => :design,
 
       # publish
       :collector => :publish,
@@ -85,7 +80,16 @@ class Category
       :panel => :result,
       :answer => :result,
       :segment => :result,
-      :segment_filter => :result
+      :segment_filter => :result,
+
+      # account
+      :account => :account,
+      :plan => :account,
+      :invoice => :account,
+      :inbox => :account,
+      :invitation => :account,
+      :receipt => :account,
+      :mailchimp => :account
 
     }
   end
