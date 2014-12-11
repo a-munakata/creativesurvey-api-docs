@@ -1,7 +1,7 @@
 ---
 
 category_name: creative
-title: 画像一覧の取得
+title: 背景画像一覧の取得
 action: index
 
 ---
