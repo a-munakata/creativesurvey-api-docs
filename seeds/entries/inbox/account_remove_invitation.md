@@ -28,7 +28,7 @@ $ curl -X DELETE https://creativesurvey.com/api/v1/account/invitation \
 レスポンス例
 {
   "name": "a.munakata",
-  "email": "a.munakata@4digit.jp",
+  "email": "sample@creativesurvey.com",
   "role": "Ultramarine",
   "box_role": "Ultramarine",
   "share_limit": 9,
@@ -36,14 +36,14 @@ $ curl -X DELETE https://creativesurvey.com/api/v1/account/invitation \
     {
       "id": 6,
       "name": "a.munakata",
-      "email": "a.munakata@4digit.jp",
+      "email": "sample@creativesurvey.com",
       "current": true
     }
   ],
   "shares": [
     {
       "name": "a.munakata",
-      "email": "a.munakata@4digit.jp",
+      "email": "sample@creativesurvey.com",
       "current": true
     }
   ],

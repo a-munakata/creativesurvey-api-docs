@@ -27,7 +27,7 @@ $ curl -X POST https://creativesurvey.com/api/v1/account/share \
 レスポンス例
 {
   "name": "a.munakata",
-  "email": "a.munakata@4digit.jp",
+  "email": "sample@creativesurvey.com",
   "role": "Ultramarine",
   "box_role": "Ultramarine",
   "share_limit": 9,
@@ -35,14 +35,14 @@ $ curl -X POST https://creativesurvey.com/api/v1/account/share \
     {
       "id": 6,
       "name": "a.munakata",
-      "email": "a.munakata@4digit.jp",
+      "email": "sample@creativesurvey.com",
       "current": true
     }
   ],
   "shares": [
     {
       "name": "a.munakata",
-      "email": "a.munakata@4digit.jp",
+      "email": "sample@creativesurvey.com",
       "current": true
     }
   ],

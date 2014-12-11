@@ -26,8 +26,8 @@ $ curl -X PUT https://creativesurvey.com/api/v1/account/share \
 
 レスポンス例
 {
-  "name": "a.munakata+check@4digit.jp",
-  "email": "a.munakata+check@4digit.jp",
+  "name": "sample@creativesurvey.com",
+  "email": "sample@creativesurvey.com",
   "role": "White",
   "box_role": "White",
   "share_limit": 0,
@@ -35,20 +35,20 @@ $ curl -X PUT https://creativesurvey.com/api/v1/account/share \
     {
       "id": 6,
       "name": "a.munakata",
-      "email": "a.munakata@4digit.jp",
+      "email": "sample@creativesurvey.com",
       "current": false
     },
     {
       "id": 144,
-      "name": "a.munakata+check@4digit.jp",
-      "email": "a.munakata+check@4digit.jp",
+      "name": "sample@creativesurvey.com",
+      "email": "sample@creativesurvey.com",
       "current": true
     }
   ],
   "shares": [
     {
-      "name": "a.munakata+check@4digit.jp",
-      "email": "a.munakata+check@4digit.jp",
+      "name": "sample@creativesurvey.com",
+      "email": "sample@creativesurvey.com",
       "current": true
     }
   ],
@@ -98,7 +98,7 @@ $ curl -X PUT https://creativesurvey.com/api/v1/account/share \
       "action": "connectAccount('60577fda3e72a4776401f34c24e57a5d5b0e3ab0')",
       "action_name": "承認する",
       "created_at": "2014-12-09T14:09:50+09:00",
-      "description": "a.munakata@4digit.jpさんからボックスがシェアされました。",
+      "description": "sample@creativesurvey.comさんからボックスがシェアされました。",
       "id": 25,
       "is_unread": false,
       "notified_at": "2014-12-09T14:09:50+09:00",
