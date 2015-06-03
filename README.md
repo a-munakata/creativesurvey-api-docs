@@ -1,6 +1,14 @@
 # CREATIVE SURVEY API DOCUMENTATION
 
-ドキュメンテーションに関わるソースはマークダウンのファイルで管理されています。
+クリエイティブサーベイのAPIは、ユーザーがメールアドレスとパスワードを入力、auth_tokenを発行するだけで誰でも使えるようになっています。ユーザーはAPIドキュメンテーションを見て、必要な操作を行います。新旧バージョンでAPIが違うので、ドキュメンテーションもそれぞれ用意されています。
+
+・新バージョン(sakura)
+https://edge.creativesurvey.com/api/v1/docs
+
+・旧バージョン(tonari)
+https://creativesurvey.com/api/v1/docs
+
+新バージョンはsakura, 旧バージョンはtonariと言うブランチで管理されています。ドキュメンテーションに関わるソースはマークダウンのファイルで管理されています。
 
 ## Setting
 
